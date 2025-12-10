@@ -78,8 +78,8 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <div className="w-full pt-0 pb-12 px-4 sm:px-8 lg:px-16" style={{ backgroundColor: '#2C847F' }}>
-            <div className="max-w-7xl mx-auto">
+        <div className="w-full pt-0 pb-12" style={{ backgroundColor: '#2C847F' }}>
+            <div className="container mx-auto px-4 max-w-[1200px]">
                 {/* Slider Container */}
                 <div
                     className="relative w-full overflow-hidden group"

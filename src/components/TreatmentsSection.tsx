@@ -167,7 +167,7 @@ export default function TreatmentsSection() {
 
                     {/* Wrapper for overflow hidden */}
                     <div
-                        className="overflow-hidden px-4 md:px-2 -mx-4 md:-mx-2"
+                        className="overflow-hidden"
                         onTouchStart={onTouchStart}
                         onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
