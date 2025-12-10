@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowRight, ShieldCheck, Zap, Timer, Check, ChevronDown, Award, TrendingUp, MapPin, FileText, Heart, Users, Phone, Mail, Linkedin } from "lucide-react";
 import LocationsSection from "@/components/LocationsSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import TreatmentsSection from "@/components/TreatmentsSection";
 
 export default function Home() {
   // State for the "How it Works" section
@@ -225,113 +226,7 @@ export default function Home() {
       </section>
 
       {/* --- TREATMENTS SECTION --- */}
-      <section className="py-24 w-full" style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="container mx-auto px-4 max-w-[1200px]">
-
-          {/* Header */}
-          <div className="mb-16 text-center max-w-4xl mx-auto">
-            <p className="text-[#2C847F] font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
-              TREATMENTS
-            </p>
-            <h2
-              className="text-[#2B3445] text-3xl font-medium lg:text-4xl mb-6"
-              style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
-            >
-              Modern, effective, clinic-based procedures
-            </h2>
-            <p
-              className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto"
-              style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-            >
-              Our partner clinics offer the full spectrum of evidence-based vein therapies.
-            </p>
-          </div>
-
-          {/* Treatments Grid with Images */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                title: "Endovenous Laser Treatment (EVLT)",
-                desc: "Gold-standard laser therapy",
-                img: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800"
-              },
-              {
-                title: "Radiofrequency Ablation (RFA)",
-                desc: "Quick, comfortable closure of faulty veins",
-                img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
-              },
-              {
-                title: "Ultrasound-Guided Foam Sclerotherapy",
-                desc: "Precise, non-surgical treatment",
-                img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800"
-              },
-              {
-                title: "VenaSeal / Glue Therapy",
-                desc: "No heat, no injections, fast recovery",
-                img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&q=80&w=800"
-              },
-              {
-                title: "Microphlebectomy",
-                desc: "Removal of bulging surface veins through tiny incisions",
-                img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800"
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group relative bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col"
-              >
-                {/* Image Container */}
-                <div className="h-48 overflow-hidden relative">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-[#1e2a5e]/10 group-hover:bg-transparent transition-colors"></div>
-
-                  {/* Number Overlay on Image */}
-                  <div
-                    className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-[#2C847F] font-bold text-xl w-10 h-10 flex items-center justify-center rounded-full shadow-md"
-                    style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
-                  >
-                    {index + 1}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex-grow flex flex-col justify-between">
-                  <div>
-                    <h3
-                      className="text-[#2B3445] text-xl font-medium mb-3"
-                      style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
-                    >
-                      {item.title}
-                    </h3>
-                    <p
-                      className="text-gray-600 leading-relaxed"
-                      style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                    >
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="flex justify-center">
-            <button
-              className="bg-[#2C847F] hover:bg-[#236b67] text-white font-semibold py-3 px-10 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer"
-              style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-            >
-              See Treatment Options
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-
-        </div>
-      </section>
+      <TreatmentsSection />
 
       {/* --- HOW IT WORKS / STEPS SECTION --- */}
       <section className="py-24 w-full" style={{ backgroundColor: '#E3E6EA' }}>

@@ -43,7 +43,6 @@ const TestimonialSlider = () => {
         setCurrentIndex(index);
     };
 
-    // Handle Autoplay
     useEffect(() => {
         if (isAutoPlaying) {
             autoPlayRef.current = setInterval(nextSlide, 5000);
@@ -53,11 +52,9 @@ const TestimonialSlider = () => {
         };
     }, [isAutoPlaying, currentIndex]);
 
-    // Pause on hover
     const pauseAutoPlay = () => setIsAutoPlaying(false);
     const resumeAutoPlay = () => setIsAutoPlaying(true);
 
-    // Swipe handlers
     const minSwipeDistance = 50;
 
     const onTouchStart = (e: React.TouchEvent) => {
@@ -81,22 +78,11 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <div className="w-full py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#DBEAE9' }}>
+        <div className="w-full pt-0 pb-12 px-4 sm:px-8 lg:px-16" style={{ backgroundColor: '#2C847F' }}>
             <div className="max-w-7xl mx-auto">
-
-                {/* Header */}
-                <div className="text-center mb-10">
-                    <h2
-                        className="text-3xl md:text-4xl font-bold text-[#2B3445] mb-2"
-                        style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
-                    >
-                        Real people. Real relief.
-                    </h2>
-                </div>
-
                 {/* Slider Container */}
                 <div
-                    className="relative w-full overflow-hidden rounded-2xl group"
+                    className="relative w-full overflow-hidden group"
                     onMouseEnter={pauseAutoPlay}
                     onMouseLeave={resumeAutoPlay}
                     onTouchStart={onTouchStart}
@@ -123,12 +109,18 @@ const TestimonialSlider = () => {
                                     />
                                 </div>
 
-                                {/* Right Side: Content with specific background color */}
+                                {/* Right Side: Content */}
                                 <div
                                     className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16 text-white"
                                     style={{ backgroundColor: '#2C847F' }}
                                 >
                                     <div className="max-w-lg">
+                                        <p
+                                            className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/70"
+                                            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
+                                        >
+                                            Real people. Real relief.
+                                        </p>
                                         <h3
                                             className="text-xl md:text-2xl lg:text-3xl font-medium leading-snug mb-8 tracking-wide"
                                             style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
@@ -142,7 +134,7 @@ const TestimonialSlider = () => {
                                             {testimonial.name}
                                         </p>
 
-                                        {/* Bar Pagination Indicator (Inside Content Area) */}
+                                        {/* Bar Pagination */}
                                         <div className="flex space-x-2">
                                             {testimonials.map((_, index) => (
                                                 <button
@@ -179,7 +171,6 @@ const TestimonialSlider = () => {
                             <ChevronRight size={24} />
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
