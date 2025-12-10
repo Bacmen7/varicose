@@ -585,7 +585,7 @@ export default function Home() {
       </section>
 
       {/* --- FOOTER --- */}
-      <footer className="w-full pt-16 pb-8" style={{ backgroundColor: '#E6F3F1' }}>
+      <footer className="w-full pt-16 pb-8" style={{ backgroundColor: '#F9F9F9' }}>
         <div className="container mx-auto px-4 max-w-[1200px]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
 
