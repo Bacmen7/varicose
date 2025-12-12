@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white py-4 px-6 border-b border-gray-100" style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}>
+    <nav className="bg-white py-4 px-4 md:px-6 border-b border-gray-100 relative" style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -31,7 +32,15 @@ export default function Navbar() {
           <span className="text-xl font-semibold text-gray-700" style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}>Varicose</span>
         </Link>
 
-        {/* Navigation Links */}
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden p-2 text-gray-700 hover:text-primary cursor-pointer"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Navigation Links - Desktop */}
         <div className="hidden md:flex items-center gap-8">
           <Link
             href="/our-approach"
@@ -91,8 +100,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Auth Buttons */}
-        <div className="flex items-center gap-4">
+        {/* Auth Buttons - Desktop */}
+        <div className="hidden md:flex items-center gap-4">
           <Link
             href="/login"
             className="text-sm font-medium text-gray-700 hover:text-[#0d7377]"
@@ -107,6 +116,57 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-50">
+          <div className="flex flex-col p-4 space-y-4">
+            <Link
+              href="/our-approach"
+              className="font-semibold py-2 text-[#026460]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              OUR APPROACH
+            </Link>
+            <Link
+              href="/individuals"
+              className="font-semibold py-2 text-[#026460]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              WHO WE SERVE
+            </Link>
+            <Link
+              href="/resources"
+              className="font-semibold py-2 text-[#026460]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              RESOURCES
+            </Link>
+            <Link
+              href="/success-stories"
+              className="font-semibold py-2 text-[#026460]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              SUCCESS STORIES
+            </Link>
+            <hr className="border-gray-200" />
+            <Link
+              href="/login"
+              className="font-medium py-2 text-gray-700"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Log In
+            </Link>
+            <Link
+              href="/signup"
+              className="bg-[#0d7377] text-white px-6 py-3 rounded-full text-center font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sign up
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

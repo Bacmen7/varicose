@@ -34,27 +34,33 @@
   font-display: swap;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Colors */
+  --color-primary: #2C847F;
+  --color-primary-dark: #236b67;
+  --color-secondary: #2B3445;
+  --color-accent: #CCE0DF;
+  --color-accent-light: #DBEAE9;
+  --color-accent-lighter: #EEF7F5;
+  --color-background: #F9F9F9;
+  --color-surface: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Fonts */
+  --font-heading: 'Recoleta', Georgia, serif;
+  --font-body: 'Proxima Nova', Arial, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+}
+
+/* Utility classes for fonts */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
 }

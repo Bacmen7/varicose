@@ -167,7 +167,7 @@ export default function TreatmentsSection() {
 
                     {/* Wrapper for overflow hidden */}
                     <div
-                        className="overflow-hidden"
+                        className="overflow-hidden px-4 md:px-2 -mx-4 md:-mx-2"
                         onTouchStart={onTouchStart}
                         onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
@@ -193,14 +193,6 @@ export default function TreatmentsSection() {
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                             />
                                             <div className="absolute inset-0 bg-[#1e2a5e]/10 group-hover:bg-transparent transition-colors"></div>
-
-                                            {/* Number Overlay on Image */}
-                                            <div
-                                                className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-[#2C847F] font-bold text-xl w-10 h-10 flex items-center justify-center rounded-full shadow-md"
-                                                style={{ fontFamily: "Recoleta, Georgia, sans-serif" }}
-                                            >
-                                                {index + 1}
-                                            </div>
                                         </div>
 
                                         {/* Content */}

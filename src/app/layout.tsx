@@ -1,21 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Vericose",
-  description: "Vericose - Your Health Partner",
+  title: "Varicose Care | Expert Vein Treatment",
+  description:
+    "Find trusted vein specialists near you. Science-backed varicose vein treatments with modern care you can rely on.",
 };
 
 export default function RootLayout({
@@ -25,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <Header />
         {children}
       </body>

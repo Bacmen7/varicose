@@ -8,19 +8,19 @@ const testimonials = [
         id: 1,
         name: "Ritu, Mumbai",
         quote: "I tried compression stockings for years. One laser session changed everything.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800"
+        image: "/team/1.png"
     },
     {
         id: 2,
         name: "Sanjay, Delhi",
         quote: "The heaviness, swelling, and night cramps — gone after my RFA treatment.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800"
+        image: "/team/3.png"
     },
     {
         id: 3,
         name: "Neha, Bangalore",
         quote: "The platform helped me find a specialist I could trust within minutes.",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=800"
+        image: "/team/2.png"
     }
 ];
 
@@ -100,11 +100,11 @@ const TestimonialSlider = () => {
                                 className="w-full flex-shrink-0 flex flex-col md:flex-row h-auto md:h-[500px]"
                             >
                                 {/* Left Side: Image */}
-                                <div className="w-full md:w-1/2 h-64 md:h-full relative">
+                                <div className="w-full md:w-1/2 h-[300px] sm:h-[350px] md:h-full relative bg-gray-100">
                                     <img
                                         src={testimonial.image}
                                         alt={`Testimonial from ${testimonial.name}`}
-                                        className="w-full h-full object-cover object-center"
+                                        className="w-full h-full object-contain md:object-cover md:object-top"
                                         draggable="false"
                                     />
                                 </div>
