@@ -43,7 +43,8 @@
   --color-accent-light: #DBEAE9;
   --color-accent-lighter: #EEF7F5;
   --color-background: #F9F9F9;
-  --color-surface: #FFFFFF;
+  --color-surface: #EEF7F5;
+  --color-cta: #FF8968;
 
   /* Fonts */
   --font-heading: 'Recoleta', Georgia, serif;

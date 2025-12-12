@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const articles = [
@@ -8,6 +9,7 @@ const articles = [
     image:
       "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800",
     desc: "Understand the underlying causes of venous insufficiency and how valve failure leads to varicose veins.",
+    href: "/blog/why-varicose-veins-happen",
   },
   {
     category: "Guide",
@@ -15,13 +17,15 @@ const articles = [
     image:
       "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2070&auto=format&fit=crop",
     desc: "Learn to spot the subtle symptoms like heaviness, aching, and swelling before visible veins appear.",
+    href: "/blog/early-warning-signs",
   },
   {
     category: "Checklist",
-    title: "When to see a doctor",
+    title: "When Should You See a Doctor for Varicose Veins?",
     image:
       "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=800",
     desc: "Knowing the red flags—such as skin changes or persistent pain—that indicate it's time for a professional evaluation.",
+    href: "/blog/when-to-see-doctor",
   },
 ];
 
@@ -40,8 +44,9 @@ export default function KnowledgeCenterSection() {
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {articles.map((item, index) => (
-            <div
+            <Link
               key={index}
+              href={item.href}
               className="group bg-white rounded-2xl overflow-hidden transition-all duration-300 flex flex-col h-full border border-transparent hover:border-primary/20"
             >
               <div className="h-40 overflow-hidden relative">
@@ -69,7 +74,7 @@ export default function KnowledgeCenterSection() {
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
