@@ -1,33 +1,39 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const treatments = [
     {
         title: "Endovenous Laser Treatment (EVLT)",
         desc: "Gold-standard laser therapy",
-        img: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800",
+        slug: "evlt"
     },
     {
         title: "Radiofrequency Ablation (RFA)",
         desc: "Quick, comfortable closure of faulty veins",
-        img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
+        slug: "rfa"
     },
     {
         title: "Ultrasound-Guided Foam Sclerotherapy",
         desc: "Precise, non-surgical treatment",
-        img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800",
+        slug: "sclerotherapy"
     },
     {
         title: "VenaSeal / Glue Therapy",
         desc: "No heat, no injections, fast recovery",
-        img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&q=80&w=800",
+        slug: "venaseal"
     },
     {
         title: "Microphlebectomy",
         desc: "Removal of bulging surface veins through tiny incisions",
-        img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800"
+        img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800",
+        slug: "microphlebectomy"
     }
 ];
 
@@ -184,35 +190,41 @@ export default function TreatmentsSection() {
                                     className="shrink-0 px-4"
                                     style={{ width: `${100 / itemsToShow}%` }}
                                 >
-                                    <div className="group relative bg-white border border-gray-100 rounded-2xl hover:border-[#2C847F]/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full">
-                                        {/* Image Container */}
-                                        <div className="h-48 overflow-hidden relative">
-                                            <img
-                                                src={item.img}
-                                                alt={item.title}
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-[#1e2a5e]/10 group-hover:bg-transparent transition-colors"></div>
-                                        </div>
+                                    <Link href={`/treatments/${item.slug}`} className="block h-full">
+                                        <div className="group relative bg-white border border-gray-100 rounded-2xl hover:border-[#2C847F]/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full cursor-pointer">
+                                            {/* Image Container */}
+                                            <div className="h-48 overflow-hidden relative">
+                                                <img
+                                                    src={item.img}
+                                                    alt={item.title}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                                />
+                                                <div className="absolute inset-0 bg-[#1e2a5e]/10 group-hover:bg-transparent transition-colors"></div>
+                                            </div>
 
-                                        {/* Content */}
-                                        <div className="p-6 flex-grow flex flex-col justify-between">
-                                            <div>
-                                                <h3
-                                                    className="text-[#2B3445] text-xl font-medium mb-3"
-                                                    style={{ fontFamily: "Recoleta, Georgia, sans-serif" }}
-                                                >
-                                                    {item.title}
-                                                </h3>
-                                                <p
-                                                    className="text-gray-600 leading-relaxed"
-                                                    style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                                                >
-                                                    {item.desc}
-                                                </p>
+                                            {/* Content */}
+                                            <div className="p-6 flex-grow flex flex-col justify-between">
+                                                <div>
+                                                    <h3
+                                                        className="text-[#2B3445] text-xl font-medium mb-3 group-hover:text-[#2C847F] transition-colors"
+                                                        style={{ fontFamily: "Recoleta, Georgia, sans-serif" }}
+                                                    >
+                                                        {item.title}
+                                                    </h3>
+                                                    <p
+                                                        className="text-gray-600 leading-relaxed mb-4"
+                                                        style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
+                                                    >
+                                                        {item.desc}
+                                                    </p>
+                                                </div>
+                                                <span className="text-[#2C847F] font-semibold text-sm flex items-center">
+                                                    Learn more
+                                                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                                                </span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
