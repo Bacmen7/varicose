@@ -68,13 +68,13 @@ function EVLTHero() {
     <section className="w-full">
       <div className="flex flex-col md:flex-row w-full min-h-[500px] md:h-[600px]">
         {/* Left Content Side */}
-        <div className="w-full md:w-1/2 bg-accent flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 md:py-0">
+        <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 md:py-0" style={{ backgroundColor: '#C5DAD8' }}>
           <div className="max-w-xl">
-            <h1 className="font-heading text-secondary text-4xl md:text-5xl lg:text-6xl font-normal mb-8 tracking-tight leading-tight">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal mb-8 tracking-tight leading-tight" style={{ color: '#026460' }}>
               Endovenous Laser Treatment (EVLT)
             </h1>
-            <div className="w-20 h-px bg-secondary mb-8 opacity-20"></div>
-            <p className="text-gray-500 text-xl lg:text-[22px] leading-relaxed tracking-wide">
+            <div className="w-20 h-px mb-8 opacity-40" style={{ backgroundColor: '#026460' }}></div>
+            <p className="text-xl lg:text-[22px] leading-relaxed tracking-wide" style={{ color: '#026460' }}>
               Gold-Standard Laser Therapy for Varicose Veins
             </p>
           </div>
@@ -83,12 +83,11 @@ function EVLTHero() {
         {/* Right Image Side */}
         <div className="w-full md:w-1/2 relative h-[400px] md:h-auto">
           <Image
-            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80"
-            alt="Medical Consultation"
+            src="/evtl.png"
+            alt="EVLT Treatment"
             fill
-            className="object-cover grayscale-[20%]"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-accent/10 mix-blend-multiply"></div>
         </div>
       </div>
     </section>
@@ -104,33 +103,34 @@ function WhatIsEVLT() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           {/* Left: Heading & Description */}
           <div className="lg:w-1/2 pt-4">
-            <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-8 font-normal">
+            <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-8 font-normal" style={{ color: '#026460' }}>
               What is Endovenous Laser Treatment?
             </h2>
-            <div className="text-lg md:text-[20px] leading-relaxed space-y-6 text-secondary/80">
+            <div className="text-lg md:text-[20px] leading-relaxed space-y-6" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>
               <p>
                 EVLT is a minimally invasive, gold-standard procedure used to treat varicose veins at their root cause.
               </p>
               <p>
-                Instead of removing veins surgically, EVLT uses laser energy delivered inside the faulty vein to gently seal it shut. Once closed, blood naturally reroutes to healthy veins.
+                Instead of removing veins surgically, EVLT uses laser energy delivered inside the faulty vein to gently seal it shut. Once closed, blood naturally reroutes to healthy veins, , relieving symptoms and improving circulation.
+
               </p>
             </div>
           </div>
 
           {/* Right: Benefits List */}
           <div className="lg:w-1/2 w-full lg:pt-6">
-            <div className="border-t border-gray-200">
+            <div style={{ borderTop: '1px solid #D4E5E4' }}>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center justify-between py-6 border-b border-gray-200 group cursor-default">
-                  <span className="font-heading text-xl font-medium text-secondary">
+                <div key={index} className="flex items-center justify-between py-6 group cursor-default" style={{ borderBottom: '1px solid #D4E5E4' }}>
+                  <span className="font-heading text-xl font-medium" style={{ color: '#026460' }}>
                     {benefit}
                   </span>
-                  <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ color: '#026460' }}>
                     <Icons.Check />
                   </div>
                 </div>
@@ -153,13 +153,13 @@ function WhyEVLT() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24" style={{ backgroundColor: '#E8EEEE' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
         <div className="mb-16">
-          <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-4 font-normal">
+          <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-4 font-normal" style={{ color: '#026460' }}>
             Why EVLT is the Gold Standard
           </h2>
-          <p className="text-lg uppercase tracking-widest text-secondary/60">
+          <p className="text-lg uppercase tracking-widest" style={{ color: 'rgba(2, 100, 96, 0.6)' }}>
             Superior Results &bull; Minimal Downtime
           </p>
         </div>
@@ -167,21 +167,21 @@ function WhyEVLT() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           {points.map((point, index) => (
             <div key={index} className="flex flex-col items-start group">
-              <div className="mb-6 text-primary transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-6 transition-transform duration-300 group-hover:scale-110" style={{ color: '#026460' }}>
                 {point.icon}
               </div>
-              <h3 className="font-heading text-secondary text-2xl mb-2">
+              <h3 className="font-heading text-2xl mb-2" style={{ color: '#026460' }}>
                 {point.title}
               </h3>
-              <p className="text-lg leading-relaxed text-secondary/70">
+              <p className="text-lg leading-relaxed" style={{ color: 'rgba(2, 100, 96, 0.7)' }}>
                 {point.desc}
               </p>
             </div>
           ))}
 
           {/* Recommendation Block */}
-          <div className="flex flex-col justify-center items-start border-l-2 border-primary pl-8">
-            <p className="font-heading text-lg font-medium italic leading-relaxed text-secondary">
+          <div className="flex flex-col justify-center items-start pl-8" style={{ borderLeft: '2px solid #026460' }}>
+            <p className="font-heading text-lg font-medium italic leading-relaxed" style={{ color: '#026460' }}>
               &quot;Widely recommended by vascular surgeons and vein specialists worldwide.&quot;
             </p>
           </div>
@@ -203,29 +203,31 @@ function WhoNeedsEVLT() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24" style={{ backgroundColor: '#D8DCDF' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col lg:flex-row gap-16">
-          <div className="lg:w-1/3">
-            <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-8 font-normal">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+          {/* Left: Heading & Medical Confirmation */}
+          <div className="lg:w-1/2">
+            <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-8 font-normal" style={{ color: '#026460' }}>
               Who Needs EVLT?
             </h2>
-            <div className="p-6 bg-accent/30 rounded-lg inline-block">
-              <p className="text-sm tracking-wide font-bold uppercase text-primary mb-2">
+            <div className="p-8 rounded-lg" style={{ backgroundColor: 'rgba(2, 100, 96, 0.08)' }}>
+              <p className="text-sm tracking-wide font-bold uppercase mb-3" style={{ color: '#026460' }}>
                 Medical Confirmation
               </p>
-              <p className="font-heading text-lg leading-snug text-secondary">
+              <p className="font-heading text-lg leading-relaxed" style={{ color: '#026460' }}>
                 A Doppler ultrasound is used to confirm whether EVLT is the right treatment for you.
               </p>
             </div>
           </div>
 
-          <div className="lg:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          {/* Right: Symptoms List */}
+          <div className="lg:w-1/2">
+            <div className="space-y-5">
               {symptoms.map((symptom, index) => (
-                <div key={index} className="flex items-baseline gap-4 border-b border-gray-100 pb-4">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 translate-y-2"></div>
-                  <span className="text-xl text-secondary/90">
+                <div key={index} className="flex items-center gap-4 pb-5" style={{ borderBottom: '1px solid rgba(2, 100, 96, 0.15)' }}>
+                  <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#026460' }}></div>
+                  <span className="text-xl" style={{ color: 'rgba(2, 100, 96, 0.9)' }}>
                     {symptom}
                   </span>
                 </div>
@@ -249,48 +251,45 @@ function HowItWorks() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24" style={{ backgroundColor: '#C5DAD8' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           {/* Left: Sticky Image Section */}
           <div className="lg:w-5/12 hidden lg:block relative">
             <div className="sticky top-12">
-              <div className="aspect-[4/5] rounded-sm overflow-hidden relative">
+              <div className="relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80"
-                  alt="Doctor performing ultrasound procedure"
-                  fill
-                  className="object-cover"
+                  src="/steps.png"
+                  alt="EVLT Procedure Steps"
+                  width={500}
+                  height={700}
+                  className="object-contain w-full h-auto"
                 />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-              </div>
-              <div className="mt-6 text-sm text-primary/60 font-medium tracking-widest uppercase">
-                The Procedure &bull; Step by Step
               </div>
             </div>
           </div>
 
           {/* Right: Steps Timeline */}
           <div className="lg:w-7/12">
-            <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-16 font-normal">
+            <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-16 font-normal" style={{ color: '#026460' }}>
               How Does EVLT Work?
             </h2>
 
-            <div className="border-l border-gray-300 pl-8 md:pl-12 space-y-16 relative">
+            <div className="pl-8 md:pl-12 space-y-16 relative" style={{ borderLeft: '1px solid rgba(2, 100, 96, 0.3)' }}>
               {steps.map((step, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-4 h-4 rounded-full bg-background border-4 border-primary transition-colors duration-300 group-hover:bg-primary"></div>
+                  <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-4 h-4 rounded-full transition-colors duration-300" style={{ backgroundColor: '#C5DAD8', border: '4px solid #026460' }}></div>
 
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-baseline mb-3">
-                    <span className="font-heading text-4xl font-normal text-accent-light group-hover:text-primary transition-colors duration-300">
+                    <span className="font-heading text-4xl font-normal transition-colors duration-300" style={{ color: 'rgba(2, 100, 96, 0.3)' }}>
                       {`0${index + 1}`}
                     </span>
-                    <h3 className="font-heading text-2xl font-normal text-secondary">
+                    <h3 className="font-heading text-2xl font-normal" style={{ color: '#026460' }}>
                       {step.title}
                     </h3>
                   </div>
 
-                  <p className="text-lg leading-relaxed max-w-lg text-secondary/80">
+                  <p className="text-lg leading-relaxed max-w-lg" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>
                     {step.desc}
                   </p>
                 </div>
@@ -305,30 +304,30 @@ function HowItWorks() {
 
 function TreatedVeinResult() {
   const results = [
-    "Gradually absorbed by the body",
-    "No longer visible",
-    "No longer causes symptoms",
+    "Is absorbed by body",
+    "Is no longer visible",
+    "Doesn't cause symptoms",
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-6 font-normal">
+          <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-6 font-normal" style={{ color: '#026460' }}>
             What Happens to the Treated Vein?
           </h2>
 
-          <p className="text-xl mb-12 text-secondary/80">
+          <p className="text-xl mb-12" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>
             Once sealed, the treated vein is:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
             {results.map((result, index) => (
-              <div key={index} className="flex flex-col items-center p-8 rounded-2xl bg-background border border-gray-200 group hover:border-accent-light transition-all duration-300 shadow-sm">
-                <div className="mb-5 text-primary transform group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="flex flex-col items-center p-8 rounded-2xl group transition-all duration-300 shadow-sm" style={{ backgroundColor: '#E8EEEE', border: '1px solid #C5DAD8' }}>
+                <div className="mb-5 transform group-hover:scale-110 transition-transform duration-300" style={{ color: '#026460' }}>
                   <Icons.Check />
                 </div>
-                <span className="font-heading text-xl font-medium leading-snug text-secondary">
+                <span className="font-heading text-xl font-medium leading-snug" style={{ color: '#026460' }}>
                   {result}
                 </span>
               </div>
@@ -336,8 +335,8 @@ function TreatedVeinResult() {
           </div>
 
           <div className="inline-block relative">
-            <div className="absolute inset-x-0 bottom-1 h-3 bg-accent/50 -z-10 skew-x-12"></div>
-            <p className="font-heading text-2xl md:text-3xl font-normal leading-relaxed text-secondary">
+            <div className="absolute inset-x-0 bottom-1 h-3 -z-10 skew-x-12" style={{ backgroundColor: 'rgba(2, 100, 96, 0.15)' }}></div>
+            <p className="font-heading text-2xl md:text-3xl font-normal leading-relaxed" style={{ color: '#026460' }}>
               Healthy veins take over blood circulation naturally.
             </p>
           </div>
@@ -358,26 +357,26 @@ function BenefitsOfEVLT() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24" style={{ backgroundColor: '#D8DCDF' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-6 font-normal">
+          <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-6 font-normal" style={{ color: '#026460' }}>
             Benefits of EVLT
           </h2>
-          <div className="w-16 h-1 bg-primary mx-auto opacity-20"></div>
+          <div className="w-16 h-1 mx-auto opacity-60" style={{ backgroundColor: '#026460' }}></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex gap-5 group hover:bg-white p-6 rounded-xl transition-colors duration-300 border border-transparent hover:border-gray-200 hover:shadow-sm">
-              <div className="flex-shrink-0 mt-1 text-primary group-hover:scale-110 transition-transform duration-300">
+            <div key={index} className="flex gap-5 group p-6 rounded-xl transition-colors duration-300 border border-transparent hover:shadow-sm" style={{ backgroundColor: 'transparent' }} onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#FFFFFF'; e.currentTarget.style.borderColor = '#D4E5E4'; }} onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = 'transparent'; }}>
+              <div className="flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" style={{ color: '#026460' }}>
                 <Icons.BigCheck />
               </div>
               <div>
-                <h3 className="font-heading text-xl font-medium mb-1 text-secondary">
+                <h3 className="font-heading text-xl font-medium mb-1" style={{ color: '#026460' }}>
                   {benefit.title}
                 </h3>
-                <p className="text-lg text-secondary/80">
+                <p className="text-lg" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>
                   {benefit.desc}
                 </p>
               </div>
@@ -400,46 +399,46 @@ function EVLTvsSurgery() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-secondary text-4xl md:text-[42px] leading-tight mb-4 font-normal">
+          <h2 className="font-heading text-4xl md:text-[42px] leading-tight mb-4 font-normal" style={{ color: '#026460' }}>
             EVLT vs. Traditional Surgery
           </h2>
-          <p className="text-lg text-secondary/60">
+          <p className="text-lg" style={{ color: 'rgba(2, 100, 96, 0.6)' }}>
             Why modern technology is the preferred choice
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-sm" style={{ border: '1px solid #C5DAD8', backgroundColor: '#FFFFFF' }}>
           {/* Table Header */}
-          <div className="grid grid-cols-2 bg-white border-b border-gray-200">
-            <div className="p-6 md:p-8 text-center border-r border-gray-200">
-              <h3 className="font-heading text-xl md:text-2xl font-bold text-primary">EVLT</h3>
-              <span className="text-sm uppercase tracking-wider text-primary font-semibold mt-2 block">The Modern Way</span>
+          <div className="grid grid-cols-2" style={{ borderBottom: '1px solid #C5DAD8' }}>
+            <div className="p-6 md:p-8 text-center" style={{ borderRight: '1px solid #C5DAD8', backgroundColor: '#C5DAD8' }}>
+              <h3 className="font-heading text-xl md:text-2xl font-bold" style={{ color: '#026460' }}>EVLT</h3>
+
             </div>
-            <div className="p-6 md:p-8 text-center bg-white">
+            <div className="p-6 md:p-8 text-center" style={{ backgroundColor: '#D8DCDF' }}>
               <h3 className="font-heading text-xl md:text-2xl font-bold text-gray-600">Traditional Surgery</h3>
-              <span className="text-sm uppercase tracking-wider text-gray-400 font-semibold mt-2 block">Vein Stripping</span>
+
             </div>
           </div>
 
           {/* Table Body */}
           <div>
             {comparisons.map((item, index) => (
-              <div key={index} className="grid grid-cols-2 border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors">
+              <div key={index} className="grid grid-cols-2 last:border-0 transition-colors" style={{ borderBottom: '1px solid rgba(212, 229, 228, 0.5)' }}>
                 {/* EVLT Side */}
-                <div className="p-6 md:p-8 border-r border-gray-100 flex items-center gap-4 bg-white">
-                  <div className="text-primary flex-shrink-0">
+                <div className="p-6 md:p-8 flex items-center gap-4" style={{ borderRight: '1px solid rgba(212, 229, 228, 0.5)', backgroundColor: '#FFFFFF' }}>
+                  <div className="flex-shrink-0" style={{ color: '#026460' }}>
                     <Icons.Check />
                   </div>
-                  <span className="text-lg font-medium text-primary">
+                  <span className="text-lg font-medium" style={{ color: '#026460' }}>
                     {item.evlt}
                   </span>
                 </div>
 
                 {/* Surgery Side */}
-                <div className="p-6 md:p-8 bg-white flex items-center gap-4">
+                <div className="p-6 md:p-8 flex items-center gap-4" style={{ backgroundColor: '#FFFFFF' }}>
                   <div className="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0"></div>
                   <span className="text-lg text-gray-500">
                     {item.surgery}
@@ -470,12 +469,12 @@ function WhyChoosePlatformSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24" style={{ backgroundColor: '#C5DAD8' }}>
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-          {/* Left Content */}
-          <div className="lg:w-1/2">
-            <h2 className="font-heading text-4xl md:text-[48px] leading-tight font-normal mb-12 text-secondary">
+          {/* Left Content - Center Aligned */}
+          <div className="lg:w-1/2 flex flex-col items-center">
+            <h2 className="font-heading text-4xl md:text-[48px] leading-tight font-normal mb-12 text-center" style={{ color: '#026460' }}>
               Why Choose EVLT Through Our Platform?
             </h2>
             <div className="space-y-6">
@@ -484,10 +483,10 @@ function WhyChoosePlatformSection() {
                   key={idx}
                   className="flex items-center gap-5 group"
                 >
-                  <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300" style={{ backgroundColor: '#FFFFFF', color: '#026460' }}>
                     <Icons.Check />
                   </div>
-                  <span className="text-xl text-secondary/90 font-light">
+                  <span className="text-xl font-light" style={{ color: 'rgba(2, 100, 96, 0.9)' }}>
                     {benefit}
                   </span>
                 </div>
@@ -499,12 +498,11 @@ function WhyChoosePlatformSection() {
           <div className="lg:w-1/2">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=800&q=80"
-                alt="Modern vein clinic"
+                src="/check.png"
+                alt="EVLT Treatment"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
             </div>
           </div>
         </div>
@@ -515,22 +513,22 @@ function WhyChoosePlatformSection() {
 
 function EVLTCTASection() {
   return (
-    <section className="py-24 bg-primary">
+    <section className="py-24" style={{ backgroundColor: '#026460' }}>
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24 text-center">
         <h2 className="font-heading text-4xl md:text-5xl lg:text-[56px] font-normal mb-6 text-white leading-tight">
           Take the First Step Toward Healthier Legs
         </h2>
-        <p className="text-xl md:text-2xl text-white/90 mb-4 font-light">
+        <p className="text-xl md:text-2xl mb-4 font-light" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
           Varicose veins don&apos;t have to control your life.
         </p>
-        <p className="text-lg md:text-xl text-white/80 mb-12 font-light max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
           EVLT offers safe, effective, long-lasting relief — without surgery.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-primary font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300 cursor-pointer text-lg">
+          <button className="font-semibold py-4 px-8 rounded-full transition-colors duration-300 cursor-pointer text-lg" style={{ backgroundColor: '#FF8968', color: '#FFFFFF' }}>
             Book a Consultation
           </button>
-          <button className="bg-transparent border-2 border-white text-white font-semibold py-4 px-8 rounded-full hover:bg-white/10 transition-colors duration-300 cursor-pointer text-lg">
+          <button className="bg-transparent font-semibold py-4 px-8 rounded-full transition-colors duration-300 cursor-pointer text-lg" style={{ border: '2px solid #FFFFFF', color: '#FFFFFF' }}>
             Find a Vein Specialist Near You
           </button>
         </div>
@@ -586,32 +584,22 @@ function DiseaseInfoSection() {
       title: "Is EVLT Painful?",
       content: (
         <div>
-          <h4 className="font-heading text-3xl font-normal mb-6 text-secondary">
+          <h4 className="font-heading text-3xl font-normal mb-6" style={{ color: '#026460' }}>
             Is EVLT Painful?
           </h4>
-          <p className="text-xl text-secondary/80 mb-10 leading-relaxed font-light">
-            Most patients describe EVLT as{" "}
-            <span className="font-medium text-secondary">
-              mildly uncomfortable at most, not painful.
-            </span>
+          <p className="text-xl mb-8 leading-relaxed font-light" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>
+            Most patients describe EVLT as mildly uncomfortable at most, not painful.
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="space-y-4">
             {[
-              { title: "Local Anesthesia", text: "Prevents pain effectively during the procedure." },
-              { title: "Sensation", text: "You may feel slight pressure or warmth." },
-              { title: "Post-Procedure", text: "Soreness is minimal and temporary." },
-              { title: "Management", text: "Pain is usually managed with simple oral medication if needed." },
-            ].map((point, idx) => (
-              <div key={idx} className="flex gap-5 border-t border-accent pt-6">
-                <div>
-                  <h5 className="font-heading font-medium text-secondary text-lg mb-2">
-                    {point.title}
-                  </h5>
-                  <p className="text-secondary/70 text-lg font-light leading-relaxed">
-                    {point.text}
-                  </p>
-                </div>
+              "Local anesthesia prevents pain",
+              "You may feel slight pressure or warmth",
+              "Post-procedure soreness is minimal and temporary",
+              "Pain is usually managed with simple oral medication if needed",
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#026460' }}></div>
+                <span className="text-lg font-light" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>{item}</span>
               </div>
             ))}
           </div>
@@ -623,10 +611,10 @@ function DiseaseInfoSection() {
       title: "Recovery After EVLT",
       content: (
         <div>
-          <h4 className="font-heading text-3xl font-normal mb-8 text-secondary">
+          <h4 className="font-heading text-3xl font-normal mb-8" style={{ color: '#026460' }}>
             Recovery After EVLT
           </h4>
-          <div className="space-y-6">
+          <div className="space-y-4">
             {[
               "Walk immediately after the procedure",
               "Resume normal daily activities within 1–2 days",
@@ -635,9 +623,9 @@ function DiseaseInfoSection() {
               "Follow-up ultrasound confirms successful closure",
               "Most patients return to work within 24–48 hours",
             ].map((item, idx) => (
-              <div key={idx} className="flex items-start gap-4 group">
-                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-125 transition-transform duration-300"></div>
-                <span className="text-lg text-secondary/80 font-light">{item}</span>
+              <div key={idx} className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#026460' }}></div>
+                <span className="text-lg font-light" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>{item}</span>
               </div>
             ))}
           </div>
@@ -649,34 +637,28 @@ function DiseaseInfoSection() {
       title: "Is EVLT Safe?",
       content: (
         <div>
-          <h4 className="font-heading text-3xl font-normal mb-6 text-secondary">
+          <h4 className="font-heading text-3xl font-normal mb-6" style={{ color: '#026460' }}>
             Is EVLT Safe?
           </h4>
           <div className="mb-10">
-            <p className="font-heading text-xl text-secondary font-medium mb-2">
+            <p className="font-heading text-xl font-medium mb-4" style={{ color: '#026460' }}>
               Yes. EVLT is FDA-approved and globally accepted.
             </p>
-            <p className="text-lg text-secondary/70 font-light">
-              When performed by an experienced specialist complications are rare.
+            <p className="text-lg font-medium mb-6" style={{ color: '#026460' }}>
+              When performed by an experienced specialist:
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              "Complications are rare",
-              "Infection risk is minimal",
-              "Long-term outcomes are excellent",
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 border border-gray-200 text-left hover:border-primary transition-colors duration-300"
-              >
-                <span className="font-heading font-medium text-secondary text-lg block mb-2">
-                  0{idx + 1}
-                </span>
-                <span className="text-secondary/80 font-light">{item}</span>
-              </div>
-            ))}
+            <div className="space-y-4">
+              {[
+                "Complications are rare",
+                "Infection risk is minimal",
+                "Long-term outcomes are excellent",
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-4">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#026460' }}></div>
+                  <span className="text-lg font-light" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       ),
@@ -686,30 +668,24 @@ function DiseaseInfoSection() {
       title: "Insurance Coverage",
       content: (
         <div>
-          <h4 className="font-heading text-3xl font-normal mb-6 text-secondary">
+          <h4 className="font-heading text-3xl font-normal mb-6" style={{ color: '#026460' }}>
             Is EVLT Covered by Insurance?
           </h4>
-          <p className="text-xl text-secondary/80 mb-10 leading-relaxed font-light">
-            In many cases, EVLT is covered by insurance when varicose veins are medically necessary
-            (pain, swelling, ulcers, venous reflux).
+          <p className="text-xl mb-8 leading-relaxed font-light" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>
+            In many cases, EVLT is covered by insurance when varicose veins are medically necessary (pain, swelling, ulcers, venous reflux).
           </p>
-
-          <div className="bg-secondary text-white p-10 relative overflow-hidden">
-            <div className="relative z-10">
-              <h5 className="font-heading text-2xl font-normal mb-8 opacity-90">
-                Our team can help you:
-              </h5>
-              <ul className="space-y-4">
-                {["Check eligibility", "Understand coverage", "Get required documentation"].map(
-                  (item, idx) => (
-                    <li key={idx} className="flex items-center gap-4 text-lg font-light opacity-90">
-                      <div className="w-5 h-px bg-white/50"></div>
-                      <span>{item}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
+          <p className="text-lg font-medium mb-6" style={{ color: '#026460' }}>
+            Our team can help you:
+          </p>
+          <div className="space-y-4">
+            {["Check eligibility", "Understand coverage", "Get required documentation"].map(
+              (item, idx) => (
+                <div key={idx} className="flex items-center gap-4">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#026460' }}></div>
+                  <span className="text-lg font-light" style={{ color: 'rgba(2, 100, 96, 0.8)' }}>{item}</span>
+                </div>
+              )
+            )}
           </div>
         </div>
       ),
@@ -717,11 +693,11 @@ function DiseaseInfoSection() {
   ];
 
   return (
-    <section className="py-32 bg-background">
+    <section className="py-32" style={{ backgroundColor: '#E8EEEE' }}>
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-24">
-        <h2 className="font-heading text-4xl md:text-[56px] leading-[1.1] font-normal mb-20 text-secondary max-w-3xl text-center mx-auto">
+        <h2 className="font-heading text-4xl md:text-[56px] leading-[1.1] font-normal mb-20 max-w-3xl text-center mx-auto" style={{ color: '#026460' }}>
           Patient Guide &{" "}
-          <span className="italic text-primary">Frequently Asked Questions</span>
+          <span className="italic" style={{ color: '#026460' }}>Frequently Asked Questions</span>
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-24">
@@ -733,14 +709,16 @@ function DiseaseInfoSection() {
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className="text-left py-5 border-b border-accent transition-all duration-300 text-lg flex justify-between items-center group cursor-pointer"
+                    className="text-left py-5 transition-all duration-300 text-lg flex justify-between items-center group cursor-pointer"
+                    style={{ borderBottom: '1px solid rgba(2, 100, 96, 0.2)' }}
                   >
                     <span
                       className={`${
                         activeTab === section.id
-                          ? "text-secondary font-medium translate-x-2"
-                          : "text-secondary/60 group-hover:text-secondary"
+                          ? "font-medium translate-x-2"
+                          : "group-hover:opacity-100"
                       } transition-all duration-300`}
+                      style={{ color: activeTab === section.id ? '#026460' : 'rgba(2, 100, 96, 0.6)' }}
                     >
                       {section.title}
                     </span>
@@ -749,7 +727,8 @@ function DiseaseInfoSection() {
                         activeTab === section.id
                           ? "opacity-100 translate-x-0"
                           : "opacity-0 -translate-x-2"
-                      } transition-all duration-300 text-secondary`}
+                      } transition-all duration-300`}
+                      style={{ color: '#026460' }}
                     >
                       <Icons.ChevronRight />
                     </span>
@@ -764,16 +743,18 @@ function DiseaseInfoSection() {
             {/* Mobile Accordion */}
             <div className="lg:hidden space-y-4">
               {sections.map((section) => (
-                <div key={section.id} className="border-b border-accent">
+                <div key={section.id} style={{ borderBottom: '1px solid rgba(2, 100, 96, 0.2)' }}>
                   <button
                     onClick={() => toggleAccordion(section.id)}
-                    className="w-full flex justify-between items-center py-5 text-left text-xl text-secondary cursor-pointer"
+                    className="w-full flex justify-between items-center py-5 text-left text-xl cursor-pointer"
+                    style={{ color: '#026460' }}
                   >
                     <span className="font-heading">{section.title}</span>
                     <div
-                      className={`transform transition-transform duration-300 text-primary ${
+                      className={`transform transition-transform duration-300 ${
                         openAccordion === section.id ? "rotate-180" : ""
                       }`}
+                      style={{ color: '#026460' }}
                     >
                       <Icons.ChevronDown />
                     </div>
