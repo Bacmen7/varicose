@@ -57,12 +57,12 @@ export default function LocationsSection() {
                         <div
                             className="absolute inset-0 z-0 pointer-events-none"
                             style={{
-                                backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')",
+                                backgroundImage: "url('/india.svg')",
                                 backgroundPosition: 'center',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
-                                opacity: 0.25,
-                                filter: 'invert(55%) sepia(66%) saturate(492%) hue-rotate(134deg) brightness(90%) contrast(92%)'
+                                opacity: 0.2,
+                                filter: 'invert(45%) sepia(25%) saturate(1500%) hue-rotate(130deg) brightness(95%) contrast(90%)'
                             }}
                         ></div>
 

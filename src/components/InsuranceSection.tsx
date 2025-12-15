@@ -47,12 +47,11 @@ export default function InsuranceSection() {
           <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-0">
             <div className="absolute inset-0 w-full h-full">
               <Image
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+                src="/insurance.png"
                 alt="Insurance Support"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
             </div>
           </div>
         </div>
