@@ -404,7 +404,7 @@ export default function EarlyWarningSignsPage() {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`block w-full text-left transition-all cursor-pointer py-3 border-b-2 ${activeSection === item.id ? 'text-primary text-base font-medium border-primary' : 'text-gray-600 hover:text-primary text-sm border-gray-200'}`}
+                    className={`block w-full text-left transition-all cursor-pointer py-3 border-b-2 font-heading ${activeSection === item.id ? 'text-primary text-base font-medium border-primary' : 'text-gray-600 hover:text-primary text-sm border-gray-200'}`}
                   >
                     {item.title}
                   </button>
