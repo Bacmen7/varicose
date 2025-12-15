@@ -4,13 +4,62 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const tableOfContents = [
+  { id: "how-veins-work", title: "How Do Veins Normally Work?" },
+  { id: "root-cause", title: "The Root Cause: Weak or Damaged Vein Valves" },
+  { id: "what-happens-ignored", title: "What Happens If Varicose Veins Are Ignored?" },
+  { id: "prevention", title: "Can Varicose Veins Be Prevented?" },
+  { id: "diagnosis", title: "How Are the Real Causes Diagnosed?" },
+  { id: "modern-treatments", title: "The Good News: Modern Treatments Fix the Root Cause" },
+  { id: "when-to-see-doctor", title: "When Should You See a Doctor?" },
+];
 
 export default function WhyVaricoseVeinsHappenPage() {
+  const [activeSection, setActiveSection] = useState("");
+
+  const scrollToSection = (id: string) => {
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionIds = tableOfContents.map(item => item.id);
+      let currentSection = sectionIds[0];
+
+      for (const sectionId of sectionIds) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150) {
+            currentSection = sectionId;
+          }
+        }
+      }
+      setActiveSection(currentSection);
+    };
+
+    handleScroll(); // Initial check
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="bg-white">
       {/* Hero */}
       <section className="bg-surface pt-8 pb-16">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <Link href="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-primary mb-8 text-sm transition-colors">
             <ArrowLeft size={16} /> Back to Home
           </Link>
@@ -21,11 +70,53 @@ export default function WhyVaricoseVeinsHappenPage() {
           <p className="text-lg md:text-[22px] md:leading-[33px] mt-4 max-w-2xl" style={{ color: '#48546B' }}>
             Understanding the real cause behind bulging, painful veins
           </p>
+
+          {/* Author Info */}
+          <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-sm md:text-base" style={{ color: '#48546B' }}>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Written by</p>
+                <p className="font-medium text-secondary">Dr. Priya Sharma</p>
+              </div>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-gray-300"></div>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Medically reviewed by</p>
+                <p className="font-medium text-secondary">Dr. Rajesh Kumar, MD</p>
+              </div>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-gray-300"></div>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Last Updated</p>
+                <p className="font-medium text-secondary">November 20, 2025</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Article Content */}
-      <article className="max-w-3xl mx-auto px-6 py-16">
+      {/* Article Content with Sidebar */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Main Article */}
+          <article className="lg:w-2/3">
 
         {/* Intro */}
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-6" style={{ color: '#48546B' }}>
@@ -36,7 +127,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* How Veins Work */}
-        <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
+        <h2 id="how-veins-work" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
           First Things First: How Do Veins Normally Work?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
@@ -54,7 +145,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* Root Cause with Image */}
-        <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
+        <h2 id="root-cause" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
           The Root Cause: Weak or Damaged Vein Valves
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-6" style={{ color: '#48546B' }}>
@@ -177,7 +268,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* What Happens If Ignored */}
-        <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
+        <h2 id="what-happens-ignored" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
           What Happens If Varicose Veins Are Ignored?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
@@ -196,7 +287,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* Prevention */}
-        <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
+        <h2 id="prevention" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
           Can Varicose Veins Be Prevented?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
@@ -214,7 +305,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* Diagnosis */}
-        <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
+        <h2 id="diagnosis" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
           How Are the Real Causes Diagnosed?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
@@ -230,7 +321,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* Modern Treatments */}
-        <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
+        <h2 id="modern-treatments" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
           The Good News: Modern Treatments Fix the Root Cause
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
@@ -247,7 +338,7 @@ export default function WhyVaricoseVeinsHappenPage() {
         </p>
 
         {/* When to See Doctor */}
-        <div className="bg-cta/10 border border-cta/20 p-6 rounded-xl mb-12">
+        <div id="when-to-see-doctor" className="bg-cta/10 border border-cta/20 p-6 rounded-xl mb-12 scroll-mt-28">
           <h2 className="font-heading text-xl md:text-2xl text-[#023936] mb-4">
             When Should You See a Doctor?
           </h2>
@@ -264,7 +355,27 @@ export default function WhyVaricoseVeinsHappenPage() {
           </p>
         </div>
 
-      </article>
+          </article>
+
+          {/* Table of Contents Sidebar */}
+          <aside className="lg:w-1/3">
+            <div className="sticky top-28 bg-surface rounded-2xl p-6">
+              <h3 className="font-heading text-xl text-secondary mb-6">Table of Contents</h3>
+              <nav>
+                {tableOfContents.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`block w-full text-left transition-all cursor-pointer py-3 border-b-2 ${activeSection === item.id ? 'text-primary text-base font-medium border-primary' : 'text-gray-600 hover:text-primary text-sm border-gray-200'}`}
+                  >
+                    {item.title}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </aside>
+        </div>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20" style={{ background: 'linear-gradient(to bottom, #E8D5A3 0%, #F5E6C3 50%, #FFFFFF 100%)' }}>

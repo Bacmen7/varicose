@@ -26,7 +26,7 @@ export default function FeaturesSection() {
     <section className="py-24 w-full bg-surface">
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Header */}
-        <div className="mb-14 lg:mb-20 text-center max-w-3xl mx-auto">
+        <div className="mb-8 lg:mb-12 text-center max-w-3xl mx-auto">
           <p className="text-primary font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
             WHY CHOOSE US
           </p>

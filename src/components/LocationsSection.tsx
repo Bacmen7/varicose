@@ -1,36 +1,14 @@
 import { MapPin } from 'lucide-react';
 
-const column1 = [
-    { name: 'Hyderabad', link: 'https://www.olivaclinic.com/hyderabad/' },
-    { name: 'Kolkata', link: 'https://www.olivaclinic.com/kolkata/' },
-    { name: 'Vijayawada', link: 'https://www.olivaclinic.com/vijayawada/' },
-    { name: 'Ahmedabad', link: 'https://www.olivaclinic.com/ahmedabad/' },
-];
+const column1 = ['Hyderabad', 'Kolkata', 'Vijayawada', 'Ahmedabad'];
+const column2 = ['Bengaluru', 'Pune', 'Ludhiana'];
+const column3 = ['Chennai', 'Vizag', 'Kochi'];
 
-const column2 = [
-    { name: 'Bengaluru', link: 'https://www.olivaclinic.com/bangalore/' },
-    { name: 'Pune', link: 'https://www.olivaclinic.com/pune/' },
-    { name: 'Ludhiana', link: 'https://www.olivaclinic.com/ludhiana/' },
-];
-
-const column3 = [
-    { name: 'Chennai', link: 'https://www.olivaclinic.com/chennai/' },
-    { name: 'Vizag', link: 'https://www.olivaclinic.com/vizag/' },
-    { name: 'Kochi', link: 'https://www.olivaclinic.com/kochi/' },
-];
-
-interface City {
-    name: string;
-    link: string;
-}
-
-const LocationItem = ({ city, showBorder = false }: { city: City; showBorder?: boolean }) => (
+const LocationItem = ({ city, showBorder = false }: { city: string; showBorder?: boolean }) => (
     <li className={`mb-6 last:mb-0 flex justify-center lg:justify-start relative`}>
-        <a
-            href={city.link}
-            title={city.name}
+        <div
             className={`
-        group flex items-center text-gray-900 hover:text-[#2C847F] transition-colors duration-200
+        flex items-center text-gray-900
         w-full
         ${showBorder ? 'border-r border-[#2C847F]' : ''}
       `}
@@ -39,12 +17,12 @@ const LocationItem = ({ city, showBorder = false }: { city: City; showBorder?: b
                 <MapPin className="w-5 h-5 lg:w-6 lg:h-6 stroke-[1.5]" />
             </div>
             <span
-                className="text-xs sm:text-sm lg:text-[15px] font-normal tracking-wide text-gray-800 group-hover:text-[#2C847F]"
+                className="text-xs sm:text-sm lg:text-[15px] font-normal tracking-wide text-gray-800"
                 style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
             >
-                {city.name}
+                {city}
             </span>
-        </a>
+        </div>
     </li>
 );
 

@@ -29,7 +29,7 @@ export default function Navbar() {
               fill="#2dd4bf"
             />
           </svg>
-          <span className="text-xl font-semibold text-gray-700" style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}>Varicose</span>
+          <span className="text-xl font-bold text-[#023936]">Varicose</span>
         </Link>
 
         {/* Mobile Menu Button */}
