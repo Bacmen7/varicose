@@ -1,73 +1,75 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const conditions = [
   {
     name: "Varicose Veins",
     href: "/conditions/varicose-veins",
-    description: "Enlarged, twisted veins visible under the skin"
+    image: "/user/varicose vein.png",
   },
   {
     name: "Spider Veins",
-    href: "#",
-    description: "Small, thin blood vessels visible on skin surface"
+    href: "/conditions/spider-veins",
+    image: "/user/spider.png",
   },
   {
     name: "Deep Vein Reflux",
-    href: "#",
-    description: "Blood flowing backward in deep leg veins"
+    href: "/conditions/deep-vein-reflux",
+    image: "/user/deep.png",
   },
   {
-    name: "Venous Insufficiency",
-    href: "#",
-    description: "Poor blood return from legs to heart"
+    name: "Chronic Venous Insufficiency",
+    href: "/conditions/chronic-venous-insufficiency",
+    image: "/user/chronic.png",
   },
   {
     name: "Leg Pain & Heaviness",
-    href: "#",
-    description: "Chronic discomfort and tired legs"
+    href: "/conditions/leg-pain-heaviness",
+    image: "/user/legpain.png",
   },
   {
-    name: "Non-healing Ulcers",
-    href: "#",
-    description: "Open wounds that don't heal properly"
+    name: "Swelling, Skin Changes, Non-healing Ulcers",
+    href: "/conditions/swelling-skin-changes",
+    image: "/user/swelling.png",
   },
 ];
 
 export default function ConditionsSection() {
   return (
-    <section className="py-20 w-full bg-accent-light">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+    <section className="py-16 md:py-24 w-full bg-surface">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-primary font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
+        <div className="max-w-2xl mb-12">
+          <h2 className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4" style={{ color: '#026460' }}>
             Conditions We Treat
-          </p>
-          <h2 className="font-heading text-secondary text-3xl font-medium lg:text-4xl mb-4 leading-tight max-w-3xl mx-auto">
-            Varicose veins aren&apos;t just cosmetic — they signal deeper circulation issues
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">
-            We help you find specialized care for various vein conditions
+          <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
+            Varicose veins aren&apos;t just cosmetic — they signal deeper circulation issues. We help you find care for:
           </p>
         </div>
 
         {/* Conditions Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {conditions.map((condition) => (
             <Link
               key={condition.name}
               href={condition.href}
-              className="bg-white p-6 rounded-2xl flex flex-col transition-all border-2 border-transparent hover:border-primary/30 cursor-pointer group"
+              className="group bg-white rounded-2xl overflow-hidden"
             >
-              <h3 className="font-heading font-semibold text-secondary text-xl mb-2 group-hover:text-primary transition-colors">
-                {condition.name}
-              </h3>
-              <p className="text-gray-500 text-sm mb-4 flex-grow">
-                {condition.description}
-              </p>
-              <div className="flex items-center text-primary font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-                Learn more
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <div className="aspect-[4/3] relative">
+                <Image
+                  src={condition.image}
+                  alt={condition.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 flex items-center justify-between">
+                <span className="font-heading text-[15px] text-secondary group-hover:text-primary transition-colors">
+                  {condition.name}
+                </span>
+                <ArrowRight size={18} className="text-primary shrink-0" />
               </div>
             </Link>
           ))}
