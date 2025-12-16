@@ -224,7 +224,7 @@ export default function VaricoseVeinsPage() {
                 When Should You Be Concerned?
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
-                Consider seeing a specialist if you experience any of these:
+                You should consider seeing a specialist if:
               </p>
             </div>
 
@@ -241,7 +241,7 @@ export default function VaricoseVeinsPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
-                  <span className="text-lg" style={{ color: '#48546B' }}>Skin color or texture changes near ankles</span>
+                  <span className="text-lg" style={{ color: '#48546B' }}>Skin around the ankles changes color or texture</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
@@ -249,17 +249,17 @@ export default function VaricoseVeinsPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
-                  <span className="text-lg" style={{ color: '#48546B' }}>One leg feels worse than the other</span>
+                  <span className="text-lg" style={{ color: '#48546B' }}>One leg feels consistently worse than the other</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
-                  <span className="text-lg" style={{ color: '#48546B' }}>Family history of varicose veins</span>
+                  <span className="text-lg" style={{ color: '#48546B' }}>You have a family history of varicose veins</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
+                  <span className="text-lg" style={{ color: '#48546B' }}>Visible veins alone aren&apos;t the only indicator</span>
                 </div>
               </div>
-
-              <p className="text-base italic mt-8" style={{ color: '#48546B' }}>
-                If you checked even one — it&apos;s worth getting evaluated.
-              </p>
             </div>
           </div>
         </div>
