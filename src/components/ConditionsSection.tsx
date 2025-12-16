@@ -37,39 +37,45 @@ const conditions = [
 
 export default function ConditionsSection() {
   return (
-    <section className="py-16 md:py-24 w-full" style={{ backgroundColor: '#D6E6E5' }}>
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="py-12 md:py-16 lg:py-24 w-full" style={{ backgroundColor: '#D6E6E5' }}>
+      <div className="max-w-4xl mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="max-w-2xl mb-12">
-          <h2 className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4" style={{ color: '#026460' }}>
+        <div className="max-w-2xl mb-8 md:mb-12">
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-[40px] md:leading-[48px] mb-3 md:mb-4" style={{ color: '#026460' }}>
             Conditions We Treat
           </h2>
-          <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
+          <p className="text-base md:text-lg leading-relaxed" style={{ color: '#48546B' }}>
             Varicose veins aren&apos;t just cosmetic — they signal deeper circulation issues. We help you find care for:
           </p>
         </div>
 
-        {/* Conditions Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Conditions Carousel/Grid */}
+        <div
+          className="flex overflow-x-auto gap-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
+          }}
+        >
           {conditions.map((condition) => (
             <Link
               key={condition.name}
               href={condition.href}
-              className="group bg-white rounded-2xl overflow-hidden"
+              className="group relative aspect-[4/3] rounded-lg overflow-hidden hover:ring-4 hover:ring-primary/30 transition-all min-w-[70%] sm:min-w-[45%] md:min-w-0 snap-center"
             >
-              <div className="aspect-[3/2] relative">
-                <Image
-                  src={condition.image}
-                  alt={condition.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4 flex items-center justify-between">
-                <span className="font-heading text-[15px] text-secondary group-hover:text-primary transition-colors">
-                  {condition.name}
-                </span>
-                <ArrowRight size={18} className="text-primary shrink-0" />
+              <Image
+                src={condition.image}
+                alt={condition.name}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-primary/90 group-hover:to-primary/20 transition-all duration-300 flex items-end p-4 md:p-5">
+                <div className="flex items-center justify-between w-full">
+                  <h3 className="font-heading text-base md:text-lg font-medium text-white leading-tight">
+                    {condition.name}
+                  </h3>
+                  <ArrowRight size={18} className="text-white group-hover:translate-x-1 transition-transform shrink-0 md:w-5 md:h-5" />
+                </div>
               </div>
             </Link>
           ))}
