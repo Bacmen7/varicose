@@ -255,11 +255,11 @@ export default function VaricoseVeinsPage() {
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
                   <span className="text-lg" style={{ color: '#48546B' }}>You have a family history of varicose veins</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
-                  <span className="text-lg" style={{ color: '#48546B' }}>Visible veins alone aren&apos;t the only indicator</span>
-                </div>
               </div>
+
+              <p className="text-base italic mt-8" style={{ color: '#48546B' }}>
+                Visible veins alone aren&apos;t the only indicator.
+              </p>
             </div>
           </div>
         </div>
