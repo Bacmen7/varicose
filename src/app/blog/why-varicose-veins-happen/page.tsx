@@ -358,7 +358,7 @@ export default function WhyVaricoseVeinsHappenPage() {
           </article>
 
           {/* Table of Contents Sidebar */}
-          <aside className="lg:w-1/3">
+          <aside className="hidden lg:block lg:w-1/3">
             <div className="sticky top-28 bg-surface rounded-2xl p-6">
               <h3 className="font-heading text-xl text-secondary mb-6">Table of Contents</h3>
               <nav>
