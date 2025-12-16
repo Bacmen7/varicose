@@ -38,7 +38,7 @@ const conditions = [
 export default function ConditionsSection() {
   return (
     <section className="py-12 md:py-16 lg:py-24 w-full" style={{ backgroundColor: '#D6E6E5' }}>
-      <div className="max-w-4xl mx-auto px-4 md:px-6">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mb-8 md:mb-12">
           <h2 className="font-heading text-2xl md:text-3xl lg:text-[40px] md:leading-[48px] mb-3 md:mb-4" style={{ color: '#026460' }}>
@@ -49,9 +49,9 @@ export default function ConditionsSection() {
           </p>
         </div>
 
-        {/* Conditions Carousel/Grid */}
+        {/* Conditions Carousel */}
         <div
-          className="flex overflow-x-auto gap-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden"
+          className="flex overflow-x-auto gap-4 md:gap-5 snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
@@ -61,7 +61,7 @@ export default function ConditionsSection() {
             <Link
               key={condition.name}
               href={condition.href}
-              className="group relative aspect-[4/3] rounded-lg overflow-hidden hover:ring-4 hover:ring-primary/30 transition-all min-w-[70%] sm:min-w-[45%] md:min-w-0 snap-center"
+              className="group relative aspect-[4/3] rounded-lg overflow-hidden hover:ring-4 hover:ring-primary/30 transition-all min-w-[70%] sm:min-w-[45%] md:min-w-[30%] snap-center"
             >
               <Image
                 src={condition.image}
