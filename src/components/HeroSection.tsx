@@ -9,7 +9,7 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 px-4 py-12 md:px-8 lg:px-12 lg:py-16 flex flex-col justify-center">
             <h1 className="font-heading text-secondary text-3xl md:text-4xl lg:text-5xl font-normal mb-6 leading-tight">
-              Relief From Varicose Veins Starts Here
+              Relief From VaricoseVeins Starts Here
             </h1>
 
             <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed max-w-lg">
@@ -31,7 +31,7 @@ export default function HeroSection() {
           <div className="w-full lg:w-1/2 h-[350px] lg:h-auto relative">
             <Image
               src="/hero.png"
-              alt="Varicose vein treatment"
+              alt="Varicosevein treatment"
               fill
               className="object-cover object-center"
               priority

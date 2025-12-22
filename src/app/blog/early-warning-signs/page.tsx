@@ -62,7 +62,7 @@ export default function EarlyWarningSignsPage() {
             <ArrowLeft size={16} /> Back to Home
           </Link>
           <h1 className="font-heading text-4xl md:text-[56px] md:leading-[73px] mt-4" style={{ color: '#026460' }}>
-            Early Warning Signs of Varicose Veins
+            Early Warning Signs of VaricoseVeins
           </h1>
           <p className="text-lg md:text-[22px] md:leading-[33px] mt-4 max-w-2xl" style={{ color: '#48546B' }}>
             Subtle symptoms today can prevent serious vein problems tomorrow
@@ -117,7 +117,7 @@ export default function EarlyWarningSignsPage() {
 
         {/* Intro */}
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
-          Most people think varicose veins appear suddenly as bulging, twisted veins.
+          Most people think Varicoseveins appear suddenly as bulging, twisted veins.
         </p>
         <p className="text-2xl font-heading text-[#023936] mb-6">
           They don&apos;t.
@@ -131,7 +131,7 @@ export default function EarlyWarningSignsPage() {
           Why Early Signs Matter
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
-          Varicose veins are a <strong className="font-bold">progressive condition</strong>. That means:
+          Varicoseveins are a <strong className="font-bold">progressive condition</strong>. That means:
         </p>
         <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] mb-6 space-y-2 ml-4" style={{ color: '#48546B' }}>
           <li>Symptoms start mild</li>
@@ -332,7 +332,7 @@ export default function EarlyWarningSignsPage() {
           Pay closer attention if you:
         </p>
         <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] mb-12 space-y-2 ml-4" style={{ color: '#48546B' }}>
-          <li>Have a family history of varicose veins</li>
+          <li>Have a family history of Varicoseveins</li>
           <li>Stand or sit for long hours</li>
           <li>Are pregnant or recently delivered</li>
           <li>Are overweight</li>
@@ -380,7 +380,7 @@ export default function EarlyWarningSignsPage() {
         <div id="takeaway" className="text-white p-8 rounded-2xl mb-12 scroll-mt-28" style={{ backgroundColor: '#1D5E5B' }}>
           <h2 className="font-heading text-2xl md:text-3xl mb-4">The Takeaway</h2>
           <p className="text-lg md:text-[22px] md:leading-[33px] text-white/90 mb-4">
-            Varicose veins rarely start with bulging veins. They start with:
+            Varicoseveins rarely start with bulging veins. They start with:
           </p>
           <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] text-white/80 space-y-2 ml-4 mb-4">
             <li>Heaviness</li>

@@ -3,9 +3,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Varicose Care | Expert Vein Treatment",
+  title: "Varicose| Expert Vein Treatment",
   description:
-    "Find trusted vein specialists near you. Science-backed varicose vein treatments with modern care you can rely on.",
+    "Find trusted vein specialists near you. Science-backed Varicosevein treatments with modern care you can rely on.",
 };
 
 export default function RootLayout({

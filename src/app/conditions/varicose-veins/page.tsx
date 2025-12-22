@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
 
-export default function VaricoseVeinsPage() {
+export default function varicoseVeinsPage() {
   return (
     <main className="bg-white">
       {/* Hero */}
@@ -17,10 +17,10 @@ export default function VaricoseVeinsPage() {
             {/* Left Content */}
             <div className="lg:w-1/2">
               <h1 className="font-heading text-4xl md:text-[48px] md:leading-[56px] mb-6" style={{ color: '#026460' }}>
-                What Are Varicose Veins?
+                What Are VaricoseVeins?
               </h1>
               <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: '#48546B' }}>
-                Varicose veins are enlarged, twisted veins that usually appear on the legs and feet. They occur when the one-way valves inside veins weaken or fail.
+                Varicoseveins are enlarged, twisted veins that usually appear on the legs and feet. They occur when the one-way valves inside veins weaken or fail.
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed mb-3" style={{ color: '#48546B' }}>
@@ -43,7 +43,7 @@ export default function VaricoseVeinsPage() {
               </ul>
 
               <p className="text-base italic" style={{ color: '#48546B' }}>
-                This is why varicose veins often worsen with time.
+                This is why Varicoseveins often worsen with time.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export default function VaricoseVeinsPage() {
                 Common Symptoms
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
-                Varicose veins don&apos;t always start visibly. Many people experience symptoms years before veins become obvious.
+                Varicoseveins don&apos;t always start visibly. Many people experience symptoms years before veins become obvious.
               </p>
             </div>
 
@@ -112,17 +112,17 @@ export default function VaricoseVeinsPage() {
         </div>
       </section>
 
-      {/* Why Do Varicose Veins Happen Section */}
+      {/* Why Do VaricoseVeins Happen Section */}
       <section className="py-16 md:py-24 bg-surface">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* Left - Title */}
             <div className="lg:w-2/5">
               <h2 className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4" style={{ color: '#026460' }}>
-                Why Do Varicose Veins Happen?
+                Why Do VaricoseVeins Happen?
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
-                Varicose veins usually develop due to a combination of factors.
+                Varicoseveins usually develop due to a combination of factors.
               </p>
             </div>
 
@@ -168,17 +168,17 @@ export default function VaricoseVeinsPage() {
         </div>
       </section>
 
-      {/* Are Varicose Veins Dangerous Section */}
+      {/* Are VaricoseVeins Dangerous Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* Left - Title */}
             <div className="lg:w-2/5">
               <h2 className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4" style={{ color: '#026460' }}>
-                Are Varicose Veins Dangerous?
+                Are VaricoseVeins Dangerous?
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
-                Varicose veins are not immediately life-threatening — but they can progress if ignored.
+                Varicoseveins are not immediately life-threatening — but they can progress if ignored.
               </p>
             </div>
 
@@ -253,7 +253,7 @@ export default function VaricoseVeinsPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0"></span>
-                  <span className="text-lg" style={{ color: '#48546B' }}>You have a family history of varicose veins</span>
+                  <span className="text-lg" style={{ color: '#48546B' }}>You have a family history of Varicoseveins</span>
                 </div>
               </div>
 
@@ -265,14 +265,14 @@ export default function VaricoseVeinsPage() {
         </div>
       </section>
 
-      {/* How Are Varicose Veins Diagnosed Section */}
+      {/* How Are VaricoseVeins Diagnosed Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* Left - Title */}
             <div className="lg:w-2/5">
               <h2 className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4" style={{ color: '#026460' }}>
-                How Are Varicose Veins Diagnosed?
+                How Are VaricoseVeins Diagnosed?
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
                 Diagnosis goes beyond visual inspection.
@@ -307,14 +307,14 @@ export default function VaricoseVeinsPage() {
         </div>
       </section>
 
-      {/* Do Varicose Veins Go Away Section */}
+      {/* Do VaricoseVeins Go Away Section */}
       <section className="py-16 md:py-24 bg-surface">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* Left - Title */}
             <div className="lg:w-2/5">
               <h2 className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4" style={{ color: '#026460' }}>
-                Do Varicose Veins Go Away on Their Own?
+                Do VaricoseVeins Go Away on Their Own?
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
                 Unfortunately, damaged vein valves do not repair themselves.
@@ -359,7 +359,7 @@ export default function VaricoseVeinsPage() {
                 The Good News: Modern Treatments Are Simple
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: '#48546B' }}>
-                Today, most varicose veins are treated with minimally invasive, non-surgical procedures.
+                Today, most Varicoseveins are treated with minimally invasive, non-surgical procedures.
               </p>
             </div>
 
@@ -494,7 +494,7 @@ export default function VaricoseVeinsPage() {
                 href="#"
                 className="inline-block bg-cta hover:bg-cta/90 text-white font-medium px-8 py-4 rounded-full transition-colors text-lg"
               >
-                Find a varicose vein specialist near you
+                Find a Varicosevein specialist near you
               </a>
             </div>
 

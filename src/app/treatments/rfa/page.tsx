@@ -75,7 +75,7 @@ function RFAHero() {
             </h1>
             <div className="w-20 h-px mb-8 bg-primary/40"></div>
             <p className="text-xl lg:text-[22px] leading-relaxed tracking-wide text-primary">
-              A Proven, Minimally Invasive Treatment for Varicose Veins
+              A Proven, Minimally Invasive Treatment for VaricoseVeins
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ function WhatIsRFA() {
             </h2>
             <div className="text-lg md:text-[20px] leading-relaxed space-y-6 text-gray-600">
               <p>
-                RFA is a non-surgical, ultrasound-guided procedure used to treat varicose veins caused by venous reflux (backward blood flow).
+                RFA is a non-surgical, ultrasound-guided procedure used to treat Varicoseveins caused by venous reflux (backward blood flow).
               </p>
               <p>
                 Instead of removing the vein, RFA:
@@ -167,7 +167,7 @@ function WhyRFA() {
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col items-start group">
               <div className="mb-6 text-primary">
-                <span className="font-heading text-5xl font-light text-primary/30">{step.num}/</span>
+                <span className="font-heading text-5xl font-light text-primary/30">{step.num}</span>
               </div>
               <h3 className="font-heading text-2xl mb-2 text-secondary">
                 {step.title}
@@ -185,7 +185,7 @@ function WhyRFA() {
 
 function WhoNeedsRFA() {
   const recommendations = [
-    "Medium to large varicose veins",
+    "Medium to large Varicoseveins",
     "Confirmed venous reflux on Doppler ultrasound",
     "Leg pain, heaviness, or fatigue",
     "Swelling around ankles or calves",
@@ -195,7 +195,7 @@ function WhoNeedsRFA() {
 
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
+      <div className="max-w-[1440px] mx-auto px-8 md:pHow Does RFA Work? (Step-by-Step)x-16 lg:px-24">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           {/* Left: Heading & Subtitle */}
           <div className="lg:w-1/2">
@@ -502,7 +502,7 @@ function RFACTASection() {
           Take the Next Step Toward Healthier Legs
         </h2>
         <p className="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto text-white/90">
-          If varicose veins are affecting your comfort or daily life, RFA offers a safe and effective solution — without surgery.
+          If Varicoseveins are affecting your comfort or daily life, RFA offers a safe and effective solution — without surgery.
         </p>
         <div className="flex justify-center">
           <button className="font-semibold py-4 px-8 rounded-full transition-colors duration-300 cursor-pointer text-lg bg-white text-primary hover:opacity-90">
@@ -631,7 +631,7 @@ function DiseaseInfoSection() {
             {[
               "Widely used across the world",
               "Backed by strong clinical evidence",
-              "Considered a first-line treatment for varicose veins",
+              "Considered a first-line treatment for Varicoseveins",
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary"></div>

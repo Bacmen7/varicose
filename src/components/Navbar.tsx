@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,26 +20,17 @@ export default function Navbar() {
   return (
     <nav className="bg-white py-4 px-4 md:px-6 border-b border-gray-100 relative" style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16 4L4 28h8l4-8 4 8h8L16 4z"
-              fill="#0d7377"
-            />
-            <path
-              d="M16 4L12 12l4 8 4-8-4-8z"
-              fill="#2dd4bf"
-            />
-          </svg>
-          <span className="text-xl font-bold text-[#023936]">Varicose</span>
+
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Varyicose Heath"
+            width={90}
+            height={60}
+            priority
+          />
         </Link>
+
 
         {/* Mobile Menu Button */}
         <button
