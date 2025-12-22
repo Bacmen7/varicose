@@ -7,7 +7,6 @@ import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import LocationsSection from "@/components/LocationsSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import KnowledgeCenterSection from "@/components/KnowledgeCenterSection";
-import InsuranceSection from "@/components/InsuranceSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -23,7 +22,6 @@ export default function Home() {
       <LocationsSection />
       <TestimonialSlider />
       <KnowledgeCenterSection />
-      <InsuranceSection />
       <CTASection />
       <Footer />
     </main>

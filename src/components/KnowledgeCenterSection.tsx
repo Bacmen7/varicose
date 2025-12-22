@@ -31,7 +31,7 @@ const articles = [
 
 export default function KnowledgeCenterSection() {
   return (
-    <section className="py-24 w-full bg-surface">
+    <section className="pt-12 pb-16 w-full bg-surface">
       <div className="container mx-auto px-4 max-w-[1200px]">
         <h2 className="font-heading text-secondary text-3xl lg:text-4xl mb-4">
           Learn everything about varicose veins

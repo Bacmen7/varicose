@@ -31,11 +31,11 @@ export default function HowItWorksSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-16 lg:py-24 w-full bg-[#E3E6EA]">
+    <section className="py-12 lg:py-16 w-full bg-[#E3E6EA]">
       <div className="container mx-auto px-4 max-w-[1200px]">
-        <div className="flex flex-col gap-8 lg:flex-row-reverse items-start">
+        <div className="flex flex-col gap-6 lg:flex-row-reverse items-start">
           {/* Right Side (Desktop): Image Display */}
-          <div className="hidden lg:block w-full lg:w-1/2 aspect-[5/6] bg-gray-200 rounded-3xl overflow-hidden shadow-xl lg:sticky lg:top-24 relative">
+          <div className="hidden lg:block w-full lg:w-1/2 h-[600px] bg-gray-200 rounded-3xl overflow-hidden shadow-xl lg:sticky lg:top-24 relative">
             {steps.map((step, index) => (
               <div
                 key={step.id}
@@ -55,17 +55,17 @@ export default function HowItWorksSection() {
           </div>
 
           {/* Left Side: Content & Accordion */}
-          <div className="w-full lg:w-1/2 flex flex-col lg:pr-16">
-            <h2 className="font-heading mb-6 lg:mb-8 text-secondary text-2xl sm:text-3xl font-medium lg:text-5xl leading-tight">
+          <div className="w-full lg:w-1/2 flex flex-col lg:pr-12">
+            <h2 className="font-heading mb-4 lg:mb-6 text-secondary text-2xl sm:text-3xl font-medium lg:text-4xl leading-tight">
               Get treated in 3 simple steps
             </h2>
 
-            <div className="flex flex-col space-y-3 lg:space-y-4">
+            <div className="flex flex-col space-y-2 lg:space-y-3">
               {steps.map((step, i) => (
                 <div
                   key={step.id}
                   onClick={() => setActiveStep(i)}
-                  className={`group relative w-full cursor-pointer p-4 sm:p-6 rounded-xl lg:rounded-2xl transition-all duration-300 ${
+                  className={`group relative w-full cursor-pointer p-3 sm:p-4 rounded-xl lg:rounded-2xl transition-all duration-300 ${
                     activeStep === i
                       ? "bg-white"
                       : "hover:bg-white/50 border border-transparent"

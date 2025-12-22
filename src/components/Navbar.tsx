@@ -2,11 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: "About Us", href: "/about" },
+    { label: "Conditions", href: "/conditions" },
+    { label: "Treatments", href: "/treatments" },
+    { label: "Our Clinics", href: "/clinics" },
+    { label: "Learn", href: "/blog" },
+  ];
 
   return (
     <nav className="bg-white py-4 px-4 md:px-6 border-b border-gray-100 relative" style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}>
@@ -42,77 +49,25 @@ export default function Navbar() {
 
         {/* Navigation Links - Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          <Link
-            href="/our-approach"
-            className="font-semibold hover:opacity-80 tracking-wide"
-            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif', fontSize: '14px', lineHeight: '17px', color: '#026460' }}
-          >
-            OUR APPROACH
-          </Link>
-
-          <div className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-1 font-semibold hover:opacity-80 tracking-wide cursor-pointer"
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="font-semibold hover:opacity-80 tracking-wide"
               style={{ fontFamily: '"Proxima Nova", Arial, sans-serif', fontSize: '14px', lineHeight: '17px', color: '#026460' }}
             >
-              WHO WE SERVE
-              <ChevronDown className="w-4 h-4" />
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50">
-                <Link
-                  href="/individuals"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Individuals
-                </Link>
-                <Link
-                  href="/employers"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Employers
-                </Link>
-                <Link
-                  href="/health-plans"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Health Plans
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/resources"
-            className="font-semibold hover:opacity-80 tracking-wide"
-            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif', fontSize: '14px', lineHeight: '17px', color: '#026460' }}
-          >
-            RESOURCES
-          </Link>
-
-          <Link
-            href="/success-stories"
-            className="font-semibold hover:opacity-80 tracking-wide"
-            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif', fontSize: '14px', lineHeight: '17px', color: '#026460' }}
-          >
-            SUCCESS STORIES
-          </Link>
+              {item.label.toUpperCase()}
+            </Link>
+          ))}
         </div>
 
-        {/* Auth Buttons - Desktop */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Book Appointment Button - Desktop */}
+        <div className="hidden md:flex items-center">
           <Link
-            href="/login"
-            className="text-sm font-medium text-gray-700 hover:text-[#0d7377]"
-          >
-            Log In
-          </Link>
-          <Link
-            href="/signup"
+            href="/book-appointment"
             className="bg-[#0d7377] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0a5c5f] transition-colors"
           >
-            Sign up
+            Book An Appointment
           </Link>
         </div>
       </div>
@@ -121,48 +76,22 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-50">
           <div className="flex flex-col p-4 space-y-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="font-semibold py-2 text-[#026460]"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label.toUpperCase()}
+              </Link>
+            ))}
             <Link
-              href="/our-approach"
-              className="font-semibold py-2 text-[#026460]"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              OUR APPROACH
-            </Link>
-            <Link
-              href="/individuals"
-              className="font-semibold py-2 text-[#026460]"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              WHO WE SERVE
-            </Link>
-            <Link
-              href="/resources"
-              className="font-semibold py-2 text-[#026460]"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              RESOURCES
-            </Link>
-            <Link
-              href="/success-stories"
-              className="font-semibold py-2 text-[#026460]"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              SUCCESS STORIES
-            </Link>
-            <hr className="border-gray-200" />
-            <Link
-              href="/login"
-              className="font-medium py-2 text-gray-700"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Log In
-            </Link>
-            <Link
-              href="/signup"
+              href="/book-appointment"
               className="bg-[#0d7377] text-white px-6 py-3 rounded-full text-center font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Sign up
+              Book An Appointment
             </Link>
           </div>
         </div>

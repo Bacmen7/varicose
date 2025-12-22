@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,31 +7,37 @@ const conditions = [
     name: "Varicose Veins",
     href: "/conditions/varicose-veins",
     image: "/user/varicose vein.png",
+    objectPosition: "center",
   },
   {
     name: "Spider Veins",
     href: "/conditions/spider-veins",
     image: "/user/spider.png",
+    objectPosition: "center top",
   },
   {
     name: "Deep Vein Reflux",
     href: "/conditions/deep-vein-reflux",
     image: "/user/deep.png",
+    objectPosition: "center top",
   },
   {
     name: "Chronic Venous Insufficiency",
     href: "/conditions/chronic-venous-insufficiency",
     image: "/user/chronic.png",
+    objectPosition: "center",
   },
   {
     name: "Leg Pain & Heaviness",
     href: "/conditions/leg-pain-heaviness",
     image: "/user/legpain.png",
+    objectPosition: "center",
   },
   {
     name: "Swelling, Skin Changes, Non-healing Ulcers",
     href: "/conditions/swelling-skin-changes",
     image: "/user/swelling.png",
+    objectPosition: "center",
   },
 ];
 
@@ -68,6 +74,7 @@ export default function ConditionsSection() {
                 alt={condition.name}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
+                style={{ objectPosition: condition.objectPosition }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-primary/90 group-hover:to-primary/20 transition-all duration-300 flex items-end p-4 md:p-5">
                 <div className="flex items-center justify-between w-full">
@@ -79,6 +86,16 @@ export default function ConditionsSection() {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="flex justify-end mt-4">
+          <div className="flex items-center gap-2 text-primary">
+            <span className="text-sm font-medium">Scroll for more</span>
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+              <ChevronRight size={20} className="text-white" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
