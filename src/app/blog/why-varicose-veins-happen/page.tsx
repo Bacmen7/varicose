@@ -9,8 +9,8 @@ import { useState, useEffect } from "react";
 const tableOfContents = [
   { id: "how-veins-work", title: "How Do Veins Normally Work?" },
   { id: "root-cause", title: "The Root Cause: Weak or Damaged Vein Valves" },
-  { id: "what-happens-ignored", title: "What Happens If VaricoseVeins Are Ignored?" },
-  { id: "prevention", title: "Can VaricoseVeins Be Prevented?" },
+  { id: "what-happens-ignored", title: "What Happens If Varicose Veins Are Ignored?" },
+  { id: "prevention", title: "Can Varicose Veins Be Prevented?" },
   { id: "diagnosis", title: "How Are the Real Causes Diagnosed?" },
   { id: "modern-treatments", title: "The Good News: Modern Treatments Fix the Root Cause" },
   { id: "when-to-see-doctor", title: "When Should You See a Doctor?" },
@@ -65,7 +65,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           </Link>
 
           <h1 className="font-heading text-4xl md:text-[56px] md:leading-[73px] mt-4" style={{ color: '#026460' }}>
-            Why Do VaricoseVeins Happen?
+            Why Do Varicose Veins Happen?
           </h1>
           <p className="text-lg md:text-[22px] md:leading-[33px] mt-4 max-w-2xl" style={{ color: '#48546B' }}>
             Understanding the real cause behind bulging, painful veins
@@ -120,7 +120,7 @@ export default function WhyvaricoseVeinsHappenPage() {
 
         {/* Intro */}
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-6" style={{ color: '#48546B' }}>
-          Varicoseveins don&apos;t appear overnight. And they&apos;re not just a cosmetic issue.
+          Varicose veins don&apos;t appear overnight. And they&apos;re not just a cosmetic issue.
         </p>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-12" style={{ color: '#48546B' }}>
           They are a sign that something isn&apos;t working properly in your leg circulation. Let&apos;s break it down in simple terms.
@@ -141,7 +141,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <li>Close to stop blood from flowing backward</li>
         </ul>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-12" style={{ color: '#48546B' }}>
-          When these valves work well, blood flows smoothly. When they don&apos;t — Varicoseveins happen.
+          When these valves work well, blood flows smoothly. When they don&apos;t — Varicose veins happen.
         </p>
 
         {/* Root Cause with Image */}
@@ -149,7 +149,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           The Root Cause: Weak or Damaged Vein Valves
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-6" style={{ color: '#48546B' }}>
-          Varicoseveins occur when the valves inside your veins become weak or damaged. When this happens:
+          Varicose veins occur when the valves inside your veins become weak or damaged. When this happens:
         </p>
 
         {/* Image Section */}
@@ -157,13 +157,13 @@ export default function WhyvaricoseVeinsHappenPage() {
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <Image
               src="/valve_reflux.png"
-              alt="Diagram showing normal valve function vs valve reflux in Varicoseveins"
+              alt="Diagram showing normal valve function vs valve reflux in Varicose veins"
               fill
               className="object-contain bg-gray-50"
             />
           </div>
           <figcaption className="text-center text-sm text-gray-500 mt-3 italic">
-            Normal valve function (left) vs. valve reflux causing Varicoseveins (right)
+            Normal valve function (left) vs. valve reflux causing Varicose veins (right)
           </figcaption>
         </figure>
 
@@ -195,7 +195,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <div>
             <h3 className="font-heading text-xl text-[#023936] mb-2">1. Genetics (The Biggest Factor)</h3>
             <p className="text-lg md:text-[22px] md:leading-[33px]" style={{ color: '#48546B' }}>
-              If your parents or close relatives have Varicoseveins, your risk is significantly higher. You inherit weaker vein walls and poor valve structure. This is why some people develop Varicoseveins even in their 20s or 30s.
+              If your parents or close relatives have Varicose veins, your risk is significantly higher. You inherit weaker vein walls and poor valve structure. This is why some people develop Varicose veins even in their 20s or 30s.
             </p>
           </div>
 
@@ -216,7 +216,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <div>
             <h3 className="font-heading text-xl text-[#023936] mb-2">4. Ageing</h3>
             <p className="text-lg md:text-[22px] md:leading-[33px]" style={{ color: '#48546B' }}>
-              As you age, vein walls lose elasticity and valves weaken naturally. This is why Varicoseveins become more common after the age of 40 — but age alone isn&apos;t the cause.
+              As you age, vein walls lose elasticity and valves weaken naturally. This is why Varicose veins become more common after the age of 40 — but age alone isn&apos;t the cause.
             </p>
           </div>
 
@@ -245,34 +245,34 @@ export default function WhyvaricoseVeinsHappenPage() {
         {/* Why Legs - Highlight Box */}
         <div className="bg-primary/5 p-6 rounded-xl mb-12">
           <h3 className="font-heading text-xl text-[#023936] mb-3">
-            Why Do VaricoseVeins Usually Appear in the Legs?
+            Why Do Varicose Veins Usually Appear in the Legs?
           </h3>
           <p className="text-lg md:text-[22px] md:leading-[33px]" style={{ color: '#48546B' }}>
-            Because your legs face maximum gravitational pressure. Blood has to travel the longest distance upward from your feet to your heart. <strong className="font-bold">That&apos;s why Varicoseveins rarely appear in arms — but commonly in calves and thighs.</strong>
+            Because your legs face maximum gravitational pressure. Blood has to travel the longest distance upward from your feet to your heart. <strong className="font-bold">That&apos;s why Varicose veins rarely appear in arms — but commonly in calves and thighs.</strong>
           </p>
         </div>
 
         {/* Spider vs Varicose*/}
         <h2 className="font-heading text-2xl md:text-3xl text-[#023936] mb-6">
-          Are Spider Veins and VaricoseVeins the Same?
+          Are Spider Veins and Varicose Veins the Same?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
           <strong className="font-bold">Not exactly.</strong>
         </p>
         <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] mb-6 space-y-2 ml-4" style={{ color: '#48546B' }}>
           <li><strong className="font-bold">Spider veins</strong> are smaller, superficial, and usually cosmetic</li>
-          <li><strong className="font-bold">Varicoseveins</strong> are larger, deeper, and often linked to valve failure</li>
+          <li><strong className="font-bold">Varicose veins</strong> are larger, deeper, and often linked to valve failure</li>
         </ul>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-12" style={{ color: '#48546B' }}>
-          Spider veins can be an early warning sign — but Varicoseveins indicate a deeper circulation issue.
+          Spider veins can be an early warning sign — but Varicose veins indicate a deeper circulation issue.
         </p>
 
         {/* What Happens If Ignored */}
         <h2 id="what-happens-ignored" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
-          What Happens If VaricoseVeins Are Ignored?
+          What Happens If Varicose Veins Are Ignored?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
-          Untreated Varicoseveins can progress. Over time, they may cause:
+          Untreated Varicose veins can progress. Over time, they may cause:
         </p>
         <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] mb-6 space-y-2 ml-4" style={{ color: '#48546B' }}>
           <li>Chronic leg pain and heaviness</li>
@@ -288,7 +288,7 @@ export default function WhyvaricoseVeinsHappenPage() {
 
         {/* Prevention */}
         <h2 id="prevention" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
-          Can VaricoseVeins Be Prevented?
+          Can Varicose Veins Be Prevented?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
           You can&apos;t change genetics — but you can slow progression by:
@@ -384,7 +384,7 @@ export default function WhyvaricoseVeinsHappenPage() {
             Take the First Step Toward Healthier Legs
           </h2>
           <p className="text-lg md:text-[22px] md:leading-[33px] mb-8" style={{ color: '#48546B' }}>
-            Varicoseveins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
+            Varicose veins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="text-white font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90" style={{ backgroundColor: '#026460' }}>

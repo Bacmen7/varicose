@@ -4,7 +4,7 @@
 
 // const conditions = [
 //   {
-//     name: "VaricoseVeins",
+//     name: "Varicose Veins",
 //     href: "/conditions/varicose-veins",
 //     image: "/user/Varicosevein.png",
 //     objectPosition: "center",
@@ -51,7 +51,7 @@
 //             Conditions We Treat
 //           </h2>
 //           <p className="text-base md:text-lg leading-relaxed" style={{ color: '#48546B' }}>
-//             Varicoseveins aren&apos;t just cosmetic — they signal deeper circulation issues. We help you find care for:
+//             Varicose veins aren&apos;t just cosmetic — they signal deeper circulation issues. We help you find care for:
 //           </p>
 //         </div>
 
@@ -113,7 +113,7 @@ import { useRef } from "react";
 
 const conditions = [
   {
-    name: "VaricoseVeins",
+    name: "Varicose Veins",
     href: "/conditions/varicose-veins",
     image: "/user/varicose vein.png",
     objectPosition: "center",
@@ -179,7 +179,7 @@ export default function ConditionsSection() {
             className="text-base md:text-lg leading-relaxed"
             style={{ color: "#48546B" }}
           >
-            Varicoseveins aren&apos;t just cosmetic — they signal deeper
+            Varicose veins aren&apos;t just cosmetic — they signal deeper
             circulation issues. We help you find care for:
           </p>
         </div>
@@ -194,7 +194,7 @@ export default function ConditionsSection() {
             <Link
               key={condition.name}
               href={condition.href}
-              className="group relative aspect-[4/3] rounded-lg overflow-hidden hover:ring-4 hover:ring-primary/30 transition-all min-w-[70%] sm:min-w-[45%] md:min-w-[30%] snap-center"
+              className="group relative aspect-[4/3] rounded-lg overflow-hidden hover:ring-4 hover:ring-primary/30 transition-all min-w-[70%] sm:min-w-[45%] md:min-w-[30%] snap-center cursor-pointer"
             >
               <Image
                 src={condition.image}
@@ -223,10 +223,10 @@ export default function ConditionsSection() {
         <div className="flex justify-end mt-4">
           <button
             onClick={handleScroll}
-            className="flex items-center gap-2 text-primary"
+            className="flex items-center gap-2 text-primary cursor-pointer"
           >
-            <span className="text-sm font-medium">Scroll for more</span>
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span className="text-sm font-medium underline-offset-4 hover:underline">Scroll for more</span>
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 active:scale-95 transition-all duration-200">
               <ChevronRight size={20} className="text-white" />
             </div>
           </button>

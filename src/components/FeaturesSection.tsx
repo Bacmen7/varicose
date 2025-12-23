@@ -31,11 +31,11 @@ export default function FeaturesSection() {
             WHY CHOOSE US
           </p>
           <h2 className="font-heading text-secondary text-3xl font-medium lg:text-4xl mb-6">
-            A simpler way to get the right Varicosevein care
+            A simpler way to get the right Varicose vein care
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             We help you quickly connect with certified vein specialists who
-            diagnose, treat, and manage Varicoseand spider veins with the
+            diagnose, treat, and manage Varicose and spider veins with the
             latest minimally invasive options.
           </p>
         </div>

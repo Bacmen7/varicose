@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 const articles = [
   {
     category: "Article",
-    title: "Why Varicoseveins happen",
+    title: "Why Varicose veins happen",
     image:
       "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800",
-    desc: "Understand the underlying causes of venous insufficiency and how valve failure leads to Varicoseveins.",
+    desc: "Understand the underlying causes of venous insufficiency and how valve failure leads to Varicose veins.",
     href: "/blog/why-varicose-veins-happen",
   },
   {
@@ -21,7 +21,7 @@ const articles = [
   },
   {
     category: "Checklist",
-    title: "When Should You See a Doctor for VaricoseVeins?",
+    title: "When Should You See a Doctor for Varicose Veins?",
     image:
       "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=800",
     desc: "Knowing the red flags—such as skin changes or persistent pain—that indicate it's time for a professional evaluation.",
@@ -34,7 +34,7 @@ export default function KnowledgeCenterSection() {
     <section className="pt-12 pb-16 w-full bg-surface">
       <div className="container mx-auto px-4 max-w-[1200px]">
         <h2 className="font-heading text-secondary text-3xl lg:text-4xl mb-4">
-          Learn everything about Varicoseveins
+          Learn everything about Varicose veins
         </h2>
         <p className="text-gray-600 text-lg mb-10 max-w-2xl">
           Simple articles and videos that help you understand symptoms, risks,

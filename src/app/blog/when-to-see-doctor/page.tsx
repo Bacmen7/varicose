@@ -63,7 +63,7 @@ export default function WhenToSeeDoctorPage() {
           </Link>
 
           <h1 className="font-heading text-4xl md:text-[56px] md:leading-[73px] mt-4" style={{ color: '#026460' }}>
-            When Should You See a Doctor for VaricoseVeins?
+            When Should You See a Doctor for Varicose Veins?
           </h1>
           <p className="text-lg md:text-[22px] md:leading-[33px] mt-4 max-w-2xl" style={{ color: '#48546B' }}>
             Knowing the right time can prevent long-term damage
@@ -121,7 +121,7 @@ export default function WhenToSeeDoctorPage() {
           Many people live with leg discomfort for years, assuming it&apos;s just part of aging, long work hours, or fatigue.
         </p>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-6" style={{ color: '#48546B' }}>
-          But when it comes to Varicoseveins, <strong className="font-bold">waiting too long can allow a manageable condition to become a chronic one</strong>.
+          But when it comes to Varicose veins, <strong className="font-bold">waiting too long can allow a manageable condition to become a chronic one</strong>.
         </p>
         <p className="text-lg md:text-[22px] md:leading-[33px] font-bold mb-12" style={{ color: '#48546B' }}>
           So how do you know when it&apos;s time to see a doctor? Let&apos;s break it down.
@@ -132,7 +132,7 @@ export default function WhenToSeeDoctorPage() {
           First: A Simple Truth
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
-          <strong className="font-bold">Varicoseveins are not just a cosmetic problem.</strong>
+          <strong className="font-bold">Varicose veins are not just a cosmetic problem.</strong>
         </p>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
           They are caused by faulty vein valves and abnormal blood flow. Once valves are damaged, they do not heal on their own.
@@ -275,7 +275,7 @@ export default function WhenToSeeDoctorPage() {
             8. Symptoms in Only One Leg
           </h3>
           <p className="text-lg md:text-[22px] md:leading-[33px] mb-3" style={{ color: '#48546B' }}>
-            Varicosevein disease often starts unevenly. If one leg consistently feels:
+            Varicose vein disease often starts unevenly. If one leg consistently feels:
           </p>
           <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] space-y-1 ml-4 mb-3" style={{ color: '#48546B' }}>
             <li>More painful</li>
@@ -295,7 +295,7 @@ export default function WhenToSeeDoctorPage() {
           You should consider early evaluation if you:
         </p>
         <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] mb-6 space-y-2 ml-4" style={{ color: '#48546B' }}>
-          <li>Have a family history of Varicoseveins</li>
+          <li>Have a family history of Varicose veins</li>
           <li>Stand or sit for long hours daily</li>
           <li>Are pregnant or recently delivered</li>
           <li>Are overweight</li>
@@ -345,7 +345,7 @@ export default function WhenToSeeDoctorPage() {
           What Happens If You Wait Too Long?
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
-          Untreated Varicoseveins can progress to:
+          Untreated Varicose veins can progress to:
         </p>
         <ul className="list-disc list-inside text-lg md:text-[22px] md:leading-[33px] mb-6 space-y-2 ml-4" style={{ color: '#48546B' }}>
           <li>Chronic pain and swelling</li>
@@ -361,7 +361,7 @@ export default function WhenToSeeDoctorPage() {
         {/* Bottom Line */}
         <div id="bottom-line" className="text-white p-8 rounded-2xl mb-12 scroll-mt-28" style={{ backgroundColor: '#1D5E5B' }}>
           <h2 className="font-heading text-2xl mb-4">The Bottom Line</h2>
-          <p className="text-white/90 text-lg md:text-[22px] md:leading-[33px] mb-4">See a doctor for Varicoseveins if:</p>
+          <p className="text-white/90 text-lg md:text-[22px] md:leading-[33px] mb-4">See a doctor for Varicose veins if:</p>
           <ul className="list-disc list-inside text-white/80 text-lg md:text-[22px] md:leading-[33px] space-y-1 ml-4 mb-4">
             <li>Symptoms are persistent</li>
             <li>Your legs affect your daily comfort</li>

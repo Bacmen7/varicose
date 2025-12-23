@@ -25,8 +25,8 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Varyicose Heath"
-            width={90}
-            height={60}
+            width={120}
+            height={80}
             priority
           />
         </Link>

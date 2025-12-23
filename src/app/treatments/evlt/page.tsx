@@ -75,7 +75,7 @@ function EVLTHero() {
             </h1>
             <div className="w-20 h-px mb-8 bg-primary/40"></div>
             <p className="text-xl lg:text-[22px] leading-relaxed tracking-wide text-primary">
-              Gold-Standard Laser Therapy for VaricoseVeins
+              Gold-Standard Laser Therapy for Varicose Veins
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ function WhatIsEVLT() {
             </h2>
             <div className="text-lg md:text-[20px] leading-relaxed space-y-6 text-gray-600">
               <p>
-                Endovenous Laser Treatment (EVLT) is a minimally invasive, gold-standard procedure used to treat Varicoseveins at their root cause.
+                Endovenous Laser Treatment (EVLT) is a minimally invasive, gold-standard procedure used to treat Varicose veins at their root cause.
               </p>
               <p>
                 Instead of removing veins surgically, EVLT uses laser energy delivered inside the faulty vein to gently seal it shut. Once closed, blood naturally reroutes to healthy veins, relieving symptoms and improving circulation.
@@ -192,7 +192,7 @@ function WhyEVLT() {
 
 function WhoNeedsEVLT() {
   const symptoms = [
-    "Visible, bulging Varicoseveins",
+    "Visible, bulging Varicose veins",
     "Persistent leg pain or heaviness",
     "Swelling around ankles or calves",
     "Night cramps or restless legs",
@@ -516,7 +516,7 @@ function EVLTCTASection() {
           Take the First Step Toward Healthier Legs
         </h2>
         <p className="text-lg md:text-xl mb-4 font-light text-white/90">
-          Varicoseveins don&apos;t have to control your life.
+          Varicose veins don&apos;t have to control your life.
         </p>
         <p className="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto text-white/90">
           EVLT offers safe, effective, long-lasting relief — without surgery.

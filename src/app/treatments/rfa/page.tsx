@@ -75,7 +75,7 @@ function RFAHero() {
             </h1>
             <div className="w-20 h-px mb-8 bg-primary/40"></div>
             <p className="text-xl lg:text-[22px] leading-relaxed tracking-wide text-primary">
-              A Proven, Minimally Invasive Treatment for VaricoseVeins
+              A Proven, Minimally Invasive Treatment for Varicose Veins
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ function WhatIsRFA() {
             </h2>
             <div className="text-lg md:text-[20px] leading-relaxed space-y-6 text-gray-600">
               <p>
-                RFA is a non-surgical, ultrasound-guided procedure used to treat Varicoseveins caused by venous reflux (backward blood flow).
+                RFA is a non-surgical, ultrasound-guided procedure used to treat Varicose veins caused by venous reflux (backward blood flow).
               </p>
               <p>
                 Instead of removing the vein, RFA:
@@ -185,7 +185,7 @@ function WhyRFA() {
 
 function WhoNeedsRFA() {
   const recommendations = [
-    "Medium to large Varicoseveins",
+    "Medium to large Varicose veins",
     "Confirmed venous reflux on Doppler ultrasound",
     "Leg pain, heaviness, or fatigue",
     "Swelling around ankles or calves",
@@ -502,7 +502,7 @@ function RFACTASection() {
           Take the Next Step Toward Healthier Legs
         </h2>
         <p className="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto text-white/90">
-          If Varicoseveins are affecting your comfort or daily life, RFA offers a safe and effective solution — without surgery.
+          If Varicose veins are affecting your comfort or daily life, RFA offers a safe and effective solution — without surgery.
         </p>
         <div className="flex justify-center">
           <button className="font-semibold py-4 px-8 rounded-full transition-colors duration-300 cursor-pointer text-lg bg-white text-primary hover:opacity-90">
@@ -631,7 +631,7 @@ function DiseaseInfoSection() {
             {[
               "Widely used across the world",
               "Backed by strong clinical evidence",
-              "Considered a first-line treatment for Varicoseveins",
+              "Considered a first-line treatment for Varicose veins",
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary"></div>
