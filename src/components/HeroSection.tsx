@@ -17,14 +17,10 @@ export default function HeroSection() {
               Modern care you can rely on.
             </p>
 
-            <button className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 mb-6 group cursor-pointer w-fit">
+            <button className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
               Book a Consultation Today
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-
-            <p className="text-sm text-gray-700 font-medium tracking-wide">
-              Safe &bull; Minimally Invasive &bull; Fast Recovery
-            </p>
           </div>
         </div>
 

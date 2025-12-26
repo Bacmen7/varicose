@@ -41,7 +41,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-primary font-semibold text-lg hover:underline cursor-pointer">
-              (555) 123-4567
+              9833943177
             </p>
           </div>
         </div>

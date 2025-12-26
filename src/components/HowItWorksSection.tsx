@@ -10,20 +10,20 @@ const steps = [
     title: "Tell us your symptoms",
     description:
       "Answer a few quick questions so we understand your condition.",
-    image: "/t1.png",
+    image: "/a1.png",
   },
   {
     id: "step-2",
     title: "Get matched to the right specialist",
     description: "We recommend verified vein doctors in your city.",
-    image: "/t2.png",
+    image: "/a2.png",
   },
   {
     id: "step-3",
     title: "Begin your treatment plan",
     description:
       "Book a consult, get your evaluation, and start treatment — often completed in 30–45 minutes.",
-    image: "/t3.png",
+    image: "/a3.png",
   },
 ];
 

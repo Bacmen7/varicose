@@ -8,31 +8,31 @@ const treatments = [
     {
         title: "Endovenous Laser Treatment (EVLT)",
         desc: "Gold-standard laser therapy",
-        img: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800",
+        img: "/ev1.png",
         slug: "evlt"
     },
     {
         title: "Radiofrequency Ablation (RFA)",
         desc: "Quick, comfortable closure of faulty veins",
-        img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
+        img: "/ev2.png",
         slug: "rfa"
     },
     {
         title: "Ultrasound-Guided Foam Sclerotherapy",
         desc: "Precise, non-surgical treatment",
-        img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800",
+        img: "/ev3.png",
         slug: "sclerotherapy"
     },
     {
         title: "VenaSeal / Glue Therapy",
         desc: "No heat, no injections, fast recovery",
-        img: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&q=80&w=800",
+        img: "/ev1.png",
         slug: "venaseal"
     },
     {
         title: "Microphlebectomy",
         desc: "Removal of bulging surface veins through tiny incisions",
-        img: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800",
+        img: "/ev2.png",
         slug: "microphlebectomy"
     }
 ];

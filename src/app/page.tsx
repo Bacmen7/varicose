@@ -8,6 +8,7 @@ import LocationsSection from "@/components/LocationsSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import KnowledgeCenterSection from "@/components/KnowledgeCenterSection";
 import CTASection from "@/components/CTASection";
+import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <LocationsSection />
       <TestimonialSlider />
       <KnowledgeCenterSection />
+      <ContactFormSection />
       <CTASection />
       <Footer />
     </main>

@@ -115,37 +115,37 @@ const conditions = [
   {
     name: "Varicose Veins",
     href: "/conditions/varicose-veins",
-    image: "/user/varicose vein.png",
+    image: "/user/varicose veins.png",
     objectPosition: "center",
   },
   {
     name: "Spider Veins",
     href: "/conditions/spider-veins",
-    image: "/user/spider.png",
-    objectPosition: "center top",
+    image: "/user/spider vein.png",
+    objectPosition: "center",
   },
   {
     name: "Deep Vein Reflux",
     href: "/conditions/deep-vein-reflux",
-    image: "/user/deep.png",
-    objectPosition: "center top",
+    image: "/user/deep vein reflux.png",
+    objectPosition: "center",
   },
   {
     name: "Chronic Venous Insufficiency",
     href: "/conditions/chronic-venous-insufficiency",
-    image: "/user/chronic.png",
+    image: "/user/chronic venus insufficiency.png",
     objectPosition: "center",
   },
   {
     name: "Leg Pain & Heaviness",
     href: "/conditions/leg-pain-heaviness",
-    image: "/user/legpain.png",
+    image: "/user/leg pain and heaviness.png",
     objectPosition: "center",
   },
   {
     name: "Swelling, Skin Changes, Non-healing Ulcers",
     href: "/conditions/swelling-skin-changes",
-    image: "/user/swelling.png",
+    image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
     objectPosition: "center",
   },
 ];
@@ -176,11 +176,16 @@ export default function ConditionsSection() {
             Conditions We Treat
           </h2>
           <p
+            className="text-base md:text-lg leading-relaxed mb-2"
+            style={{ color: "#48546B" }}
+          >
+            Varicose veins aren&apos;t just cosmetic — they signal deeper circulation issues.
+          </p>
+          <p
             className="text-base md:text-lg leading-relaxed"
             style={{ color: "#48546B" }}
           >
-            Varicose veins aren&apos;t just cosmetic — they signal deeper
-            circulation issues. We help you find care for:
+            We help you find care for:
           </p>
         </div>
 

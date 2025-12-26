@@ -1,12 +1,6 @@
-import { ShieldCheck, Zap, Timer } from "lucide-react";
+import { Zap, Timer } from "lucide-react";
 
 const features = [
-  {
-    icon: ShieldCheck,
-    title: "Verified Doctors Only",
-    description:
-      "Every specialist is credentialed, experienced, and focused on vein health.",
-  },
   {
     icon: Zap,
     title: "Minimally Invasive Treatments",
@@ -31,21 +25,19 @@ export default function FeaturesSection() {
             WHY CHOOSE US
           </p>
           <h2 className="font-heading text-secondary text-3xl font-medium lg:text-4xl mb-6">
-            A simpler way to get the right Varicose vein care
+            Get The Right Varicose Vein Care
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            We help you quickly connect with certified vein specialists who
-            diagnose, treat, and manage Varicose and spider veins with the
-            latest minimally invasive options.
+            We are a network of clinics with certified vein specialists who diagnose, treat, and manage Varicose and Spider Veins with the latest minimally invasive options.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="flex justify-center gap-8 flex-wrap">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-accent-lighter rounded-2xl p-8 transition-transform hover:-translate-y-1 duration-300"
+              className="bg-accent-lighter rounded-2xl p-8 transition-transform hover:-translate-y-1 duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[400px]"
             >
               <span className="bg-white mb-6 flex size-14 items-center justify-center rounded-full shadow-sm text-primary">
                 <feature.icon className="size-7" />
