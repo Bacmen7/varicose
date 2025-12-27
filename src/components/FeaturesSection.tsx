@@ -17,10 +17,10 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-24 w-full bg-surface">
+    <section className="py-8 w-full bg-surface">
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Header */}
-        <div className="mb-6 lg:mb-8 text-center max-w-3xl mx-auto">
+        <div className="mb-4 lg:mb-6 text-center max-w-3xl mx-auto">
           <p className="text-primary font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
             WHY CHOOSE US
           </p>

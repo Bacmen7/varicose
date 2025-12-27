@@ -30,7 +30,7 @@ export default function HeroSection() {
             src="/hero.png"
             alt="Varicose vein treatment"
             fill
-            className="object-cover object-left"
+            className="object-cover object-right"
             priority
           />
         </div>
