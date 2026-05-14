@@ -45,8 +45,7 @@ export default function ConditionsOverviewPage() {
   const [current, setCurrent] = useState(0);
 
   const filtered = conditions.filter((c) =>
-    c.title.toLowerCase().includes(query.toLowerCase()) ||
-    c.description.toLowerCase().includes(query.toLowerCase())
+    c.title.toLowerCase().includes(query.toLowerCase())
   );
 
   const prev = () => setCurrent((i) => (i === 0 ? conditions.length - 1 : i - 1));
