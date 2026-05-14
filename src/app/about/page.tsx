@@ -27,13 +27,13 @@ export default function AboutPage() {
               </p>
 
               {/* Stats */}
-              <div className="flex gap-8 mb-6">
+              <div className="flex gap-10 mb-6 justify-center">
                 {[
                   { num: "500+", label: "Patients treated" },
                   { num: "1", label: "Dedicated centre, Mumbai" },
                   { num: "10+", label: "Years in healthcare" },
                 ].map((s, i) => (
-                  <div key={i} className="flex flex-col">
+                  <div key={i} className="flex flex-col items-center text-center">
                     <span className="font-heading text-secondary text-2xl font-normal">{s.num}</span>
                     <span className="text-gray-500 text-sm mt-1">{s.label}</span>
                   </div>
@@ -66,15 +66,15 @@ export default function AboutPage() {
             <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Approach</p>
             <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Varya Health</h2>
             <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
-              We believe good care starts with understanding your concerns. That's why we give every patient enough time to talk, understand their concerns, and get a treatment plan that's clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
+              We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their concerns, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Zap, title: "Minimally invasive focus", desc: "We prioritise procedures like EVLT, RFA, and Sclerotherapy that mean less pain, faster recovery, and no hospital stay." },
-              { icon: Search, title: "Early diagnosis matters", desc: "We use duplex ultrasound to identify venous reflux early, before complications like ulcers or DVT develop." },
-              { icon: MessageCircle, title: "Clear communication", desc: "We explain your condition in plain language so you always understand what is happening and what comes next." },
-              { icon: MapPin, title: "Mumbai-based access", desc: "One dedicated centre in Mumbai with flexible appointments and teleconsultation options for patients across Maharashtra." },
+              { icon: MessageCircle, title: "Clear & Simple Communication", desc: "We explain your condition in easy language, answer your questions patiently, and help you feel confident about your treatment plan." },
+              { icon: Search, title: "Early Diagnosis Matters", desc: "Finding vein problems early can help prevent pain, swelling, skin changes, and other complications later." },
+              { icon: Zap, title: "Accurate Vein Assessment", desc: "We use safe ultrasound scans and detailed vein evaluations to understand the cause of your symptoms and guide the right treatment." },
+              { icon: MapPin, title: "Easy Access to Care", desc: "With flexible appointments and online consultations, getting expert vein care becomes simpler and more convenient." },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary/30 transition-all duration-300">
                 <span className="bg-accent-lighter mb-5 flex size-12 items-center justify-center rounded-xl text-primary">

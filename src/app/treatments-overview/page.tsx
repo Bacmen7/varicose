@@ -13,18 +13,21 @@ const diagSteps = [
 const approachCards = [
   {
     type: "Conservative",
+    image: "/r1.png",
     title: "Compression Therapy",
     desc: "The starting point. Medically graded stockings that reduce swelling and slow progression.",
     items: ["Graduated compression stockings", "Lifestyle and elevation advice", "Used alongside other treatments"],
   },
   {
     type: "Injection",
+    image: "/r2.png",
     title: "Injection Therapies",
     desc: "For spider veins and smaller varicose veins. Done in-clinic, no anaesthesia needed.",
     items: ["Sclerotherapy — liquid injection", "Foam sclerotherapy — larger veins", "Walk same day, no downtime"],
   },
   {
     type: "Advanced",
+    image: "/r3.png",
     title: "Advanced Procedures",
     desc: "For larger varicose veins with significant reflux. Minimally invasive, under local anaesthesia.",
     items: ["EVLT — endovenous laser treatment", "RFA — radiofrequency ablation", "Venaseal — medical glue closure"],
@@ -138,11 +141,12 @@ export default function TreatmentsOverviewPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {approachCards.map((card, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                <div className="px-6 pt-6 pb-4" style={{ backgroundColor: '#CCE0DF' }}>
-                  <span className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full mb-4 text-white" style={{ backgroundColor: '#026460' }}>{card.type}</span>
-                  <h3 className="font-heading text-secondary text-2xl font-normal">{card.title}</h3>
+                <div className="relative h-48 overflow-hidden">
+                  <Image src={card.image} alt={card.title} fill className="object-cover" />
+                  <span className="absolute top-4 left-4 inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full text-white" style={{ backgroundColor: '#026460' }}>{card.type}</span>
                 </div>
                 <div className="p-6">
+                  <h3 className="font-heading text-secondary text-2xl font-normal mb-3">{card.title}</h3>
                   <p className="text-gray-600 text-base leading-relaxed mb-4">{card.desc}</p>
                   <div className="flex flex-col gap-2">
                     {card.items.map((item, j) => (

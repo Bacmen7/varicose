@@ -466,7 +466,7 @@ export default function varicoseVeinsPage() {
           {/* Right - Full Height Image */}
           <div className="lg:w-1/2 relative min-h-[300px] lg:min-h-0">
             <Image
-              src="/t1.png"
+              src="/patient.png"
               alt="Doctor consultation"
               fill
               className="object-cover"
