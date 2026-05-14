@@ -35,7 +35,7 @@ export default function LocationsSection() {
                     {/* Left Column: Heading */}
                     <div className="w-full lg:w-[32%] mb-8 lg:mb-0 text-center lg:text-left z-20">
                         <h2
-                            className="text-2xl sm:text-3xl md:text-[2.5rem] font-bold text-[#2B3445] leading-[1.2] mb-2"
+                            className="text-2xl sm:text-3xl md:text-[2.5rem] font-normal text-[#2B3445] leading-[1.2] mb-2"
                             style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
                         >
                             Find the Best <br className="hidden lg:block" />

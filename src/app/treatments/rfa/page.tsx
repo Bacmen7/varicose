@@ -399,10 +399,10 @@ function RFAvsSurgery() {
           {/* Table Header */}
           <div className="grid grid-cols-2 border-b border-gray-200">
             <div className="p-4 md:p-5 text-center border-r border-gray-200 bg-primary/10">
-              <h3 className="font-heading text-lg md:text-xl font-bold text-primary">Radiofrequency Ablation</h3>
+              <h3 className="font-heading text-lg md:text-xl font-normal text-primary">Radiofrequency Ablation</h3>
             </div>
             <div className="p-4 md:p-5 text-center bg-gray-100">
-              <h3 className="font-heading text-lg md:text-xl font-bold text-gray-500">Traditional Surgery</h3>
+              <h3 className="font-heading text-lg md:text-xl font-normal text-gray-500">Traditional Surgery</h3>
             </div>
           </div>
 

@@ -47,7 +47,7 @@
 //       <div className="max-w-6xl mx-auto px-6">
 //         {/* Header */}
 //         <div className="max-w-2xl mb-8 md:mb-12">
-//           <h2 className="font-heading text-2xl md:text-3xl lg:text-[40px] md:leading-[48px] mb-3 md:mb-4" style={{ color: '#026460' }}>
+//           <h2 className="font-heading font-bold text-2xl md:text-3xl lg:text-[40px] md:leading-[48px] mb-3 md:mb-4" style={{ color: '#026460' }}>
 //             Conditions We Treat
 //           </h2>
 //           <p className="text-base md:text-lg leading-relaxed" style={{ color: '#48546B' }}>
@@ -78,7 +78,7 @@
 //               />
 //               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-primary/90 group-hover:to-primary/20 transition-all duration-300 flex items-end p-4 md:p-5">
 //                 <div className="flex items-center justify-between w-full">
-//                   <h3 className="font-heading text-base md:text-lg font-medium text-white leading-tight">
+//                   <h3 className="font-heading text-base md:text-lg font-bold text-white leading-tight">
 //                     {condition.name}
 //                   </h3>
 //                   <ArrowRight size={18} className="text-white group-hover:translate-x-1 transition-transform shrink-0 md:w-5 md:h-5" />
@@ -211,7 +211,7 @@ export default function ConditionsSection() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-primary/90 group-hover:to-primary/20 transition-all duration-300 flex items-end p-4 md:p-5">
                 <div className="flex items-center justify-between w-full">
-                  <h3 className="font-heading text-base md:text-lg font-medium text-white leading-tight">
+                  <h3 className="font-heading text-base md:text-lg font-bold text-white leading-tight">
                     {condition.name}
                   </h3>
                   <ArrowRight
