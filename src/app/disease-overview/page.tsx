@@ -4,54 +4,127 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import { Search, ChevronRight, ArrowRight } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+
 
 const conditions = [
-  { href: "/conditions/varicose-veins", image: "/user/varicose veins.png", category: "Get started", title: "What are varicose veins" },
-  { href: "/conditions/varicose-veins#causes", image: "/user/chronic venus insufficiency.png", category: "Get started", title: "Causes of varicose veins" },
-  { href: "/treatments", image: "/user/deep vein reflux.png", category: "Treatment", title: "How is varicose vein treated" },
-  { href: "/treatments/evlt", image: "/user/leg pain and heaviness.png", category: "Treatment", title: "Is laser treatment for varicose veins painful?" },
-  { href: "/blog/when-to-see-doctor", image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png", category: "Recovery", title: "How long does recovery take after vein treatment?" },
+  {
+    href: "/conditions/varicose-veins",
+    image: "/user/varicose veins.png",
+    category: "Get started",
+    title: "What are varicose veins",
+  },
+  {
+    href: "/conditions/varicose-veins#causes",
+    image: "/user/chronic venus insufficiency.png",
+    category: "Get started",
+    title: "Causes of varicose veins",
+  },
+  {
+    href: "/treatments",
+    image: "/user/deep vein reflux.png",
+    category: "Treatment",
+    title: "How is varicose vein treated",
+  },
+  {
+    href: "/treatments/evlt",
+    image: "/user/leg pain and heaviness.png",
+    category: "Treatment",
+    title: "Is laser treatment for varicose veins painful?",
+  },
+  {
+    href: "/blog/when-to-see-doctor",
+    image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
+    category: "Recovery",
+    title: "How long does recovery take after vein treatment?",
+  },
 ];
 
 export default function ConditionsOverviewPage() {
   const [query, setQuery] = useState("");
+  const [current, setCurrent] = useState(0);
+
+  const filtered = conditions.filter((c) =>
+    c.title.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const prev = () => setCurrent((i) => (i === 0 ? conditions.length - 1 : i - 1));
+  const next = () => setCurrent((i) => (i === conditions.length - 1 ? 0 : i + 1));
 
   return (
     <main className="bg-background">
 
-      {/* ── HERO ── */}
-      <section className="w-full bg-accent overflow-hidden">
-        <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[550px]">
-          <div className="w-full lg:w-1/2 px-4 py-12 md:px-8 lg:px-16 xl:px-24 lg:py-16 flex flex-col justify-center">
-            <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-8">
-              <h1 className="font-heading text-secondary text-3xl md:text-4xl lg:text-5xl font-normal mb-6 leading-tight">
-                Browse Vein Conditions Reviewed by Experts
-              </h1>
-              <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed max-w-lg">
-                Browse expert-reviewed guides on varicose veins, spider veins, chronic venous insufficiency, and more.
-              </p>
-              <div className="relative w-full max-w-lg mb-6">
-                <input
-                  type="text"
-                  placeholder="Search conditions..."
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  className="w-full rounded-xl py-3.5 pl-5 pr-12 text-base outline-none border border-gray-300 bg-white text-gray-800"
-                />
-                <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-              </div>
-              <Link href="/conditions" className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
-                Explore Conditions
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2 h-[350px] lg:h-auto relative">
-            <Image src="/user/varicose veins.png" alt="Browse vein conditions" fill className="object-cover object-right" priority />
+      {/* ── HERO WITH SEARCH ── */}
+      <section className="py-16 w-full" style={{ background: 'linear-gradient(135deg, #023936 0%, #2C847F 100%)' }}>
+        <div className="container mx-auto px-4 max-w-[800px] text-center">
+          <h1 className="font-heading text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+            Browse vein conditions reviewed by experts
+          </h1>
+          <div className="relative max-w-2xl mx-auto">
+            <input
+              type="text"
+              placeholder="Search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="w-full rounded-xl py-4 pl-6 pr-14 text-base outline-none"
+              style={{ backgroundColor: 'rgba(255,255,255,0.18)', color: 'white', border: '1px solid rgba(255,255,255,0.25)' }}
+            />
+            <Search className="absolute right-5 top-1/2 -translate-y-1/2" size={20} style={{ color: 'rgba(255,255,255,0.7)' }} />
           </div>
         </div>
       </section>
+
+      {/* ── FEATURED CAROUSEL ── */}
+      {query === "" && (
+        <section className="py-12 w-full bg-background">
+          <div className="container mx-auto px-4 max-w-[800px]">
+            <div className="relative rounded-2xl overflow-hidden" style={{ height: '380px' }}>
+              <Image
+                src={conditions[current].image}
+                alt={conditions[current].title}
+                fill
+                className="object-cover transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+              {/* Prev */}
+              <button
+                onClick={prev}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-all"
+              >
+                <ChevronLeft size={20} className="text-secondary" />
+              </button>
+
+              {/* Next */}
+              <button
+                onClick={next}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-all"
+              >
+                <ChevronRight size={20} className="text-secondary" />
+              </button>
+
+              {/* Content overlay */}
+              <Link href={conditions[current].href} className="absolute bottom-0 left-0 right-0 p-8">
+                <p className="text-white/80 text-sm font-medium mb-1">{conditions[current].category}</p>
+                <h2 className="font-heading text-white text-2xl md:text-3xl font-normal mb-4">
+                  {conditions[current].title}
+                </h2>
+                {/* Dots */}
+                <div className="flex gap-2">
+                  {conditions.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={(e) => { e.preventDefault(); setCurrent(i); }}
+                      className="w-2.5 h-2.5 rounded-full transition-all"
+                      style={{ backgroundColor: i === current ? '#2C847F' : 'rgba(255,255,255,0.5)' }}
+                    />
+                  ))}
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
 
       {/* ── EXPLORE BY CATEGORY ── */}

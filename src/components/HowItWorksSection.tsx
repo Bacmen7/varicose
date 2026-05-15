@@ -10,7 +10,7 @@ const steps = [
     title: "Tell us your symptoms",
     description:
       "Answer a few quick questions so we understand your condition.",
-    image: "/a1.png",
+    image: "/v2.png",
   },
   {
     id: "step-2",
@@ -31,7 +31,7 @@ export default function HowItWorksSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-12 lg:py-16 w-full bg-[#E3E6EA]">
+    <section className="py-12 lg:py-16 pb-20 w-full bg-[#E3E6EA] relative">
       <div className="container mx-auto px-4 max-w-[1200px]">
         <div className="flex flex-col gap-6 lg:flex-row-reverse items-start">
           {/* Right Side (Desktop): Image Display */}
@@ -131,6 +131,9 @@ export default function HowItWorksSection() {
           </div>
         </div>
       </div>
+      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#F9F9F9" />
+      </svg>
     </section>
   );
 }

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="py-20 w-full" style={{ backgroundColor: '#026460' }}>
+    <section className="py-20 pb-24 w-full relative" style={{ backgroundColor: '#026460' }}>
       <div className="container mx-auto px-4 max-w-[1200px] text-center">
         <h2 className="font-heading text-white text-3xl lg:text-5xl mb-6">
           Start your journey to pain-free legs today.

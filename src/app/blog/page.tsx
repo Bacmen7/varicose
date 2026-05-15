@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
@@ -98,32 +100,39 @@ export default function BlogOverviewPage() {
     <main className="bg-background">
 
       {/* ── HERO ── */}
-      <section className="w-full bg-accent overflow-hidden">
-        <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[550px]">
-          <div className="w-full lg:w-1/2 px-4 py-12 md:px-8 lg:px-16 xl:px-24 lg:py-16 flex flex-col justify-center">
-            <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-8">
-              <h1 className="font-heading text-secondary text-3xl md:text-4xl lg:text-5xl font-normal mb-6 leading-tight">
-                Explore Health Guide — Varicose Vein
+      <section className="relative w-full overflow-hidden bg-surface pb-16">
+        <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[560px]">
+          <div className="w-full lg:w-1/2 px-6 py-14 lg:px-16 xl:px-24 lg:py-20 flex flex-col justify-center bg-surface">
+            <div className="max-w-lg mx-auto lg:mx-0 lg:ml-auto lg:mr-10">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full mb-6 bg-accent text-primary">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
+                Varicose Vein Health Guide
+              </span>
+              <h1 className="font-heading text-secondary text-4xl md:text-5xl lg:text-[52px] lg:leading-[1.15] font-normal mb-5">
+                Explore Health Guide{" "}
+                <span className="text-primary">Varicose Vein</span>
               </h1>
-              <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed max-w-lg">
-                Reliable, vascular-focused medical information. Written and reviewed by certified vascular specialists.
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Reliable, vascular-focused medical information. Written and reviewed by certified vascular specialists. Evidence-based guides to help you take an active role in your care.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="#conditions" className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
+                <Link href="#conditions" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-full flex items-center gap-2 transition-all duration-300 group">
                   Explore Conditions
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/treatments" className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
+                <Link href="/treatments" className="border-2 border-primary text-primary font-semibold text-sm py-3 px-7 rounded-full hover:bg-primary/5 transition-all duration-300">
                   Browse Treatments
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
           </div>
           <div className="w-full lg:w-1/2 h-[350px] lg:h-auto relative">
-            <Image src="/user/varicose veins.png" alt="Varicose vein health guide" fill className="object-cover object-right" priority />
+            <Image src="/AAAhero.png" alt="Varicose Vein Health Guide" fill className="object-cover object-center" priority />
           </div>
         </div>
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "56px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#D6E6E5" />
+        </svg>
       </section>
 
       {/* ── CONDITION CARDS ── */}
@@ -158,7 +167,7 @@ export default function BlogOverviewPage() {
       </section>
 
       {/* ── WHEN TO SEE SPECIALIST ── */}
-      <section className="py-12 md:py-16 lg:py-20 w-full" style={{ backgroundColor: '#026460' }}>
+      <section className="relative py-12 md:py-16 lg:pb-20 w-full" style={{ backgroundColor: '#026460' }}>
         <div className="container mx-auto px-4 max-w-[1200px]">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="lg:w-2/5 flex flex-col justify-center">
@@ -186,10 +195,13 @@ export default function BlogOverviewPage() {
             </div>
           </div>
         </div>
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#F9F9F9" />
+        </svg>
       </section>
 
       {/* ── WHAT TO EXPECT ── */}
-      <section className="py-12 md:py-16 lg:py-20 w-full bg-background">
+      <section className="relative py-12 md:py-16 lg:pb-20 w-full bg-background">
         <div className="container mx-auto px-4 max-w-[1200px]">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             <div className="lg:w-2/5">
@@ -233,10 +245,13 @@ export default function BlogOverviewPage() {
             </div>
           </div>
         </div>
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#ffffff" />
+        </svg>
       </section>
 
       {/* ── TREATMENT TABLE ── */}
-      <section className="py-12 md:py-16 lg:py-20 w-full bg-white">
+      <section className="relative py-12 md:py-16 lg:pb-20 w-full bg-white">
         <div className="container mx-auto px-4 max-w-[1200px]">
           <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Treatment Options</p>
           <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">How Varicose Veins Are Treated</h2>
@@ -270,6 +285,9 @@ export default function BlogOverviewPage() {
             ))}
           </div>
         </div>
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#026460" />
+        </svg>
       </section>
 
       {/* ── CTA ── */}

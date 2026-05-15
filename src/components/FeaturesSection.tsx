@@ -29,10 +29,10 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-8 w-full bg-surface">
-      <div className="w-full px-8 md:px-16">
+    <section className="pt-16 pb-20 w-full bg-surface relative">
+      <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Header */}
-        <div className="mb-4 lg:mb-6 text-center max-w-3xl mx-auto">
+        <div className="mb-10 text-center max-w-3xl mx-auto">
           <p className="text-primary font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
             WHY CHOOSE US
           </p>
@@ -45,13 +45,13 @@ export default function FeaturesSection() {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-row divide-x divide-primary/20 border border-primary/20 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-accent-lighter p-6 transition-colors hover:bg-accent duration-300 flex-1 min-w-0"
+              className="bg-white rounded-2xl border border-gray-100 p-8 transition-transform hover:-translate-y-1 duration-300"
             >
-              <span className="bg-white mb-6 flex size-14 items-center justify-center rounded-full shadow-sm text-primary">
+              <span className="bg-white mb-6 flex size-14 items-center justify-center rounded-full shadow text-primary">
                 <feature.icon className="size-7" />
               </span>
               <h3 className="font-heading mb-3 text-xl font-medium text-secondary">

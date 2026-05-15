@@ -162,7 +162,7 @@ export default function ConditionsSection() {
 
   return (
     <section
-      className="py-12 md:py-16 lg:py-24 w-full"
+      className="py-12 md:py-16 lg:py-24 pb-20 w-full relative"
       style={{ backgroundColor: "#D6E6E5" }}
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -238,6 +238,9 @@ export default function ConditionsSection() {
         </div>
 
       </div>
+      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#FFFFFF" />
+      </svg>
     </section>
   );
 }

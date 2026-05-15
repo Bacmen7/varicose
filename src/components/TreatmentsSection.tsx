@@ -113,7 +113,7 @@ export default function TreatmentsSection() {
     };
 
     return (
-        <section className="py-24 w-full" style={{ backgroundColor: "#FFFFFF" }}>
+        <section className="py-24 pb-28 w-full relative" style={{ backgroundColor: "#FFFFFF" }}>
             <div className="container mx-auto px-4 max-w-[1200px]">
                 {/* Header */}
                 <div className="mb-16 text-center max-w-4xl mx-auto">

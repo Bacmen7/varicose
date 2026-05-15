@@ -78,7 +78,7 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <div className="w-full" style={{ backgroundColor: '#2C847F' }}>
+        <div className="w-full relative pb-16" style={{ backgroundColor: '#2C847F' }}>
             <div className="container mx-auto px-4 max-w-[1200px]">
                 {/* Slider Container */}
                 <div
@@ -173,6 +173,9 @@ const TestimonialSlider = () => {
                     </div>
                 </div>
             </div>
+            <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+              <path d="M0 30C240 62 480 62 720 30C960 -2 1200 -2 1440 30V60H0V30Z" fill="#EEF7F5" />
+            </svg>
         </div>
     );
 };

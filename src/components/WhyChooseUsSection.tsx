@@ -22,7 +22,7 @@ const benefits = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-24 w-full bg-background">
+    <section className="py-24 pb-28 w-full bg-background relative">
       <div className="container mx-auto px-4 max-w-[1200px]">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-6xl flex flex-col items-center text-center">
@@ -37,7 +37,7 @@ export default function WhyChooseUsSection() {
               {benefits.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 p-6 rounded-2xl bg-white transition-all duration-300 group border border-gray-100 hover:border-primary/30 h-full min-h-[90px]"
+                  className="flex items-start gap-4 p-6 rounded-2xl bg-white transition-all duration-300 group border border-gray-100 hover:border-primary/30"
                 >
                   <div className="p-3 rounded-lg shrink-0 bg-accent-lighter text-primary group-hover:scale-110 transition-transform duration-300">
                     <item.icon size={24} strokeWidth={1.5} />
@@ -58,6 +58,9 @@ export default function WhyChooseUsSection() {
           </div>
         </div>
       </div>
+      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+        <path d="M0 30C240 62 480 62 720 30C960 -2 1200 -2 1440 30V60H0V30Z" fill="#FFFFFF" />
+      </svg>
     </section>
   );
 }

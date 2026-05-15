@@ -31,7 +31,7 @@ const articles = [
 
 export default function KnowledgeCenterSection() {
   return (
-    <section className="pt-12 pb-16 w-full bg-surface">
+    <section className="pt-12 pb-24 w-full bg-surface relative">
       <div className="container mx-auto px-4 max-w-[1200px]">
         <h2 className="font-heading text-secondary text-3xl lg:text-4xl mb-4">
           Learn everything about Varicose veins
@@ -85,6 +85,9 @@ export default function KnowledgeCenterSection() {
           </button>
         </div>
       </div>
+      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#FFFFFF" />
+      </svg>
     </section>
   );
 }

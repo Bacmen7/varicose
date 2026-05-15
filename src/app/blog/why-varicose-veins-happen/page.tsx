@@ -58,7 +58,7 @@ export default function WhyvaricoseVeinsHappenPage() {
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="bg-surface pt-8 pb-16">
+      <section className="relative bg-surface pt-8 pb-20">
         <div className="max-w-6xl mx-auto px-6">
           <Link href="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-primary mb-8 text-sm transition-colors">
             <ArrowLeft size={16} /> Back to Home
@@ -110,9 +110,13 @@ export default function WhyvaricoseVeinsHappenPage() {
             </div>
           </div>
         </div>
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#ffffff" />
+        </svg>
       </section>
 
       {/* Article Content with Sidebar */}
+      <div className="relative bg-white pb-20">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Main Article */}
@@ -376,9 +380,13 @@ export default function WhyvaricoseVeinsHappenPage() {
           </aside>
         </div>
       </div>
+      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#E8D5A3" />
+      </svg>
+    </div>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ background: 'linear-gradient(to bottom, #E8D5A3 0%, #F5E6C3 50%, #FFFFFF 100%)' }}>
+      <section className="relative py-20 pb-36" style={{ background: 'linear-gradient(to bottom, #E8D5A3 0%, #F5E6C3 50%, #FFFFFF 100%)' }}>
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-heading text-3xl md:text-4xl text-[#023936] mb-4">
             Take the First Step Toward Healthier Legs
@@ -395,6 +403,9 @@ export default function WhyvaricoseVeinsHappenPage() {
             </button>
           </div>
         </div>
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#ffffff" />
+        </svg>
       </section>
 
       <Footer />
