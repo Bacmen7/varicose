@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 
 const filters = ["All", "About the condition", "Treatment options", "After treatment", "Staying well", "Patient stories", "During pregnancy"];
 
@@ -77,24 +77,30 @@ export default function BlogOverviewPage() {
     <main className="bg-background">
 
       {/* ── HERO ── */}
-      <section className="w-full bg-surface py-16 lg:py-20">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-          <div className="max-w-2xl">
-            <p className="text-primary font-semibold mb-4 text-sm tracking-wider uppercase">
-              Vein Health Blog
-            </p>
-            <h1 className="font-heading text-secondary text-4xl md:text-5xl lg:text-[56px] lg:leading-[1.1] font-normal mb-6">
-              Learn everything about varicose veins
-            </h1>
-            <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-              Simple articles and guides written for patients, not doctors. Understand symptoms, treatments, and how to take care of your vein health.
-            </p>
+      <section className="w-full bg-accent overflow-hidden">
+        <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[550px]">
+          <div className="w-full lg:w-1/2 px-4 py-12 md:px-8 lg:px-16 xl:px-24 lg:py-16 flex flex-col justify-center">
+            <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-8">
+              <h1 className="font-heading text-secondary text-3xl md:text-4xl lg:text-5xl font-normal mb-6 leading-tight">
+                Learn Everything About Varicose Veins
+              </h1>
+              <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed max-w-lg">
+                Simple articles and guides written for patients. Understand symptoms, treatments, and how to take care of your vein health.
+              </p>
+              <Link href="#articles" className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
+                Browse All Articles
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 h-[350px] lg:h-auto relative">
+            <Image src="/user/varicose veins.png" alt="Learn about varicose veins" fill className="object-cover object-right" priority />
           </div>
         </div>
       </section>
 
       {/* ── FILTER + ARTICLES ── */}
-      <section className="py-12 md:py-16 w-full bg-background">
+      <section id="articles" className="py-12 md:py-16 w-full bg-background">
         <div className="container mx-auto px-4 max-w-[1200px]">
 
           {/* Filter pills */}

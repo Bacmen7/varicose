@@ -1,4 +1,4 @@
-import { Zap, Timer } from "lucide-react";
+import { Zap, Timer, ShieldCheck, MapPin } from "lucide-react";
 
 const features = [
   {
@@ -13,12 +13,24 @@ const features = [
     description:
       "From first symptoms to post-treatment recovery, we guide your care journey.",
   },
+  {
+    icon: ShieldCheck,
+    title: "Certified Vein Specialists",
+    description:
+      "Our doctors are trained in advanced venous care and use evidence-based protocols for every patient.",
+  },
+  {
+    icon: MapPin,
+    title: "Clinics Near You",
+    description:
+      "A growing network of vein care centres across India — expert help close to where you live.",
+  },
 ];
 
 export default function FeaturesSection() {
   return (
     <section className="py-8 w-full bg-surface">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+      <div className="w-full px-8 md:px-16">
         {/* Header */}
         <div className="mb-4 lg:mb-6 text-center max-w-3xl mx-auto">
           <p className="text-primary font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
@@ -33,11 +45,11 @@ export default function FeaturesSection() {
         </div>
 
         {/* Cards */}
-        <div className="flex justify-center gap-8 flex-wrap">
+        <div className="flex flex-row divide-x divide-primary/20 border border-primary/20 rounded-2xl overflow-hidden">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-accent-lighter rounded-2xl p-8 transition-transform hover:-translate-y-1 duration-300 w-full md:w-[calc(50%-1rem)] lg:w-[400px]"
+              className="bg-accent-lighter p-6 transition-colors hover:bg-accent duration-300 flex-1 min-w-0"
             >
               <span className="bg-white mb-6 flex size-14 items-center justify-center rounded-full shadow-sm text-primary">
                 <feature.icon className="size-7" />

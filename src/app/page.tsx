@@ -7,8 +7,8 @@ import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import LocationsSection from "@/components/LocationsSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import KnowledgeCenterSection from "@/components/KnowledgeCenterSection";
-import CTASection from "@/components/CTASection";
 import ContactFormSection from "@/components/ContactFormSection";
+import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 export default function Home() {

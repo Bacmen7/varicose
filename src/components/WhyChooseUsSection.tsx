@@ -37,7 +37,7 @@ export default function WhyChooseUsSection() {
               {benefits.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-white transition-all duration-300 group border border-gray-100 hover:border-primary/30"
+                  className="flex items-center gap-4 p-6 rounded-2xl bg-white transition-all duration-300 group border border-gray-100 hover:border-primary/30 h-full min-h-[90px]"
                 >
                   <div className="p-3 rounded-lg shrink-0 bg-accent-lighter text-primary group-hover:scale-110 transition-transform duration-300">
                     <item.icon size={24} strokeWidth={1.5} />
