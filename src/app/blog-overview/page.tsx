@@ -98,19 +98,21 @@ export default function BlogOverviewPage() {
         <div className="container mx-auto px-4 max-w-[1200px]">
 
           {/* Filter pills */}
-          <div className="flex flex-wrap gap-2 mb-10">
+          <div className="mb-10 flex items-center gap-4 overflow-x-auto border-b border-accent px-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] sm:px-0 [&::-webkit-scrollbar]:hidden">
+            <span className="shrink-0 text-sm font-bold uppercase tracking-[0.08em] text-secondary/60">
+              BROWSE
+            </span>
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setActiveFilter(f)}
-                className="text-sm font-semibold px-5 py-2 rounded-full border-2 transition-all duration-200"
-                style={{
-                  borderColor: activeFilter === f ? '#2C847F' : '#E5E7EB',
-                  backgroundColor: activeFilter === f ? '#2C847F' : 'transparent',
-                  color: activeFilter === f ? 'white' : '#6B7280',
-                }}
+                className={`shrink-0 rounded-full border px-5 py-3 text-sm font-semibold transition-all duration-200 ${
+                  activeFilter === f
+                    ? "border-primary bg-primary text-white"
+                    : "border-accent bg-white text-secondary hover:border-primary hover:text-primary"
+                }`}
               >
-                {f}
+                {f === "All" ? "All articles" : f}
               </button>
             ))}
           </div>

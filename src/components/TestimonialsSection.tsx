@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useEffect, useCallback } from "react";
+import { Star } from "lucide-react";
 
 const reviews = [
   {
@@ -38,6 +39,16 @@ function GoogleIcon() {
         <path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.34l2.58-2.58A8.66 8.66 0 0 0 9 0 9 9 0 0 0 .96 4.96l3 2.34C4.67 5.16 6.66 3.58 9 3.58z" />
       </svg>
     </span>
+  );
+}
+
+function RatingStars() {
+  return (
+    <div className="mt-1 flex items-center gap-1 text-[#FABB05]" aria-label="5 star rating">
+      {Array.from({ length: 5 }).map((_, index) => (
+        <Star key={index} className="size-3.5 fill-current" strokeWidth={0} />
+      ))}
+    </div>
   );
 }
 
@@ -89,7 +100,20 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="py-20 md:py-28 bg-white overflow-hidden relative pb-24">
+    <section className="py-20 md:py-28 overflow-hidden relative pb-24" style={{ backgroundColor: "#E3E6EA" }}>
+      <svg
+        className="absolute -top-px left-0 w-full block"
+        style={{ height: "60px" }}
+        preserveAspectRatio="none"
+        viewBox="0 0 1440 60"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0 0H1440V30C1200 62 960 62 720 30C480 -2 240 -2 0 30V0Z"
+          fill="#FFFFFF"
+        />
+      </svg>
       <div className="max-w-[1200px] mx-auto text-center mb-10 md:mb-14 px-6">
         <p className="text-xs uppercase tracking-[0.25em] font-semibold text-gray-400 mb-3">
           Trusted by thousands of patients
@@ -117,9 +141,12 @@ export default function TestimonialsSection() {
             >
               <div>
                 <div className="mb-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-3">
                     <GoogleIcon />
-                    <span className="text-sm font-semibold text-secondary">Google Review</span>
+                    <div className="leading-none">
+                      <span className="text-sm font-semibold leading-none text-secondary">Google Review</span>
+                      <RatingStars />
+                    </div>
                   </div>
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary">5.0</span>
                 </div>

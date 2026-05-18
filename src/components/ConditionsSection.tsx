@@ -85,15 +85,15 @@ export default function ConditionsSection() {
           <Link
             key={condition.name}
             href={condition.href}
-            className="group w-[214px] shrink-0 text-center"
+            className="group w-[250px] shrink-0 text-center"
           >
-            <div className="relative h-[318px] w-full overflow-hidden rounded-[8px] bg-white">
+            <div className="relative h-[330px] w-full overflow-hidden rounded-[8px] bg-white">
               <Image
                 src={condition.image}
                 alt={condition.name}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="214px"
+                sizes="250px"
               />
             </div>
             <h3 className="mt-[14px] text-[16px] font-semibold leading-6 tracking-[0.04em] text-secondary">
