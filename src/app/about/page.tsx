@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import ConditionsTreatSection from "@/components/ConditionsTreatSection";
+import PatientReviewsCarousel from "@/components/PatientReviewsCarousel";
 import { ArrowRight, Zap, Search, MessageCircle, MapPin } from "lucide-react";
 
 export default function AboutPage() {
@@ -9,39 +11,25 @@ export default function AboutPage() {
     <main className="bg-background">
 
       {/* ── HERO ── */}
-      <section className="w-full bg-accent overflow-hidden relative pb-16">
-        <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[550px]">
+      <section className="w-full bg-primary overflow-hidden relative pb-10">
+        <div className="flex flex-col lg:flex-row min-h-[420px] lg:min-h-[460px]">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 px-4 py-12 md:px-8 lg:px-16 xl:px-24 lg:py-16 flex flex-col justify-center">
+          <div className="w-full lg:w-1/2 px-4 py-10 md:px-8 lg:px-16 xl:px-24 lg:py-12 flex flex-col justify-center">
             <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-8">
-              <h1 className="font-heading text-secondary text-3xl md:text-4xl lg:text-5xl font-normal mb-4 leading-tight">
+              <h1 className="font-heading text-white text-3xl md:text-4xl lg:text-5xl font-normal mb-4 leading-tight">
                 Relief you can trust.{" "}
-                <span className="text-primary">Care that comes to you.</span>
+                <span className="text-accent-lighter">Care that comes to you.</span>
               </h1>
-              <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed max-w-lg">
+              <p className="text-white/85 text-base lg:text-lg mb-5 leading-relaxed max-w-lg">
                 Varicose veins affect millions of Indians, yet most people wait years before seeking help. At Varya Health, we make specialist vascular care simple, accessible, and reassuring for every patient who walks through our doors.
               </p>
 
-              {/* Stats */}
-              <div className="flex gap-10 mb-6 justify-center">
-                {[
-                  { num: "500+", label: "Patients treated" },
-                  { num: "1", label: "Dedicated centre, Mumbai" },
-                  { num: "10+", label: "Years in healthcare" },
-                ].map((s, i) => (
-                  <div key={i} className="flex flex-col items-center text-center">
-                    <span className="font-heading text-secondary text-2xl font-normal">{s.num}</span>
-                    <span className="text-gray-500 text-sm mt-1">{s.label}</span>
-                  </div>
-                ))}
-              </div>
-
               <div className="flex flex-wrap gap-3">
-                <Link href="/blog/when-to-see-doctor" className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
+                <Link href="/blog/when-to-see-doctor" className="bg-white text-primary hover:bg-accent-lighter font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
                   Meet our specialist
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/blog/when-to-see-doctor" className="border-2 border-primary text-primary font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 hover:bg-primary/5 w-fit">
+                <Link href="/blog/when-to-see-doctor" className="border-2 border-white/80 text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 hover:bg-white/10 w-fit">
                   Book consultation
                 </Link>
               </div>
@@ -49,23 +37,53 @@ export default function AboutPage() {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-1/2 h-[350px] lg:h-auto relative">
-            <Image src="/v2.png" alt="Varya Health" fill className="object-cover object-center" priority />
+          <div className="w-full lg:w-1/2 h-[300px] lg:h-auto relative">
+            <Image src="/hero.png" alt="Varya Health specialist care" fill className="object-cover object-center" priority />
           </div>
         </div>
         {/* Wave → bg-surface */}
-        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#EEF7F5" />
+        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "34px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
+          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#2C847F" />
         </svg>
       </section>
 
+      {/* ── STATS ── */}
+      <section className="relative w-full overflow-hidden bg-primary py-8 sm:py-10">
+        <div className="mx-auto max-w-[1200px] px-8 sm:px-16">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-12">
+            {[
+              { num: "500+", label: "Patients treated" },
+              { num: "01", label: "Dedicated centre, Mumbai" },
+              { num: "10+", label: "Years in healthcare" },
+            ].map((stat, i) => (
+              <div key={i} className="overflow-hidden pl-4 sm:pl-6 lg:pl-8">
+                <div className="relative h-[102px] sm:h-[130px] md:h-[155px]">
+                  <span className="absolute left-0 top-0 select-none whitespace-nowrap text-[48px] font-bold leading-none tracking-tight text-white/[0.06] sm:text-[64px] md:text-[80px]">
+                    {stat.num}
+                  </span>
+                  <span className="absolute left-0 top-[24px] select-none whitespace-nowrap text-[48px] font-bold leading-none tracking-tight text-white/[0.12] sm:top-[32px] sm:text-[64px] md:top-[40px] md:text-[80px]">
+                    {stat.num}
+                  </span>
+                  <span className="absolute left-0 top-[48px] whitespace-nowrap text-[48px] font-bold leading-none tracking-tight text-white/90 sm:top-[64px] sm:text-[64px] md:top-[76px] md:text-[80px]">
+                    {stat.num}
+                  </span>
+                </div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-white/60 sm:text-[14px]">
+                    {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── WHY PATIENTS TRUST US ── */}
-      <section className="py-12 lg:py-16 w-full bg-surface relative pb-16">
-        <div className="container mx-auto px-8 max-w-[1400px]">
+      <section className="py-10 lg:py-12 w-full bg-surface relative">
+        <div className="container mx-auto px-3 md:px-4 max-w-[1320px]">
           <div className="mb-8">
             <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Approach</p>
             <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Varya Health</h2>
-            <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
               We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their concerns, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
             </p>
           </div>
@@ -99,8 +117,8 @@ export default function AboutPage() {
             <div className="hidden md:block absolute top-6 left-[calc(16.666%+24px)] right-[calc(16.666%+24px)] h-px bg-primary/30" />
 
             {[
-              { num: 1, title: "Book a consultation", desc: "Call us, WhatsApp, or book online. We usually respond within a few hours and schedule your visit at your convenience." },
-              { num: 2, title: "Diagnosis and scan", desc: "Your specialist reviews your symptoms and performs a duplex ultrasound scan to understand your condition fully." },
+              { num: 1, title: "Book a consultation", desc: "Call us, WhatsApp, or book online. We usually respond within 24 hours and schedule your visit at your convenience." },
+              { num: 2, title: "Diagnosis and scan", desc: "Your specialist reviews your symptoms and performs an ultrasound scan to understand your condition fully." },
               { num: 3, title: "Treatment and recovery", desc: "A personalised treatment plan is created. Most procedures are completed in a single visit with minimal downtime." },
             ].map((s, i) => (
               <div key={i} className="flex-1 flex flex-col items-center text-center px-6">
@@ -181,115 +199,51 @@ export default function AboutPage() {
         </svg>
       </section>
 
-      {/* ── CONDITIONS ── */}
-      <section className="py-12 lg:py-16 w-full bg-background relative pb-20">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Conditions We Treat</p>
-          <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Vascular conditions we specialise in</h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-10">
-            Our focus is on venous and vascular conditions that affect daily life. We treat a wide range of conditions, with varicose veins as our primary area of expertise.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-white rounded-2xl px-6 py-5 border-2 border-primary flex items-center gap-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-primary shrink-0" />
-              <span className="font-body text-secondary text-base font-bold flex-1">Varicose veins</span>
-              <span className="text-xs font-semibold px-3 py-1 rounded-full text-white shrink-0" style={{ backgroundColor: '#FF8968' }}>Primary</span>
-            </div>
-            <div className="bg-white rounded-2xl px-6 py-5 border border-gray-200 flex flex-col gap-3">
-              {["Spider veins", "Chronic venous insufficiency (CVI)", "DVT awareness and prevention", "Venous leg ulcers", "Leg swelling and venous oedema", "Post-pregnancy vein conditions"].map((label, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                  <span className="font-body text-secondary text-base">{label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ConditionsTreatSection />
 
       {/* ── WHY PATIENTS CHOOSE US ── */}
       <section className="py-12 lg:py-16 w-full bg-surface relative pb-20">
-        <div className="container mx-auto px-4 max-w-[1200px]">
+        <div className="container mx-auto px-2 md:px-3 max-w-[1360px]">
           <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Why Patients Choose Us</p>
           <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Relief that goes beyond the procedure</h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mb-10">
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-10">
             Choosing the right vascular care centre is about more than just the treatment. It is about feeling heard, supported, and confident in the care you receive at every step.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {[
-              { icon: "check", title: "No unnecessary surgery", desc: "We recommend surgery only when it is genuinely needed. Most patients are treated with day-care procedures and go home the same day." },
-              { icon: "shield", title: "Honest second opinions", desc: "If you have already been advised a procedure elsewhere, we are happy to provide an independent clinical review before you decide." },
-              { icon: "dollar", title: "Transparent costs", desc: "We share a clear estimate before any procedure. No hidden charges. We also guide patients on PM-JAY and insurance coverage where applicable." },
-              { icon: "screen", title: "Teleconsultation available", desc: "Not able to visit in person? Connect with our specialist via video consultation. We serve patients across Maharashtra through eSanjeevani and direct teleconsult." },
-            ].map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-primary/30 transition-all duration-300 flex flex-col gap-4">
-                <span className="bg-accent-lighter flex size-11 items-center justify-center rounded-xl text-primary shrink-0">
-                  {item.icon === "check" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>}
-                  {item.icon === "shield" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l7 4v5c0 4.4-3 8.5-7 10C8 20.5 5 16.4 5 12V7l7-4z"/></svg>}
-                  {item.icon === "dollar" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>}
-                  {item.icon === "screen" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>}
-                </span>
-                <div>
-                  <h3 className="font-heading text-secondary text-lg font-normal mb-2">{item.title}</h3>
-                  <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                { image: "/patient.png", title: "No unnecessary surgery", desc: "We recommend a procedure only when it is genuinely needed, with day-care options for most suitable patients." },
+                { image: "/v2.png", title: "Honest second opinions", desc: "Already advised treatment elsewhere? We provide an independent review so you can decide with clarity." },
+                { image: "/insurance.png", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
+                { image: "/image.png", title: "Teleconsultation available", desc: "Connect online before visiting the centre, especially if you live outside Mumbai or need initial guidance." },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 transition-all duration-300 flex flex-col">
+                  <div className="relative h-40 w-full overflow-hidden">
+                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-heading text-secondary text-lg font-normal mb-2">{item.title}</h3>
+                    <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
 
       {/* ── PATIENT STORIES ── */}
-      <section className="py-12 lg:py-16 w-full bg-background relative pb-20">
-        <div className="container mx-auto px-4 max-w-[1200px]">
+      <section className="pt-12 pb-28 lg:pt-16 lg:pb-32 w-full bg-background relative">
+        <div className="container mx-auto px-2 md:px-3 max-w-[1360px]">
           <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Patient Stories</p>
           <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">
-            500+ patients. 500+ reasons to seek care earlier.
+            500+ patients.
+            <br />
+            500+ reasons to seek care earlier.
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-10">
             Here is what some of our patients have shared about their experience at Varya Health. Real words, real recoveries.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                quote: "I had been ignoring my leg pain for almost three years. After just one consultation at Varya Health, I finally understood what was happening. The EVLT procedure was over in under an hour and I was back home the same day.",
-                name: "Priya Verma",
-                location: "Andheri, Mumbai",
-                initials: "PV",
-              },
-              {
-                quote: "I was nervous about surgery. Dr. Sharma explained everything clearly and suggested a minimally invasive option instead. No general anaesthesia, no hospital stay, and my legs feel completely different now.",
-                name: "Rajan Khanna",
-                location: "Thane, Maharashtra",
-                initials: "RK",
-              },
-              {
-                quote: "My varicose veins came back after my second pregnancy. The team at Varya Health was so understanding. They gave me all the time I needed to ask questions and I never felt rushed or confused.",
-                name: "Sunita Mishra",
-                location: "Borivali, Mumbai",
-                initials: "SM",
-              },
-            ].map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-200 flex flex-col gap-4">
-                {/* Stars */}
-                <div className="flex gap-0.5">
-                  {[...Array(4)].map((_, j) => (
-                    <svg key={j} width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  ))}
-                </div>
-                <p className="text-gray-600 text-base leading-relaxed italic flex-grow">{t.quote}</p>
-                <div className="flex items-center gap-3 mt-2">
-                  <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center shrink-0">
-                    <span className="text-primary font-semibold text-xs">{t.initials}</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-secondary text-sm">{t.name}</p>
-                    <p className="text-gray-400 text-xs">{t.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <PatientReviewsCarousel />
         </div>
         {/* Wave → CTASection bg #026460 */}
         <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">

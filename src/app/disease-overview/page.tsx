@@ -44,10 +44,6 @@ export default function ConditionsOverviewPage() {
   const [query, setQuery] = useState("");
   const [current, setCurrent] = useState(0);
 
-  const filtered = conditions.filter((c) =>
-    c.title.toLowerCase().includes(query.toLowerCase())
-  );
-
   const prev = () => setCurrent((i) => (i === 0 ? conditions.length - 1 : i - 1));
   const next = () => setCurrent((i) => (i === conditions.length - 1 ? 0 : i + 1));
 
@@ -210,19 +206,24 @@ export default function ConditionsOverviewPage() {
       </section>
 
       {/* ── EXPLORE BY SUBTYPE ── */}
-      <section className="py-10 w-full bg-background">
-        <div className="container mx-auto px-4 max-w-[900px]">
-          <h2 className="font-heading text-secondary text-2xl font-bold mb-6">Explore by subtype</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-2">
+      <section className="py-14 md:py-16 w-full" style={{ backgroundColor: '#F7F6F1' }}>
+        <div className="container mx-auto px-4 max-w-[1120px]">
+          <h2 className="font-heading text-[40px] leading-tight font-normal mb-9" style={{ color: '#16383A' }}>Explore by subtype</h2>
+          <div className="flex flex-wrap gap-3 md:gap-x-4 md:gap-y-3">
             {[
               "Varicose Veins", "Spider Veins", "Chronic Venous Insufficiency",
               "Deep Vein Reflux", "Venous Leg Ulcers", "Post-Pregnancy Veins",
               "Leg Swelling", "Skin Darkening", "Superficial Thrombophlebitis",
               "Reticular Veins", "Pelvic Varicosities", "Venous Eczema",
-              "Lipodermatosclerosis",
+
             ].map((subtype, i) => (
-              <Link key={i} href="/conditions/varicose-veins" className="text-gray-600 text-sm hover:text-primary transition-colors py-0.5">
-                {subtype}
+              <Link
+                key={i}
+                href="/conditions/varicose-veins"
+                className="inline-flex min-h-[54px] items-center gap-3 rounded-full border border-[#DDEBEA] bg-white px-6 text-[20px] font-normal leading-none text-[#244247] shadow-[0_1px_4px_rgba(22,56,58,0.04)] transition-all hover:border-primary hover:text-primary hover:shadow-[0_4px_14px_rgba(44,132,127,0.12)]"
+              >
+                <span className="h-2 w-2 rounded-full bg-[#9DE5D4]" aria-hidden="true" />
+                <span>{subtype}</span>
               </Link>
             ))}
           </div>
