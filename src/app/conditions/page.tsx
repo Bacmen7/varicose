@@ -179,7 +179,7 @@ export default function ConditionsOverviewPage() {
                     Video
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                   </span>
-                  <h3 className="font-sans text-secondary text-base font-bold leading-snug line-clamp-2">{video.title}</h3>
+                  <h3 className="font-sans text-secondary text-base font-medium leading-snug line-clamp-2">{video.title}</h3>
                 </div>
               </div>
             ))}
