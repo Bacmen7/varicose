@@ -531,68 +531,28 @@ export default function VaricoseVeinsPage() {
             </ul>
           </section>
 
-          {/* ── SECTION: Early Eval (dark teal, full-bleed) ── */}
+          {/* ── SECTION: Early Eval ── */}
           <section
             id="early-eval"
             data-toc-section
             className="mb-0 scroll-mt-24"
           >
-            {/* Negative-margin full-bleed panel */}
-            <div
-              className="-mx-6 lg:-mx-0 rounded-none lg:rounded-3xl overflow-hidden"
-              style={{ backgroundColor: "#1D5E5B" }}
-            >
-              <div className="flex flex-col lg:flex-row">
-                {/* Text side */}
-                <div className="flex-1 py-12 px-8 lg:py-14 lg:px-10">
-                  <h2
-                    className="font-heading text-2xl md:text-3xl font-bold mb-4 text-white"
-                  >
-                    Why Early Evaluation Matters
-                  </h2>
-                  <p className="text-base mb-6 text-white/80">Early diagnosis:</p>
-                  <div className="space-y-4">
-                    {[
-                      "Prevents progression",
-                      "Reduces complications",
-                      "Makes treatment simpler and more effective",
-                      "Improves long-term outcomes",
-                    ].map((point) => (
-                      <div key={point} className="flex items-center gap-4">
-                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                          <svg
-                            className="w-4 h-4 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                        <span className="text-base text-white">{point}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-base italic mt-8 text-white/70">
-                    Ignoring symptoms often leads to more complex care later.
-                  </p>
-                </div>
-
-                {/* Image side */}
-                <div className="lg:w-2/5 relative min-h-[260px] lg:min-h-0">
-                  <Image
-                    src="/patient.png"
-                    alt="Doctor consultation"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+            <div className="rounded-xl border border-cta/20 bg-cta/10 p-6">
+              <h2 className="font-heading text-xl md:text-2xl text-secondary mb-4">
+                Why Early Evaluation Matters
+              </h2>
+              <p className="text-[15px] md:text-base leading-7 mb-4" style={{ color: "#48546B" }}>
+                Early diagnosis:
+              </p>
+              <ul className="list-disc list-inside text-[15px] md:text-base leading-7 space-y-2 ml-4" style={{ color: "#48546B" }}>
+                <li>Prevents progression</li>
+                <li>Reduces complications</li>
+                <li>Makes treatment simpler and more effective</li>
+                <li>Improves long-term outcomes</li>
+              </ul>
+              <p className="text-primary font-bold text-[15px] md:text-base mt-4">
+                Ignoring symptoms often leads to more complex care later.
+              </p>
             </div>
           </section>
         </article>
@@ -606,94 +566,34 @@ export default function VaricoseVeinsPage() {
         </aside>
       </div>
 
-      {/* ── BOTTOM CTA ───────────────────────────────────────── */}
-      <section>
-        <div
-          className="border-y pt-10 md:pt-16 lg:pt-20 max-w-full overflow-hidden"
-          style={{ borderColor: "rgba(44,132,127,0.20)", backgroundColor: "#EEF7F5" }}
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-primary py-20 pb-36">
+        <svg
+          className="absolute -top-px left-0 block w-full rotate-180"
+          style={{ height: "60px" }}
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 60"
+          fill="none"
         >
-          <div className="max-w-6xl mx-auto px-6 relative flex flex-col md:flex-row md:gap-12">
-            {/* Left Content */}
-            <div className="mb-72 md:mb-28 md:w-2/3 lg:shrink-0 xl:mb-20 xl:w-1/2">
-              <h2
-                className="font-heading text-3xl md:text-[40px] md:leading-[48px] mb-4"
-                style={{ color: "#026460" }}
-              >
-                Take the First Step Toward Healthier Legs
-              </h2>
-              <p
-                className="text-base leading-relaxed mb-4"
-                style={{ color: "#48546B" }}
-              >
-                If your legs feel heavy, painful, or swollen, it&apos;s worth
-                getting checked.
-              </p>
-              <p
-                className="text-base leading-relaxed mb-8"
-                style={{ color: "#48546B" }}
-              >
-                Understanding the problem is the first step toward lasting
-                relief.
-              </p>
-              <a
-                href="#"
-                className="inline-block text-white font-medium px-6 py-3 rounded-full transition-colors text-base"
-                style={{ backgroundColor: "#2C847F" }}
-              >
-                Find a Varicose vein specialist near you
-              </a>
-            </div>
-
-            {/* Right – Stacked Cards */}
-            <div className="absolute bottom-0 right-1/2 mr-6 h-min w-[110%] max-w-md translate-x-1/2 md:-right-36 md:mr-0 md:w-3/4 md:max-w-xl md:translate-x-0 lg:mt-auto xl:relative xl:right-0 xl:h-full xl:w-full xl:max-w-full">
-              <div
-                className="relative h-full min-h-64 w-full"
-                style={{ aspectRatio: "8/5" }}
-              >
-                {/* Card 3 – Back */}
-                <div
-                  className="absolute right-0 top-0 z-10 w-3/5 bg-white shadow-lg rounded-3xl overflow-hidden"
-                  style={{
-                    aspectRatio: "3/5",
-                    transform: "translateX(-24%) translateY(24%) rotate(-30deg)",
-                  }}
-                >
-                  <Image
-                    src="/patient.png"
-                    alt="Patient consultation"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                {/* Card 2 – Middle */}
-                <div
-                  className="absolute right-0 top-0 z-20 w-3/5 bg-white shadow-xl rounded-3xl overflow-hidden"
-                  style={{
-                    aspectRatio: "3/5",
-                    transform: "translateX(-16%) translateY(8%) rotate(-15deg)",
-                  }}
-                >
-                  <Image
-                    src="/t2.png"
-                    alt="Treatment procedure"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                {/* Card 1 – Front */}
-                <div
-                  className="absolute right-0 top-0 z-30 w-3/5 bg-white shadow-2xl rounded-3xl overflow-hidden"
-                  style={{ aspectRatio: "3/5" }}
-                >
-                  <Image
-                    src="/t3.png"
-                    alt="Healthy legs result"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+          <path
+            d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z"
+            fill="#ffffff"
+          />
+        </svg>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-heading text-3xl md:text-4xl text-white mb-4">
+            Take the First Step Toward Healthier Legs
+          </h2>
+          <p className="text-[15px] md:text-base leading-7 mb-8 text-white/85">
+            Varicose veins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90">
+              Book a Consultation
+            </button>
+            <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full transition-colors hover:bg-white/10 border-2 border-white">
+              Find a Specialist Near You
+            </button>
           </div>
         </div>
       </section>
@@ -711,11 +611,11 @@ export default function VaricoseVeinsPage() {
           </h2>
 
           <form className="mx-auto mt-14 flex max-w-[430px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-            <label htmlFor="vein-newsletter-email" className="sr-only">
+            <label htmlFor="condition-newsletter-email" className="sr-only">
               Email Address
             </label>
             <input
-              id="vein-newsletter-email"
+              id="condition-newsletter-email"
               type="email"
               placeholder="Email Address*"
               className="h-14 flex-1 rounded-full border border-accent bg-white px-6 text-sm text-secondary outline-none transition-colors placeholder:text-secondary/45 focus:border-primary"

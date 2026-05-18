@@ -405,6 +405,38 @@ export default function WhyvaricoseVeinsHappenPage() {
         </div>
       </section>
 
+      {/* Newsletter */}
+      <section className="bg-white py-20 md:py-24">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="mb-8 text-xs font-semibold uppercase tracking-[0.35em] text-secondary/70">
+            From our vein care experts to your inbox
+          </p>
+          <h2 className="font-heading text-4xl font-normal leading-tight text-primary md:text-5xl">
+            Get vein-friendly tips, news, and more
+            <br className="hidden md:block" />
+            delivered weekly.
+          </h2>
+
+          <form className="mx-auto mt-14 flex max-w-[430px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+            <label htmlFor="vein-newsletter-email" className="sr-only">
+              Email Address
+            </label>
+            <input
+              id="vein-newsletter-email"
+              type="email"
+              placeholder="Email Address*"
+              className="h-14 flex-1 rounded-full border border-accent bg-white px-6 text-sm text-secondary outline-none transition-colors placeholder:text-secondary/45 focus:border-primary"
+            />
+            <button
+              type="submit"
+              className="h-14 rounded-full bg-cta px-7 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Subscribe →
+            </button>
+          </form>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
