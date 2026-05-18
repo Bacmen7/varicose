@@ -97,12 +97,12 @@ export default function VideoStoriesSection() {
                 </div>
               </div>
 
-              <div className="p-4 pt-3 flex flex-col flex-grow">
-                <p className="text-sm text-gray-800 leading-relaxed mb-3 flex-grow">
+              <div className="p-5 pt-4 flex flex-col flex-grow">
+                <p className="font-heading text-secondary text-base leading-snug mb-4 flex-grow">
                   {video.title}
                 </p>
                 <div className="flex items-center justify-between">
-                  <p className="text-xs text-gray-400">{video.doctor}</p>
+                  <p className="text-sm font-medium text-gray-500">{video.doctor}</p>
                   <YouTubeIcon />
                 </div>
               </div>
@@ -154,8 +154,8 @@ export default function VideoStoriesSection() {
               />
             </div>
             <div className="mt-4">
-              <p className="text-white text-base font-semibold leading-snug">{activeVideo.title}</p>
-              <p className="text-white/50 text-sm mt-1">{activeVideo.doctor}</p>
+              <p className="font-heading text-white text-xl font-normal leading-snug">{activeVideo.title}</p>
+              <p className="text-white/60 text-sm font-medium mt-1">{activeVideo.doctor}</p>
             </div>
           </div>
         </div>

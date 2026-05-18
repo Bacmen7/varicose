@@ -61,6 +61,15 @@ body {
   font-family: var(--font-body);
 }
 
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
 /* Utility classes for fonts */
 .font-heading {
   font-family: var(--font-heading);
