@@ -31,11 +31,11 @@ const slides = [
   {
     id: 2,
     heading: (
-      <>
-        Advanced care for{" "}
-        <span className="font-bold font-body text-[0.85em] whitespace-nowrap inline-block">varicose</span>{" "}
-        veins
-      </>
+      <span className="inline-flex flex-col">
+        <span>Advanced care</span>
+        <span>for</span>
+        <span>Varicose Vein</span>
+      </span>
     ),
     image: "/b1.png",
   },

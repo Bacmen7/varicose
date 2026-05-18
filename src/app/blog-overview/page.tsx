@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const filters = ["All", "About the condition", "Treatment options", "After treatment", "Staying well", "Patient stories", "During pregnancy"];
 
@@ -78,7 +78,7 @@ export default function BlogOverviewPage() {
 
       {/* ── HERO ── */}
       <section className="w-full bg-surface py-16 lg:py-20">
-        <div className="container mx-auto px-4 max-w-[1200px]">
+        <div className="container mx-auto max-w-[1200px]">
           <div className="max-w-2xl">
             <p className="text-primary font-semibold mb-4 text-sm tracking-wider uppercase">
               Vein Health Blog
@@ -115,37 +115,39 @@ export default function BlogOverviewPage() {
             ))}
           </div>
 
-          {/* Cards grid — exactly like KnowledgeCenterSection */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Article cards */}
+          <div className="mx-auto flex max-w-[900px] flex-col gap-5 px-0">
             {filtered.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className="group bg-white rounded-2xl overflow-hidden transition-all duration-300 flex flex-col h-full border border-transparent hover:border-primary/20"
+                className="group grid overflow-hidden rounded-2xl border border-primary/35 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_10px_28px_rgba(44,132,127,0.10)] sm:grid-cols-[190px_1fr]"
               >
-                <div className="h-44 overflow-hidden relative">
+                <div className="relative min-h-[150px] overflow-hidden bg-accent-light">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
+                  <div className="absolute inset-0 bg-primary/10 transition-colors group-hover:bg-primary/0" />
                 </div>
-                <div className="p-5 flex flex-col flex-grow">
-                  <div className="flex items-center justify-between mb-2">
-                    <p className="text-xs font-bold tracking-wider uppercase text-primary">{item.category}</p>
-                    <span className="text-xs text-gray-400">{item.readTime}</span>
-                  </div>
-                  <h3 className="font-heading text-secondary text-xl font-normal mb-3 leading-snug group-hover:text-primary transition-colors">
+
+                <div className="flex flex-col justify-center px-6 py-5 sm:px-7">
+                  {index === 0 && (
+                    <span className="mb-2 w-fit rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                      Featured
+                    </span>
+                  )}
+                  <h3 className="font-heading text-[22px] font-normal leading-snug text-secondary transition-colors group-hover:text-primary">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 text-base leading-relaxed mb-4 flex-grow line-clamp-3">
+                  <p className="mt-3 max-w-[570px] text-sm leading-6 text-gray-600">
                     {item.desc}
                   </p>
-                  <span className="text-primary font-semibold text-sm flex items-center mt-auto">
-                    Read more
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <span className="mt-4 flex items-center gap-1 text-xs font-semibold text-gray-400">
+                    {item.readTime}
+                    <ArrowUpRight className="size-3.5 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   </span>
                 </div>
               </Link>
@@ -156,7 +158,7 @@ export default function BlogOverviewPage() {
           <div className="flex justify-center mt-12">
             <button className="bg-primary hover:opacity-90 text-white font-semibold py-3 px-10 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer">
               Load more articles
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>
