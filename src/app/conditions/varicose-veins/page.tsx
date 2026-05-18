@@ -179,10 +179,7 @@ export default function VaricoseVeinsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-16 items-center">
             <div>
-              <span className="inline-flex text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full bg-accent text-primary">
-                Venous Condition
-              </span>
-              <h1 className="font-heading text-secondary text-4xl md:text-5xl lg:text-[64px] lg:leading-[1.05] font-normal mt-5 mb-6 max-w-3xl">
+              <h1 className="font-heading text-secondary text-4xl md:text-5xl lg:text-[64px] lg:leading-[1.05] font-normal mb-6 max-w-3xl">
                 Varicose Veins Overview
               </h1>
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl mb-6">

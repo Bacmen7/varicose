@@ -77,6 +77,37 @@ const articleRows = [
       },
     ],
   },
+  {
+    title: "Spider vein articles",
+    image: "/user/spider vein.png",
+    href: "/conditions",
+    articles: [
+      {
+        title: "Spider veins vs varicose veins",
+        image: "/user/spider vein.png",
+        readTime: "5 min read",
+        href: "/conditions",
+      },
+      {
+        title: "Why tiny red and blue veins appear",
+        image: "/user/chronic venus insufficiency.png",
+        readTime: "6 min read",
+        href: "/blog/why-varicose-veins-happen",
+      },
+      {
+        title: "When spider veins need medical attention",
+        image: "/user/leg pain and heaviness.png",
+        readTime: "4 min read",
+        href: "/blog/when-to-see-doctor",
+      },
+      {
+        title: "Treatment options for visible surface veins",
+        image: "/user/deep vein reflux.png",
+        readTime: "5 min read",
+        href: "/treatments-overview",
+      },
+    ],
+  },
 ];
 
 const moreTopics = [
@@ -164,27 +195,27 @@ export default function BlogPage() {
   return (
     <main className="bg-white">
       <section className="relative overflow-hidden bg-white">
-        <div className="relative z-0 h-[485px]">
+        <div className="relative z-0 h-[400px]">
           <Image src="/hero.png" alt="Varya Health guide" fill priority className="object-cover object-center" />
           <div className="absolute inset-0 bg-black/28" />
-          <div className="relative mx-auto flex h-full max-w-[1200px] items-end px-4 pb-[118px]">
-            <div className="max-w-[900px]">
+          <div className="relative mx-auto flex h-full max-w-[1200px] items-end px-4 pb-[98px]">
+            <div className="max-w-[1100px]">
               <h1 className="font-body text-white text-3xl leading-tight md:text-4xl md:leading-[1.25] font-normal">
               Explore Health Guide
               <br />
-              Reliable, relatable medical information in your hands.
+              <span className="md:whitespace-nowrap">Reliable, relatable medical information in your hands.</span>
             </h1>
             </div>
           </div>
         </div>
 
         <div className="relative z-10 mx-auto max-w-[1200px] px-4 pb-16">
-          <div className="-mt-[74px] grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mt-[62px] grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
             {guideCategories.map((category) => (
               <Link
                 key={category.title}
                 href={category.href}
-                className="group flex min-h-[116px] items-center justify-between gap-4 bg-surface px-6 transition-colors hover:bg-accent-lighter"
+                className="group flex min-h-[104px] items-center justify-between gap-4 bg-surface px-6 transition-colors hover:bg-accent-lighter"
               >
                 <div className="flex items-center gap-4">
                   <BookOpen size={34} strokeWidth={1.25} className="text-secondary" />
