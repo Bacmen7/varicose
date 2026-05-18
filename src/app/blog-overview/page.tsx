@@ -7,12 +7,19 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { ArrowUpRight } from "lucide-react";
 
-const filters = ["All", "About the condition", "Treatment options", "After treatment", "Staying well", "Patient stories", "During pregnancy"];
+const filters = [
+  "Featured",
+  "Latest Research",
+  "Specialist Insights",
+  "Patient Journeys",
+  "Women’s Vein Health",
+];
 
 const blogPosts = [
   {
     category: "Article",
-    tag: "About the condition",
+    tag: "Latest Research",
+    featured: true,
     title: "Why Varicose Veins Happen",
     desc: "Understand the underlying causes of venous insufficiency and how valve failure leads to varicose veins.",
     image: "/user/varicose veins.png",
@@ -21,7 +28,7 @@ const blogPosts = [
   },
   {
     category: "Guide",
-    tag: "About the condition",
+    tag: "Specialist Insights",
     title: "Early Warning Signs",
     desc: "Learn to spot subtle symptoms like heaviness, aching, and swelling before visible veins appear.",
     image: "/user/leg pain and heaviness.png",
@@ -30,7 +37,7 @@ const blogPosts = [
   },
   {
     category: "Checklist",
-    tag: "About the condition",
+    tag: "Specialist Insights",
     title: "When Should You See a Doctor for Varicose Veins?",
     desc: "The red flags — skin changes or persistent pain — that indicate it is time for a professional evaluation.",
     image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
@@ -39,7 +46,7 @@ const blogPosts = [
   },
   {
     category: "Guide",
-    tag: "Treatment options",
+    tag: "Latest Research",
     title: "EVLT vs RFA — Which One Is Right for You?",
     desc: "Both use heat to close faulty veins in under an hour. A plain-language breakdown for patients.",
     image: "/user/deep vein reflux.png",
@@ -48,7 +55,7 @@ const blogPosts = [
   },
   {
     category: "Article",
-    tag: "After treatment",
+    tag: "Patient Journeys",
     title: "What to Expect in the Week After Treatment",
     desc: "Bruising, tightness, and that cord-like feeling along the treated vein — what is normal and what is not.",
     image: "/user/chronic venus insufficiency.png",
@@ -57,7 +64,7 @@ const blogPosts = [
   },
   {
     category: "Article",
-    tag: "During pregnancy",
+    tag: "Women’s Vein Health",
     title: "Varicose Veins During and After Pregnancy",
     desc: "Hormones, weight, and posture all play a role. Here is when veins improve on their own — and when they do not.",
     image: "/user/spider vein.png",
@@ -67,10 +74,10 @@ const blogPosts = [
 ];
 
 export default function BlogOverviewPage() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Featured");
 
-  const filtered = activeFilter === "All"
-    ? blogPosts
+  const filtered = activeFilter === "Featured"
+    ? blogPosts.filter((p) => p.featured)
     : blogPosts.filter((p) => p.tag === activeFilter);
 
   return (
@@ -99,9 +106,6 @@ export default function BlogOverviewPage() {
 
           {/* Filter pills */}
           <div className="mb-10 flex items-center gap-4 overflow-x-auto border-b border-accent px-4 pb-8 [-ms-overflow-style:none] [scrollbar-width:none] sm:px-0 [&::-webkit-scrollbar]:hidden">
-            <span className="shrink-0 text-sm font-bold uppercase tracking-[0.08em] text-secondary/60">
-              BROWSE
-            </span>
             {filters.map((f) => (
               <button
                 key={f}
@@ -112,7 +116,7 @@ export default function BlogOverviewPage() {
                     : "border-accent bg-white text-secondary hover:border-primary hover:text-primary"
                 }`}
               >
-                {f === "All" ? "All articles" : f}
+                {f}
               </button>
             ))}
           </div>
@@ -136,7 +140,7 @@ export default function BlogOverviewPage() {
                 </div>
 
                 <div className="flex flex-col justify-center px-6 py-5 sm:px-7">
-                  {index === 0 && (
+                  {item.featured && (
                     <span className="mb-2 w-fit rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
                       Featured
                     </span>
