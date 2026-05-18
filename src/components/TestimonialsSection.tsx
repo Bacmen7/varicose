@@ -28,6 +28,19 @@ const reviews = [
   },
 ];
 
+function GoogleIcon() {
+  return (
+    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white border border-gray-100">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+        <path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z" />
+        <path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.33-1.58-5.04-3.72H.96v2.34A9 9 0 0 0 9 18z" />
+        <path fill="#FBBC05" d="M3.96 10.7A5.4 5.4 0 0 1 3.68 9c0-.59.1-1.16.28-1.7V4.96H.96A9 9 0 0 0 0 9c0 1.45.35 2.82.96 4.04l3-2.34z" />
+        <path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.34l2.58-2.58A8.66 8.66 0 0 0 9 0 9 9 0 0 0 .96 4.96l3 2.34C4.67 5.16 6.66 3.58 9 3.58z" />
+      </svg>
+    </span>
+  );
+}
+
 export default function TestimonialsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const pausedRef = useRef(false);
@@ -103,9 +116,13 @@ export default function TestimonialsSection() {
               className="flex-shrink-0 w-[75vw] sm:w-[300px] md:w-[340px] p-5 sm:p-8 flex flex-col justify-between bg-surface rounded-2xl"
             >
               <div>
-                <svg className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-5 text-primary/30" viewBox="0 0 40 40" fill="currentColor">
-                  <path d="M10.4 28.8c-2.4 0-4.27-.73-5.6-2.2C3.47 25.13 2.8 23.2 2.8 20.8c0-2.93.87-5.6 2.6-8 1.73-2.4 4.07-4.33 7-5.8l1.6 2.4c-2.13 1.2-3.73 2.53-4.8 4-.93 1.47-1.4 2.93-1.4 4.4.27-.13.73-.2 1.4-.2 1.6 0 2.93.53 4 1.6 1.07 1.07 1.6 2.47 1.6 4.2 0 1.6-.6 3-1.8 4.2-1.2 1.07-2.73 1.6-4.6 1.6zm17.6 0c-2.4 0-4.27-.73-5.6-2.2-1.33-1.47-2-3.4-2-5.8 0-2.93.87-5.6 2.6-8 1.73-2.4 4.07-4.33 7-5.8l1.6 2.4c-2.13 1.2-3.73 2.53-4.8 4-.93 1.47-1.4 2.93-1.4 4.4.27-.13.73-.2 1.4-.2 1.6 0 2.93.53 4 1.6 1.07 1.07 1.6 2.47 1.6 4.2 0 1.6-.6 3-1.8 4.2-1.2 1.07-2.73 1.6-4.6 1.6z" />
-                </svg>
+                <div className="mb-4 flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-2">
+                    <GoogleIcon />
+                    <span className="text-sm font-semibold text-secondary">Google Review</span>
+                  </div>
+                  <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary">5.0</span>
+                </div>
                 <p className="text-[15px] sm:text-[17px] leading-[1.7] font-medium text-secondary">
                   {r.quote}
                 </p>

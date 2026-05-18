@@ -26,10 +26,10 @@ export default function Home() {
       <TreatmentsSection />
       <HowItWorksSection />
       <WhyChooseUsSection />
-      <VideoStoriesSection />
       <LocationsSection />
-      <TestimonialSlider />
       <TestimonialsSection />
+      <VideoStoriesSection />
+      <TestimonialSlider />
       <KnowledgeCenterSection />
       <ContactFormSection />
       <CTASection />
