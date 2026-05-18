@@ -12,7 +12,7 @@ export default function Navbar() {
   const navItems = [
     { label: "About Us", href: "/about" },
     { label: "Conditions", href: "/conditions" },
-    { label: "Treatments", href: "/treatments" },
+    { label: "Treatments", href: "/treatments-overview" },
     { label: "Our Clinics", href: "/clinics" },
     { label: "Learn", href: "/blog" },
   ];
