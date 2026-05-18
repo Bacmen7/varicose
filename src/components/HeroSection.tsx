@@ -14,7 +14,7 @@ const slides = [
         <span className="font-bold font-body text-[0.85em] whitespace-nowrap inline-block">Varicose Veins</span>?
       </>
     ),
-    image: "/b1.png",
+    image: "/h3.png",
   },
   {
     id: 1,
@@ -26,7 +26,7 @@ const slides = [
         <span className="font-bold font-body text-[0.85em] whitespace-nowrap inline-block">here</span>
       </>
     ),
-    image: "/b1.png",
+    image: "/h2.png",
   },
   {
     id: 2,
@@ -37,7 +37,9 @@ const slides = [
         <span>Varicose Vein</span>
       </span>
     ),
-    image: "/b1.png",
+    image: "/h1-cutout.png",
+    imageWrapClass: "w-[132%] h-full -right-10 md:-right-16 lg:-right-20",
+    imageClass: "object-right-bottom p-0",
   },
 ];
 
@@ -134,7 +136,7 @@ export default function HeroSection() {
           {slides.map((slide, index) => (
             <div
               key={`img-${slide.id}`}
-              className={`absolute bottom-0 right-0 w-full h-full transition-all duration-[800ms] ease-out ${
+              className={`absolute bottom-0 right-0 ${slide.imageWrapClass ?? "w-full h-full"} overflow-hidden transition-all duration-[800ms] ease-out ${
                 index === currentSlide
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-12 pointer-events-none"
@@ -144,7 +146,7 @@ export default function HeroSection() {
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
                 fill
-                className="object-contain object-bottom"
+                className={`object-contain object-bottom ${slide.imageClass ?? ""}`}
                 priority={index === 0}
               />
             </div>

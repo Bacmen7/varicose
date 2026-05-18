@@ -67,20 +67,32 @@ export default function ContactFormSection() {
                 </div>
                 <div>
                   <label htmlFor="condition" className="block text-gray-700 font-semibold mb-1 text-sm">Condition</label>
-                  <select
-                    id="condition"
-                    value={form.condition}
-                    onChange={(e) => setForm({ ...form, condition: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary bg-white text-gray-700"
-                  >
-                    <option value="">Select your condition</option>
-                    <option value="varicose-veins">Varicose Veins</option>
-                    <option value="spider-veins">Spider Veins</option>
-                    <option value="deep-vein-reflux">Deep Vein Reflux</option>
-                    <option value="chronic-venous-insufficiency">Chronic Venous Insufficiency</option>
-                    <option value="leg-pain">Leg Pain & Heaviness</option>
-                    <option value="other">Other</option>
-                </select>
+                  <div className="relative">
+                    <select
+                      id="condition"
+                      value={form.condition}
+                      onChange={(e) => setForm({ ...form, condition: e.target.value })}
+                      className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-3 py-2 pr-10 text-sm text-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="">Select your condition</option>
+                      <option value="varicose-veins">Varicose Veins</option>
+                      <option value="spider-veins">Spider Veins</option>
+                      <option value="deep-vein-reflux">Deep Vein Reflux</option>
+                      <option value="chronic-venous-insufficiency">Chronic Venous Insufficiency</option>
+                      <option value="leg-pain">Leg Pain & Heaviness</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <svg
+                      className="pointer-events-none absolute right-4 top-1/2 size-4 -translate-y-1/2 text-secondary"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
@@ -118,7 +130,7 @@ export default function ContactFormSection() {
           {/* Right Side - Image */}
           <div className="relative h-[500px] md:h-[580px] rounded-2xl overflow-hidden">
             <Image
-              src="/hero.png"
+              src="/contact-form.png"
               alt="Varicose vein consultation"
               fill
               className="object-cover"

@@ -11,7 +11,10 @@ export default function AboutPage() {
     <main className="bg-background">
 
       {/* ── HERO ── */}
-      <section className="w-full bg-primary overflow-hidden relative pb-10">
+      <section
+        className="w-full overflow-hidden relative"
+        style={{ backgroundColor: "#026460" }}
+      >
         <div className="flex flex-col lg:flex-row min-h-[420px] lg:min-h-[460px]">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 px-4 py-10 md:px-8 lg:px-16 xl:px-24 lg:py-12 flex flex-col justify-center">
@@ -24,7 +27,7 @@ export default function AboutPage() {
                 Varicose veins affect millions of Indians, yet most people wait years before seeking help. At Varya Health, we make specialist vascular care simple, accessible, and reassuring for every patient who walks through our doors.
               </p>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/blog/when-to-see-doctor" className="bg-white text-primary hover:bg-accent-lighter font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
                   Meet our specialist
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
@@ -38,13 +41,9 @@ export default function AboutPage() {
 
           {/* Right Image */}
           <div className="w-full lg:w-1/2 h-[300px] lg:h-auto relative">
-            <Image src="/hero.png" alt="Varya Health specialist care" fill className="object-cover object-center" priority />
+            <Image src="/hero2.png" alt="Varya Health specialist care" fill className="object-cover object-center" priority />
           </div>
         </div>
-        {/* Wave → bg-surface */}
-        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "34px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#2C847F" />
-        </svg>
       </section>
 
       {/* ── STATS ── */}
@@ -213,9 +212,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
                 { image: "/patient.png", title: "No unnecessary surgery", desc: "We recommend a procedure only when it is genuinely needed, with day-care options for most suitable patients." },
-                { image: "/v2.png", title: "Honest second opinions", desc: "Already advised treatment elsewhere? We provide an independent review so you can decide with clarity." },
-                { image: "/insurance.png", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
-                { image: "/image.png", title: "Teleconsultation available", desc: "Connect online before visiting the centre, especially if you live outside Mumbai or need initial guidance." },
+                { image: "/talk.png", title: "Honest second opinions", desc: "Already advised treatment elsewhere? We provide an independent review so you can decide with clarity." },
+                { image: "/cost.png", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
+                { image: "/teleconsulation.png", title: "Teleconsultation available", desc: "Connect online before visiting the centre, especially if you live outside Mumbai or need initial guidance." },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-primary/30 transition-all duration-300 flex flex-col">
                   <div className="relative h-40 w-full overflow-hidden">

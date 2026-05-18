@@ -8,6 +8,7 @@ import CTASection from "@/components/CTASection";
 import { ArrowUpRight } from "lucide-react";
 
 const filters = [
+  "All articles",
   "Featured",
   "Latest Research",
   "Specialist Insights",
@@ -74,11 +75,13 @@ const blogPosts = [
 ];
 
 export default function BlogOverviewPage() {
-  const [activeFilter, setActiveFilter] = useState("Featured");
+  const [activeFilter, setActiveFilter] = useState("All articles");
 
-  const filtered = activeFilter === "Featured"
-    ? blogPosts.filter((p) => p.featured)
-    : blogPosts.filter((p) => p.tag === activeFilter);
+  const filtered = activeFilter === "All articles"
+    ? blogPosts
+    : activeFilter === "Featured"
+      ? blogPosts.filter((p) => p.featured)
+      : blogPosts.filter((p) => p.tag === activeFilter);
 
   return (
     <main className="bg-background">

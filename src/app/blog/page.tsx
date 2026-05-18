@@ -121,19 +121,19 @@ const moreTopics = [
 const latestArticles = [
   {
     title: "Why varicose veins happen",
-    image: "/user/varicose veins.png",
+    image: "/i1.png",
     readTime: "8 min read",
     href: "/blog/why-varicose-veins-happen",
   },
   {
     title: "Early warning signs of vein disease",
-    image: "/user/leg pain and heaviness.png",
+    image: "/i2.png",
     readTime: "5 min read",
     href: "/blog/early-warning-signs",
   },
   {
     title: "When to see a doctor for varicose veins",
-    image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
+    image: "/i3.png",
     readTime: "4 min read",
     href: "/blog/when-to-see-doctor",
   },
@@ -196,7 +196,7 @@ export default function BlogPage() {
     <main className="bg-white">
       <section className="relative overflow-hidden bg-white">
         <div className="relative z-0 h-[400px]">
-          <Image src="/hero.png" alt="Varya Health guide" fill priority className="object-cover object-center" />
+          <Image src="/blog.png" alt="Varya Health guide" fill priority className="object-cover object-center" />
           <div className="absolute inset-0 bg-black/28" />
           <div className="relative mx-auto flex h-full max-w-[1200px] items-end px-4 pb-[98px]">
             <div className="max-w-[1100px]">

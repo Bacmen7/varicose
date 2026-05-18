@@ -381,24 +381,24 @@ export default function WhyvaricoseVeinsHappenPage() {
         </div>
       </div>
       <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#E8D5A3" />
+        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#2C847F" />
       </svg>
     </div>
 
       {/* CTA Section */}
-      <section className="relative py-20 pb-36" style={{ background: 'linear-gradient(to bottom, #E8D5A3 0%, #F5E6C3 50%, #FFFFFF 100%)' }}>
+      <section className="relative py-20 pb-36 bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl text-[#023936] mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl text-white mb-4">
             Take the First Step Toward Healthier Legs
           </h2>
-          <p className="text-lg md:text-[22px] md:leading-[33px] mb-8" style={{ color: '#48546B' }}>
+          <p className="text-lg md:text-[22px] md:leading-[33px] mb-8 text-white/85">
             Varicose veins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="text-white font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90" style={{ backgroundColor: '#026460' }}>
+            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90">
               Book a Consultation
             </button>
-            <button className="bg-white font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90" style={{ border: '2px solid #026460', color: '#026460' }}>
+            <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full transition-colors hover:bg-white/10 border-2 border-white">
               Find a Specialist Near You
             </button>
           </div>
