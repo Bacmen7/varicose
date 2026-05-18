@@ -7,11 +7,11 @@ import { ArrowRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 
 const guideCategories = [
   { title: "Varicose veins", href: "/conditions/varicose-veins" },
-  { title: "Symptoms & warning signs", href: "/blog/early-warning-signs" },
-  { title: "Treatment options", href: "/treatments-overview" },
   { title: "Spider veins", href: "/conditions" },
-  { title: "Recovery after treatment", href: "/treatments/evlt" },
-  { title: "Pregnancy & veins", href: "/blog/early-warning-signs" },
+  { title: "Venous leg ulcers", href: "/conditions" },
+  { title: "Chronic venous insufficiency", href: "/conditions" },
+  { title: "Reticular veins", href: "/conditions" },
+  { title: "Lipodermatosclerosis", href: "/conditions" },
 ];
 
 const articleRows = [
@@ -47,37 +47,6 @@ const articleRows = [
     ],
   },
   {
-    title: "Treatment articles",
-    image: "/evlt.png",
-    href: "/treatments-overview",
-    articles: [
-      {
-        title: "EVLT for varicose veins: what to expect",
-        image: "/evlt.png",
-        readTime: "7 min read",
-        href: "/treatments/evlt",
-      },
-      {
-        title: "RFA treatment explained clearly",
-        image: "/r1.png",
-        readTime: "6 min read",
-        href: "/treatments/rfa",
-      },
-      {
-        title: "How treatment helps blood flow improve",
-        image: "/valve_reflux.png",
-        readTime: "5 min read",
-        href: "/blog/why-varicose-veins-happen",
-      },
-      {
-        title: "What recovery looks like after vein care",
-        image: "/patient.png",
-        readTime: "4 min read",
-        href: "/treatments/evlt",
-      },
-    ],
-  },
-  {
     title: "Spider vein articles",
     image: "/user/spider vein.png",
     href: "/conditions",
@@ -105,6 +74,37 @@ const articleRows = [
         image: "/user/deep vein reflux.png",
         readTime: "5 min read",
         href: "/treatments-overview",
+      },
+    ],
+  },
+  {
+    title: "Treatment articles",
+    image: "/evlt.png",
+    href: "/treatments-overview",
+    articles: [
+      {
+        title: "EVLT for varicose veins: what to expect",
+        image: "/evlt.png",
+        readTime: "7 min read",
+        href: "/treatments/evlt",
+      },
+      {
+        title: "RFA treatment explained clearly",
+        image: "/r1.png",
+        readTime: "6 min read",
+        href: "/treatments/rfa",
+      },
+      {
+        title: "How treatment helps blood flow improve",
+        image: "/valve_reflux.png",
+        readTime: "5 min read",
+        href: "/blog/why-varicose-veins-happen",
+      },
+      {
+        title: "What recovery looks like after vein care",
+        image: "/patient.png",
+        readTime: "4 min read",
+        href: "/treatments/evlt",
       },
     ],
   },
