@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import { ArrowLeft } from "lucide-react";
 
 const TOC_SECTIONS = [
   { id: "overview",    label: "What Are Varicose Veins?" },
@@ -15,27 +14,6 @@ const TOC_SECTIONS = [
   { id: "diagnosis",  label: "How Are They Diagnosed?" },
   { id: "treatment",  label: "Treatment Options" },
   { id: "early-eval", label: "Why Early Evaluation Matters" },
-];
-
-const OVERVIEW_CARDS = [
-  {
-    title: "Symptoms",
-    image: "/user/leg pain and heaviness.png",
-    desc: "Heavy legs, aching, swelling, night cramps, itching, and visible bulging veins can all point toward varicose veins.",
-    href: "#symptoms",
-  },
-  {
-    title: "Causes",
-    image: "/valve_reflux.png",
-    desc: "Weak valves allow blood to flow backward and pool inside the vein, increasing pressure over time.",
-    href: "#causes",
-  },
-  {
-    title: "Treatment",
-    image: "/evlt.png",
-    desc: "Modern options like EVLT, RFA, sclerotherapy, and VenaSeal are minimally invasive for suitable patients.",
-    href: "#treatment",
-  },
 ];
 
 function TableOfContents() {
@@ -148,7 +126,7 @@ function BulletItem({ children }: { children: React.ReactNode }) {
         className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0"
         style={{ backgroundColor: "#2C847F" }}
       />
-      <span className="text-[17px] leading-relaxed" style={{ color: "#48546B" }}>
+      <span className="text-base leading-relaxed" style={{ color: "#48546B" }}>
         {children}
       </span>
     </li>
@@ -165,113 +143,85 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 
 export default function VaricoseVeinsPage() {
   return (
-    <main className="bg-background">
+    <main className="bg-white">
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-primary/20 bg-surface pt-10 pb-16 lg:pb-20">
-        <div className="max-w-[1320px] mx-auto px-4 md:px-6">
-          <Link
-            href="/conditions"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-dark mb-8 text-sm font-semibold transition-colors"
-          >
-            <ArrowLeft size={15} />
-            All Conditions
-          </Link>
+      <section className="relative overflow-hidden bg-[#126B73]">
+        <div className="mx-auto grid min-h-[340px] max-w-[1180px] grid-cols-1 px-6 pt-8 md:grid-cols-[1fr_360px] lg:grid-cols-[1fr_430px]">
+          <div className="relative z-10 pb-12">
+            <nav className="mb-9 text-sm text-white/85">
+              <Link href="/" className="hover:text-white">Home</Link>
+              <span className="px-2">&gt;</span>
+              <Link href="/conditions" className="hover:text-white">Diseases & Conditions</Link>
+              <span className="px-2">&gt;</span>
+              <span>Varicose Veins</span>
+            </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-16 items-center">
-            <div>
-              <h1 className="font-heading text-secondary text-4xl md:text-5xl lg:text-[64px] lg:leading-[1.05] font-normal mb-6 max-w-3xl">
-                Varicose Veins Overview
-              </h1>
-              <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl mb-6">
-                Learn what varicose veins are, why they happen, which symptoms to watch for, and when treatment may help.
-              </p>
-              <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-8">
-                This guide covers symptoms, causes, diagnosis, treatment options, and the warning signs that should not be ignored.
-              </p>
-              <a
-                href="#symptoms"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-primary-dark"
-              >
-                Explore symptoms and treatment
-              </a>
-            </div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
+              A Patient Guide For India
+            </p>
+            <h1 className="font-heading text-5xl font-normal leading-[1.08] text-white md:text-[64px]">
+              Varicose Veins
+            </h1>
+            <p className="mt-4 max-w-2xl font-heading text-xl text-white md:text-2xl">
+              What It Is, Symptoms, Causes & Treatment Options
+            </p>
+          </div>
 
-            <div className="relative min-h-[360px] lg:min-h-[460px]">
-              <div className="absolute left-4 top-16 h-[280px] w-[44%] rotate-[-13deg] overflow-hidden rounded-3xl bg-white border border-white/60">
-                <Image
-                  src="/user/varicose veins.png"
-                  alt="Visible varicose veins"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="absolute right-0 top-0 h-[360px] w-[66%] overflow-hidden rounded-3xl bg-white border border-white/60">
-                <Image
-                  src="/patient.png"
-                  alt="Doctor consulting a vein patient"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute bottom-0 left-[28%] rounded-2xl bg-white p-5 border border-accent shadow-[0_16px_40px_rgba(44,132,127,0.12)]">
-                <p className="text-primary text-sm font-semibold uppercase tracking-[0.18em]">Covered here</p>
-                <p className="font-heading text-secondary text-2xl font-normal mt-1">Symptoms, causes and treatment</p>
-              </div>
-            </div>
+          <div className="relative hidden md:block">
+            <Image
+              src="/h2.png"
+              alt="Patient with varicose veins"
+              fill
+              className="object-contain object-bottom"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      {/* ── OVERVIEW CARDS ───────────────────────────────────── */}
-      <section className="py-12 lg:py-16 bg-background">
-        <div className="max-w-[1320px] mx-auto px-4 md:px-6">
-          <div className="mb-8 max-w-3xl">
-            <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Condition Overview</p>
-            <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">
-              Symptoms, causes and treatment at a glance
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Start with the essentials, then continue into the detailed sections below for a fuller explanation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {OVERVIEW_CARDS.map((card) => (
-              <a
-                key={card.title}
-                href={card.href}
-                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all hover:border-primary/40"
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <Image
-                    src={card.image}
-                    alt={`${card.title} overview`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-secondary text-2xl font-normal mb-3">{card.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">{card.desc}</p>
-                </div>
-              </a>
-            ))}
-          </div>
+      {/* ── TOPIC TABS ───────────────────────────────────────── */}
+      <section className="bg-[#0B5660]">
+        <div className="mx-auto flex max-w-[1180px] gap-3 overflow-x-auto px-6 py-4">
+          {[
+            { label: "Causes & Symptoms", href: "#symptoms", active: true },
+            { label: "Diagnosis", href: "#diagnosis" },
+            { label: "Treatment", href: "#treatment" },
+          ].map((tab) => (
+            <a
+              key={tab.label}
+              href={tab.href}
+              className={`shrink-0 rounded-full px-6 py-3 text-sm transition-colors ${
+                tab.active
+                  ? "bg-white text-[#07545D]"
+                  : "bg-white/12 text-white hover:bg-white/20"
+              }`}
+            >
+              {tab.label}
+            </a>
+          ))}
         </div>
       </section>
 
       {/* ── ARTICLE + SIDEBAR ────────────────────────────────── */}
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 py-10 lg:flex lg:gap-14">
+      <div className="mx-auto max-w-[1180px] px-6 py-20 lg:flex lg:gap-14">
         {/* ── LEFT ARTICLE ─────────────────────────────────── */}
         <article className="flex-1 min-w-0">
-          <section className="mb-12 rounded-3xl bg-white border border-gray-200 p-6 md:p-8">
-            <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Patient Guide</p>
-            <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">
-              Understanding varicose veins clearly
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Varicose veins are more than a cosmetic concern for many people. They can signal ongoing pressure inside leg veins, and that pressure may lead to pain, swelling, skin changes, or ulcers if it progresses.
+          <section className="mb-12">
+            <p className="mb-6 text-base leading-8" style={{ color: "#1F2937" }}>
+              Have you ever experienced heaviness, aching, swelling, or visible
+              twisted veins in your legs? Do these symptoms feel worse after
+              long hours of standing or sitting? This guide covers everything
+              you need to know.
+            </p>
+            <p className="mb-6 text-base leading-8" style={{ color: "#1F2937" }}>
+              Varicose veins are enlarged veins that usually appear in the legs
+              when tiny one-way valves stop working properly. As a result, blood
+              flows backward, pressure builds, and veins can stretch or bulge.
+            </p>
+            <p className="text-base leading-8" style={{ color: "#1F2937" }}>
+              They are common in India and often affect people who stand, sit,
+              travel, or work for long hours. Early evaluation can prevent
+              symptoms from becoming more complex over time.
             </p>
           </section>
 
@@ -283,7 +233,7 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>What Are Varicose Veins?</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
               Varicose veins are enlarged, twisted veins that usually appear on
               the legs and feet. They occur when the one-way valves inside veins
               weaken or fail.
@@ -300,7 +250,7 @@ export default function VaricoseVeinsPage() {
               />
             </div>
 
-            <p className="text-[17px] leading-relaxed mb-4" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-4" style={{ color: "#48546B" }}>
               When this happens:
             </p>
             <ul className="space-y-3 mb-5">
@@ -329,7 +279,7 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>Common Symptoms</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-6" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-6" style={{ color: "#48546B" }}>
               Varicose veins don&apos;t always start visibly. Many people
               experience symptoms years before veins become obvious.
             </p>
@@ -359,7 +309,7 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>Why Do They Happen?</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-7" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-7" style={{ color: "#48546B" }}>
               Varicose veins usually develop due to a combination of factors.
             </p>
 
@@ -423,12 +373,12 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>Are They Dangerous?</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
               Varicose veins are not immediately life-threatening — but they can
               progress if ignored.
             </p>
 
-            <p className="text-[17px] mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base mb-5" style={{ color: "#48546B" }}>
               Without treatment, they may lead to:
             </p>
 
@@ -452,7 +402,7 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>When Should You Be Concerned?</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-6" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-6" style={{ color: "#48546B" }}>
               You should consider seeing a specialist if:
             </p>
 
@@ -484,11 +434,11 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>How Are They Diagnosed?</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
               Diagnosis goes beyond visual inspection.
             </p>
 
-            <p className="text-[17px] mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base mb-5" style={{ color: "#48546B" }}>
               A Doppler ultrasound is used to:
             </p>
 
@@ -512,11 +462,11 @@ export default function VaricoseVeinsPage() {
           >
             <SectionHeading>Can They Go Away on Their Own?</SectionHeading>
 
-            <p className="text-[17px] leading-relaxed mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
               Unfortunately, damaged vein valves do not repair themselves.
             </p>
 
-            <p className="text-[17px] mb-4" style={{ color: "#48546B" }}>
+            <p className="text-base mb-4" style={{ color: "#48546B" }}>
               Lifestyle changes like walking, leg elevation, or compression
               stockings can:
             </p>
@@ -526,7 +476,7 @@ export default function VaricoseVeinsPage() {
               <BulletItem>Slow progression</BulletItem>
             </ul>
 
-            <p className="text-[17px] mb-2" style={{ color: "#48546B" }}>
+            <p className="text-base mb-2" style={{ color: "#48546B" }}>
               But they cannot reverse valve damage.
             </p>
             <p className="text-base italic mb-10" style={{ color: "#48546B" }}>
@@ -541,12 +491,12 @@ export default function VaricoseVeinsPage() {
               The Good News: Modern Treatments Are Simple
             </h3>
 
-            <p className="text-[17px] leading-relaxed mb-5" style={{ color: "#48546B" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
               Today, most varicose veins are treated with minimally invasive,
               non-surgical procedures.
             </p>
 
-            <p className="text-[17px] mb-4" style={{ color: "#48546B" }}>
+            <p className="text-base mb-4" style={{ color: "#48546B" }}>
               Common treatment options include:
             </p>
 
@@ -569,7 +519,7 @@ export default function VaricoseVeinsPage() {
               </BulletItem>
             </ul>
 
-            <p className="text-[17px] mb-4" style={{ color: "#48546B" }}>
+            <p className="text-base mb-4" style={{ color: "#48546B" }}>
               These treatments:
             </p>
 
@@ -600,7 +550,7 @@ export default function VaricoseVeinsPage() {
                   >
                     Why Early Evaluation Matters
                   </h2>
-                  <p className="text-lg mb-6 text-white/80">Early diagnosis:</p>
+                  <p className="text-base mb-6 text-white/80">Early diagnosis:</p>
                   <div className="space-y-4">
                     {[
                       "Prevents progression",
@@ -624,7 +574,7 @@ export default function VaricoseVeinsPage() {
                             />
                           </svg>
                         </div>
-                        <span className="text-lg text-white">{point}</span>
+                        <span className="text-base text-white">{point}</span>
                       </div>
                     ))}
                   </div>
@@ -672,14 +622,14 @@ export default function VaricoseVeinsPage() {
                 Take the First Step Toward Healthier Legs
               </h2>
               <p
-                className="text-lg leading-relaxed mb-4"
+                className="text-base leading-relaxed mb-4"
                 style={{ color: "#48546B" }}
               >
                 If your legs feel heavy, painful, or swollen, it&apos;s worth
                 getting checked.
               </p>
               <p
-                className="text-lg leading-relaxed mb-8"
+                className="text-base leading-relaxed mb-8"
                 style={{ color: "#48546B" }}
               >
                 Understanding the problem is the first step toward lasting
@@ -745,6 +695,38 @@ export default function VaricoseVeinsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── NEWSLETTER ───────────────────────────────────────── */}
+      <section className="bg-white py-20 md:py-24">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="mb-8 text-xs font-semibold uppercase tracking-[0.35em] text-secondary/70">
+            From our vein care experts to your inbox
+          </p>
+          <h2 className="font-heading text-4xl font-normal leading-tight text-primary md:text-5xl">
+            Get vein-friendly tips, news, and more
+            <br className="hidden md:block" />
+            delivered weekly.
+          </h2>
+
+          <form className="mx-auto mt-14 flex max-w-[430px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+            <label htmlFor="vein-newsletter-email" className="sr-only">
+              Email Address
+            </label>
+            <input
+              id="vein-newsletter-email"
+              type="email"
+              placeholder="Email Address*"
+              className="h-14 flex-1 rounded-full border border-accent bg-white px-6 text-sm text-secondary outline-none transition-colors placeholder:text-secondary/45 focus:border-primary"
+            />
+            <button
+              type="submit"
+              className="h-14 rounded-full bg-cta px-7 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Subscribe →
+            </button>
+          </form>
         </div>
       </section>
 
