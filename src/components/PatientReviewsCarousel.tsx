@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 const reviews = [
   {
     quote:
-      "I had been ignoring my leg pain for almost three years. After just one consultation at Varya Health, I finally understood what was happening. The EVLT procedure was over in under an hour and I was back home the same day.",
+      "I had been ignoring my leg pain for almost three years. After just one consultation at Sira Vascular, I finally understood what was happening. The EVLT procedure was over in under an hour and I was back home the same day.",
     name: "Priya Verma",
     location: "Andheri, Mumbai",
     initials: "PV",
@@ -20,7 +20,7 @@ const reviews = [
   },
   {
     quote:
-      "My varicose veins came back after my second pregnancy. The team at Varya Health was so understanding. They gave me all the time I needed to ask questions and I never felt rushed or confused.",
+      "My varicose veins came back after my second pregnancy. The team at Sira Vascular was so understanding. They gave me all the time I needed to ask questions and I never felt rushed or confused.",
     name: "Sunita Mishra",
     location: "Borivali, Mumbai",
     initials: "SM",
@@ -34,7 +34,7 @@ const reviews = [
   },
   {
     quote:
-      "I wanted a second opinion before going ahead with treatment. Varya Health gave honest guidance and helped me understand what was necessary and what could wait.",
+      "I wanted a second opinion before going ahead with treatment. Sira Vascular gave honest guidance and helped me understand what was necessary and what could wait.",
     name: "Neha Rao",
     location: "Powai, Mumbai",
     initials: "NR",

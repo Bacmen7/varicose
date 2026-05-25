@@ -15,6 +15,7 @@ const slides = [
       </>
     ),
     image: "/h3.png",
+    imageWrapClass: "w-[285px] h-[285px] -right-16 sm:w-[330px] sm:h-[330px] sm:-right-14 md:w-[380px] md:h-[420px] md:right-0 lg:w-[330px] lg:h-[400px] lg:right-0",
   },
   {
     id: 1,
@@ -38,7 +39,7 @@ const slides = [
       </span>
     ),
     image: "/h1-cutout.png",
-    imageWrapClass: "w-[132%] h-full -right-10 md:-right-16 lg:-right-20",
+    imageWrapClass: "w-[260px] h-[230px] right-0 bottom-0 sm:w-[320px] sm:h-[280px] sm:right-0 md:w-[430px] md:h-[390px] md:right-0 lg:w-[132%] lg:h-full lg:-right-20",
     imageClass: "object-right-bottom p-0",
   },
 ];
@@ -132,7 +133,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Edge: Image */}
-        <div className="absolute bottom-0 -right-4 sm:-right-2 md:right-4 lg:right-8 w-[190px] h-[230px] sm:w-[240px] sm:h-[290px] md:w-[310px] md:h-[370px] lg:w-[330px] lg:h-[400px] z-10 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 -right-4 sm:-right-2 md:right-4 lg:right-8 w-[190px] h-[230px] sm:w-[240px] sm:h-[290px] md:w-[310px] md:h-[370px] lg:w-[330px] lg:h-[400px] z-10 overflow-visible pointer-events-none">
           {slides.map((slide, index) => (
             <div
               key={`img-${slide.id}`}

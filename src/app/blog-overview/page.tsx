@@ -176,7 +176,7 @@ export default function BlogOverviewPage() {
       {/* ── STATS ── */}
       <section className="py-16 w-full bg-surface">
         <div className="container mx-auto px-4 max-w-[1200px]">
-          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase text-center">Varya Health — Vein Care in India</p>
+          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase text-center">Sira Vascular - Vein Care in India</p>
           <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal text-center mb-12">Trusted by patients across India</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[

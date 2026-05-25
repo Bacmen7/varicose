@@ -196,7 +196,7 @@ export default function BlogPage() {
     <main className="bg-white">
       <section className="relative overflow-hidden bg-white">
         <div className="relative z-0 h-[400px]">
-          <Image src="/blog.png" alt="Varya Health guide" fill priority className="object-cover object-center" />
+          <Image src="/blog.png" alt="Sira Vascular guide" fill priority className="object-cover object-center" />
           <div className="absolute inset-0 bg-black/28" />
           <div className="relative mx-auto flex h-full max-w-[1200px] items-end px-4 pb-[98px]">
             <div className="max-w-[1100px]">

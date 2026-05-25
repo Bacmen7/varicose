@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const socialLinks = [
-  { icon: Phone, href: "tel:9833943177", label: "Call" },
-  { icon: Mail, href: "mailto:hello@varyahealth.in", label: "Email" },
+  { icon: Phone, href: "tel:+919833943177", label: "Call" },
+  { icon: Mail, href: "mailto:chirag@navighealth.com", label: "Email" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: MessageCircle, href: "#", label: "Message" },
 ];
@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <Image
               src="/logo.png"
-              alt="Varya Health"
+              alt="Sira Vascular"
               width={180}
               height={60}
               className="mb-4 h-auto w-[180px]"
@@ -43,13 +43,13 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 space-y-3 text-gray-600 font-medium">
-              <a href="tel:9833943177" className="flex items-center gap-3 transition-colors hover:text-primary">
+              <a href="tel:+919833943177" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Phone size={18} className="text-primary" />
-                <span>98339 43177</span>
+                <span>+91 9833943177</span>
               </a>
-              <a href="mailto:hello@varyahealth.in" className="flex items-center gap-3 transition-colors hover:text-primary">
+              <a href="mailto:chirag@navighealth.com" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Mail size={18} className="text-primary" />
-                <span>hello@varyahealth.in</span>
+                <span>chirag@navighealth.com</span>
               </a>
             </div>
 

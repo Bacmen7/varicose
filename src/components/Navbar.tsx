@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -8,6 +9,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { label: "About Us", href: "/about" },
@@ -17,6 +19,10 @@ export default function Navbar() {
     { label: "Learn", href: "/blog" },
   ];
 
+  if (pathname === "/book-appointment" || pathname === "/pricing") {
+    return null;
+  }
+
   return (
     <nav className="sticky top-0 z-50 bg-white py-4 px-4 md:px-6 border-b border-gray-100" style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -24,7 +30,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.png"
-            alt="Varyicose Heath"
+            alt="Sira Vascular"
             width={120}
             height={80}
             priority

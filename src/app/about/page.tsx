@@ -24,7 +24,7 @@ export default function AboutPage() {
                 <span className="text-accent-lighter">Care that comes to you.</span>
               </h1>
               <p className="text-white/85 text-base lg:text-lg mb-5 leading-relaxed max-w-lg">
-                Varicose veins affect millions of Indians, yet most people wait years before seeking help. At Varya Health, we make specialist vascular care simple, accessible, and reassuring for every patient who walks through our doors.
+                Varicose veins affect millions of Indians, yet most people wait years before seeking help. At Sira Vascular, we make specialist vascular care simple, accessible, and reassuring for every patient who walks through our doors.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -41,7 +41,7 @@ export default function AboutPage() {
 
           {/* Right Image */}
           <div className="w-full lg:w-1/2 h-[300px] lg:h-auto relative">
-            <Image src="/hero2.png" alt="Varya Health specialist care" fill className="object-cover object-center" priority />
+            <Image src="/hero2.png" alt="Sira Vascular specialist care" fill className="object-cover object-center" priority />
           </div>
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-3 md:px-4 max-w-[1320px]">
           <div className="mb-8">
             <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Approach</p>
-            <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Varya Health</h2>
+            <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Sira Vascular</h2>
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
               We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their concerns, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
             </p>
@@ -150,7 +150,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-heading text-secondary text-xl font-normal">Dr. Rajeev Sharma</h3>
                 <p className="text-primary text-sm font-semibold mt-0.5">Vascular Surgeon &amp; Phlebologist</p>
-                <p className="text-gray-400 text-sm mt-0.5">Varya Health, Mumbai</p>
+                <p className="text-gray-400 text-sm mt-0.5">Sira Vascular, Mumbai</p>
               </div>
               <div className="flex flex-col gap-2">
                 {["MBBS", "MS — General Surgery", "Fellowship in Vascular Surgery"].map((q, i) => (
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 His approach is thorough, patient-first, and built around helping people understand their condition before any treatment decision is made. He speaks Hindi and English fluently, making consultations comfortable for patients from all backgrounds.
               </p>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                Dr. Sharma believes that no patient should feel rushed or confused during their care. Every consultation at Varya Health is unhurried, evidence-based, and focused on finding the right path for each individual.
+                Dr. Sharma believes that no patient should feel rushed or confused during their care. Every consultation at Sira Vascular is unhurried, evidence-based, and focused on finding the right path for each individual.
               </p>
 
               <Link href="/blog/when-to-see-doctor" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-full inline-flex items-center gap-2 transition-all duration-300 group w-fit">
@@ -240,7 +240,7 @@ export default function AboutPage() {
             500+ reasons to seek care earlier.
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-10">
-            Here is what some of our patients have shared about their experience at Varya Health. Real words, real recoveries.
+            Here is what some of our patients have shared about their experience at Sira Vascular. Real words, real recoveries.
           </p>
           <PatientReviewsCarousel />
         </div>

@@ -195,7 +195,7 @@ export default function ConditionsOverviewPage() {
               <h3 className="font-heading text-secondary text-xl font-bold mb-2">Our Editorial Process</h3>
               <p className="text-gray-600 text-base leading-relaxed">
                 Every piece of educational content we publish has been thoroughly reviewed by a member of{" "}
-                <Link href="/about" className="text-primary font-medium hover:underline">Varya&apos;s Clinical Team</Link>.
+                <Link href="/about" className="text-primary font-medium hover:underline">Sira Vascular&apos;s Clinical Team</Link>.
               </p>
             </div>
             <Link href="/about" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-xl whitespace-nowrap transition-all shrink-0">
