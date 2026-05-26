@@ -4,9 +4,7 @@ import {
   ArrowRight,
   Check,
   ChevronDown,
-  CircleCheckBig,
   ShieldCheck,
-  Stethoscope,
 } from "lucide-react";
 import Footer from "@/components/Footer";
 
@@ -110,8 +108,8 @@ const insuranceItems = [
 
 function PriceBox({ amount, label }: { amount: string; label: string }) {
   return (
-    <div className="rounded-lg border border-[#cde7e6] bg-[#e3f2f2] px-3 py-3 text-center">
-      <p className="text-sm font-semibold text-[#116965] sm:text-base">{amount}</p>
+    <div className="flex h-[86px] w-full flex-col items-center justify-center rounded-lg bg-[#eef7f5] px-2 text-center">
+      <p className="whitespace-nowrap text-[13px] font-semibold text-[#116965] xl:text-sm">{amount}</p>
       <p className="mt-1 text-xs text-[#607578]">{label}</p>
     </div>
   );
@@ -120,28 +118,21 @@ function PriceBox({ amount, label }: { amount: string; label: string }) {
 function ProcedureTable({
   title,
   pill,
-  icon: Icon,
   columnOne,
   columnTwo,
   procedures,
 }: {
   title: string;
   pill: string;
-  icon: typeof CircleCheckBig;
   columnOne: string;
   columnTwo: string;
   procedures: Procedure[];
 }) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-[#d6e8e8] bg-white shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-3 bg-[#e6f4f3] px-5 py-4 sm:px-6">
-        <div className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
-            <Icon size={18} />
-          </span>
-          <h2 className="font-heading text-xl font-normal text-secondary sm:text-2xl">{title}</h2>
-        </div>
-        <span className="rounded-full bg-[#08736d] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
+    <article className="overflow-hidden rounded-xl border border-[#dce8e8] bg-white">
+      <div className="flex flex-wrap items-end justify-between gap-3 border-b border-[#dce9e8] px-5 py-5 sm:px-6">
+        <h2 className="font-heading text-xl font-normal text-secondary sm:text-2xl">{title}</h2>
+        <span className="border-b border-primary pb-1 text-xs font-semibold uppercase tracking-wider text-primary">
           {pill}
         </span>
       </div>
@@ -160,7 +151,7 @@ function ProcedureTable({
         >
           <div>
             <div className="flex flex-wrap items-center gap-2">
-              <h3 className="font-heading text-lg font-normal text-secondary sm:text-xl">
+              <h3 className="text-base font-semibold text-secondary">
                 {procedure.name}
               </h3>
               {procedure.badge ? (
@@ -192,34 +183,32 @@ function ProcedureTable({
 
 export default function PricingPage() {
   return (
-    <main className="bg-[#f1fafa] font-body">
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#054f4d] to-[#087b78] px-5 py-14 text-white sm:px-10 lg:px-[5.5rem] lg:pb-14 lg:pt-16">
-        <div className="absolute -right-24 -top-36 h-[360px] w-[360px] rounded-full bg-white/[0.055]" />
-        <div className="absolute bottom-[-80px] left-[43%] h-[170px] w-[170px] rounded-full bg-white/[0.055]" />
-        <div className="relative max-w-2xl">
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-            Sira Vascular - Treatments &amp; Pricing
+    <main className="bg-white font-body">
+      <section className="bg-[#026460] text-white">
+        <div className="mx-auto max-w-[1200px] px-4 py-14 sm:py-16 lg:py-20">
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/72">
+            Treatments &amp; Pricing
           </p>
-          <h1 className="font-heading text-4xl font-normal leading-[1.18] text-white sm:text-5xl">
-            Clear Pricing.
-            <br />
-            Expert Vein Care.
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/82">
-            Every patient receives a personalised treatment plan after a detailed consultation
-            and duplex ultrasound scan. All procedures are performed by experienced vascular
-            specialists with no hidden fees.
-          </p>
+          <div className="grid gap-7 lg:grid-cols-[1fr_440px] lg:items-end">
+            <h1 className="font-heading text-4xl font-normal leading-[1.18] text-white sm:text-5xl">
+              Clear pricing.
+              <br />
+              Expert vein care.
+            </h1>
+            <p className="text-base leading-relaxed text-white/85 lg:text-lg">
+              Every patient receives a personalised treatment plan after consultation and a
+              duplex ultrasound scan. Costs are shared clearly before treatment begins.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="px-4 py-12 sm:px-6 lg:px-10 lg:py-14">
+      <section className="bg-[#f7fbfa] px-4 py-12 sm:px-6 lg:px-10 lg:py-14">
         <div className="mx-auto grid max-w-[1200px] items-start gap-6 lg:grid-cols-[1fr_310px]">
           <div className="space-y-7">
             <ProcedureTable
               title="Surgical Procedure Options"
               pill="Minimally Invasive"
-              icon={CircleCheckBig}
               columnOne="One Leg"
               columnTwo="Both Legs"
               procedures={surgicalProcedures}
@@ -227,13 +216,12 @@ export default function PricingPage() {
             <ProcedureTable
               title="Other Procedures"
               pill="Non-Surgical"
-              icon={Stethoscope}
               columnOne="Per Session"
               columnTwo="Multiple Sessions"
               procedures={otherProcedures}
             />
 
-            <section className="flex flex-col justify-between gap-6 rounded-2xl bg-[#075d59] px-6 py-6 text-white sm:flex-row sm:items-center">
+            <section className="flex flex-col justify-between gap-6 rounded-xl bg-[#026460] px-6 py-6 text-white sm:flex-row sm:items-center">
               <div>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/65">
                   Sira Vascular
@@ -251,9 +239,9 @@ export default function PricingPage() {
             </section>
           </div>
 
-          <div className="space-y-5 lg:sticky lg:top-5">
-            <aside className="overflow-hidden rounded-2xl border border-[#d6e8e8] bg-white shadow-sm">
-              <div className="bg-[#d9efee] px-5 py-4">
+          <div className="space-y-5">
+            <aside className="overflow-hidden rounded-xl border border-[#d6e8e8] bg-white">
+              <div className="border-b border-[#dce9e8] px-5 py-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary">
                   Specialist Consultation
                 </p>
@@ -270,10 +258,10 @@ export default function PricingPage() {
               <div className="px-5 py-5">
                 <Link
                   href="/book-appointment"
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#f26932] px-4 py-4 text-base font-semibold text-white transition-colors hover:bg-[#df5924]"
+                  className="mx-auto flex h-12 w-fit items-center justify-center gap-2 rounded-full bg-[#f26932] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#df5924]"
                 >
                   Schedule Appointment
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </Link>
                 <p className="mt-4 text-center text-sm leading-relaxed text-[#677b7e]">
                   We use duplex ultrasound to accurately assess the severity of your varicose
@@ -303,12 +291,12 @@ export default function PricingPage() {
               </div>
             </aside>
 
-            <aside className="overflow-hidden rounded-2xl border border-[#d6e8e8] bg-white shadow-sm">
-              <div className="flex items-center gap-3 bg-[#08736d] px-5 py-4 text-white">
-                <ShieldCheck size={20} />
+            <aside className="overflow-hidden rounded-xl border border-[#d6e8e8] bg-white">
+              <div className="flex items-center gap-3 border-b border-[#dce9e8] px-5 py-4 text-secondary">
+                <ShieldCheck size={20} className="text-primary" />
                 <div>
                   <h2 className="font-heading text-xl font-normal">Insurance Coverage</h2>
-                  <p className="text-xs text-white/78">Check your eligibility before booking</p>
+                  <p className="text-sm text-[#677b7e]">Check your eligibility before booking</p>
                 </div>
               </div>
               <div className="space-y-4 px-5 py-5">

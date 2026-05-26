@@ -89,14 +89,12 @@ const initialData: FormData = {
 };
 
 const inputClasses =
-  "h-12 w-full rounded-[7px] border border-[#d9e4e5] bg-white px-3 text-base text-[#354850] outline-none focus:border-[#147873]";
+  "h-12 w-full rounded-lg border border-[#d9e4e5] bg-white px-3 text-base text-[#354850] outline-none focus:border-primary";
 
 function Sidebar({ step }: { step: number }) {
   return (
-    <aside className="relative overflow-hidden bg-gradient-to-br from-[#034a49] via-[#075f5c] to-[#087c79] px-7 pb-9 pt-[72px] text-white sm:px-10 lg:w-[46.6%] lg:px-[20px] lg:pt-[89px]">
-      <div className="absolute -right-16 -top-24 h-[270px] w-[270px] rounded-full bg-white/[0.045]" />
-      <div className="absolute -bottom-16 -left-12 h-[165px] w-[165px] rounded-full bg-white/[0.05]" />
-      <div className="relative z-10 max-w-[350px]">
+    <aside className="bg-[#026460] px-7 pb-9 pt-[72px] text-white sm:px-10 lg:w-[46.6%] lg:px-12 lg:pt-[89px]">
+      <div className="max-w-[380px]">
         <p className="mb-5 text-sm font-semibold tracking-[0.2em] text-white/75">
           SIRA VASCULAR - INDIA
         </p>
@@ -123,7 +121,7 @@ function Sidebar({ step }: { step: number }) {
                 >
                   {number}
                 </span>
-                <span className={active ? "font-semibold text-white" : "text-white/75"}>{label}</span>
+                <span className={active ? "font-semibold text-white" : "text-white/78"}>{label}</span>
               </li>
             );
           })}
@@ -150,17 +148,17 @@ function SelectOption({
     <button
       type="button"
       onClick={onClick}
-      className={`flex w-full items-center gap-4 rounded-[9px] border px-[17px] text-left text-base font-semibold transition ${
+      className={`flex w-full items-center gap-4 rounded-lg border px-[17px] text-left text-base font-semibold transition ${
         compact ? "min-h-[54px]" : "min-h-[68px]"
       } ${
         selected
-          ? "border-[#096965] bg-[#096965] text-white shadow-[0_7px_18px_rgba(3,81,78,0.17)]"
+          ? "border-[#026460] bg-[#026460] text-white"
           : "border-[#d9e4e5] bg-white text-[#354850] hover:border-[#90b9b8]"
       }`}
     >
       {Icon ? (
         <span
-          className={`flex h-[39px] w-[39px] items-center justify-center rounded-[8px] ${
+          className={`flex h-[39px] w-[39px] items-center justify-center rounded-lg ${
             selected ? "bg-white/15" : "bg-[#e7f4f4] text-[#18827d]"
           }`}
         >
@@ -192,16 +190,16 @@ export default function BookAppointmentPage() {
 
   return (
     <main className="bg-white font-body">
-      <div className="mx-auto min-h-screen overflow-hidden border-[3px] border-[#faefc8] border-t-[7px] border-t-[#102947]">
-        <div className="flex min-h-[calc(100vh-10px)] flex-col lg:flex-row">
+      <div className="mx-auto overflow-hidden border-b border-[#d9e6e5]">
+        <div className="flex min-h-[calc(100vh-82px)] flex-col lg:flex-row">
           <Sidebar step={step} />
 
-          <section className="flex-1 bg-[#eff8f8] px-5 py-8 sm:px-10 lg:px-[45px] lg:pb-8 lg:pt-[42px]">
+          <section className="flex-1 bg-[#f7fbfa] px-5 py-8 sm:px-10 lg:px-[54px] lg:pb-10 lg:pt-[52px]">
             <form onSubmit={onSubmit} className="w-full">
               <div className="mb-[32px]">
-                <div className="h-[4px] rounded-full bg-[#cae0e0]">
+                <div className="h-[3px] bg-[#d8e7e6]">
                   <div
-                    className="h-[4px] rounded-full bg-[#06645f] transition-all"
+                    className="h-[3px] bg-primary transition-all"
                     style={{ width: `${step * 20}%` }}
                   />
                 </div>
@@ -373,19 +371,19 @@ export default function BookAppointmentPage() {
                     </div>
                   )}
 
-                  <div className="mt-[21px] flex gap-[9px]">
+                  <div className="mt-7 flex justify-start gap-3">
                     <button
                       type="button"
                       onClick={() => setStep((current) => Math.max(1, current - 1))}
-                      className={`h-12 rounded-[8px] px-[25px] text-base font-semibold text-white ${
-                        step === 1 ? "bg-[#91afaf]" : "bg-[#074b49]"
+                      className={`h-11 min-w-[112px] rounded-full px-6 text-sm font-semibold text-white ${
+                        step === 1 ? "bg-[#92aaaa]" : "bg-primary"
                       }`}
                     >
                       Back
                     </button>
                     <button
                       type="submit"
-                      className="h-12 flex-1 rounded-[8px] bg-[#f26932] text-base font-semibold text-white transition hover:bg-[#df5924]"
+                      className="h-11 min-w-[148px] rounded-full bg-[#f26932] px-8 text-sm font-semibold text-white transition hover:bg-[#df5924]"
                     >
                       {step === 5 ? "Submit" : "Next"}
                     </button>

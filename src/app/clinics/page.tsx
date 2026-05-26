@@ -62,39 +62,6 @@ const regions: ClinicRegion[] = [
       },
     ],
   },
-  {
-    label: "United Kingdom",
-    count: "5 clinics",
-    mapUrl: "https://www.google.com/maps?q=United+Kingdom&z=6&output=embed",
-    cities: ["All Clinics", "London", "Manchester", "Leicester", "York", "Preston"],
-    clinics: [
-      {
-        area: "Leicester",
-        name: "UK Vein Care Leicester",
-        address: "624 Uppingham Rd, Leicester LE7 9QB",
-      },
-      {
-        area: "Nottingham",
-        name: "UK Vein Care Warrington",
-        address: "C/O Cheshire Beauty and Wellbeing, Old Alder Ln, Nottingham",
-      },
-      {
-        area: "York",
-        name: "UK Vein Care York",
-        address: "138 Boroughbridge Rd, York YO26 6AL",
-      },
-      {
-        area: "Preston",
-        name: "UK Vein Care Preston",
-        address: "228 Garstang Road, Preston PR2 9QB",
-      },
-      {
-        area: "Hertfordshire",
-        name: "UK Vein Care Hertfordshire",
-        address: "The Coach House, Harpenden AL5 1AJ",
-      },
-    ],
-  },
 ];
 
 function ClinicCard({ clinic }: { clinic: Clinic }) {

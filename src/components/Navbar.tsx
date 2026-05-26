@@ -19,7 +19,7 @@ export default function Navbar() {
     { label: "Learn", href: "/blog" },
   ];
 
-  if (pathname === "/book-appointment" || pathname === "/pricing") {
+  if (pathname === "/pricing") {
     return null;
   }
 
