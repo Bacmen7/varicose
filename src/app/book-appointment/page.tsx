@@ -81,10 +81,10 @@ const initialData: FormData = {
   appearance: "The veins on my leg have progressed to a sore or ulcer",
   duration: "I am not sure",
   title: "",
-  fullName: "jtrujhrft",
-  phone: "5324T",
-  email: "y5e4y",
-  message: "dgdit",
+  fullName: "",
+  phone: "",
+  email: "",
+  message: "",
   consultation: "",
 };
 

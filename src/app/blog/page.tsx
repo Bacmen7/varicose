@@ -39,10 +39,10 @@ const articleRows = [
         href: "/blog/when-to-see-doctor",
       },
       {
-        title: "Varicose veins after pregnancy",
-        image: "/user/spider vein.png",
-        readTime: "6 min read",
-        href: "/blog/early-warning-signs",
+        title: "Can varicose veins come back?",
+        image: "/valve_reflux.png",
+        readTime: "7 min read",
+        href: "/blog/can-varicose-veins-come-back",
       },
     ],
   },
@@ -120,16 +120,16 @@ const moreTopics = [
 
 const latestArticles = [
   {
-    title: "Why varicose veins happen",
+    title: "Can varicose veins come back?",
     image: "/i1.png",
-    readTime: "8 min read",
-    href: "/blog/why-varicose-veins-happen",
+    readTime: "7 min read",
+    href: "/blog/can-varicose-veins-come-back",
   },
   {
-    title: "Early warning signs of vein disease",
+    title: "Why varicose veins happen",
     image: "/i2.png",
-    readTime: "5 min read",
-    href: "/blog/early-warning-signs",
+    readTime: "8 min read",
+    href: "/blog/why-varicose-veins-happen",
   },
   {
     title: "When to see a doctor for varicose veins",
