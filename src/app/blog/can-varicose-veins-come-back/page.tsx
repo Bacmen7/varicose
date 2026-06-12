@@ -130,6 +130,27 @@ export default function CanVaricoseVeinsComeBackPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      <style jsx global>{`
+        .vv-article > [data-toc-section] ~ [data-toc-section] {
+          margin-top: 3.5rem;
+        }
+        .vv-article > [data-toc-section] > h2 {
+          margin-bottom: 1.5rem;
+        }
+        .vv-article > [data-toc-section] h3 {
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          text-decoration: underline;
+          text-decoration-color: #2c847f;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 6px;
+        }
+        .vv-article > [data-toc-section] h2 + h3 {
+          margin-top: 0;
+        }
+      `}</style>
+
+
       {/* Hero */}
       <section className="relative bg-surface pt-8 pb-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -245,78 +266,87 @@ export default function CanVaricoseVeinsComeBackPage() {
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Main Article */}
-            <article className="lg:w-2/3">
+            <article className="lg:w-2/3 vv-article">
               {/* Intro */}
-              <p
-                className="text-[15px] md:text-base leading-7 mb-6"
-                style={{ color: "#48546B" }}
-              >
-                After varicose vein treatments, your legs finally started feeling better.
-                Then one day, you notice a small vein again. Instantly, your mind starts
-                questioning: Is varicose vein coming back again? Was the treatment worth
-                it? Will the veins end up the same as before?
-              </p>
-              <p
-                className="text-[15px] md:text-base leading-7 mb-6"
-                style={{ color: "#48546B" }}
-              >
-                Varicose veins can come back for some people. The return of varicose veins
-                is more related to the nature of the condition rather than a treatment
-                failure. Sometimes, you are prone to developing them. Studies suggest that
-                varicose veins have a high recurrence rate:{" "}
-                <strong className="font-bold">
-                  60% of people develop new varicose veins within 5 years of treatment
-                </strong>
-                . Recurrence does not mean your treatment has failed. People who experience
-                recurrence may do so because it mainly depends on their lifestyle, genetics
-                or treating only visible veins.
-              </p>
-              <p
-                className="text-[15px] md:text-base leading-7 mb-12"
-                style={{ color: "#48546B" }}
-              >
-                This guide will walk you through why varicose veins keep coming back, what
-                treatment options have the highest recurrence, what you can do to reduce
-                the risk and when to visit your vascular surgeon.
-              </p>
+              <div data-toc-section>
+                <p
+                  className="text-[17px] leading-[1.8] mb-5"
+                  style={{ color: "#1a1a1a" }}
+                >
+                  After varicose vein treatments, your legs finally started feeling
+                  better. Then one day, you notice a small vein again. Instantly, your
+                  mind starts questioning: Is varicose vein coming back again? Was the
+                  treatment worth it? Will the veins end up the same as before?
+                </p>
+                <p
+                  className="text-[17px] leading-[1.8] mb-5"
+                  style={{ color: "#48546B" }}
+                >
+                  Varicose veins can come back for some people. The return of varicose
+                  veins is more related to the nature of the condition rather than a
+                  treatment failure. Sometimes, you are prone to developing them. Studies
+                  suggest that varicose veins have a high recurrence rate:{" "}
+                  <strong className="font-bold">
+                    60% of people develop new varicose veins within 5 years of treatment
+                  </strong>
+                  . Recurrence does not mean your treatment has failed. People who
+                  experience recurrence may do so because it mainly depends on their
+                  lifestyle, genetics or treating only visible veins.
+                </p>
+                <p
+                  className="text-[17px] leading-[1.8]"
+                  style={{ color: "#48546B" }}
+                >
+                  This guide will walk you through why varicose veins keep coming back,
+                  what treatment options have the highest recurrence, what you can do to
+                  reduce the risk and when to visit your vascular surgeon.
+                </p>
+              </div>
 
               {/* Why Return */}
+              <div id="why-return" data-toc-section className="scroll-mt-28">
               <h2
-                id="why-return"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 Why Do Varicose Veins Return After Treatment?
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-8"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
-                Most available treatment options for varicose veins have high success rates
-                and are often permanent. But, in some people, varicose veins may come back
-                if new veins become affected, a treated vein reopens, or smaller untreated
-                veins gradually develop into varicose veins.
+                Most available treatment options for varicose veins have high success
+                rates and are often permanent. But, in some people, varicose veins may
+                come back if new veins become affected, a treated vein reopens, or smaller
+                untreated veins gradually develop into varicose veins.
               </p>
 
-              <h3 className="font-heading text-xl text-[#023936] mb-3">
+              <h3
+                className="font-heading text-xl md:text-2xl"
+                style={{ color: "#026460" }}
+              >
                 New Vein Formation — The Most Common Reason
               </h3>
               <p
-                className="text-[15px] md:text-base leading-7 mb-8"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
-                Most of the time, what looks like a return are actually new veins. New vein
-                formation is generally influenced by factors such as your genes, habits,
-                work, and your general lifestyle. The originally treated vein is closed,
-                but new varicose veins may have formed because your body may be prone to
-                developing them. So over the years, new veins can surface elsewhere. This
-                is very common and does not mean the treatment has failed.
+                Most of the time, what looks like a return are actually new veins. New
+                vein formation is generally influenced by factors such as your genes,
+                habits, work, and your general lifestyle. The originally treated vein is
+                closed, but new varicose veins may have formed because your body may be
+                prone to developing them. So over the years, new veins can surface
+                elsewhere. This is very common and does not mean the treatment has failed.
               </p>
 
-              <h3 className="font-heading text-xl text-[#023936] mb-3">
+              <h3
+                className="font-heading text-xl md:text-2xl"
+                style={{ color: "#026460" }}
+              >
                 A Treated Vein Reopens — Uncommon Today
               </h3>
               <p
-                className="text-[15px] md:text-base leading-7 mb-8"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
                 A vein may have been treated, but sometimes it is not fully sealed, and
@@ -326,37 +356,42 @@ export default function CanVaricoseVeinsComeBackPage() {
                 and treated early, before it progresses.
               </p>
 
-              <h3 className="font-heading text-xl text-[#023936] mb-3">
+              <h3
+                className="font-heading text-xl md:text-2xl"
+                style={{ color: "#026460" }}
+              >
                 Untreated Smaller Veins or New Vessel Formation
               </h3>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
                 Smaller veins that were not treated earlier may become tortuous and bulge
                 later. Tiny new vessels may also develop near the original site. These are
                 treated with simple procedures when they appear.
               </p>
+              </div>
 
               {/* Lowest Comeback */}
+              <div id="lowest-comeback" data-toc-section className="scroll-mt-28">
               <h2
-                id="lowest-comeback"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 Which Treatments Have the Lowest Comeback Rates?
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
                 The chances of recurrence may vary between treatments. Some are discussed
                 below:
               </p>
               <ul
-                className="text-[15px] md:text-base leading-7 mb-6 space-y-4"
-                style={{ color: "#48546B" }}
+                className="text-[17px] leading-[1.8] mb-5 space-y-2"
+                style={{ color: "#48546B", listStyleType: "disc", paddingLeft: "1.5rem" }}
               >
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">
                     <Link
                       href="/treatments/evlt"
@@ -366,44 +401,46 @@ export default function CanVaricoseVeinsComeBackPage() {
                     </Link>{" "}
                     and radiofrequency ablation (RFA)
                   </strong>{" "}
-                  — These are minimally invasive procedures with only a 5–10% chance of
+                  — These are minimally invasive procedures with only a 2–10% chance of
                   recurrence. They work by directly sealing the swollen and twisted vein.
                   So there is very little chance of reopening.
                 </li>
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">Sclerotherapy</strong> — This is an
                   injection method that works well for smaller veins, but when used for
                   larger veins, it results in a higher recurrence rate. Foam sclerotherapy
                   has shown rising recurrence rates over the years.
                 </li>
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">Vein Stripping</strong> — It is an old,
                   traditional method, which carries a higher recurrence rate of around
-                  20–30% or more. Due to the high recurrence rate, this procedure is rarely
-                  performed.
+                  20–30% or more. Due to the high recurrence rate, this procedure is
+                  rarely performed.
                 </li>
               </ul>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
-                A 5 year follow up study was conducted in the UK for patients who underwent
-                various treatments for varicose veins. They compared laser therapy, foam
-                sclerotherapy and surgery. The treatments had similar recurrence rates and
-                quality of life during the first 2–3 years. However, with a 5-year
-                long-term follow-up, the differences between the treatments became more
-                noticeable.
+                A 5 year follow up study was conducted in the UK for patients who
+                underwent various treatments for varicose veins. They compared laser
+                therapy, foam sclerotherapy and surgery. The treatments had similar
+                recurrence rates and quality of life during the first 2–3 years. However,
+                with a 5-year long-term follow-up, the differences between the treatments
+                became more noticeable.
               </p>
+              </div>
 
               {/* Compression */}
+              <div id="compression" data-toc-section className="scroll-mt-28">
               <h2
-                id="compression"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 Can Compression Stockings Help Prevent Recurrence?
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
                 Compression stockings are among the simplest tools that work by gently
@@ -411,34 +448,36 @@ export default function CanVaricoseVeinsComeBackPage() {
                 strain off your veins. They are easy to overuse once your legs feel fine.
               </p>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
-                After treatment, your surgeon may advise you to wear compression stockings
-                to support healing by keeping the pressure down in the remaining veins.
-                They are helpful, especially on days when you are on your feet a lot. They
-                are not a cure on their own, and in most cases you will not need them
-                forever.
+                After treatment, your surgeon may advise you to wear compression
+                stockings to support healing by keeping the pressure down in the
+                remaining veins. They are helpful, especially on days when you are on
+                your feet a lot. They are not a cure on their own, and in most cases you
+                will not need them forever.
               </p>
+              </div>
 
               {/* Lower Risk */}
+              <div id="lower-risk" data-toc-section className="scroll-mt-28">
               <h2
-                id="lower-risk"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 What Can You Do to Lower Your Risk of Recurrence?
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-4"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
                 Changing your lifestyle can make a huge difference. Even if you are
                 naturally prone to developing varicose veins, small lifestyle changes can
-                make a big difference. By keeping the pressure in your leg veins as low as
-                possible, you can reduce the chances of new veins forming.
+                make a big difference. By keeping the pressure in your leg veins as low
+                as possible, you can reduce the chances of new veins forming.
               </p>
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
                 Making small, steady changes to your habits will help you in the long run
@@ -446,111 +485,118 @@ export default function CanVaricoseVeinsComeBackPage() {
               </p>
 
               <ul
-                className="text-[15px] md:text-base leading-7 mb-8 space-y-3"
-                style={{ color: "#48546B" }}
+                className="text-[17px] leading-[1.8] mb-5 space-y-2"
+                style={{ color: "#48546B", listStyleType: "disc", paddingLeft: "1.5rem" }}
               >
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">Stay Active</strong> — Regular walking is
                   best for your veins.
                 </li>
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">Maintain Weight</strong> — Keeping your
                   weight in the healthy range (BMI) prevents added pressure on your legs.
                 </li>
-                <li>
-                  <strong className="font-bold">Leg Elevation</strong> — Elevating your leg
-                  whenever possible, or especially at the end of the day, helps venous
-                  reflux, i.e., helps blood flow back to the heart.
+                <li className="pl-1">
+                  <strong className="font-bold">Leg Elevation</strong> — Elevating your
+                  leg whenever possible, or especially at the end of the day, helps
+                  venous reflux, i.e., helps blood flow back to the heart.
                 </li>
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">Short Breaks</strong> — Take short walk
-                  breaks after every hour in between long stretches of sitting or standing.
+                  breaks after every hour in between long stretches of sitting or
+                  standing.
                 </li>
-                <li>
+                <li className="pl-1">
                   <strong className="font-bold">Hydration</strong> — Staying hydrated,
-                  especially in India&apos;s hot summers, supports overall circulation and
-                  general health.
+                  especially in India&apos;s hot summers, supports overall circulation
+                  and general health.
                 </li>
               </ul>
 
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
-                Many jobs in India require long periods of sitting or standing. If you are
-                a teacher, factory worker, shopkeeper, corporate employee, or in any job
-                where you need to sit or stand for a long time, it is best to take short
-                walking breaks to improve blood flow in your legs.
+                Many jobs in India require long periods of sitting or standing. If you
+                are a teacher, factory worker, shopkeeper, corporate employee, or in any
+                job where you need to sit or stand for a long time, it is best to take
+                short walking breaks to improve blood flow in your legs.
               </p>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
                 These small changes in your habits and lifestyle can lower the risk of
                 developing and recurring varicose veins.
               </p>
+              </div>
 
               {/* Follow Up */}
+              <div id="follow-up" data-toc-section className="scroll-mt-28">
               <h2
-                id="follow-up"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 When to Schedule Follow-Up Duplex Scans?
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
-                Follow-up after the treatment helps in long-term vein health. They help in
-                diagnosing any returning reflux early, often before you would even notice a
-                vein. This will help in early prevention and treatment while it is still
-                small.
+                Follow-up after the treatment helps in long-term vein health. They help
+                in diagnosing any returning reflux early, often before you would even
+                notice a vein. This will help in early prevention and treatment while it
+                is still small.
               </p>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
                 Usually, your vascular surgeon will suggest a follow-up based on your
-                treatment and your vein health. During the check-up, they will use a duplex
-                ultrasound, the same painless scan that they used when they were diagnosing
-                you in the first place, with no needles and no discomfort.
+                treatment and your vein health. During the check-up, they will use a
+                duplex ultrasound, the same painless scan that they used when they were
+                diagnosing you in the first place, with no needles and no discomfort.
               </p>
+              </div>
 
               {/* Veins Coming Back */}
+              <div id="veins-coming-back" data-toc-section className="scroll-mt-28">
               <h2
-                id="veins-coming-back"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 What to Do If You Notice Veins Coming Back?
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
-                If you do notice a new vein, do not consider it a treatment failure. It is
-                common in some people who are living with a venous tendency, and it is
+                If you do notice a new vein, do not consider it a treatment failure. It
+                is common in some people who are living with a venous tendency, and it is
                 manageable.
               </p>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
                 These recurrent veins can usually be treated with modern and minimally
                 invasive methods. Your doctor will recommend laser, RFA, VenaSeal, or
-                sclerotherapy for smaller veins based on your health condition, rather than
-                pushing one option. You must visit the doctor immediately. The earlier you
-                mention it to your surgeon, the faster the recovery can happen. A quick
-                check is always better than waiting and wondering.
+                sclerotherapy for smaller veins based on your health condition, rather
+                than pushing one option. You must visit the doctor immediately. The
+                earlier you mention it to your surgeon, the faster the recovery can
+                happen. A quick check is always better than waiting and wondering.
               </p>
+              </div>
 
               {/* FAQ */}
+              <div id="faq" data-toc-section className="scroll-mt-28">
               <h2
-                id="faq"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 Frequently Asked Questions
               </h2>
-              <div className="mb-12 space-y-3">
+              <div className="space-y-3">
                 {faqs.map((faq, i) => (
                   <div
                     key={i}
@@ -561,7 +607,8 @@ export default function CanVaricoseVeinsComeBackPage() {
                       className="w-full flex items-center justify-between gap-4 text-left px-5 py-4 bg-surface hover:bg-accent-lighter transition-colors"
                     >
                       <span
-                        className="font-heading text-base md:text-lg text-[#023936]"
+                        className="font-body text-base md:text-lg font-semibold"
+                        style={{ color: "#026460" }}
                       >
                         {faq.q}
                       </span>
@@ -574,7 +621,7 @@ export default function CanVaricoseVeinsComeBackPage() {
                     </button>
                     {openFaq === i && (
                       <div
-                        className="px-5 py-4 text-[15px] leading-7 bg-white"
+                        className="font-body px-5 py-4 text-[17px] leading-[1.8] bg-white"
                         style={{ color: "#48546B" }}
                       >
                         {faq.a}
@@ -584,29 +631,35 @@ export default function CanVaricoseVeinsComeBackPage() {
                 ))}
               </div>
 
+              </div>
+
               {/* Stay Ahead */}
+              <div id="stay-ahead" data-toc-section className="scroll-mt-28">
               <h2
-                id="stay-ahead"
-                className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28"
+                className="font-heading text-3xl md:text-4xl"
+                style={{ color: "#026460", letterSpacing: "-0.8px" }}
               >
                 Worried About Recurrence? Stay Ahead of It
               </h2>
               <p
-                className="text-[15px] md:text-base leading-7 mb-6"
+                className="text-[17px] leading-[1.8] mb-5"
                 style={{ color: "#48546B" }}
               >
                 If the thought of veins returning has been worrying you, make it a reason
-                to stay connected with your health. People who maintain a healthy lifestyle
-                and visit their doctor regularly can almost prevent recurrence. Recurrence
-                is very common, but it&apos;s manageable.
+                to stay connected with your health. People who maintain a healthy
+                lifestyle and visit their doctor regularly can almost prevent recurrence.
+                Recurrence is very common, but it&apos;s manageable.
               </p>
               <p
-                className="text-[15px] md:text-base leading-7 mb-12"
+                className="text-[17px] leading-[1.8]"
                 style={{ color: "#48546B" }}
               >
                 When you are due for a follow-up, or if you have noticed something new,
                 schedule an appointment with a vascular specialist and stay ahead of it.
               </p>
+              </div>
+
+              <hr className="border-none border-t border-[#dcdcdc] mt-12 mb-10" />
 
               {/* Sources */}
               <div className="bg-surface rounded-xl p-6 md:p-8 mb-8">
@@ -651,26 +704,75 @@ export default function CanVaricoseVeinsComeBackPage() {
             </article>
 
             {/* Table of Contents Sidebar */}
-            <aside className="hidden lg:block lg:w-1/3">
-              <div className="sticky top-28 bg-surface rounded-2xl p-6">
-                <h3 className="font-heading text-xl text-secondary mb-6">
-                  Table of Contents
-                </h3>
-                <nav>
-                  {tableOfContents.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className={`block w-full text-left transition-all cursor-pointer py-3 border-b-2 font-heading ${
-                        activeSection === item.id
-                          ? "text-primary text-base font-medium border-primary"
-                          : "text-gray-600 hover:text-primary text-sm border-gray-200"
-                      }`}
-                    >
-                      {item.title}
-                    </button>
-                  ))}
-                </nav>
+            <aside className="hidden lg:block lg:w-[340px] shrink-0">
+              <div className="sticky top-28">
+                <div className="bg-surface rounded-2xl overflow-hidden">
+                  <p
+                    className="font-body"
+                    style={{
+                      fontSize: "11px",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.14em",
+                      color: "#48546B",
+                      padding: "22px 22px 14px",
+                    }}
+                  >
+                    On This Page
+                  </p>
+                  <nav className="flex flex-col pb-2">
+                    {tableOfContents.map((item, i) => {
+                      const isActive = activeSection === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => scrollToSection(item.id)}
+                          className="text-left flex items-center gap-3 pr-5 transition-colors cursor-pointer font-body"
+                          style={{
+                            backgroundColor: isActive
+                              ? "rgba(44,132,127,0.12)"
+                              : "transparent",
+                            paddingLeft: "18px",
+                            paddingTop: "11px",
+                            paddingBottom: "11px",
+                            borderBottom: "1px solid rgba(2,100,96,0.08)",
+                          }}
+                        >
+                          <div
+                            style={{
+                              width: 3,
+                              alignSelf: "stretch",
+                              backgroundColor: isActive ? "#026460" : "transparent",
+                              flexShrink: 0,
+                            }}
+                          />
+                          <span
+                            className="font-body"
+                            style={{
+                              fontSize: "12px",
+                              fontWeight: 700,
+                              color: isActive ? "#026460" : "#7f8da3",
+                              minWidth: "20px",
+                            }}
+                          >
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <span
+                            className="font-body"
+                            style={{
+                              fontSize: "14px",
+                              color: isActive ? "#026460" : "#48546B",
+                              fontWeight: isActive ? 700 : 600,
+                              lineHeight: 1.35,
+                            }}
+                          >
+                            {item.title}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </nav>
+                </div>
               </div>
             </aside>
           </div>
@@ -690,25 +792,25 @@ export default function CanVaricoseVeinsComeBackPage() {
       </div>
 
       {/* CTA Section */}
-      <section className="relative pt-32 md:pt-40 pb-36 bg-primary">
+      <section className="relative pt-14 md:pt-16 pb-14 md:pb-16 bg-primary">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-heading text-4xl md:text-5xl text-white mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl text-white mb-4">
             Stay Ahead of Recurrence
           </h2>
-          <p className="text-lg md:text-xl leading-8 mb-10 text-white/90 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg leading-7 mb-6 text-white/90 max-w-2xl mx-auto">
             Notice a new vein or due for a follow-up? Schedule a quick check with a
             vascular specialist — early action keeps recurrence simple and manageable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/book-appointment"
-              className="bg-white text-primary text-base md:text-lg font-semibold py-4 px-10 rounded-full transition-colors hover:opacity-90"
+              className="bg-white text-primary text-base font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90"
             >
               Book a Consultation
             </Link>
             <Link
               href="/clinics"
-              className="bg-transparent text-white text-base md:text-lg font-semibold py-4 px-10 rounded-full transition-colors hover:bg-white/10 border-2 border-white"
+              className="bg-transparent text-white text-base font-semibold py-3 px-8 rounded-full transition-colors hover:bg-white/10 border-2 border-white"
             >
               Find a Specialist Near You
             </Link>
