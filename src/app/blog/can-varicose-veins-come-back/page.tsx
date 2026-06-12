@@ -151,10 +151,6 @@ export default function CanVaricoseVeinsComeBackPage() {
         .vv-article > [data-toc-section] h3 {
           margin-top: 2rem;
           margin-bottom: 1rem;
-          text-decoration: underline;
-          text-decoration-color: #2c847f;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 6px;
         }
         .vv-article > [data-toc-section] h2 + h3 {
           margin-top: 0;
