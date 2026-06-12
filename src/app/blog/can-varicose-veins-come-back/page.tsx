@@ -131,8 +131,19 @@ export default function CanVaricoseVeinsComeBackPage() {
       />
 
       <style jsx global>{`
-        .vv-article > [data-toc-section] ~ [data-toc-section] {
+        .vv-article > [data-toc-section] + [data-toc-section] {
+          position: relative;
           margin-top: 3.5rem;
+          padding-top: 3.5rem;
+        }
+        .vv-article > [data-toc-section] + [data-toc-section]::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: #dcdcdc;
         }
         .vv-article > [data-toc-section] > h2 {
           margin-bottom: 1.5rem;
@@ -285,9 +296,9 @@ export default function CanVaricoseVeinsComeBackPage() {
                   Varicose veins can come back for some people. The return of varicose
                   veins is more related to the nature of the condition rather than a
                   treatment failure. Sometimes, you are prone to developing them. Studies
-                  suggest that varicose veins have a high recurrence rate:{" "}
+                  suggest a recurrence rate of around{" "}
                   <strong className="font-bold">
-                    60% of people develop new varicose veins within 5 years of treatment
+                    20% to 50% within 5 to 10 years of treatment
                   </strong>
                   . Recurrence does not mean your treatment has failed. People who
                   experience recurrence may do so because it mainly depends on their
