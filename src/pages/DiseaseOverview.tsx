@@ -159,11 +159,11 @@ export default function ConditionsOverviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { image: "/user/varicose veins.png", title: "What Are Varicose Veins? Causes, Symptoms & When To See A Doctor" },
-              { image: "/user/deep vein reflux.png", title: "Spider Veins vs Varicose Veins — What's the difference?" },
+              { image: "/user/deep vein reflux.png", title: "Spider Veins vs Varicose Veins: What's the difference?" },
               { image: "/user/leg pain and heaviness.png", title: "How to Recognise Venous Disease in Yourself or Others: Key Signs" },
             ].map((video, i) => (
               <div key={i} className="bg-white rounded-xl overflow-hidden border border-gray-100 cursor-pointer group flex flex-col">
-                {/* Thumbnail — separate block, fixed height */}
+                {/* Thumbnail: separate block, fixed height */}
                 <div className="w-full h-48 relative overflow-hidden rounded-t-2xl flex-shrink-0">
                   <Image
                     src={video.image}

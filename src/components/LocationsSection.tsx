@@ -29,7 +29,7 @@ export default function LocationsSection() {
               <span className="whitespace-nowrap">Near You</span>
             </h2>
             <p className="mt-4 text-[15px] md:text-base leading-relaxed text-gray-600 max-w-xl mx-auto lg:mx-0">
-              34 state-of-the-art clinics across India — expert vein care close
+              34 state-of-the-art clinics across India, with expert vein care close
               to where you live.
             </p>
 

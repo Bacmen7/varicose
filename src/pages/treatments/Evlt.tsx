@@ -17,7 +17,7 @@ const tocSections = [
 
 const keyTakeaways = [
   "EVLT is a minimally invasive, FDA-approved laser procedure that treats varicose veins at their root cause.",
-  "It is performed under local anesthesia and takes 30-60 minutes per leg — no surgery, no stitches.",
+  "It is performed under local anesthesia and takes 30-60 minutes per leg, with no surgery and no stitches.",
   "Most patients walk out the same day and return to work within 24-48 hours.",
   "Long-term closure success rate is above 95% when performed by an experienced specialist.",
 ];
@@ -34,7 +34,7 @@ const symptoms = [
 
 const steps = [
   { title: "Ultrasound Mapping", desc: "The doctor identifies the faulty vein and maps blood flow using Doppler ultrasound." },
-  { title: "Local Anesthesia", desc: "The area is numbed — you stay awake, comfortable, and pain-free." },
+  { title: "Local Anesthesia", desc: "The area is numbed, so you stay awake, comfortable, and pain-free." },
   { title: "Laser Fiber Insertion", desc: "A thin laser fiber is inserted into the vein through a tiny needle puncture." },
   { title: "Laser Activation", desc: "Controlled laser energy seals the vein from inside." },
   { title: "Natural Blood Rerouting", desc: "Blood automatically flows through healthier veins." },
@@ -150,7 +150,7 @@ export default function EVLTPage() {
           </div>
         </header>
 
-        {/* Mobile TOC — sticky collapsible bar */}
+        {/* Mobile TOC: sticky collapsible bar */}
         <div className="sticky top-0 z-20 border-b border-gray-100 bg-white shadow-sm lg:hidden">
           <div className="mx-auto max-w-7xl px-6">
             <button

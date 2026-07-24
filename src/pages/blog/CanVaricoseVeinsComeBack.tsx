@@ -336,7 +336,7 @@ export default function CanVaricoseVeinsComeBackPage() {
                 className="font-heading text-xl md:text-2xl"
                 style={{ color: "#026460" }}
               >
-                New Vein Formation — The Most Common Reason
+                New Vein Formation: The Most Common Reason
               </h3>
               <p
                 className="text-[17px] leading-[1.8] mb-5"
@@ -354,7 +354,7 @@ export default function CanVaricoseVeinsComeBackPage() {
                 className="font-heading text-xl md:text-2xl"
                 style={{ color: "#026460" }}
               >
-                A Treated Vein Reopens — Uncommon Today
+                A Treated Vein Reopens: Uncommon Today
               </h3>
               <p
                 className="text-[17px] leading-[1.8] mb-5"
@@ -412,18 +412,18 @@ export default function CanVaricoseVeinsComeBackPage() {
                     </Link>{" "}
                     and radiofrequency ablation (RFA)
                   </strong>{" "}
-                  — These are minimally invasive procedures with only a 2–10% chance of
+                  These are minimally invasive procedures with only a 2-10% chance of
                   recurrence. They work by directly sealing the swollen and twisted vein.
                   So there is very little chance of reopening.
                 </li>
                 <li className="pl-1">
-                  <strong className="font-bold">Sclerotherapy</strong> — This is an
+                  <strong className="font-bold">Sclerotherapy</strong>: This is an
                   injection method that works well for smaller veins, but when used for
                   larger veins, it results in a higher recurrence rate. Foam sclerotherapy
                   has shown rising recurrence rates over the years.
                 </li>
                 <li className="pl-1">
-                  <strong className="font-bold">Vein Stripping</strong> — It is an old,
+                  <strong className="font-bold">Vein Stripping</strong>: It is an old,
                   traditional method, which carries a higher recurrence rate of around
                   20–30% or more. Due to the high recurrence rate, this procedure is
                   rarely performed.
@@ -500,25 +500,25 @@ export default function CanVaricoseVeinsComeBackPage() {
                 style={{ color: "#48546B", listStyleType: "disc", paddingLeft: "1.5rem" }}
               >
                 <li className="pl-1">
-                  <strong className="font-bold">Stay Active</strong> — Regular walking is
+                  <strong className="font-bold">Stay Active</strong>: Regular walking is
                   best for your veins.
                 </li>
                 <li className="pl-1">
-                  <strong className="font-bold">Maintain Weight</strong> — Keeping your
+                  <strong className="font-bold">Maintain Weight</strong>: Keeping your
                   weight in the healthy range (BMI) prevents added pressure on your legs.
                 </li>
                 <li className="pl-1">
-                  <strong className="font-bold">Leg Elevation</strong> — Elevating your
+                  <strong className="font-bold">Leg Elevation</strong>: Elevating your
                   leg whenever possible, or especially at the end of the day, helps
                   venous reflux, i.e., helps blood flow back to the heart.
                 </li>
                 <li className="pl-1">
-                  <strong className="font-bold">Short Breaks</strong> — Take short walk
+                  <strong className="font-bold">Short Breaks</strong>: Take short walk
                   breaks after every hour in between long stretches of sitting or
                   standing.
                 </li>
                 <li className="pl-1">
-                  <strong className="font-bold">Hydration</strong> — Staying hydrated,
+                  <strong className="font-bold">Hydration</strong>: Staying hydrated,
                   especially in India&apos;s hot summers, supports overall circulation
                   and general health.
                 </li>
@@ -810,7 +810,7 @@ export default function CanVaricoseVeinsComeBackPage() {
           </h2>
           <p className="text-base md:text-lg leading-7 mb-6 text-white/90 max-w-2xl mx-auto">
             Notice a new vein or due for a follow-up? Schedule a quick check with a
-            vascular specialist — early action keeps recurrence simple and manageable.
+            vascular specialist. Early action keeps recurrence simple and manageable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

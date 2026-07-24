@@ -138,7 +138,7 @@ export default function WhenToSeeDoctorPage() {
         </p>
         <div className="bg-primary/5 p-6 rounded-xl mb-12">
           <p className="text-lg md:text-[22px] md:leading-[33px]" style={{ color: '#48546B' }}>
-            The goal of seeing a doctor early is not always immediate treatment — it&apos;s <strong className="font-bold">early diagnosis and prevention of progression</strong>.
+            The goal of seeing a doctor early is not always immediate treatment. It&apos;s <strong className="font-bold">early diagnosis and prevention of progression</strong>.
           </p>
         </div>
 
@@ -288,7 +288,7 @@ export default function WhenToSeeDoctorPage() {
 
         {/* Risk Factors */}
         <h2 id="risk-factors" className="font-heading text-2xl md:text-3xl text-[#023936] mb-6 scroll-mt-28">
-          What If You Have Risk Factors — Even Mild Symptoms Matter
+          What If You Have Risk Factors? Even Mild Symptoms Matter
         </h2>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-4" style={{ color: '#48546B' }}>
           You should consider early evaluation if you:
@@ -354,7 +354,7 @@ export default function WhenToSeeDoctorPage() {
           <li>Reduced mobility and quality of life</li>
         </ul>
         <p className="text-lg md:text-[22px] md:leading-[33px] font-bold mb-12" style={{ color: '#48546B' }}>
-          Modern treatments are simple — but advanced disease requires more care.
+          Modern treatments are simple, but advanced disease requires more care.
         </p>
 
         {/* Bottom Line */}
@@ -402,7 +402,7 @@ export default function WhenToSeeDoctorPage() {
             Take the Next Step
           </h2>
           <p className="text-lg md:text-[22px] md:leading-[33px] mb-8" style={{ color: '#48546B' }}>
-            If your legs have been bothering you — even quietly — it&apos;s worth getting them checked.
+            If your legs have been bothering you, even quietly, it&apos;s worth getting them checked.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="text-white font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90" style={{ backgroundColor: '#026460' }}>

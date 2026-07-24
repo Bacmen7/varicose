@@ -21,7 +21,7 @@ const steps = [
     id: "step-3",
     title: "Begin your treatment plan",
     description:
-      "Book a consult, get your evaluation, and start treatment — often completed in 30–45 minutes.",
+      "Book a consult, get your evaluation, and start treatment, often completed in 30-45 minutes.",
     image: "/a3.png",
   },
 ];

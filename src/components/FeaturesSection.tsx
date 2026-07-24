@@ -5,7 +5,7 @@ const features = [
     icon: Zap,
     title: "Minimally Invasive Treatments",
     description:
-      "Laser, RF ablation, foam sclerotherapy, glue therapy & more — no long hospital stays.",
+      "Laser, RF ablation, foam sclerotherapy, glue therapy & more, with no long hospital stays.",
   },
   {
     icon: Timer,
@@ -23,7 +23,7 @@ const features = [
     icon: MapPin,
     title: "Clinics Near You",
     description:
-      "A growing network of vein care centres across India — expert help close to where you live.",
+      "A growing network of vein care centres across India, with expert help close to where you live.",
   },
 ];
 

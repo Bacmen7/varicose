@@ -21,7 +21,7 @@ const articles = [
     category: "Checklist",
     title: "When Should You See a Doctor for Varicose Veins?",
     image: "/v2.png",
-    desc: "Knowing the red flags—such as skin changes or persistent pain—that indicate it's time for a professional evaluation.",
+    desc: "Knowing the red flags, such as skin changes or persistent pain, that indicate it's time for a professional evaluation.",
     href: "/blog/when-to-see-doctor",
   },
 ];

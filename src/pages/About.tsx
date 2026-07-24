@@ -148,7 +148,7 @@ export default function AboutPage() {
                 <p className="text-gray-400 text-sm mt-0.5">Sira Vascular, Mumbai</p>
               </div>
               <div className="flex flex-col gap-2">
-                {["MBBS", "MS — General Surgery", "Fellowship in Vascular Surgery"].map((q, i) => (
+                {["MBBS", "MS (General Surgery)", "Fellowship in Vascular Surgery"].map((q, i) => (
                   <span key={i} className="text-sm font-medium text-primary bg-accent px-3 py-1 rounded-md w-fit">{q}</span>
                 ))}
               </div>

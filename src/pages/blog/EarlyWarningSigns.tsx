@@ -122,7 +122,7 @@ export default function EarlyWarningSignsPage() {
           They don&apos;t.
         </p>
         <p className="text-lg md:text-[22px] md:leading-[33px] mb-12" style={{ color: '#48546B' }}>
-          Long before veins become visible, your body starts sending quiet warning signals — signals that are easy to ignore, but <strong className="font-bold">important to recognize early</strong>.
+          Long before veins become visible, your body starts sending quiet warning signals. These are easy to ignore, but <strong className="font-bold">important to recognize early</strong>.
         </p>
 
         {/* Why Early Signs Matter */}
@@ -182,7 +182,7 @@ export default function EarlyWarningSignsPage() {
               <li>Felt more in calves or behind knees</li>
             </ul>
             <p className="text-base italic" style={{ color: '#48546B' }}>
-              It&apos;s often mistaken for muscle strain — but it&apos;s actually <strong className="font-bold">circulation-related</strong>.
+              It&apos;s often mistaken for muscle strain, but it&apos;s actually <strong className="font-bold">circulation-related</strong>.
             </p>
           </div>
 

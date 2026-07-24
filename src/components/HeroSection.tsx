@@ -20,17 +20,17 @@ export default function HeroSection() {
         {/* Left: copy + CTAs + trust */}
         <div className="flex flex-col items-center pt-11 pb-4 text-center md:pt-14 lg:items-start lg:justify-center lg:py-20 lg:pr-6 lg:text-left">
           <h1 className="max-w-[580px] font-heading text-[2.1rem] font-light leading-[1.17] tracking-tight text-white sm:text-[2.7rem] lg:max-w-none lg:text-[3.2rem] xl:text-[3.5rem]">
-            Say goodbye to{" "}
+            Heavy, aching legs?{" "}
             <span className="whitespace-nowrap italic" style={{ color: "#CCE0DF" }}>
               Varicose Veins
-            </span>
-            , without major surgery
+            </span>{" "}
+            that keep getting worse?
           </h1>
 
           <p className="mt-5 max-w-[540px] text-[15px] leading-relaxed text-white/85 sm:text-[17px]">
-            Pain, swelling, or visible veins? Get science-backed, minimally
-            invasive treatment from expert vein specialists — walk in, walk
-            out, most procedures take under an hour.
+            Legs that hurt after standing all day. Night cramps that break your
+            sleep. Swollen ankles and veins you try to hide. These are signs of
+            varicose veins, and they are treatable without major surgery.
           </p>
 
           {/* CTAs */}

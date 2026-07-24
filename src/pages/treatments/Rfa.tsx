@@ -263,7 +263,7 @@ function WhatHappensToVein() {
             </p>
             <div className="p-8 rounded-lg bg-surface border border-gray-200">
               <p className="font-heading text-lg leading-relaxed text-secondary">
-                No important blood flow is lost — healthy veins take over naturally.
+                No important blood flow is lost. Healthy veins take over naturally.
               </p>
             </div>
           </div>
@@ -525,7 +525,7 @@ function RFACTASection() {
           Take the Next Step Toward Healthier Legs
         </h2>
         <p className="text-lg md:text-xl mb-12 font-light max-w-2xl mx-auto text-white/90">
-          If Varicose veins are affecting your comfort or daily life, RFA offers a safe and effective solution — without surgery.
+          If Varicose veins are affecting your comfort or daily life, RFA offers a safe and effective solution, without surgery.
         </p>
         <div className="flex justify-center">
           <button className="font-semibold py-4 px-8 rounded-full transition-colors duration-300 cursor-pointer text-lg bg-white text-primary hover:opacity-90">

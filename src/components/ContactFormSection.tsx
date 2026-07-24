@@ -1,10 +1,10 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import Image from "@/compat/Image";
 import { useState } from "react";
 
 export default function ContactFormSection() {
-  const [form, setForm] = useState({ name: "", mobile: "", city: "", condition: "", message: "" });
+  const [form, setForm] = useState({ name: "", mobile: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,120 +14,85 @@ export default function ContactFormSection() {
   return (
     <section className="py-14 md:py-20 w-full bg-white relative">
       <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
-        <div className="text-left mb-8">
-          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">
-            Get Expert Consultation
-          </h2>
-          <p className="text-[15px] md:text-base leading-relaxed text-gray-600">
-            Fill in your details and our patient counsellor will call you back
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid items-stretch gap-8 md:grid-cols-2 lg:gap-12">
 
-          {/* Left Side - Form (no card bg) */}
-          <div className="p-2">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+          {/* Left: heading + form */}
+          <div className="flex flex-col justify-center">
+            <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-primary md:text-[13px]">
+              BOOK A CONSULTATION
+            </p>
+            <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-3">
+              Get Expert Consultation
+            </h2>
+            <p className="mb-8 text-[15px] leading-relaxed text-gray-600 md:text-base">
+              Fill in your details and our patient counsellor will call you back.
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-1 text-sm">Name</label>
+                  <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-gray-700">Name</label>
                   <input
                     type="text"
                     id="name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     placeholder="Enter your name"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="mobile" className="block text-gray-700 font-semibold mb-1 text-sm">Mobile Number</label>
+                  <label htmlFor="mobile" className="mb-1.5 block text-sm font-semibold text-gray-700">Mobile Number</label>
                   <input
                     type="tel"
                     id="mobile"
                     value={form.mobile}
                     onChange={(e) => setForm({ ...form, mobile: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     placeholder="Enter your mobile number"
                     pattern="[0-9]{10}"
                     required
                   />
                 </div>
-                <div>
-                  <label htmlFor="city" className="block text-gray-700 font-semibold mb-1 text-sm">City</label>
-                  <input
-                    type="text"
-                    id="city"
-                    value={form.city}
-                    onChange={(e) => setForm({ ...form, city: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                    placeholder="Enter your city"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="condition" className="block text-gray-700 font-semibold mb-1 text-sm">Condition</label>
-                  <div className="relative">
-                    <select
-                      id="condition"
-                      value={form.condition}
-                      onChange={(e) => setForm({ ...form, condition: e.target.value })}
-                      className="w-full appearance-none rounded-lg border border-gray-200 bg-white px-3 py-2 pr-10 text-sm text-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                    >
-                      <option value="">Select your condition</option>
-                      <option value="varicose-veins">Varicose Veins</option>
-                      <option value="spider-veins">Spider Veins</option>
-                      <option value="deep-vein-reflux">Deep Vein Reflux</option>
-                      <option value="chronic-venous-insufficiency">Chronic Venous Insufficiency</option>
-                      <option value="leg-pain">Leg Pain & Heaviness</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <svg
-                      className="pointer-events-none absolute right-4 top-1/2 size-4 -translate-y-1/2 text-secondary"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
-                    </svg>
-                  </div>
-                </div>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-semibold mb-1 text-sm">Message</label>
+                <label htmlFor="message" className="mb-1.5 block text-sm font-semibold text-gray-700">Message</label>
                 <textarea
                   id="message"
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none"
+                  className="w-full resize-none rounded-lg border border-gray-200 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   placeholder="Describe your symptoms or concerns"
-                  rows={3}
+                  rows={4}
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-fit bg-primary text-white rounded-full px-6 py-3 text-[14px] font-semibold hover:bg-primary-dark transition-colors flex items-center gap-2 cursor-pointer"
+                className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-primary-dark sm:w-fit sm:px-8"
               >
                 Get A Call Back
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="h-5 w-5" />
               </button>
             </form>
 
-            <div className="mt-6 pt-6 border-t border-gray-200 text-center">
-              <p className="text-gray-700 font-semibold">
-                Speak to our Patient Counsellor:{" "}
-                <a href="tel:9833943177" className="text-primary hover:underline">
+            <div className="mt-8 flex items-center gap-3 border-t border-gray-100 pt-6">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent-lighter text-primary">
+                <Phone size={18} strokeWidth={1.8} />
+              </span>
+              <p className="text-sm text-gray-600">
+                Speak to our Patient Counsellor{" "}
+                <a href="tel:9833943177" className="block text-base font-semibold text-primary hover:underline">
                   9833943177
                 </a>
               </p>
             </div>
           </div>
 
-          {/* Right Side - Image */}
-          <div className="relative h-[500px] md:h-[580px] rounded-xl border border-black/5 overflow-hidden">
+          {/* Right: image */}
+          <div className="relative hidden min-h-[480px] overflow-hidden rounded-2xl border border-black/5 md:block">
             <Image
               src="/contact-form.png"
               alt="Varicose vein consultation"

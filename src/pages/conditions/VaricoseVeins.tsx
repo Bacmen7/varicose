@@ -289,7 +289,7 @@ export default function VaricoseVeinsPage() {
               <BulletItem>Night cramps and restless legs</BulletItem>
               <BulletItem>Itching or irritation near affected veins</BulletItem>
               <BulletItem>
-                Skin changes — darkening or dryness near ankles
+                Skin changes: darkening or dryness near ankles
               </BulletItem>
               <BulletItem>Visible bulging or twisted veins</BulletItem>
             </ul>
@@ -373,7 +373,7 @@ export default function VaricoseVeinsPage() {
             <SectionHeading>Are They Dangerous?</SectionHeading>
 
             <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
-              Varicose veins are not immediately life-threatening — but they can
+              Varicose veins are not immediately life-threatening, but they can
               progress if ignored.
             </p>
 
@@ -584,7 +584,7 @@ export default function VaricoseVeinsPage() {
             Take the First Step Toward Healthier Legs
           </h2>
           <p className="text-[15px] md:text-base leading-7 mb-8 text-white/85">
-            Varicose veins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
+            Varicose veins happen for real medical reasons, not vanity. Understanding the cause is the first step to lasting relief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-primary font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90">

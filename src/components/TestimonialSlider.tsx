@@ -12,7 +12,7 @@ const testimonials = [
     {
         id: 2,
         name: "Sanjay, Delhi",
-        quote: "The heaviness, swelling, and night cramps — gone after my RFA treatment.",
+        quote: "The heaviness, swelling, and night cramps, gone after my RFA treatment.",
         image: "/team/3.png"
     },
     {

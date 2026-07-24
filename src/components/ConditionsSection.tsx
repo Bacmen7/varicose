@@ -25,7 +25,7 @@ export default function ConditionsSection() {
             symptoms and conditions
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-gray-600 md:text-base">
-            Varicose veins aren&apos;t just cosmetic &mdash; they signal deeper
+            Varicose veins aren&apos;t just cosmetic. They signal deeper
             circulation issues. We help you find care for{" "}
             <span className="rounded-[3px] bg-primary px-2 py-0.5 font-semibold text-white">
               vein and circulation conditions
