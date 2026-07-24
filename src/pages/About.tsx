@@ -17,7 +17,7 @@ export default function AboutPage() {
       >
         <div className="flex flex-col lg:flex-row min-h-[420px] lg:min-h-[460px]">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 px-4 py-10 md:px-8 lg:px-16 xl:px-24 lg:py-12 flex flex-col justify-center">
+          <div className="w-full lg:w-1/2 px-5 py-12 md:px-8 lg:px-16 xl:px-24 lg:py-14 flex flex-col justify-center">
             <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-8">
               <h1 className="font-heading text-white text-3xl md:text-4xl lg:text-5xl font-normal mb-4 leading-tight">
                 Relief you can trust.{" "}
@@ -48,27 +48,22 @@ export default function AboutPage() {
 
       {/* ── STATS ── */}
       <section className="relative w-full overflow-hidden bg-primary py-8 sm:py-10">
-        <div className="mx-auto max-w-[1200px] px-8 sm:px-16">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-12">
             {[
               { num: "500+", label: "Patients treated" },
               { num: "01", label: "Dedicated centre, Mumbai" },
               { num: "10+", label: "Years in healthcare" },
             ].map((stat, i) => (
-              <div key={i} className="overflow-hidden pl-4 sm:pl-6 lg:pl-8">
-                <div className="relative h-[102px] sm:h-[130px] md:h-[155px]">
-                  <span className="absolute left-0 top-0 select-none whitespace-nowrap text-[48px] font-bold leading-none tracking-tight text-white/[0.06] sm:text-[64px] md:text-[80px]">
-                    {stat.num}
-                  </span>
-                  <span className="absolute left-0 top-[24px] select-none whitespace-nowrap text-[48px] font-bold leading-none tracking-tight text-white/[0.12] sm:top-[32px] sm:text-[64px] md:top-[40px] md:text-[80px]">
-                    {stat.num}
-                  </span>
-                  <span className="absolute left-0 top-[48px] whitespace-nowrap text-[48px] font-bold leading-none tracking-tight text-white/90 sm:top-[64px] sm:text-[64px] md:top-[76px] md:text-[80px]">
-                    {stat.num}
-                  </span>
-                </div>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white/60 sm:text-[14px]">
-                    {stat.label}
+              <div key={i} className="flex flex-col items-center text-center">
+                <p
+                  className="font-heading leading-none mb-3 text-white"
+                  style={{ fontSize: "clamp(38px, 4.8vw, 68px)", fontWeight: 800 }}
+                >
+                  {stat.num}
+                </p>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-white/70 sm:text-[14px]">
+                  {stat.label}
                 </p>
               </div>
             ))}
@@ -77,12 +72,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHY PATIENTS TRUST US ── */}
-      <section className="py-10 lg:py-12 w-full bg-surface relative">
-        <div className="container mx-auto px-3 md:px-4 max-w-[1320px]">
-          <div className="mb-8">
-            <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Approach</p>
-            <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Sira Vascular</h2>
-            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+      <section className="py-14 md:py-20 w-full bg-surface relative">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
+          <div className="mb-10 text-center">
+            <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">Our Approach</p>
+            <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">Why patients trust Sira Vascular</h2>
+            <p className="text-gray-600 text-base lg:text-lg leading-relaxed max-w-3xl mx-auto">
               We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their concerns, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
             </p>
           </div>
@@ -93,7 +88,7 @@ export default function AboutPage() {
               { icon: Zap, title: "Accurate Vein Assessment", desc: "We use safe ultrasound scans and detailed vein evaluations to understand the cause of your symptoms and guide the right treatment." },
               { icon: MapPin, title: "Easy Access to Care", desc: "With flexible appointments and online consultations, getting expert vein care becomes simpler and more convenient." },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-xl p-8 border border-gray-200 hover:border-primary/30 transition-all duration-300">
+              <div key={i} className="bg-white rounded-xl p-6 md:p-7 border border-black/5 shadow-sm hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                 <span className="bg-accent-lighter mb-5 flex size-12 items-center justify-center rounded-xl text-primary">
                   <item.icon className="size-5" strokeWidth={1.5} />
                 </span>
@@ -106,10 +101,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="py-12 lg:py-16 w-full bg-background relative">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase text-center">How It Works</p>
-          <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-12 text-center">Your care journey in 3 steps</h2>
+      <section className="py-14 md:py-20 w-full bg-background relative">
+        <div className="mx-auto w-full max-w-[1200px] px-5 md:px-8">
+          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4 text-center">How It Works</p>
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-12 text-center">Your care journey in 3 steps</h2>
 
           <div className="relative flex flex-col md:flex-row gap-10 md:gap-0">
             {/* Connector line */}
@@ -133,10 +128,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── OUR SPECIALIST ── */}
-      <section className="py-12 lg:py-16 w-full bg-surface relative pb-20">
-        <div className="container mx-auto px-4 max-w-[1200px]">
-          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Specialist</p>
-          <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-10">Expert care, delivered with clarity</h2>
+      <section className="py-14 md:py-20 w-full bg-surface relative">
+        <div className="mx-auto w-full max-w-[1200px] px-5 md:px-8">
+          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">Our Specialist</p>
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-10">Expert care, delivered with clarity</h2>
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Left: avatar + name card */}
@@ -162,7 +157,7 @@ export default function AboutPage() {
             {/* Right: content */}
             <div className="flex-1">
               {/* Stats row */}
-              <div className="flex gap-8 mb-8 pb-8 border-b border-gray-100">
+              <div className="flex flex-wrap gap-x-10 gap-y-4 mb-8 pb-8 border-b border-gray-100">
                 {[
                   { num: "15+", label: "Years experience" },
                   { num: "1,000+", label: "Procedures performed" },
@@ -192,19 +187,15 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        {/* Wave → bg-background */}
-        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#F9F9F9" />
-        </svg>
       </section>
 
       <ConditionsTreatSection />
 
       {/* ── WHY PATIENTS CHOOSE US ── */}
-      <section className="py-12 lg:py-16 w-full bg-surface relative pb-20">
-        <div className="container mx-auto px-2 md:px-3 max-w-[1360px]">
-          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Why Patients Choose Us</p>
-          <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Relief that goes beyond the procedure</h2>
+      <section className="py-14 md:py-20 w-full bg-surface relative">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
+          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">Why Patients Choose Us</p>
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">Relief that goes beyond the procedure</h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-10">
             Choosing the right vascular care centre is about more than just the treatment. It is about feeling heard, supported, and confident in the care you receive at every step.
           </p>
@@ -216,7 +207,7 @@ export default function AboutPage() {
                 { image: "/cost.png", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
                 { image: "/teleconsulation.png", title: "Teleconsultation available", desc: "Connect online before visiting the centre, especially if you live outside Mumbai or need initial guidance." },
               ].map((item, i) => (
-                <div key={i} className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/30 transition-all duration-300 flex flex-col">
+                <div key={i} className="bg-white rounded-xl overflow-hidden border border-black/5 shadow-sm hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 flex flex-col">
                   <div className="relative h-40 w-full overflow-hidden">
                     <Image src={item.image} alt={item.title} fill className="object-cover" />
                   </div>
@@ -231,10 +222,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── PATIENT STORIES ── */}
-      <section className="pt-12 pb-28 lg:pt-16 lg:pb-32 w-full bg-background relative">
-        <div className="container mx-auto px-2 md:px-3 max-w-[1360px]">
-          <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Patient Stories</p>
-          <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">
+      <section className="py-14 md:py-20 w-full bg-background relative">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
+          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">Patient Stories</p>
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">
             500+ patients.
             <br />
             500+ reasons to seek care earlier.
@@ -242,12 +233,8 @@ export default function AboutPage() {
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mb-10">
             Here is what some of our patients have shared about their experience at Sira Vascular. Real words, real recoveries.
           </p>
-          <PatientReviewsCarousel />
         </div>
-        {/* Wave → CTASection bg #026460 */}
-        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#026460" />
-        </svg>
+        <PatientReviewsCarousel />
       </section>
 
       <CTASection />

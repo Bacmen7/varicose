@@ -56,7 +56,7 @@ export default function TreatmentsOverviewPage() {
     <main className="bg-background">
 
       {/* ── HERO ── */}
-      <section className="relative w-full overflow-hidden bg-surface pb-16">
+      <section className="relative w-full overflow-hidden bg-surface">
         <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[560px]">
           <div className="w-full lg:w-1/2 px-6 py-14 lg:px-16 xl:px-24 lg:py-20 flex flex-col justify-center bg-surface">
             <div className="max-w-lg mx-auto lg:mx-0 lg:ml-auto lg:mr-10">
@@ -85,9 +85,6 @@ export default function TreatmentsOverviewPage() {
             <Image src="/AAAhero.png" alt="Varicose Vein Treatments" fill className="object-cover object-center" priority />
           </div>
         </div>
-        <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "56px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-          <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#ffffff" />
-        </svg>
       </section>
 
       {/* ── HOW IS IT DIAGNOSED ── */}

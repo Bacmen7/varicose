@@ -1,115 +1,101 @@
-
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "@/compat/Image";
 import Link from "@/compat/Link";
-import { useRef } from "react";
 
-const conditions = [
-  {
-    name: "Varicose Veins",
-    href: "/conditions/varicose-veins",
-    image: "/user/varicose veins.png",
-  },
-  {
-    name: "Spider Veins",
-    href: "/conditions/spider-veins",
-    image: "/user/spider vein.png",
-  },
-  {
-    name: "Deep Vein Reflux",
-    href: "/conditions/deep-vein-reflux",
-    image: "/user/deep vein reflux.png",
-  },
-  {
-    name: "Chronic Venous Insufficiency",
-    href: "/conditions/chronic-venous-insufficiency",
-    image: "/user/chronic venus insufficiency.png",
-  },
-  {
-    name: "Leg Pain & Heaviness",
-    href: "/conditions/leg-pain-heaviness",
-    image: "/user/leg pain and heaviness.png",
-  },
-  {
-    name: "Swelling, Skin Changes, Non-healing Ulcers",
-    href: "/conditions/swelling-skin-changes",
-    image:
-      "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
-  },
+const symptoms = [
+  "Leg heaviness",
+  "Visible bulging veins",
+  "Aching after standing",
+  "Ankle swelling",
+  "Night cramps",
 ];
 
 export default function ConditionsSection() {
-  const carouselRef = useRef<HTMLDivElement | null>(null);
-
-  const scrollCarousel = (direction: "left" | "right") => {
-    carouselRef.current?.scrollBy({
-      left: direction === "left" ? -300 : 300,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <section className="relative w-full overflow-hidden bg-accent-light py-14 md:py-20">
-      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 text-center">
-        <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary">
-          Expert care for all vein
-          <br className="hidden sm:block" />
-          symptoms and conditions
-        </h2>
-        <p className="font-body mx-auto mt-5 max-w-2xl text-[15px] md:text-base leading-relaxed text-gray-600">
-          Varicose veins aren&apos;t just cosmetic &mdash; they signal deeper
-          circulation issues. We help you find care for{" "}
-          <span className="rounded-[3px] bg-primary px-2 py-0.5 font-semibold text-white">
-            vein and circulation conditions
-          </span>
-          .
-        </p>
-      </div>
+    <section className="w-full bg-accent-light py-14 md:py-20">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
+        {/* Header */}
+        <div className="mb-10 text-center md:mb-12">
+          <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-primary md:text-[13px]">
+            CONDITIONS WE TREAT
+          </p>
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary">
+            Expert care for vein
+            <br className="hidden sm:block" />
+            symptoms and conditions
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-gray-600 md:text-base">
+            Varicose veins aren&apos;t just cosmetic &mdash; they signal deeper
+            circulation issues. We help you find care for{" "}
+            <span className="rounded-[3px] bg-primary px-2 py-0.5 font-semibold text-white">
+              vein and circulation conditions
+            </span>
+            .
+          </p>
+        </div>
 
-      <button
-        type="button"
-        aria-label="Previous conditions"
-        onClick={() => scrollCarousel("left")}
-        className="absolute left-2 top-[62%] z-20 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary shadow-sm transition hover:bg-accent-lighter md:flex"
-      >
-        <ChevronLeft size={24} />
-      </button>
+        {/* Featured condition card */}
+        <div className="mx-auto max-w-[1000px] overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm md:grid md:grid-cols-[380px_minmax(0,1fr)]">
+          {/* Image */}
+          <div className="relative h-56 md:h-auto md:min-h-[360px]">
+            <Image
+              src="/user/varicose veins.png"
+              alt="Varicose veins on a leg"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 380px"
+            />
+          </div>
 
-      <div
-        ref={carouselRef}
-        className="scrollbar-hidden mt-10 flex gap-6 overflow-x-auto px-5 pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:px-8"
-        style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
-      >
-        {conditions.map((condition) => (
-          <Link
-            key={condition.name}
-            href={condition.href}
-            className="group w-[250px] shrink-0 text-center"
-          >
-            <div className="relative h-[330px] w-full overflow-hidden rounded-xl bg-white">
-              <Image
-                src={condition.image}
-                alt={condition.name}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="250px"
-              />
-            </div>
-            <h3 className="mt-[14px] text-[16px] font-semibold leading-6 text-secondary">
-              {condition.name}
+          {/* Content */}
+          <div className="p-6 md:p-9">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent-lighter px-3 py-1 text-[12px] font-semibold text-primary">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+              Our primary focus
+            </span>
+
+            <h3 className="font-heading mt-4 text-2xl font-normal leading-snug text-secondary md:text-3xl">
+              Varicose Veins
             </h3>
-          </Link>
-        ))}
-      </div>
 
-      <button
-        type="button"
-        aria-label="Next conditions"
-        onClick={() => scrollCarousel("right")}
-        className="absolute right-2 top-[62%] z-20 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary shadow-sm transition hover:bg-accent-lighter md:flex"
-      >
-        <ChevronRight size={24} />
-      </button>
+            <p className="mt-3 text-[15px] leading-relaxed text-gray-600 md:text-base">
+              Varicose veins are swollen, twisted veins that appear on the legs
+              when valves inside the veins stop working properly. Blood pools in
+              the vein, causing visible bulging, heaviness, aching, swelling,
+              and skin changes. Left untreated, they can affect comfort,
+              mobility, and skin health over time.
+            </p>
+
+            {/* Symptom chips */}
+            <div className="mt-5 flex flex-wrap gap-2">
+              {symptoms.map((symptom) => (
+                <span
+                  key={symptom}
+                  className="rounded-full bg-accent-light px-3 py-1.5 text-[13px] font-semibold text-primary"
+                >
+                  {symptom}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <Link
+                href="/conditions/varicose-veins"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-primary-dark"
+              >
+                Learn about varicose veins
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href="/conditions"
+                className="text-[14px] font-semibold text-primary underline-offset-4 hover:underline"
+              >
+                View all conditions
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

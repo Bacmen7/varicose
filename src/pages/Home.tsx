@@ -6,11 +6,11 @@ import ConditionsGridSection from "@/components/ConditionsGridSection";
 import TreatmentsSection from "@/components/TreatmentsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
-import VideoStoriesSection from "@/components/VideoStoriesSection";
+// import VideoStoriesSection from "@/components/VideoStoriesSection";
 import LocationsSection from "@/components/LocationsSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import KnowledgeCenterSection from "@/components/KnowledgeCenterSection";
+// import KnowledgeCenterSection from "@/components/KnowledgeCenterSection";
 import CTASection from "@/components/CTASection";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
@@ -28,9 +28,9 @@ export default function Home() {
       <WhyChooseUsSection />
       <LocationsSection />
       <TestimonialsSection />
-      <VideoStoriesSection />
+      {/* <VideoStoriesSection /> */}
       <TestimonialSlider />
-      <KnowledgeCenterSection />
+      {/* <KnowledgeCenterSection /> */}
       <ContactFormSection />
       <CTASection />
       <Footer />

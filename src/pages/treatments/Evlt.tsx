@@ -1,7 +1,7 @@
 
 import Link from "@/compat/Link";
 import { useState, useEffect } from "react";
-import { Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const tocSections = [
@@ -15,10 +15,11 @@ const tocSections = [
   { id: "faq", label: "FAQs" },
 ];
 
-const navTabs = [
-  { label: "Overview", id: "overview" },
-  { label: "How It Works", id: "how-it-works" },
-  { label: "Benefits", id: "benefits" },
+const keyTakeaways = [
+  "EVLT is a minimally invasive, FDA-approved laser procedure that treats varicose veins at their root cause.",
+  "It is performed under local anesthesia and takes 30-60 minutes per leg — no surgery, no stitches.",
+  "Most patients walk out the same day and return to work within 24-48 hours.",
+  "Long-term closure success rate is above 95% when performed by an experienced specialist.",
 ];
 
 const symptoms = [
@@ -77,7 +78,7 @@ function CheckIcon() {
 export default function EVLTPage() {
   const [activeSection, setActiveSection] = useState("overview");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState("overview");
+  const [tocOpen, setTocOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -106,84 +107,158 @@ export default function EVLTPage() {
       <main>
 
         {/* HERO */}
-        <header>
-          <div style={{ backgroundColor: "#2C847F" }} className="text-white">
-            <div className="max-w-7xl mx-auto px-6 pt-6 pb-12 flex flex-col items-start">
-              <Link href="/treatments-overview" className="inline-flex items-center text-white/80 text-sm font-medium mb-10 hover:text-white hover:underline">
-                <svg className="w-2.5 h-2.5 mr-2 fill-current" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                </svg>
-                Treatments
-              </Link>
-              <h1 className="font-heading mb-4 text-4xl font-normal leading-[1.08] text-white md:text-5xl lg:text-[56px]">
-                Endovenous Laser Treatment
-                <br /><span className="text-[0.65em] opacity-75">(EVLT)</span>
+        <header className="bg-accent-lighter">
+          <div className="max-w-7xl mx-auto px-6 pt-5 pb-12 md:pt-8 md:pb-14">
+            {/* Breadcrumb */}
+            <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[12px] font-semibold text-gray-500 md:mb-10 md:gap-2 md:text-[13px]">
+              <Link href="/" className="transition-colors hover:text-secondary">Sira Vascular</Link>
+              <span>&gt;</span>
+              <Link href="/treatments-overview" className="transition-colors hover:text-secondary">Treatments</Link>
+              <span>&gt;</span>
+              <span className="text-secondary">Endovenous Laser Treatment (EVLT)</span>
+            </nav>
+
+            <div className="max-w-3xl">
+              <h1 className="font-heading mb-4 text-[28px] font-normal leading-[1.15] tracking-tight text-secondary md:mb-5 md:text-4xl lg:text-5xl">
+                Endovenous Laser Treatment (EVLT)
               </h1>
-              <p className="mb-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
+              <p className="mb-5 text-base leading-relaxed text-gray-600 md:text-lg">
                 Gold-standard minimally invasive laser therapy for varicose veins. No surgery. No stitches. Walk out the same day.
               </p>
-              <a href="#" className="inline-flex items-center text-sm font-semibold text-white hover:opacity-80 hover:underline md:text-base">
-                <Calendar className="w-[22px] h-[22px] mr-3" strokeWidth={1.5} />
+
+              {/* Meta row */}
+              <div className="flex flex-wrap items-center gap-x-2 text-[12px] font-semibold leading-6 text-gray-500 md:text-[13px]">
+                <span>6 min read</span>
+                <span>&bull;</span>
+                <span>Written by:</span>
+                <span className="underline">Vein Specialist Team</span>
+                <span>&bull;</span>
+                <span>Reviewed by:</span>
+                <span className="underline">Dr. Rajeev Sharma</span>
+                <span>&bull;</span>
+                <span>Updated: <strong className="text-secondary">May 2026</strong></span>
+              </div>
+
+              <a
+                href="#"
+                className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-10 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-primary-dark md:mt-8 md:inline-flex md:w-auto md:py-3"
+              >
                 Request an Appointment
+                <ArrowRight className="h-4 w-4" />
               </a>
-            </div>
-          </div>
-          <div style={{ backgroundColor: "#236b67" }} className="border-t border-white/20">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex gap-3 overflow-x-auto">
-              {navTabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => { setActiveTab(tab.id); scrollToSection(tab.id); }}
-                  className={`inline-block rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${activeTab === tab.id ? "bg-white text-secondary" : "bg-white/[0.12] text-white hover:bg-white/20"}`}
-                >
-                  {tab.label}
-                </button>
-              ))}
             </div>
           </div>
         </header>
 
-        {/* ARTICLE + SIDEBAR */}
+        {/* Mobile TOC — sticky collapsible bar */}
+        <div className="sticky top-0 z-20 border-b border-gray-100 bg-white shadow-sm lg:hidden">
+          <div className="mx-auto max-w-7xl px-6">
+            <button
+              onClick={() => setTocOpen(!tocOpen)}
+              className="flex w-full items-center justify-between py-3.5 text-left"
+            >
+              <span className="text-[15px] font-semibold text-secondary">Here&apos;s what we&apos;ll cover</span>
+              <ChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${tocOpen ? "rotate-180" : ""}`} />
+            </button>
+            {tocOpen && (
+              <div className="max-h-[50vh] space-y-3 overflow-y-auto pb-4">
+                {tocSections.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => { setTocOpen(false); scrollToSection(s.id); }}
+                    className="block w-full text-left text-[14px] leading-6 text-secondary hover:underline"
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* ARTICLE + LEFT TOC SIDEBAR */}
         <section className="bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
-            <div className="lg:flex lg:gap-14">
+          <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
+            <div className="grid gap-8 md:gap-12 lg:grid-cols-[250px_minmax(0,1fr)]">
 
-              {/* LEFT: Article */}
-              <div className="flex-1 min-w-0">
+              {/* LEFT: Sticky TOC */}
+              <aside className="hidden h-fit lg:sticky lg:top-24 lg:block">
+                <div className="mb-5 flex items-center justify-between">
+                  <h3 className="font-heading text-xl font-normal leading-none tracking-tight text-secondary">
+                    Here&apos;s what we&apos;ll cover
+                  </h3>
+                </div>
+                <div className="space-y-4">
+                  {tocSections.map((s) => (
+                    <button
+                      key={s.id}
+                      onClick={() => scrollToSection(s.id)}
+                      className={`block text-left text-[16px] leading-7 transition-colors hover:underline ${
+                        activeSection === s.id ? "font-semibold text-primary" : "text-secondary"
+                      }`}
+                    >
+                      {s.label}
+                    </button>
+                  ))}
+                </div>
 
-                {/* Author */}
-                <div className="flex items-center gap-3 mb-10 pb-6 border-b border-gray-100">
-                  <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-primary font-bold text-sm">VS</div>
-                  <div>
-                    <p className="text-sm font-semibold text-secondary leading-tight">Vein Specialist Team</p>
-                    <p className="text-xs text-gray-400">Phlebologist · Reviewed May 2026</p>
-                  </div>
+                {/* CTA card */}
+                <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-6">
+                  <h4 className="font-heading mb-3 text-xl font-normal leading-snug text-secondary">
+                    You do not have to live with varicose veins
+                  </h4>
+                  <p className="mb-5 text-sm leading-relaxed text-gray-500">
+                    Get started on your path to pain-free legs. See a vein specialist within days.
+                  </p>
+                  <a href="#" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-primary py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark">
+                    Book Your First Visit
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </aside>
+
+              {/* RIGHT: Article content */}
+              <div className="min-w-0">
+
+                {/* Key takeaways */}
+                <div className="mb-10 bg-accent-lighter p-5 md:mb-14 md:p-7">
+                  <h3 className="font-heading mb-4 text-xl font-normal leading-none tracking-tight text-secondary md:mb-6 md:text-3xl">
+                    Key takeaways
+                  </h3>
+                  <ul className="space-y-4">
+                    {keyTakeaways.map((item, index) => (
+                      <li key={index} className="flex gap-3 text-[16px] leading-8 text-secondary">
+                        <span>&bull;</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* OVERVIEW */}
-                <div id="overview" data-toc-section className="mb-20">
-                  <p className="mb-5 text-base leading-8 text-secondary">
+                <div id="overview" data-toc-section className="mb-8 space-y-4 md:mb-10 md:space-y-6">
+                  <p className="text-[16px] leading-[1.7] text-secondary">
                     Endovenous Laser Treatment (EVLT) is a{" "}
-                    <strong className="font-semibold" style={{ background: "#CCE0DF", padding: "2px 6px", borderRadius: "3px" }}>
+                    <strong className="rounded-[3px] bg-accent px-1.5 py-0.5 font-semibold">
                       minimally invasive, gold-standard procedure
                     </strong>{" "}
                     used to treat varicose veins at their root cause.
                   </p>
-                  <p className="mb-5 text-base leading-8 text-gray-500">
+                  <p className="text-[16px] leading-[1.7] text-secondary/80">
                     Instead of removing veins surgically, EVLT uses laser energy delivered inside the faulty vein to gently seal it shut. Once closed, blood naturally reroutes to healthy veins, relieving symptoms and improving circulation.
                   </p>
-                  <p className="text-base leading-8 text-gray-500">
+                  <p className="text-[16px] leading-[1.7] text-secondary/80">
                     EVLT is performed under local anesthesia. The procedure takes 30-60 minutes, and most patients walk out of the clinic the same day and return to work within 24-48 hours.
                   </p>
                 </div>
 
                 {/* KEY FACTS */}
-                <div id="key-facts" data-toc-section style={{ marginBottom: "5rem", paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-6 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
+                <div id="key-facts" data-toc-section className="mb-10 md:mb-14">
+                  <h2 className="font-heading mb-5 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
                     Key facts about EVLT
                   </h2>
-                  <div className="bg-accent-lighter border border-accent/60 p-6 md:p-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5">
+                  <div className="border border-accent/60 bg-accent-lighter p-5 md:p-7">
+                    <div className="grid grid-cols-1 gap-x-10 gap-y-5 sm:grid-cols-2">
                       {[
                         ["Procedure type", "Minimally invasive, day-care"],
                         ["Anesthesia", "Local anesthesia only"],
@@ -194,7 +269,7 @@ export default function EVLTPage() {
                       ].map(([label, value]) => (
                         <div key={label}>
                           <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-gray-400">{label}</p>
-                          <p className="text-base text-secondary">{value}</p>
+                          <p className="text-[16px] text-secondary">{value}</p>
                         </div>
                       ))}
                     </div>
@@ -202,54 +277,54 @@ export default function EVLTPage() {
                 </div>
 
                 {/* WHO NEEDS */}
-                <div id="who-needs" data-toc-section style={{ marginBottom: "5rem", paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-4 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
+                <div id="who-needs" data-toc-section className="mb-10 md:mb-14">
+                  <h2 className="font-heading mb-4 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
                     Who needs EVLT?
                   </h2>
-                  <p className="mb-6 text-base leading-8 text-gray-500">
+                  <p className="mb-5 text-[16px] leading-[1.7] text-secondary/80">
                     EVLT is recommended when a{" "}
-                    <strong style={{ textDecoration: "underline", textDecorationColor: "#2C847F", textUnderlineOffset: "3px", textDecorationThickness: "2px" }}>
+                    <strong className="underline decoration-primary decoration-2 underline-offset-[3px]">
                       Doppler ultrasound confirms venous reflux
                     </strong>{" "}
                     in the great or small saphenous vein.
                   </p>
-                  <ul className="space-y-4" style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                  <ul className="list-disc space-y-3 pl-6">
                     {symptoms.map((s, i) => (
-                      <li key={i} className="pl-1 text-base leading-8 text-secondary">{s}</li>
+                      <li key={i} className="pl-1 text-[16px] leading-[1.7] text-secondary">{s}</li>
                     ))}
                   </ul>
                 </div>
 
                 {/* HOW IT WORKS */}
-                <div id="how-it-works" data-toc-section style={{ marginBottom: "5rem", paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-8 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
+                <div id="how-it-works" data-toc-section className="mb-10 md:mb-14">
+                  <h2 className="font-heading mb-7 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
                     How does EVLT work?
                   </h2>
-                  <div className="pl-8 space-y-12 relative border-l-2 border-accent">
+                  <div className="relative space-y-10 border-l-2 border-accent pl-8">
                     {steps.map((step, index) => (
                       <div key={index} className="relative">
-                        <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-primary" />
-                        <div className="flex items-baseline gap-3 mb-2">
+                        <div className="absolute -left-[41px] top-1.5 h-4 w-4 rounded-full border-4 border-primary bg-white" />
+                        <div className="mb-2 flex items-baseline gap-3">
                           <span className="font-heading text-3xl font-normal text-primary/30">{`0${index + 1}`}</span>
                           <h3 className="font-heading text-xl font-normal text-secondary md:text-2xl">{step.title}</h3>
                         </div>
-                        <p className="text-base leading-relaxed text-gray-500">{step.desc}</p>
+                        <p className="text-[16px] leading-[1.7] text-secondary/80">{step.desc}</p>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* BENEFITS */}
-                <div id="benefits" data-toc-section style={{ marginBottom: "5rem", paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-6 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
+                <div id="benefits" data-toc-section className="mb-10 md:mb-14">
+                  <h2 className="font-heading mb-5 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
                     Benefits of EVLT
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {benefits.map((b, i) => (
-                      <div key={i} className="flex gap-4 p-5 rounded-xl border border-gray-100 hover:border-primary/30 hover:bg-accent-lighter transition-all">
-                        <div className="flex-shrink-0 mt-0.5 text-primary"><CheckIcon /></div>
+                      <div key={i} className="flex gap-4 rounded-xl border border-gray-100 p-5 transition-all hover:border-primary/30 hover:bg-accent-lighter">
+                        <div className="mt-0.5 flex-shrink-0 text-primary"><CheckIcon /></div>
                         <div>
-                          <p className="mb-0.5 text-base font-semibold text-secondary">{b.title}</p>
+                          <p className="mb-0.5 text-[16px] font-semibold text-secondary">{b.title}</p>
                           <p className="text-sm leading-6 text-gray-500">{b.desc}</p>
                         </div>
                       </div>
@@ -258,28 +333,28 @@ export default function EVLTPage() {
                 </div>
 
                 {/* VS SURGERY */}
-                <div id="vs-surgery" data-toc-section style={{ marginBottom: "5rem", paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-2 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
+                <div id="vs-surgery" data-toc-section className="mb-10 md:mb-14">
+                  <h2 className="font-heading mb-2 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
                     EVLT vs. traditional surgery
                   </h2>
-                  <p className="mb-6 text-base text-gray-400">Why modern laser therapy is the preferred choice</p>
-                  <div className="rounded-xl overflow-hidden border border-gray-200">
+                  <p className="mb-5 text-[16px] text-gray-400">Why modern laser therapy is the preferred choice</p>
+                  <div className="overflow-hidden rounded-xl border border-gray-200">
                     <div className="grid grid-cols-2 border-b border-gray-200">
-                      <div className="p-4 text-center border-r border-gray-200 bg-primary/10">
-                        <p className="font-semibold text-base text-primary">EVLT</p>
+                      <div className="border-r border-gray-200 bg-primary/10 p-4 text-center">
+                        <p className="text-base font-semibold text-primary">EVLT</p>
                       </div>
-                      <div className="p-4 text-center bg-gray-50">
-                        <p className="font-semibold text-base text-gray-400">Traditional Surgery</p>
+                      <div className="bg-gray-50 p-4 text-center">
+                        <p className="text-base font-semibold text-gray-400">Traditional Surgery</p>
                       </div>
                     </div>
                     {comparisons.map((item, i) => (
                       <div key={i} className="grid grid-cols-2 border-b border-gray-100 last:border-0">
-                        <div className="py-3 px-4 flex items-center gap-3 border-r border-gray-100 bg-white">
-                          <span className="text-primary flex-shrink-0"><CheckIcon /></span>
+                        <div className="flex items-center gap-3 border-r border-gray-100 bg-white px-4 py-3">
+                          <span className="flex-shrink-0 text-primary"><CheckIcon /></span>
                           <span className="text-sm font-medium text-secondary md:text-base">{item.evlt}</span>
                         </div>
-                        <div className="py-3 px-4 flex items-center gap-3 bg-white">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0" />
+                        <div className="flex items-center gap-3 bg-white px-4 py-3">
+                          <div className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-300" />
                           <span className="text-sm text-gray-400 md:text-base">{item.surgery}</span>
                         </div>
                       </div>
@@ -288,29 +363,29 @@ export default function EVLTPage() {
                 </div>
 
                 {/* RECOVERY */}
-                <div id="recovery" data-toc-section style={{ marginBottom: "5rem", paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-6 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
-                    Recovery & safety
+                <div id="recovery" data-toc-section className="mb-10 md:mb-14">
+                  <h2 className="font-heading mb-5 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
+                    Recovery &amp; safety
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className="p-6 rounded-xl bg-accent-lighter border border-accent/40">
+                  <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                    <div className="rounded-xl border border-accent/40 bg-accent-lighter p-6">
                       <h3 className="font-heading mb-4 text-xl font-normal text-secondary">Recovery timeline</h3>
                       <ul className="space-y-3">
                         {["Walk immediately after procedure", "Resume daily activity in 1-2 days", "Wear compression stockings as advised", "Avoid intense workouts for 2 weeks", "Follow-up ultrasound confirms closure"].map((item, i) => (
                           <li key={i} className="flex items-center gap-3 text-sm leading-6 text-secondary md:text-base">
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                            <div className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
                             {item}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="p-6 rounded-xl bg-white border border-gray-100">
+                    <div className="rounded-xl border border-gray-100 bg-white p-6">
                       <h3 className="font-heading mb-4 text-xl font-normal text-secondary">Is it safe?</h3>
                       <p className="mb-4 text-sm leading-relaxed text-gray-500 md:text-base">Yes. EVLT is FDA-approved. When performed by an experienced specialist:</p>
                       <ul className="space-y-3">
                         {["Complications are rare", "Infection risk is minimal", "Long-term outcomes are excellent"].map((item, i) => (
                           <li key={i} className="flex items-center gap-3 text-sm leading-6 text-secondary md:text-base">
-                            <span className="text-primary flex-shrink-0"><CheckIcon /></span>
+                            <span className="flex-shrink-0 text-primary"><CheckIcon /></span>
                             {item}
                           </li>
                         ))}
@@ -320,24 +395,22 @@ export default function EVLTPage() {
                 </div>
 
                 {/* FAQ */}
-                <div id="faq" data-toc-section style={{ paddingTop: "2.5rem", borderTop: "1px solid #e8ecf0" }}>
-                  <h2 className="font-heading mb-6 text-3xl font-normal leading-tight text-secondary lg:text-4xl">
+                <div id="faq" data-toc-section>
+                  <h2 className="font-heading mb-5 text-2xl font-normal leading-tight tracking-tight text-secondary md:text-3xl">
                     Frequently asked questions
                   </h2>
                   <div className="space-y-3">
                     {faqs.map((faq, i) => (
-                      <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                      <div key={i} className="overflow-hidden rounded-xl border border-gray-200">
                         <button
                           onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                          className="w-full flex items-center justify-between p-5 text-left cursor-pointer hover:bg-gray-50 transition-colors"
+                          className="flex w-full cursor-pointer items-center justify-between p-5 text-left transition-colors hover:bg-gray-50"
                         >
                           <span className="pr-4 text-base font-semibold text-secondary">{faq.q}</span>
-                          <svg className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                            <polyline points="6 9 12 15 18 9" />
-                          </svg>
+                          <ChevronDown className={`h-5 w-5 flex-shrink-0 text-gray-400 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
                         </button>
                         {openFaq === i && (
-                          <div className="border-t border-gray-100 px-5 pb-5 pt-4 text-base leading-relaxed text-gray-500">
+                          <div className="border-t border-gray-100 px-5 pb-5 pt-4 text-[16px] leading-[1.7] text-secondary/80">
                             {faq.a}
                           </div>
                         )}
@@ -346,60 +419,19 @@ export default function EVLTPage() {
                   </div>
                 </div>
 
-              </div>
-
-              {/* RIGHT: Sticky Sidebar */}
-              <div className="hidden lg:block w-[280px] xl:w-[300px] flex-shrink-0">
-                <div className="sticky top-[88px]" style={{ maxHeight: "calc(100vh - 112px)", overflowY: "auto" }}>
-
-                  {/* TOC */}
-                  <div className="bg-accent-lighter py-5 px-6 mb-5 rounded-xl">
-                    <h3 className="font-heading mb-3 text-xl font-normal text-secondary">
-                      Table of Contents
-                    </h3>
-                    <nav className="flex flex-col">
-                      {tocSections.map((s) => (
-                        <button key={s.id} onClick={() => scrollToSection(s.id)} className="text-left py-2 border-b border-secondary/5 last:border-0 cursor-pointer">
-                          <span className={`text-sm underline underline-offset-4 decoration-1 transition-colors ${activeSection === s.id ? "text-secondary font-semibold" : "text-gray-400 hover:text-secondary"}`}>
-                            {s.label}
-                          </span>
-                        </button>
-                      ))}
-                    </nav>
+                {/* Written by / Last update row */}
+                <div className="mt-12 grid grid-cols-2 gap-8 border-t border-gray-200 pt-8">
+                  <div>
+                    <p className="mb-1 text-[13px] text-gray-400">Written by</p>
+                    <p className="text-[15px] font-semibold text-secondary underline">Vein Specialist Team</p>
                   </div>
-
-                  {/* CTA Card */}
-                  <div className="bg-white p-6 border border-gray-200 rounded-xl">
-                    <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center mb-5">
-                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <h4 className="font-heading mb-3 text-xl font-normal leading-snug text-secondary">
-                      You do not have to live with varicose veins
-                    </h4>
-                    <p className="mb-5 text-sm leading-relaxed text-gray-500">
-                      Get started on your path to pain-free legs. See a vein specialist within days.
-                    </p>
-                    <a href="#" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-primary py-3 text-sm font-semibold text-white hover:opacity-90">
-                      Book Your First Visit
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
+                  <div className="text-right">
+                    <p className="mb-1 text-[13px] text-gray-400">Last update</p>
+                    <p className="text-[15px] font-semibold text-secondary">May 2026</p>
                   </div>
-
-                  {/* Quick Stats */}
-                  <div className="mt-5 p-5 bg-white border border-gray-200 rounded-xl space-y-4">
-                    {[["Success rate", "95%+"], ["Procedure time", "30-60 min"], ["Recovery", "24-48 hrs"]].map(([label, value]) => (
-                      <div key={label} className="flex items-center justify-between">
-                        <span className="text-xs uppercase tracking-wide text-gray-400">{label}</span>
-                        <span className="font-heading text-primary text-lg font-medium">{value}</span>
-                      </div>
-                    ))}
-                  </div>
-
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
         </section>

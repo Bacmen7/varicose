@@ -163,7 +163,7 @@ export default function TestimonialsSection() {
                       .replace(".", "")}
                   </span>
                   <div>
-                    <p className="text-[15px] font-bold leading-tight text-secondary">
+                    <p className="text-[15px] font-semibold leading-tight text-secondary">
                       {r.name}
                     </p>
                     <p className="mt-0.5 text-[13px] leading-tight text-gray-500">
@@ -183,7 +183,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Quote */}
-              <p className="mt-3 flex-grow text-[15px] leading-[1.7] text-gray-600">
+              <p className="mt-3 flex-grow text-[17px] leading-[1.45] text-gray-600">
                 &ldquo;{r.quote}&rdquo;
               </p>
             </div>

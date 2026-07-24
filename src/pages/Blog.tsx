@@ -142,36 +142,41 @@ function ArticleRow({ row }: { row: (typeof articleRows)[number] }) {
   return (
     <section className="mb-16">
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[300px_minmax(0,1fr)]">
-        <Link href={row.href} className="group relative min-h-[360px] overflow-hidden bg-gray-100">
+        <Link href={row.href} className="group relative min-h-[360px] overflow-hidden rounded-2xl bg-gray-100">
           <Image src={row.image} alt={row.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-secondary/25 to-transparent" />
           <div className="absolute left-8 top-8 max-w-[230px]">
             <h2 className="font-heading text-white text-2xl md:text-3xl leading-tight font-normal">
               {row.title}
             </h2>
           </div>
-          <div className="absolute bottom-8 right-8 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary">
+          <div className="absolute bottom-8 right-8 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary transition-transform group-hover:scale-110">
             <BookOpen size={20} strokeWidth={1.6} />
           </div>
         </Link>
 
-        <div className="scrollbar-hidden flex gap-5 overflow-x-auto overflow-y-hidden [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="scrollbar-hidden flex gap-5 overflow-x-auto overflow-y-hidden py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {row.articles.map((article) => (
-            <Link key={article.title} href={article.href} className="group flex min-h-[360px] w-[280px] shrink-0 flex-col bg-surface lg:w-[292px]">
+            <Link
+              key={article.title}
+              href={article.href}
+              className="group flex min-h-[360px] w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 lg:w-[292px]"
+            >
               <div className="relative h-[190px] overflow-hidden">
                 <Image src={article.image} alt={article.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <span className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[12px] font-semibold text-secondary backdrop-blur-sm">
+                  <BookOpen size={14} strokeWidth={1.6} />
+                  {article.readTime}
+                </span>
               </div>
               <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-heading text-secondary text-[22px] leading-snug font-normal">
+                <h3 className="font-heading text-secondary text-[20px] leading-snug font-normal transition-colors group-hover:text-primary">
                   {article.title}
                 </h3>
-                <div className="mt-auto flex items-center justify-between pt-6">
-                  <span className="flex items-center gap-2 text-sm text-secondary">
-                    <BookOpen size={18} strokeWidth={1.5} />
-                    {article.readTime}
-                  </span>
-                  <ArrowRight size={20} className="text-primary transition-transform group-hover:translate-x-1" />
-                </div>
+                <span className="mt-auto flex items-center gap-1.5 pt-6 text-sm font-semibold text-primary">
+                  Read article
+                  <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
+                </span>
               </div>
             </Link>
           ))}
@@ -214,7 +219,7 @@ export default function BlogPage() {
               <Link
                 key={category.title}
                 href={category.href}
-                className="group flex min-h-[104px] items-center justify-between gap-4 bg-surface px-6 transition-colors hover:bg-accent-lighter"
+                className="group flex min-h-[104px] items-center justify-between gap-4 rounded-2xl bg-surface px-6 transition-colors hover:bg-accent-lighter"
               >
                 <div className="flex items-center gap-4">
                   <BookOpen size={34} strokeWidth={1.25} className="text-secondary" />
@@ -254,19 +259,24 @@ export default function BlogPage() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {latestArticles.map((article) => (
-              <Link key={article.title} href={article.href} className="group flex min-h-[360px] flex-col bg-surface">
+              <Link
+                key={article.title}
+                href={article.href}
+                className="group flex min-h-[360px] flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30"
+              >
                 <div className="relative h-[190px] overflow-hidden">
                   <Image src={article.image} alt={article.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <span className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[12px] font-semibold text-secondary backdrop-blur-sm">
+                    <BookOpen size={14} strokeWidth={1.6} />
+                    {article.readTime}
+                  </span>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-heading text-secondary text-xl leading-snug font-normal">{article.title}</h3>
-                  <div className="mt-auto flex items-center justify-between pt-6">
-                    <span className="flex items-center gap-2 text-sm text-secondary">
-                      <BookOpen size={18} strokeWidth={1.5} />
-                      {article.readTime}
-                    </span>
-                    <ArrowRight size={20} className="text-primary transition-transform group-hover:translate-x-1" />
-                  </div>
+                  <h3 className="font-heading text-secondary text-xl leading-snug font-normal transition-colors group-hover:text-primary">{article.title}</h3>
+                  <span className="mt-auto flex items-center gap-1.5 pt-6 text-sm font-semibold text-primary">
+                    Read article
+                    <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
               </Link>
             ))}
@@ -285,7 +295,7 @@ export default function BlogPage() {
               <Link
                 key={topic.title}
                 href={topic.href}
-                className="group relative flex h-[230px] w-[320px] shrink-0 overflow-hidden bg-accent p-8 transition-colors hover:bg-accent-light"
+                className="group relative flex h-[230px] w-[320px] shrink-0 overflow-hidden rounded-2xl bg-accent p-8 transition-colors hover:bg-accent-light"
               >
                 <h3 className="font-heading text-primary text-3xl font-normal leading-tight">
                   {topic.title}
