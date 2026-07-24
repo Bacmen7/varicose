@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from "@/compat/Link";
+import Image from "@/compat/Image";
 
 const conditions = [
   { name: "Varicose Veins", image: "/user/varicose veins.png", href: "/conditions/varicose-veins" },
@@ -28,7 +28,7 @@ export default function ConditionsGridSection() {
             <Link
               key={c.name}
               href={c.href}
-              className="bg-white rounded-2xl py-8 px-5 flex flex-col items-center text-center gap-3 hover:shadow-md transition-shadow cursor-pointer border border-transparent hover:border-primary/20"
+              className="bg-white rounded-xl py-8 px-5 flex flex-col items-center text-center gap-3 hover:shadow-md transition-shadow cursor-pointer border border-transparent hover:border-primary/20"
             >
               <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center relative">
                 <Image

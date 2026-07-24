@@ -1,6 +1,6 @@
 import { Mail, MessageCircle, Phone, Linkedin } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/compat/Image";
+import Link from "@/compat/Link";
 
 const socialLinks = [
   { icon: Phone, href: "tel:+919833943177", label: "Call" },
@@ -27,8 +27,8 @@ const resourceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#E6F3F1] pt-16 pb-8">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+    <footer className="w-full bg-accent-light py-14">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.25fr_1fr_1fr] md:gap-16">
           <div>
             <Image
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-secondary">
+            <h2 className="mb-5 text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-secondary">
               Pages
             </h2>
             <nav className="flex flex-col gap-4">
@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-secondary">
+            <h2 className="mb-5 text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-secondary">
               Resources
             </h2>
             <nav className="flex flex-col gap-4">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/compat/Image";
 import { ArrowRight, Check } from "lucide-react";
 
 const benefits = [

@@ -1,7 +1,6 @@
-"use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from "@/compat/Image";
 import { ChevronDown } from "lucide-react";
 
 const steps = [
@@ -31,11 +30,11 @@ export default function HowItWorksSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-12 lg:py-16 pb-20 w-full bg-[#E3E6EA] relative">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+    <section className="py-14 md:py-20 w-full bg-[#E3E6EA] relative">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
         <div className="flex flex-col gap-6 lg:flex-row-reverse items-start">
           {/* Right Side (Desktop): Image Display */}
-          <div className="hidden lg:block w-full lg:w-1/2 h-[600px] bg-gray-200 rounded-3xl overflow-hidden shadow-xl lg:sticky lg:top-24 relative">
+          <div className="hidden lg:block w-full lg:w-1/2 h-[600px] bg-gray-200 rounded-xl overflow-hidden shadow-sm lg:sticky lg:top-24 relative">
             {steps.map((step, index) => (
               <div
                 key={step.id}
@@ -56,7 +55,7 @@ export default function HowItWorksSection() {
 
           {/* Left Side: Content & Accordion */}
           <div className="w-full lg:w-1/2 flex flex-col lg:pr-12">
-            <h2 className="font-heading mb-4 lg:mb-6 text-secondary text-2xl sm:text-3xl font-medium lg:text-4xl leading-tight">
+            <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] mb-4 lg:mb-6 text-secondary">
               Get treated in 3 simple steps
             </h2>
 
@@ -65,9 +64,9 @@ export default function HowItWorksSection() {
                 <div
                   key={step.id}
                   onClick={() => setActiveStep(i)}
-                  className={`group relative w-full cursor-pointer p-3 sm:p-4 rounded-xl lg:rounded-2xl transition-all duration-300 ${
+                  className={`group relative w-full cursor-pointer p-3 sm:p-4 rounded-xl transition-all duration-300 ${
                     activeStep === i
-                      ? "bg-white"
+                      ? "bg-white border border-black/5 shadow-sm"
                       : "hover:bg-white/50 border border-transparent"
                   }`}
                 >
@@ -131,9 +130,6 @@ export default function HowItWorksSection() {
           </div>
         </div>
       </div>
-      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-        <path d="M0 60H1440V30C1200 -2 960 -2 720 30C480 62 240 62 0 30V60Z" fill="#F9F9F9" />
-      </svg>
     </section>
   );
 }

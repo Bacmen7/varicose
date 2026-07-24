@@ -1,0 +1,3 @@
+module.exports=[74362,a=>{"use strict";function b({children:a}){return a}a.s(["default",()=>b,"metadata",0,{title:"Can Varicose Veins Come Back? Recurrence and How to Prevent It",description:"Learn why varicose veins sometimes return after treatment, which options have the lowest recurrence, and simple ways to lower your risk."}])}];
+
+//# sourceMappingURL=src_app_blog_can-varicose-veins-come-back_layout_tsx_ac53e1b2._.js.map

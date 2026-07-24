@@ -1,4 +1,3 @@
-"use client";
 
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -78,8 +77,8 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <div className="w-full relative pb-16" style={{ backgroundColor: '#2C847F' }}>
-            <div className="container mx-auto px-4 max-w-[1200px]">
+        <div className="w-full relative pb-16 bg-primary">
+            <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
                 {/* Slider Container */}
                 <div
                     className="relative w-full overflow-hidden group"
@@ -100,7 +99,7 @@ const TestimonialSlider = () => {
                                 className="w-full flex-shrink-0 flex flex-col md:flex-row h-auto md:h-[500px]"
                             >
                                 {/* Left Side: Image */}
-                                <div className="w-full md:w-1/2 h-[300px] sm:h-[350px] md:h-full relative bg-gray-100">
+                                <div className="w-full md:w-1/2 h-[300px] sm:h-[350px] md:h-full relative bg-gray-100 overflow-hidden">
                                     <img
                                         src={testimonial.image}
                                         alt={`Testimonial from ${testimonial.name}`}
@@ -110,27 +109,15 @@ const TestimonialSlider = () => {
                                 </div>
 
                                 {/* Right Side: Content */}
-                                <div
-                                    className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16 text-white"
-                                    style={{ backgroundColor: '#2C847F' }}
-                                >
+                                <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16 text-white bg-primary">
                                     <div className="max-w-lg">
-                                        <p
-                                            className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/70"
-                                            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                                        >
+                                        <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] mb-4 text-white/80">
                                             Real people. Real relief.
                                         </p>
-                                        <h3
-                                            className="text-xl md:text-2xl lg:text-3xl font-medium leading-snug mb-8 tracking-wide"
-                                            style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
-                                        >
+                                        <h3 className="font-heading font-normal text-white text-xl md:text-2xl lg:text-3xl leading-snug tracking-tight mb-8">
                                             &ldquo;{testimonial.quote}&rdquo;
                                         </h3>
-                                        <p
-                                            className="text-sm md:text-base font-semibold text-white/90 mb-12"
-                                            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                                        >
+                                        <p className="text-sm md:text-base font-semibold text-white/90 mb-12">
                                             {testimonial.name}
                                         </p>
 
@@ -173,9 +160,6 @@ const TestimonialSlider = () => {
                     </div>
                 </div>
             </div>
-            <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-              <path d="M0 30C240 62 480 62 720 30C960 -2 1200 -2 1440 30V60H0V30Z" fill="#EEF7F5" />
-            </svg>
         </div>
     );
 };

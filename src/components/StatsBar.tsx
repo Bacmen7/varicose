@@ -1,20 +1,15 @@
 export default function StatsBar() {
   return (
-    <section className="py-10 md:py-14 bg-background">
-      <div className="max-w-[1320px] mx-auto px-3 md:px-4 grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] items-start gap-8 md:gap-12">
+    <section className="relative py-14 md:py-20 bg-background">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] items-start gap-6 lg:gap-12">
         {/* Left - Heading */}
-        <div className="flex-[1.5] text-center md:text-left">
-          <h2
-            className="font-heading leading-[1.1] font-normal mb-4 text-primary text-[2rem] sm:text-[2.4rem]"
-          >
+        <div className="text-center md:text-left">
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] mb-4 text-secondary">
             Clinically Proven
             <br />
             Vein Care
           </h2>
-          <p
-            className="text-base leading-relaxed text-gray-600 max-w-xl mx-auto md:mx-0"
-            style={{ marginTop: "20px", marginBottom: "16px" }}
-          >
+          <p className="text-[15px] md:text-base leading-relaxed text-gray-600 max-w-2xl mx-auto md:mx-0 mt-5 mb-4">
             Our approach focuses on early diagnosis, personalised treatment plans,
             <br className="hidden lg:block" />
             and modern minimally invasive therapies to restore healthy circulation
@@ -24,22 +19,17 @@ export default function StatsBar() {
         </div>
 
         {/* Right - Stats */}
-        <div className="grid grid-cols-1 gap-6 self-start sm:grid-cols-2 lg:translate-x-4 lg:justify-self-end lg:pt-2 xl:translate-x-8">
-          <div className="flex flex-col items-center text-center sm:-translate-x-8 sm:items-start sm:text-left lg:-translate-x-12">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 self-start sm:grid-cols-2 lg:pt-2">
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
             <p
               className="font-heading leading-none mb-2 text-primary"
               style={{ fontSize: "clamp(38px, 4.8vw, 68px)", fontWeight: 800 }}
             >
               95%+
             </p>
-            <p className="text-base leading-relaxed font-normal text-gray-600">
-              <span className="block sm:whitespace-nowrap">
-                of patients experience significant relief
-              </span>
-              <span className="block">
-                in{" "}
-                <strong className="font-semibold text-secondary">4 weeks or less</strong>
-              </span>
+            <p className="max-w-[260px] text-base leading-relaxed font-normal text-gray-600">
+              of patients experience significant relief in{" "}
+              <strong className="font-semibold text-secondary">4 weeks or less</strong>
             </p>
           </div>
 

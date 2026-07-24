@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/why-varicose-veins-happen/layout,_N_T_/blog/why-varicose-veins-happen/page,_N_T_/blog/why-varicose-veins-happen"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/why-varicose-veins-happen/__PAGE__",
+    "/blog/why-varicose-veins-happen",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -22,14 +22,14 @@ const benefits = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-24 pb-28 w-full bg-background relative">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+    <section className="py-14 md:py-20 w-full bg-background relative">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
         <div className="flex flex-col items-center">
-          <div className="w-full max-w-6xl flex flex-col items-center text-center">
-            <p className="text-primary font-semibold mb-4 text-sm tracking-wider uppercase">
+          <div className="w-full flex flex-col items-center text-center">
+            <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">
               THE DIFFERENCE
             </p>
-            <h2 className="font-heading text-secondary text-3xl lg:text-5xl mb-12">
+            <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-12">
               Why patients choose us for their care
             </h2>
 
@@ -37,7 +37,7 @@ export default function WhyChooseUsSection() {
               {benefits.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-white transition-all duration-300 group border border-gray-100 hover:border-primary/30"
+                  className="flex items-start gap-4 p-6 rounded-xl border border-black/5 bg-white shadow-sm transition-all duration-300 group hover:border-primary/30"
                 >
                   <div className="p-3 rounded-lg shrink-0 bg-accent-lighter text-primary group-hover:scale-110 transition-transform duration-300">
                     <item.icon size={24} strokeWidth={1.5} />
@@ -50,7 +50,7 @@ export default function WhyChooseUsSection() {
             </div>
 
             <div className="mt-12">
-              <button className="bg-primary hover:opacity-90 text-white font-semibold py-3.5 px-8 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md group cursor-pointer">
+              <button className="bg-primary text-white rounded-full px-6 py-3 text-[14px] font-semibold hover:bg-primary-dark transition-colors flex items-center gap-2 group cursor-pointer">
                 Schedule Your Visit
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -58,9 +58,6 @@ export default function WhyChooseUsSection() {
           </div>
         </div>
       </div>
-      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-        <path d="M0 30C240 62 480 62 720 30C960 -2 1200 -2 1440 30V60H0V30Z" fill="#FFFFFF" />
-      </svg>
     </section>
   );
 }

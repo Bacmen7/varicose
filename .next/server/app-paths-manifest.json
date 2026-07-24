@@ -1,0 +1,22 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/blog-overview/page": "app/blog-overview/page.js",
+  "/blog/can-varicose-veins-come-back/page": "app/blog/can-varicose-veins-come-back/page.js",
+  "/blog/early-warning-signs/page": "app/blog/early-warning-signs/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/blog/when-to-see-doctor/page": "app/blog/when-to-see-doctor/page.js",
+  "/blog/why-varicose-veins-happen/page": "app/blog/why-varicose-veins-happen/page.js",
+  "/book-appointment/page": "app/book-appointment/page.js",
+  "/clinics/page": "app/clinics/page.js",
+  "/conditions/page": "app/conditions/page.js",
+  "/conditions/varicose-veins/page": "app/conditions/varicose-veins/page.js",
+  "/disease-overview/page": "app/disease-overview/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/treatments-overview/page": "app/treatments-overview/page.js",
+  "/treatments/evlt/page": "app/treatments/evlt/page.js",
+  "/treatments/rfa/page": "app/treatments/rfa/page.js"
+}

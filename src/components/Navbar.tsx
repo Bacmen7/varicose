@@ -1,8 +1,7 @@
-"use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "@/compat/Image";
+import Link from "@/compat/Link";
+import { usePathname } from "@/compat/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -100,11 +99,11 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 z-50 border-b border-gray-100 bg-white px-4 py-4 md:px-6"
+      className="sticky top-0 z-50 border-b border-gray-100 bg-white px-4 py-2.5 md:px-6"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center" onClick={closeMenus}>
-          <Image src="/logo.png" alt="Sira Vascular" width={120} height={80} priority />
+          <Image src="/logo.png" alt="Sira Vascular" width={100} height={66} priority />
         </Link>
 
         <button

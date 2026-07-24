@@ -1,0 +1,164 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/blog/can-varicose-veins-come-back",
+      "regex": "^/blog/can\\-varicose\\-veins\\-come\\-back(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/can\\-varicose\\-veins\\-come\\-back(?:/)?$"
+    },
+    {
+      "page": "/blog/early-warning-signs",
+      "regex": "^/blog/early\\-warning\\-signs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/early\\-warning\\-signs(?:/)?$"
+    },
+    {
+      "page": "/blog/when-to-see-doctor",
+      "regex": "^/blog/when\\-to\\-see\\-doctor(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/when\\-to\\-see\\-doctor(?:/)?$"
+    },
+    {
+      "page": "/blog/why-varicose-veins-happen",
+      "regex": "^/blog/why\\-varicose\\-veins\\-happen(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/why\\-varicose\\-veins\\-happen(?:/)?$"
+    },
+    {
+      "page": "/blog-overview",
+      "regex": "^/blog\\-overview(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog\\-overview(?:/)?$"
+    },
+    {
+      "page": "/book-appointment",
+      "regex": "^/book\\-appointment(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/book\\-appointment(?:/)?$"
+    },
+    {
+      "page": "/clinics",
+      "regex": "^/clinics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/clinics(?:/)?$"
+    },
+    {
+      "page": "/conditions",
+      "regex": "^/conditions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/conditions(?:/)?$"
+    },
+    {
+      "page": "/conditions/varicose-veins",
+      "regex": "^/conditions/varicose\\-veins(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/conditions/varicose\\-veins(?:/)?$"
+    },
+    {
+      "page": "/disease-overview",
+      "regex": "^/disease\\-overview(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/disease\\-overview(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/pricing",
+      "regex": "^/pricing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pricing(?:/)?$"
+    },
+    {
+      "page": "/treatments/evlt",
+      "regex": "^/treatments/evlt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/treatments/evlt(?:/)?$"
+    },
+    {
+      "page": "/treatments/rfa",
+      "regex": "^/treatments/rfa(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/treatments/rfa(?:/)?$"
+    },
+    {
+      "page": "/treatments-overview",
+      "regex": "^/treatments\\-overview(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/treatments\\-overview(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

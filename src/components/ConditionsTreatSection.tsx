@@ -1,4 +1,3 @@
-"use client";
 
 import { useState } from "react";
 
@@ -77,7 +76,7 @@ export default function ConditionsTreatSection() {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.95fr] gap-5">
-          <article className="bg-white rounded-2xl border-2 border-primary px-6 py-6 md:px-8 md:py-8">
+          <article className="bg-white rounded-xl border-2 border-primary px-6 py-6 md:px-8 md:py-8">
             <div className="flex items-start gap-3 mb-5">
               <span className="mt-2 h-2.5 w-2.5 rounded-full bg-primary shrink-0" />
               <div className="flex-1">
@@ -111,7 +110,7 @@ export default function ConditionsTreatSection() {
             </div>
           </article>
 
-          <aside className="bg-white rounded-2xl border border-gray-200 px-6 py-6 md:px-8 md:py-8">
+          <aside className="bg-white rounded-xl border border-gray-200 px-6 py-6 md:px-8 md:py-8">
             <h3 className="font-heading text-secondary text-2xl font-normal mb-5">We also specialise in...</h3>
             <div className="divide-y divide-gray-100">
               {conditions.slice(1).map((condition, i) => {

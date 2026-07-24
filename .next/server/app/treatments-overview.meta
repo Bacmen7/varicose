@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/treatments-overview/layout,_N_T_/treatments-overview/page,_N_T_/treatments-overview"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/treatments-overview/__PAGE__",
+    "/treatments-overview",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vericose (Sira Vascular)
+
+React + Vite + TypeScript + Tailwind CSS v4 single-page app (migrated from Next.js).
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # dev server (default http://localhost:5173)
+npm run build     # type-check + production build into dist/
+npm run preview   # serve the production build locally
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/main.tsx` — entry point (BrowserRouter + global CSS)
+- `src/App.tsx` — layout (Navbar) + all routes (lazy-loaded pages)
+- `src/pages/` — one component per route
+- `src/components/` — shared sections/UI
+- `src/compat/` — small drop-in shims for the old Next.js APIs (`Image`, `Link`, `usePathname`, `usePageMeta`)
+- `public/` — static assets (served from `/`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploying
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is an SPA — configure your static host to rewrite all paths to `index.html`
+(e.g. Netlify `/* /index.html 200`, or Vercel rewrites) so deep links like
+`/treatments/evlt` work on refresh.

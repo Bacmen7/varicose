@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { ArrowRight, X } from "lucide-react";
 
@@ -53,20 +52,20 @@ export default function VideoStoriesSection() {
   const visibleVideos = videos.slice(currentPage * ITEMS_PER_PAGE, (currentPage + 1) * ITEMS_PER_PAGE);
 
   return (
-    <section className="py-20 md:py-28 bg-surface relative pb-24">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="py-14 md:py-20 bg-surface relative">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-gray-400 mb-2">
+            <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-2">
               Vericose Vein Video Library
             </p>
-            <h2 className="font-heading text-3xl md:text-[2.75rem] leading-[1.1] tracking-tight text-secondary font-normal">
+            <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary">
               Hear From Our Expert Specialists
             </h2>
           </div>
-          <button className="inline-flex items-center gap-2 rounded-full font-semibold text-[14px] text-white transition-all hover:opacity-90 self-start md:self-auto cursor-pointer bg-primary px-6 py-3">
+          <button className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-6 py-3 text-[14px] font-semibold hover:bg-primary-dark transition-colors self-start md:self-auto cursor-pointer">
             View All Stories
             <ArrowRight className="w-4 h-4" />
           </button>
@@ -78,10 +77,10 @@ export default function VideoStoriesSection() {
             <div
               key={`${currentPage}-${i}`}
               onClick={() => setActiveVideo(video)}
-              className="w-[280px] min-w-[280px] sm:w-[300px] sm:min-w-[300px] md:w-auto md:min-w-0 flex-shrink-0 md:flex-shrink flex flex-col rounded-2xl border border-gray-200 overflow-hidden bg-white group cursor-pointer hover:shadow-md transition-shadow"
+              className="w-[280px] min-w-[280px] sm:w-[300px] sm:min-w-[300px] md:w-auto md:min-w-0 flex-shrink-0 md:flex-shrink flex flex-col rounded-xl border border-black/5 bg-white shadow-sm overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
             >
               <div className="p-3 pb-0">
-                <div className="relative aspect-video bg-gray-100 overflow-hidden rounded-xl">
+                <div className="relative aspect-video bg-gray-100 overflow-hidden rounded-lg">
                   <img
                     src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                     alt={video.title}
@@ -122,10 +121,6 @@ export default function VideoStoriesSection() {
         </div>
       </div>
 
-      {/* Wave */}
-      <svg className="absolute -bottom-px left-0 w-full block" style={{ height: "60px" }} preserveAspectRatio="none" viewBox="0 0 1440 60" fill="none">
-        <path d="M0 30C240 62 480 62 720 30C960 -2 1200 -2 1440 30V60H0V30Z" fill="#FFFFFF" />
-      </svg>
 
       {/* Video Modal */}
       {activeVideo && (

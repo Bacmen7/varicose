@@ -1,4 +1,3 @@
-"use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -75,7 +74,7 @@ export default function PatientReviewsCarousel() {
     <div>
       <div className="grid grid-cols-1 items-stretch md:grid-cols-3 gap-6">
         {visibleReviews.map((review) => (
-          <div key={`${review.name}-${review.location}`} className="min-h-[390px] bg-white rounded-2xl p-6 border border-gray-200 flex h-full flex-col gap-4">
+          <div key={`${review.name}-${review.location}`} className="min-h-[390px] bg-white rounded-xl p-6 border border-gray-200 flex h-full flex-col gap-4">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-2">
                 <GoogleIcon />

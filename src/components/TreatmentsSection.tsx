@@ -1,7 +1,6 @@
-"use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import Link from "@/compat/Link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const treatments = [
@@ -113,23 +112,17 @@ export default function TreatmentsSection() {
     };
 
     return (
-        <section className="py-24 pb-28 w-full relative" style={{ backgroundColor: "#FFFFFF" }}>
-            <div className="container mx-auto px-4 max-w-[1200px]">
+        <section className="py-14 md:py-20 w-full relative bg-white">
+            <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
                 {/* Header */}
-                <div className="mb-16 text-center max-w-4xl mx-auto">
-                    <p className="text-[#2C847F] font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
+                <div className="mb-10 text-center">
+                    <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">
                         TREATMENTS
                     </p>
-                    <h2
-                        className="text-[#2B3445] text-3xl font-medium lg:text-4xl mb-6"
-                        style={{ fontFamily: "Recoleta, Georgia, sans-serif" }}
-                    >
+                    <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-6">
                         Modern, effective, clinic-based procedures
                     </h2>
-                    <p
-                        className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto"
-                        style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                    >
+                    <p className="text-[15px] md:text-base leading-relaxed text-gray-600 max-w-2xl mx-auto">
                         Our partner clinics offer the full spectrum of evidence-based vein therapies.
                     </p>
                 </div>
@@ -144,9 +137,9 @@ export default function TreatmentsSection() {
                             <button
                                 onClick={prevSlide}
                                 disabled={currentIndex === 0}
-                                className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 
-                        w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center 
-                        text-[#2C847F] transition-all duration-300
+                                className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
+                        w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center
+                        text-primary transition-all duration-300
                         ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:scale-110'}
                         max-md:hidden
                     `}
@@ -158,9 +151,9 @@ export default function TreatmentsSection() {
                             <button
                                 onClick={nextSlide}
                                 disabled={currentIndex >= maxIndex}
-                                className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 
-                        w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center 
-                        text-[#2C847F] transition-all duration-300
+                                className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10
+                        w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center
+                        text-primary transition-all duration-300
                         ${currentIndex >= maxIndex ? 'opacity-0 pointer-events-none' : 'opacity-100 hover:scale-110'}
                         max-md:hidden
                     `}
@@ -173,7 +166,7 @@ export default function TreatmentsSection() {
 
                     {/* Wrapper for overflow hidden */}
                     <div
-                        className="overflow-hidden px-4 md:px-2 -mx-4 md:-mx-2"
+                        className="overflow-hidden px-3 -mx-3"
                         onTouchStart={onTouchStart}
                         onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
@@ -187,13 +180,13 @@ export default function TreatmentsSection() {
                             {treatments.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="shrink-0 px-4"
+                                    className="shrink-0 px-3"
                                     style={{ width: `${100 / itemsToShow}%` }}
                                 >
                                     <Link href={`/treatments/${item.slug}`} className="block h-full">
-                                        <div className="group relative bg-white border border-gray-100 rounded-2xl hover:border-[#2C847F]/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full cursor-pointer">
+                                        <div className="group relative rounded-xl border border-black/5 bg-white shadow-sm hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full cursor-pointer">
                                             {/* Image Container */}
-                                            <div className="h-48 overflow-hidden relative">
+                                            <div className="h-48 overflow-hidden relative rounded-t-xl">
                                                 <img
                                                     src={item.img}
                                                     alt={item.title}
@@ -205,20 +198,14 @@ export default function TreatmentsSection() {
                                             {/* Content */}
                                             <div className="p-6 flex-grow flex flex-col justify-between">
                                                 <div>
-                                                    <h3
-                                                        className="text-[#2B3445] text-xl font-medium mb-3 group-hover:text-[#2C847F] transition-colors"
-                                                        style={{ fontFamily: "Recoleta, Georgia, sans-serif" }}
-                                                    >
+                                                    <h3 className="font-heading text-secondary text-xl font-medium mb-3 group-hover:text-primary transition-colors">
                                                         {item.title}
                                                     </h3>
-                                                    <p
-                                                        className="text-gray-600 leading-relaxed mb-4"
-                                                        style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                                                    >
+                                                    <p className="text-gray-600 leading-relaxed mb-4">
                                                         {item.desc}
                                                     </p>
                                                 </div>
-                                                <span className="text-[#2C847F] font-semibold text-sm flex items-center">
+                                                <span className="text-primary font-semibold text-sm flex items-center">
                                                     Learn more
                                                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                                 </span>
@@ -236,7 +223,7 @@ export default function TreatmentsSection() {
                             <button
                                 key={idx}
                                 onClick={() => setCurrentIndex(idx)}
-                                className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-[#2C847F]' : 'w-2 bg-gray-300'
+                                className={`h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-primary' : 'w-2 bg-gray-300'
                                     }`}
                                 aria-label={`Go to slide ${idx + 1}`}
                             />
@@ -248,14 +235,13 @@ export default function TreatmentsSection() {
                 {/* CTA */}
                 <div className="flex justify-center">
                     <button
-                        className="bg-[#2C847F] hover:bg-[#236b67] text-white font-semibold py-3 px-10 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer"
-                        style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
+                        className="bg-primary text-white rounded-full px-6 py-3 text-[14px] font-semibold hover:bg-primary-dark transition-colors flex items-center gap-2 group cursor-pointer"
                     >
                         See Treatment Options
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>
             </div>
-        </section>
+    </section>
     );
 }

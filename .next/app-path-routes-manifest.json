@@ -1,0 +1,22 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/blog-overview/page": "/blog-overview",
+  "/blog/can-varicose-veins-come-back/page": "/blog/can-varicose-veins-come-back",
+  "/blog/early-warning-signs/page": "/blog/early-warning-signs",
+  "/blog/page": "/blog",
+  "/blog/when-to-see-doctor/page": "/blog/when-to-see-doctor",
+  "/blog/why-varicose-veins-happen/page": "/blog/why-varicose-veins-happen",
+  "/book-appointment/page": "/book-appointment",
+  "/clinics/page": "/clinics",
+  "/conditions/page": "/conditions",
+  "/conditions/varicose-veins/page": "/conditions/varicose-veins",
+  "/disease-overview/page": "/disease-overview",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/pricing/page": "/pricing",
+  "/treatments-overview/page": "/treatments-overview",
+  "/treatments/evlt/page": "/treatments/evlt",
+  "/treatments/rfa/page": "/treatments/rfa"
+}

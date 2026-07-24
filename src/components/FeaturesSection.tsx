@@ -29,17 +29,17 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="pt-16 pb-20 w-full bg-surface relative">
-      <div className="container mx-auto px-2 md:px-3 max-w-[1360px]">
+    <section className="py-14 md:py-20 w-full bg-surface relative">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
         {/* Header */}
-        <div className="mb-10 text-center max-w-3xl mx-auto">
-          <p className="text-primary font-semibold mb-4 text-sm lg:text-base tracking-wider uppercase">
+        <div className="mb-10 text-center">
+          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">
             WHY CHOOSE US
           </p>
-          <h2 className="font-heading text-secondary text-3xl font-medium lg:text-4xl mb-6">
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-6">
             Get The Right Varicose Vein Care
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-[15px] md:text-base leading-relaxed text-gray-600 max-w-2xl mx-auto">
             We are a network of clinics with certified vein specialists who diagnose, treat, and manage Varicose and Spider Veins with the latest minimally invasive options.
           </p>
         </div>
@@ -49,9 +49,9 @@ export default function FeaturesSection() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-white rounded-2xl border border-gray-100 p-8 transition-transform hover:-translate-y-1 duration-300"
+              className="rounded-xl border border-black/5 bg-white shadow-sm p-8 transition-transform hover:-translate-y-1 duration-300"
             >
-              <span className="bg-white mb-6 flex size-14 items-center justify-center rounded-full shadow text-primary">
+              <span className="bg-white mb-6 flex size-14 items-center justify-center rounded-full shadow-sm text-primary">
                 <feature.icon className="size-7" />
               </span>
               <h3 className="font-heading mb-3 text-xl font-medium text-secondary">

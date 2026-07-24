@@ -1,7 +1,6 @@
-"use client";
 
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Image from "@/compat/Image";
 import { useState } from "react";
 
 export default function ContactFormSection() {
@@ -13,13 +12,13 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section className="py-16 pb-24 w-full bg-white relative">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+    <section className="py-14 md:py-20 w-full bg-white relative">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
         <div className="text-left mb-8">
-          <h2 className="font-heading text-3xl lg:text-4xl text-secondary mb-4">
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">
             Get Expert Consultation
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-[15px] md:text-base leading-relaxed text-gray-600">
             Fill in your details and our patient counsellor will call you back
           </p>
         </div>
@@ -36,7 +35,7 @@ export default function ContactFormSection() {
                     id="name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     placeholder="Enter your name"
                     required
                   />
@@ -48,7 +47,7 @@ export default function ContactFormSection() {
                     id="mobile"
                     value={form.mobile}
                     onChange={(e) => setForm({ ...form, mobile: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     placeholder="Enter your mobile number"
                     pattern="[0-9]{10}"
                     required
@@ -61,7 +60,7 @@ export default function ContactFormSection() {
                     id="city"
                     value={form.city}
                     onChange={(e) => setForm({ ...form, city: e.target.value })}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     placeholder="Enter your city"
                   />
                 </div>
@@ -72,7 +71,7 @@ export default function ContactFormSection() {
                       id="condition"
                       value={form.condition}
                       onChange={(e) => setForm({ ...form, condition: e.target.value })}
-                      className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-3 py-2 pr-10 text-sm text-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                      className="w-full appearance-none rounded-lg border border-gray-200 bg-white px-3 py-2 pr-10 text-sm text-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     >
                       <option value="">Select your condition</option>
                       <option value="varicose-veins">Varicose Veins</option>
@@ -102,7 +101,7 @@ export default function ContactFormSection() {
                   id="message"
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none"
+                  className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none"
                   placeholder="Describe your symptoms or concerns"
                   rows={3}
                 />
@@ -110,7 +109,7 @@ export default function ContactFormSection() {
 
               <button
                 type="submit"
-                className="w-fit bg-primary hover:bg-primary-dark text-white font-semibold py-2.5 px-7 text-sm rounded-full flex items-center gap-2 transition-colors duration-200 cursor-pointer"
+                className="w-fit bg-primary text-white rounded-full px-6 py-3 text-[14px] font-semibold hover:bg-primary-dark transition-colors flex items-center gap-2 cursor-pointer"
               >
                 Get A Call Back
                 <ArrowRight className="w-5 h-5" />
@@ -128,12 +127,11 @@ export default function ContactFormSection() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="relative h-[500px] md:h-[580px] rounded-2xl overflow-hidden">
+          <div className="relative h-[500px] md:h-[580px] rounded-xl border border-black/5 overflow-hidden">
             <Image
               src="/contact-form.png"
               alt="Varicose vein consultation"
-              fill
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>

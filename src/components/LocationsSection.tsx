@@ -1,100 +1,103 @@
-import { MapPin } from 'lucide-react';
+import { MapPin, ArrowRight } from "lucide-react";
+import Link from "@/compat/Link";
 
-const column1 = ['Hyderabad', 'Kolkata', 'Vijayawada', 'Ahmedabad'];
-const column2 = ['Bengaluru', 'Pune', 'Ludhiana'];
-const column3 = ['Chennai', 'Vizag', 'Kochi'];
-
-const LocationItem = ({ city, showBorder = false }: { city: string; showBorder?: boolean }) => (
-    <li className={`mb-6 last:mb-0 flex justify-center lg:justify-start relative`}>
-        <div
-            className={`
-        flex items-center text-gray-900
-        w-full
-        ${showBorder ? 'border-r border-[#2C847F]' : ''}
-      `}
-        >
-            <div className="mr-2 lg:mr-3 text-[#2C847F] shrink-0">
-                <MapPin className="w-5 h-5 lg:w-6 lg:h-6 stroke-[1.5]" />
-            </div>
-            <span
-                className="text-xs sm:text-sm lg:text-[15px] font-normal tracking-wide text-gray-800"
-                style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-            >
-                {city}
-            </span>
-        </div>
-    </li>
-);
+const cities = [
+  "Hyderabad",
+  "Bengaluru",
+  "Chennai",
+  "Kolkata",
+  "Pune",
+  "Vizag",
+  "Vijayawada",
+  "Ludhiana",
+  "Kochi",
+  "Ahmedabad",
+];
 
 export default function LocationsSection() {
-    return (
-        <section className="w-full py-16 lg:py-24 pb-28 relative z-10" style={{ backgroundColor: '#FFFFFF' }}>
-            <div className="max-w-[1200px] mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center">
+  return (
+    <section className="w-full py-14 md:py-20 bg-white">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+          {/* Left: heading + city chips + CTA */}
+          <div className="text-center lg:text-left">
+            <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary">
+              Our Clinics
+            </p>
+            <h2 className="mt-3 font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary">
+              Find the Best Vein Specialist{" "}
+              <span className="whitespace-nowrap">Near You</span>
+            </h2>
+            <p className="mt-4 text-[15px] md:text-base leading-relaxed text-gray-600 max-w-xl mx-auto lg:mx-0">
+              34 state-of-the-art clinics across India — expert vein care close
+              to where you live.
+            </p>
 
-                    {/* Left Column: Heading */}
-                    <div className="w-full lg:w-[32%] mb-8 lg:mb-0 text-center lg:text-left z-20">
-                        <h2
-                            className="text-2xl sm:text-3xl md:text-[2.5rem] font-normal text-[#2B3445] leading-[1.2] mb-2"
-                            style={{ fontFamily: 'Recoleta, Georgia, sans-serif' }}
-                        >
-                            Find the Best <br className="hidden lg:block" />
-                            <span className="lg:hidden"> </span>
-                            Vein Specialist Near You
-                        </h2>
-                        <p
-                            className="text-gray-600 text-sm sm:text-lg font-light tracking-wide"
-                            style={{ fontFamily: '"Proxima Nova", Arial, sans-serif' }}
-                        >
-                            34 State-of-the-art-clinics
-                        </p>
-                    </div>
-
-                    {/* Right Column: Cities List */}
-                    <div className="w-full lg:w-[68%] relative pl-0 lg:pl-10">
-
-                        {/* Background Map - Watermark */}
-                        <div
-                            className="absolute inset-0 z-0 pointer-events-none"
-                            style={{
-                                backgroundImage: "url('/india.svg')",
-                                backgroundPosition: 'center',
-                                backgroundSize: 'contain',
-                                backgroundRepeat: 'no-repeat',
-                                opacity: 0.2,
-                                filter: 'invert(45%) sepia(25%) saturate(1500%) hue-rotate(130deg) brightness(95%) contrast(90%)'
-                            }}
-                        ></div>
-
-                        {/* Grid Container */}
-                        <div className="relative z-10 grid grid-cols-3">
-
-                            {/* Column 1 */}
-                            <ul className="list-none p-0 m-0 pr-1 sm:pr-2 lg:pr-10">
-                                {column1.map((city, index) => (
-                                    <LocationItem key={index} city={city} showBorder={index < 3} />
-                                ))}
-                            </ul>
-
-                            {/* Column 2 */}
-                            <ul className="list-none p-0 m-0 px-1 sm:px-2 lg:pl-10 lg:pr-10">
-                                {column2.map((city, index) => (
-                                    <LocationItem key={index} city={city} showBorder={true} />
-                                ))}
-                            </ul>
-
-                            {/* Column 3 */}
-                            <ul className="list-none p-0 m-0 pl-1 sm:pl-2 lg:pl-10">
-                                {column3.map((city, index) => (
-                                    <LocationItem key={index} city={city} showBorder={false} />
-                                ))}
-                            </ul>
-
-                        </div>
-                    </div>
-
-                </div>
+            {/* City chips */}
+            <div className="mt-7 flex flex-wrap justify-center gap-2.5 lg:justify-start">
+              {cities.map((city) => (
+                <span
+                  key={city}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-black/5 bg-surface px-4 py-2 text-[14px] font-medium text-secondary transition-colors hover:bg-accent-light"
+                >
+                  <MapPin size={14} className="text-primary" />
+                  {city}
+                </span>
+              ))}
             </div>
-        </section>
-    );
+
+            <Link
+              href="/clinics"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              Explore All Clinics
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          {/* Right: map panel */}
+          <div className="relative overflow-hidden rounded-xl bg-surface border border-black/5">
+            <div className="px-6 pt-8 pb-4 md:px-10 md:pt-10">
+              <img
+                src="/india.svg"
+                alt="Sira Vascular clinics across India"
+                className="mx-auto h-[280px] w-auto md:h-[360px]"
+                style={{
+                  filter:
+                    "invert(45%) sepia(25%) saturate(1500%) hue-rotate(130deg) brightness(95%) contrast(90%)",
+                  opacity: 0.9,
+                }}
+              />
+            </div>
+            <div className="grid grid-cols-3 divide-x divide-black/5 border-t border-black/5 bg-white/60">
+              <div className="px-4 py-4 text-center">
+                <p className="font-heading text-[1.4rem] md:text-[1.7rem] leading-none text-primary font-semibold">
+                  34+
+                </p>
+                <p className="mt-1 text-[12px] md:text-[13px] text-gray-600">
+                  Clinics
+                </p>
+              </div>
+              <div className="px-4 py-4 text-center">
+                <p className="font-heading text-[1.4rem] md:text-[1.7rem] leading-none text-primary font-semibold">
+                  10
+                </p>
+                <p className="mt-1 text-[12px] md:text-[13px] text-gray-600">
+                  Cities
+                </p>
+              </div>
+              <div className="px-4 py-4 text-center">
+                <p className="font-heading text-[1.4rem] md:text-[1.7rem] leading-none text-primary font-semibold">
+                  Pan-India
+                </p>
+                <p className="mt-1 text-[12px] md:text-[13px] text-gray-600">
+                  Growing network
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

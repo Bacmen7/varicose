@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Proxima Nova Font Family - Local Files */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Recoleta Font */
+@font-face {
+  font-family: 'Recoleta';
+  src: url('/fonts/Recoleta Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  /* Colors */
+  --color-primary: #2C847F;
+  --color-primary-dark: #236b67;
+  --color-secondary: #2B3445;
+  --color-accent: #CCE0DF;
+  --color-accent-light: #DBEAE9;
+  --color-accent-lighter: #EEF7F5;
+  --color-background: #F9F9F9;
+  --color-surface: #EEF7F5;
+  --color-cta: #FF8968;
+
+  /* Fonts */
+  --font-heading: 'Recoleta', Georgia, serif;
+  --font-body: 'Proxima Nova', Arial, sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utility classes for fonts */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
