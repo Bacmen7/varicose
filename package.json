@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --project tsconfig.build.json --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint ."
   },
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/vite": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
