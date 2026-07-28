@@ -1,19 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import Footer from "@/components/Footer";
-
-const concerns = [
-  "Varicose Veins",
-  "Spider Veins",
-  "Leg Swelling / Heaviness",
-  "Night Cramps / Restless Legs",
-  "Skin Discoloration near Ankles",
-  "Venous Ulcer",
-  "Not sure / Need a diagnosis",
-  "Other",
-];
 
 const fieldClasses =
   "w-full rounded-lg border border-[#d9e4e4] bg-white px-3.5 py-3 text-sm text-[#2b3a3a] outline-none transition-all focus:border-primary focus:ring-[3px] focus:ring-accent-lighter";
@@ -40,9 +28,7 @@ function Field({
 export default function BookConsultation() {
   const [form, setForm] = useState({
     name: "",
-    age: "",
     phone: "",
-    concern: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -52,8 +38,8 @@ export default function BookConsultation() {
     setForm((f) => ({ ...f, [key]: val }));
 
   const handleSubmit = () => {
-    if (!form.name || !form.age || !form.phone || !form.concern) {
-      setError("Please fill in your name, age, phone number and concern.");
+    if (!form.name || !form.phone) {
+      setError("Please fill in your name and phone number.");
       return;
     }
     setError("");
@@ -75,7 +61,7 @@ export default function BookConsultation() {
       </section>
 
       {/* Card */}
-      <div className="mx-auto max-w-[960px] px-5 pb-16 md:px-8">
+      <div className="mx-auto max-w-[720px] px-5 pb-16 md:px-8">
         <div className="-mt-16 rounded-2xl border border-black/5 bg-white p-8 shadow-[0_10px_30px_rgba(13,115,119,0.08)] sm:p-12 md:p-16">
           {!submitted ? (
             <>
@@ -87,65 +73,32 @@ export default function BookConsultation() {
                 to arrange a time that works for you.
               </p>
 
-              <div className="grid gap-x-5 sm:grid-cols-[2fr_1fr]">
-                <Field label="Full Name" required>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={(e) => update("name", e.target.value)}
-                    className={fieldClasses}
-                  />
-                </Field>
-                <Field label="Age" required>
-                  <input
-                    type="number"
-                    min={1}
-                    max={120}
-                    placeholder="e.g. 42"
-                    value={form.age}
-                    onChange={(e) => update("age", e.target.value)}
-                    className={fieldClasses}
-                  />
-                </Field>
-              </div>
+              <Field label="Full Name" required>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  value={form.name}
+                  onChange={(e) => update("name", e.target.value)}
+                  className={fieldClasses}
+                />
+              </Field>
 
-              <div className="grid gap-x-5 sm:grid-cols-2">
-                <Field label="Phone Number" required>
-                  <input
-                    type="tel"
-                    placeholder="10-digit mobile number"
-                    value={form.phone}
-                    onChange={(e) => update("phone", e.target.value)}
-                    className={fieldClasses}
-                  />
-                </Field>
-                <Field label="Concern" required>
-                  <div className="relative">
-                    <select
-                      value={form.concern}
-                      onChange={(e) => update("concern", e.target.value)}
-                      className={`${fieldClasses} appearance-none pr-11`}
-                    >
-                      <option value="">Select your concern</option>
-                      {concerns.map((c) => (
-                        <option key={c}>{c}</option>
-                      ))}
-                    </select>
-                    <ChevronDown
-                      size={18}
-                      className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-primary"
-                    />
-                  </div>
-                </Field>
-              </div>
+              <Field label="Phone Number" required>
+                <input
+                  type="tel"
+                  placeholder="10-digit mobile number"
+                  value={form.phone}
+                  onChange={(e) => update("phone", e.target.value)}
+                  className={fieldClasses}
+                />
+              </Field>
 
               <Field label="Message (optional)">
                 <textarea
                   placeholder="Briefly describe your symptoms or any questions for the doctor."
                   value={form.message}
                   onChange={(e) => update("message", e.target.value)}
-                  className={`${fieldClasses} min-h-[120px] resize-y`}
+                  className={`${fieldClasses} min-h-[130px] resize-y`}
                 />
               </Field>
 
@@ -158,13 +111,12 @@ export default function BookConsultation() {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="mx-auto block rounded-full px-6 py-2 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:brightness-105 cursor-pointer"
+                className="w-full rounded-full bg-cta py-3.5 text-base font-bold text-white shadow-md transition-all duration-200 hover:brightness-105 cursor-pointer"
               >
                 Request My Consultation
               </button>
               <p className="mt-4 text-center text-sm text-gray-500">
-                Your details are kept private and used only to arrange your
-                appointment.
+                We call back within 1 hour &middot; No spam
               </p>
             </>
           ) : (

@@ -2,7 +2,7 @@
 import Image from "@/compat/Image";
 import Link from "@/compat/Link";
 import { usePathname } from "@/compat/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const navItems = [
@@ -153,9 +153,13 @@ export default function Navbar() {
           <Link
             href="/book-appointment"
             onClick={closeMenus}
-            className="rounded-full bg-[#0d7377] px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0a5c5f]"
+            className="group inline-flex items-center gap-2 rounded-full bg-cta px-6 py-2 text-sm font-medium text-white transition-all hover:brightness-105"
           >
             Book An Appointment
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover:translate-x-0.5"
+            />
           </Link>
         </div>
       </div>
@@ -252,10 +256,14 @@ export default function Navbar() {
             ))}
             <Link
               href="/book-appointment"
-              className="rounded-full bg-[#0d7377] px-6 py-2 text-center font-medium text-white"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-cta px-6 py-2 text-center text-sm font-medium text-white"
               onClick={closeMenus}
             >
               Book An Appointment
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-0.5"
+              />
             </Link>
           </div>
         </div>

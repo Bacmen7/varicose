@@ -275,6 +275,8 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* EXPLORE MORE TOPICS - hidden */}
+      {false && (
       <section className="overflow-hidden border-t border-gray-100 bg-white py-16">
         <div className="mx-auto max-w-[1200px] px-4">
           <h2 className="font-heading mb-10 text-secondary text-3xl md:text-4xl font-normal">
@@ -308,6 +310,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+      )}
 
       <Footer />
     </main>

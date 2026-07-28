@@ -16,7 +16,6 @@ const stepLabels = [
   "Which veins concern you most?",
   "How do your veins look?",
   "How long have you had this?",
-  "About You",
   "Specialist Consultation",
 ];
 
@@ -68,11 +67,6 @@ type FormData = {
   concern: string;
   appearance: string;
   duration: string;
-  title: string;
-  fullName: string;
-  phone: string;
-  email: string;
-  message: string;
   consultation: string;
 };
 
@@ -80,16 +74,8 @@ const initialData: FormData = {
   concern: "Multiple areas",
   appearance: "The veins on my leg have progressed to a sore or ulcer",
   duration: "I am not sure",
-  title: "",
-  fullName: "",
-  phone: "",
-  email: "",
-  message: "",
   consultation: "",
 };
-
-const inputClasses =
-  "h-12 w-full rounded-lg border border-[#d9e4e5] bg-white px-3 text-base text-[#354850] outline-none focus:border-primary";
 
 function Sidebar({ step }: { step: number }) {
   return (
@@ -182,7 +168,7 @@ export default function BookAppointmentPage() {
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (step < 5) {
+    if (step < 4) {
       setStep((current) => current + 1);
       return;
     }
@@ -198,15 +184,15 @@ export default function BookAppointmentPage() {
           <Sidebar step={step} />
 
           <section className="flex-1 bg-[#f7fbfa] px-5 py-8 sm:px-10 lg:px-[54px] lg:pb-10 lg:pt-[52px]">
-            <form onSubmit={onSubmit} className="w-full">
+            <form onSubmit={onSubmit} className="flex min-h-[calc(100vh-230px)] w-full flex-col">
               <div className="mb-[32px]">
                 <div className="h-[3px] bg-[#d8e7e6]">
                   <div
                     className="h-[3px] bg-primary transition-all"
-                    style={{ width: `${step * 20}%` }}
+                    style={{ width: `${step * 25}%` }}
                   />
                 </div>
-                <p className="mt-[7px] text-xs text-[#66777b]">Step {step} of 5</p>
+                <p className="mt-[7px] text-xs text-[#66777b]">Step {step} of 4</p>
               </div>
 
               {submitted ? (
@@ -287,63 +273,6 @@ export default function BookAppointmentPage() {
 
                   {step === 4 && (
                     <div>
-                      <h2 className="font-heading text-3xl text-[#104d4a]">About You</h2>
-                      <p className="mb-5 mt-2 text-base leading-relaxed text-[#718287]">
-                        A few details so we can help you better
-                      </p>
-                      <div className="grid gap-3 sm:grid-cols-2">
-                        <InputField label="Title">
-                          <select
-                            value={data.title}
-                            onChange={(event) => update("title", event.target.value)}
-                            className={inputClasses}
-                          >
-                            <option value="">Mr</option>
-                            <option>Mrs</option>
-                            <option>Ms</option>
-                            <option>Dr</option>
-                          </select>
-                        </InputField>
-                        <InputField label="Full Name">
-                          <input
-                            value={data.fullName}
-                            onChange={(event) => update("fullName", event.target.value)}
-                            className={inputClasses}
-                          />
-                        </InputField>
-                        <InputField label="Phone Number">
-                          <input
-                            value={data.phone}
-                            onChange={(event) => update("phone", event.target.value)}
-                            className={inputClasses}
-                          />
-                        </InputField>
-                        <InputField label="Email Address">
-                          <input
-                            value={data.email}
-                            onChange={(event) => update("email", event.target.value)}
-                            className={inputClasses}
-                          />
-                        </InputField>
-                        <label className="sm:col-span-2">
-                          <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-[#28807b]">
-                            Your Message
-                          </span>
-                          <textarea
-                            value={data.message}
-                            onChange={(event) => update("message", event.target.value)}
-                            className={`${inputClasses} h-[80px] resize-none py-3`}
-                          />
-                        </label>
-                      </div>
-                      <p className="mt-4 text-sm text-[#f26932]">
-                        Please fill in your name, phone and email to continue.
-                      </p>
-                    </div>
-                  )}
-
-                  {step === 5 && (
-                    <div>
                       <h2 className="font-heading text-3xl text-[#104d4a]">
                         Do you require a specialist consultation right now?
                       </h2>
@@ -374,7 +303,7 @@ export default function BookAppointmentPage() {
                     </div>
                   )}
 
-                  <div className="mt-7 flex justify-start gap-3">
+                  <div className="mt-auto flex justify-start gap-3 pt-10">
                     <button
                       type="button"
                       onClick={() => setStep((current) => Math.max(1, current - 1))}
@@ -388,7 +317,7 @@ export default function BookAppointmentPage() {
                       type="submit"
                       className="h-11 min-w-[148px] rounded-full bg-cta px-8 text-sm font-semibold text-white transition hover:brightness-105"
                     >
-                      {step === 5 ? "Submit" : "Next"}
+                      {step === 4 ? "Submit" : "Next"}
                     </button>
                   </div>
                 </>
@@ -402,13 +331,3 @@ export default function BookAppointmentPage() {
   );
 }
 
-function InputField({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <label>
-      <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-[#28807b]">
-        {label}
-      </span>
-      {children}
-    </label>
-  );
-}
