@@ -1,48 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import {
+  conditionNameMap,
+  overviewRouteMap,
+  buildFeatured,
+  buildCategoryLinks,
+} from "@/data/conditionRoutes";
 
-
-const conditions = [
-  {
-    href: "/conditions/varicose-veins",
-    image: "/user/varicose veins.png",
-    category: "Get started",
-    title: "What are varicose veins",
-  },
-  {
-    href: "/conditions/varicose-veins#causes",
-    image: "/user/chronic venus insufficiency.png",
-    category: "Get started",
-    title: "Causes of varicose veins",
-  },
-  {
-    href: "/treatments",
-    image: "/user/deep vein reflux.png",
-    category: "Treatment",
-    title: "How is varicose vein treated",
-  },
-  {
-    href: "/treatments/evlt",
-    image: "/user/leg pain and heaviness.png",
-    category: "Treatment",
-    title: "Is laser treatment for varicose veins painful?",
-  },
-  {
-    href: "/blog/when-to-see-doctor",
-    image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
-    category: "Recovery",
-    title: "How long does recovery take after vein treatment?",
-  },
-];
 
 export default function ConditionsOverviewPage() {
+  return (
+    <Suspense fallback={null}>
+      <ConditionsInner />
+    </Suspense>
+  );
+}
+
+function ConditionsInner() {
   const [query, setQuery] = useState("");
   const [current, setCurrent] = useState(0);
+  const searchParams = useSearchParams();
+
+  // /conditions?c=<slug> customises this page for that condition
+  const slug = searchParams.get("c");
+  const conditionName = slug ? conditionNameMap[slug] : null;
+  const displayName = conditionName ?? "varicose veins";
+  const overviewHref =
+    (slug && overviewRouteMap[slug]) || "/varicose-veins-overview";
+  const conditions = buildFeatured(displayName, overviewHref);
+  const categoryLinks = buildCategoryLinks(displayName, overviewHref);
 
   const prev = () => setCurrent((i) => (i === 0 ? conditions.length - 1 : i - 1));
   const next = () => setCurrent((i) => (i === conditions.length - 1 ? 0 : i + 1));
@@ -53,8 +45,15 @@ export default function ConditionsOverviewPage() {
       {/* ── HERO WITH SEARCH ── */}
       <section className="py-16 w-full" style={{ background: 'linear-gradient(135deg, #023936 0%, #2C847F 100%)' }}>
         <div className="container mx-auto px-4 max-w-[800px] text-center">
+          {conditionName && (
+            <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-accent md:text-[13px]">
+              {conditionName}
+            </p>
+          )}
           <h1 className="font-heading text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-            Browse vein conditions reviewed by experts
+            {conditionName
+              ? `Browse ${conditionName} reviewed by experts`
+              : "Browse vein conditions reviewed by experts"}
           </h1>
           <div className="relative max-w-2xl mx-auto">
             <input
@@ -130,13 +129,7 @@ export default function ConditionsOverviewPage() {
             <div className="px-8 py-6" style={{ borderBottom: '1px solid #E5E7EB' }}>
               <h2 className="font-heading text-secondary text-3xl font-bold">Explore by category</h2>
             </div>
-            {[
-              { label: "Common subtypes & symptoms", href: "/conditions/varicose-veins" },
-              { label: "Treatment options", href: "/treatments" },
-              { label: "Vein health stats & science", href: "/blog/why-varicose-veins-happen" },
-              { label: "Living with varicose veins", href: "/blog/early-warning-signs" },
-              { label: "Related symptoms & conditions", href: "/blog/when-to-see-doctor" },
-            ].map((item, i) => (
+            {categoryLinks.map((item, i) => (
               <Link
                 key={i}
                 href={item.href}
@@ -153,18 +146,19 @@ export default function ConditionsOverviewPage() {
         </div>
       </section>
 
-      {/* ── EXPLORE VIDEOS ── */}
-      <section className="py-12 w-full bg-background">
+      {/* EXPLORE VIDEOS - hidden */}
+{false && (
+<section className="py-12 w-full bg-background">
         <div className="container mx-auto px-4 max-w-[1200px]">
           <h2 className="font-heading text-secondary text-2xl md:text-3xl font-bold text-center mb-8">Explore videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { image: "/user/varicose veins.png", title: "What Are Varicose Veins? Causes, Symptoms & When To See A Doctor" },
-              { image: "/user/deep vein reflux.png", title: "Spider Veins vs Varicose Veins — What's the difference?" },
+              { image: "/user/deep vein reflux.png", title: "Spider Veins vs Varicose Veins - What's the difference?" },
               { image: "/user/leg pain and heaviness.png", title: "How to Recognise Venous Disease in Yourself or Others: Key Signs" },
             ].map((video, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 cursor-pointer group flex flex-col">
-                {/* Thumbnail — separate block, fixed height */}
+                {/* Thumbnail - separate block, fixed height */}
                 <div className="w-full h-48 relative overflow-hidden rounded-t-2xl flex-shrink-0">
                   <Image
                     src={video.image}
@@ -186,6 +180,7 @@ export default function ConditionsOverviewPage() {
           </div>
         </div>
       </section>
+)}
 
       {/* ── EDITORIAL PROCESS ── */}
       <section className="py-8 w-full bg-background">
@@ -198,7 +193,7 @@ export default function ConditionsOverviewPage() {
                 <Link href="/about" className="text-primary font-medium hover:underline">Sira Vascular&apos;s Clinical Team</Link>.
               </p>
             </div>
-            <Link href="/about" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-xl whitespace-nowrap transition-all shrink-0">
+            <Link href="/about" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-2 px-6 rounded-xl whitespace-nowrap transition-all shrink-0">
               Learn more
             </Link>
           </div>
@@ -219,7 +214,7 @@ export default function ConditionsOverviewPage() {
             ].map((subtype, i) => (
               <Link
                 key={i}
-                href="/conditions/varicose-veins"
+                href="/conditions?c=varicose-veins"
                 className="inline-flex min-h-[54px] items-center gap-3 rounded-full border border-[#DDEBEA] bg-white px-6 text-[20px] font-normal leading-none text-[#244247] shadow-[0_1px_4px_rgba(22,56,58,0.04)] transition-all hover:border-primary hover:text-primary hover:shadow-[0_4px_14px_rgba(44,132,127,0.12)]"
               >
                 <span className="h-2 w-2 rounded-full bg-[#9DE5D4]" aria-hidden="true" />

@@ -23,14 +23,14 @@ const approachCards = [
     image: "/r2.png",
     title: "Injection Therapies",
     desc: "For spider veins and smaller varicose veins. Done in-clinic, no anaesthesia needed.",
-    items: ["Sclerotherapy — liquid injection", "Foam sclerotherapy — larger veins", "Walk same day, no downtime"],
+    items: ["Sclerotherapy - liquid injection", "Foam sclerotherapy - larger veins", "Walk same day, no downtime"],
   },
   {
     type: "Advanced",
     image: "/r3.png",
     title: "Advanced Procedures",
     desc: "For larger varicose veins with significant reflux. Minimally invasive, under local anaesthesia.",
-    items: ["EVLT — endovenous laser treatment", "RFA — radiofrequency ablation", "Venaseal — medical glue closure"],
+    items: ["EVLT - endovenous laser treatment", "RFA - radiofrequency ablation", "Venaseal - medical glue closure"],
   },
 ];
 
@@ -43,11 +43,11 @@ const accordionSteps = [
 ];
 
 const conditionRows = [
-  { condition: "Varicose Veins", badge: "Venous", badgeColor: "#CCE0DF", badgeText: "#026460", first: "Compression + duplex scan", next: "EVLT or RFA — same day procedure", href: "/treatments/evlt" },
-  { condition: "Spider Veins", badge: "Cosmetic", badgeColor: "#FEF3C7", badgeText: "#92400E", first: "Sclerotherapy — liquid injection", next: "Foam sclerotherapy, 2 to 3 sessions", href: "/treatments/evlt" },
+  { condition: "Varicose Veins", badge: "Venous", badgeColor: "#CCE0DF", badgeText: "#026460", first: "Compression + duplex scan", next: "EVLT or RFA - same day procedure", href: "/treatments/evlt" },
+  { condition: "Spider Veins", badge: "Cosmetic", badgeColor: "#FEF3C7", badgeText: "#92400E", first: "Sclerotherapy - liquid injection", next: "Foam sclerotherapy, 2 to 3 sessions", href: "/treatments/evlt" },
   { condition: "Chronic Venous Insufficiency", badge: "CVI", badgeColor: "#FDE8D8", badgeText: "#A03D12", first: "Compression + lifestyle changes", next: "Ablation to treat underlying reflux", href: "/treatments/rfa" },
-  { condition: "DVT Awareness", badge: "Urgent", badgeColor: "#DBEAFE", badgeText: "#1E40AF", first: "Urgent referral — do not wait", next: "Anticoagulant therapy, specialist review", href: "/conditions/varicose-veins" },
-  { condition: "Venous Leg Ulcers", badge: "Advanced", badgeColor: "#FDE8D8", badgeText: "#A03D12", first: "Compression bandaging + wound care", next: "Ablation once ulcer heals", href: "/conditions/varicose-veins" },
+  { condition: "DVT Awareness", badge: "Urgent", badgeColor: "#DBEAFE", badgeText: "#1E40AF", first: "Urgent referral - do not wait", next: "Anticoagulant therapy, specialist review", href: "/conditions?c=dvt-and-leg-swelling" },
+  { condition: "Venous Leg Ulcers", badge: "Advanced", badgeColor: "#FDE8D8", badgeText: "#A03D12", first: "Compression bandaging + wound care", next: "Ablation once ulcer heals", href: "/conditions?c=vein-ulcers" },
   { condition: "Post-Pregnancy Veins", badge: "Hormonal", badgeColor: "#FCE7F3", badgeText: "#9D174D", first: "Wait 3 to 6 months post-delivery", next: "Sclerotherapy or EVLT if veins persist", href: "/treatments/evlt" },
 ];
 
@@ -71,11 +71,11 @@ export default function TreatmentsOverviewPage() {
                 Minimally invasive, walk-in walk-out procedures. No long hospital stays. Our vascular specialists choose the right treatment for your vein type and severity.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="#treatments" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-full flex items-center gap-2 transition-all duration-300 group">
+                <Link href="#treatments" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-2 px-6 rounded-full flex items-center gap-2 transition-all duration-300 group">
                   Explore Treatments
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/blog/when-to-see-doctor" className="border-2 border-primary text-primary font-semibold text-sm py-3 px-7 rounded-full hover:bg-primary/5 transition-all duration-300">
+                <Link href="/blog/when-to-see-doctor" className="border-2 border-primary text-primary font-semibold text-sm py-2 px-6 rounded-full hover:bg-primary/5 transition-all duration-300">
                   Book a Consultation
                 </Link>
               </div>
@@ -105,9 +105,9 @@ export default function TreatmentsOverviewPage() {
               <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>Getting the right diagnosis</p>
               <h3 className="font-heading text-white text-3xl font-normal mb-4 leading-snug">Getting the right picture</h3>
               <p className="text-base leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                Varicose veins can look simple on the outside but involve deeper valve problems underneath. A proper diagnosis makes sure the right vein is treated — and nothing is missed.
+                Varicose veins can look simple on the outside but involve deeper valve problems underneath. A proper diagnosis makes sure the right vein is treated - and nothing is missed.
               </p>
-              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold text-sm py-3 px-7 rounded-full transition-all group">
+              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold text-sm py-2 px-6 rounded-full transition-all group">
                 Book your first appointment
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -122,7 +122,7 @@ export default function TreatmentsOverviewPage() {
                       <Icon size={18} strokeWidth={1.5} className="text-white" />
                     </div>
                     <div>
-                      <p className="text-primary font-semibold text-xs tracking-wider uppercase mb-1">{s.step} — {s.title}</p>
+                      <p className="text-primary font-semibold text-xs tracking-wider uppercase mb-1">{s.step} - {s.title}</p>
                       <p className="text-gray-600 text-base leading-snug">{s.desc}</p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function TreatmentsOverviewPage() {
           <div className="text-center mb-12">
             <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Step Two</p>
             <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Personalised treatment</h2>
-            <p className="text-gray-600 text-lg max-w-xl mx-auto">Three main approaches — most patients need just one, chosen after their scan.</p>
+            <p className="text-gray-600 text-lg max-w-xl mx-auto">Three main approaches - most patients need just one, chosen after their scan.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {approachCards.map((card, i) => (
@@ -222,7 +222,7 @@ export default function TreatmentsOverviewPage() {
           <div className="text-center mb-12">
             <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Treatment by Condition</p>
             <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Find your condition</h2>
-            <p className="text-gray-600 text-lg max-w-xl mx-auto">See what is typically recommended first — and what comes next if that is not enough.</p>
+            <p className="text-gray-600 text-lg max-w-xl mx-auto">See what is typically recommended first - and what comes next if that is not enough.</p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-gray-200">
             {/* Header */}
@@ -259,7 +259,7 @@ export default function TreatmentsOverviewPage() {
               <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>Most patients are seen within 1 to 2 weeks. Early treatment means faster recovery.</p>
             </div>
             <div className="relative z-10 flex flex-col items-start md:items-end gap-2 shrink-0">
-              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold text-sm py-3 px-8 rounded-full transition-all group shadow-lg">
+              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold text-sm py-2 px-6 rounded-full transition-all group shadow-lg">
                 Book a Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>

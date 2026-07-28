@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import {
   CalendarDays,
   CircleUserRound,
@@ -116,7 +117,7 @@ function Sidebar({ step }: { step: number }) {
               <li key={label} className="flex items-center gap-[10px] text-sm">
                 <span
                   className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm ${
-                    active ? "bg-[#f26932] text-white" : "bg-white/20 text-white/80"
+                    active ? "bg-[#FF7A4D] text-white" : "bg-white/20 text-white/80"
                   }`}
                 >
                   {number}
@@ -171,6 +172,7 @@ function SelectOption({
 }
 
 export default function BookAppointmentPage() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [data, setData] = useState<FormData>(initialData);
   const [submitted, setSubmitted] = useState(false);
@@ -185,7 +187,9 @@ export default function BookAppointmentPage() {
       setStep((current) => current + 1);
       return;
     }
+    // Assessment complete - hand the patient over to the consultation form
     setSubmitted(true);
+    router.push("/book-consultation");
   };
 
   return (
@@ -383,7 +387,7 @@ export default function BookAppointmentPage() {
                     </button>
                     <button
                       type="submit"
-                      className="h-11 min-w-[148px] rounded-full bg-[#f26932] px-8 text-sm font-semibold text-white transition hover:bg-[#df5924]"
+                      className="h-11 min-w-[148px] rounded-full bg-[#FF7A4D] px-8 text-sm font-semibold text-white transition hover:brightness-105"
                     >
                       {step === 5 ? "Submit" : "Next"}
                     </button>

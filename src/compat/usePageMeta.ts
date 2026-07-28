@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const DEFAULT_TITLE = "Varicose| Expert Vein Treatment";
+const DEFAULT_TITLE = "Sira Vascular | Expert Vein Treatment";
 
 // SPA replacement for Next.js per-page `export const metadata`.
 export function usePageMeta(title?: string, description?: string) {

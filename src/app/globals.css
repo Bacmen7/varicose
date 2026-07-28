@@ -44,11 +44,11 @@
   --color-accent-lighter: #EEF7F5;
   --color-background: #F9F9F9;
   --color-surface: #EEF7F5;
-  --color-cta: #FF8968;
+  --color-cta: #FF7A4D;
 
   /* Fonts */
-  --font-heading: 'Recoleta', Georgia, serif;
-  --font-body: 'Proxima Nova', Arial, sans-serif;
+  --font-heading: var(--font-lora), 'Recoleta', Georgia, serif;
+  --font-body: var(--font-nunito-sans), 'Proxima Nova', Arial, sans-serif;
 }
 
 html {
@@ -59,6 +59,13 @@ body {
   background: var(--color-background);
   color: var(--color-secondary);
   font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* Medium default for headings — utility classes (font-bold etc.) still override */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .scrollbar-hidden {

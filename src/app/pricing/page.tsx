@@ -137,7 +137,7 @@ function ProcedureTable({
         </span>
       </div>
 
-      <div className="hidden grid-cols-[minmax(250px,1fr)_155px_155px_28px] border-b border-[#dce9e8] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[#637578] md:grid">
+      <div className="hidden grid-cols-[minmax(250px,1fr)_155px_155px_28px] border-b border-[#dce9e8] px-6 py-2 text-xs font-semibold uppercase tracking-wider text-[#637578] md:grid">
         <p>Procedure</p>
         <p className="text-center">{columnOne}</p>
         <p className="text-center">{columnTwo}</p>
@@ -257,8 +257,8 @@ export default function PricingPage() {
               </div>
               <div className="px-5 py-5">
                 <Link
-                  href="/book-appointment"
-                  className="mx-auto flex h-12 w-fit items-center justify-center gap-2 rounded-full bg-[#f26932] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#df5924]"
+                  href="/book-consultation"
+                  className="mx-auto flex h-12 w-fit items-center justify-center gap-2 rounded-full bg-[#FF7A4D] px-7 text-sm font-semibold text-white transition-colors hover:brightness-105"
                 >
                   Schedule Appointment
                   <ArrowRight size={16} />

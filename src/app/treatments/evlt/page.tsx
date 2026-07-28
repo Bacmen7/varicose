@@ -34,7 +34,7 @@ const symptoms = [
 
 const steps = [
   { title: "Ultrasound Mapping", desc: "The doctor identifies the faulty vein and maps blood flow using Doppler ultrasound." },
-  { title: "Local Anesthesia", desc: "The area is numbed — you stay awake, comfortable, and pain-free." },
+  { title: "Local Anesthesia", desc: "The area is numbed - you stay awake, comfortable, and pain-free." },
   { title: "Laser Fiber Insertion", desc: "A thin laser fiber is inserted into the vein through a tiny needle puncture." },
   { title: "Laser Activation", desc: "Controlled laser energy seals the vein from inside." },
   { title: "Natural Blood Rerouting", desc: "Blood automatically flows through healthier veins." },
@@ -123,7 +123,7 @@ export default function EVLTPage() {
               <p className="mb-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 Gold-standard minimally invasive laser therapy for varicose veins. No surgery. No stitches. Walk out the same day.
               </p>
-              <a href="#" className="inline-flex items-center text-sm font-semibold text-white hover:opacity-80 hover:underline md:text-base">
+              <a href="/book-consultation" className="inline-flex items-center text-sm font-semibold text-white hover:opacity-80 hover:underline md:text-base">
                 <Calendar className="w-[22px] h-[22px] mr-3" strokeWidth={1.5} />
                 Request an Appointment
               </a>
@@ -382,7 +382,7 @@ export default function EVLTPage() {
                     <p className="mb-5 text-sm leading-relaxed text-gray-500">
                       Get started on your path to pain-free legs. See a vein specialist within days.
                     </p>
-                    <a href="#" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-primary py-3 text-sm font-semibold text-white hover:opacity-90">
+                    <a href="/book-consultation" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-cta px-6 py-2 text-sm font-semibold text-white transition-all hover:brightness-105">
                       Book Your First Visit
                       <ArrowRight className="w-4 h-4" />
                     </a>

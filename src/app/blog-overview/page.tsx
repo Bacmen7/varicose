@@ -40,7 +40,7 @@ const blogPosts = [
     category: "Checklist",
     tag: "Specialist Insights",
     title: "When Should You See a Doctor for Varicose Veins?",
-    desc: "The red flags — skin changes or persistent pain — that indicate it is time for a professional evaluation.",
+    desc: "The red flags - skin changes or persistent pain - that indicate it is time for a professional evaluation.",
     image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
     href: "/blog/when-to-see-doctor",
     readTime: "4 min read",
@@ -48,7 +48,7 @@ const blogPosts = [
   {
     category: "Guide",
     tag: "Latest Research",
-    title: "EVLT vs RFA — Which One Is Right for You?",
+    title: "EVLT vs RFA - Which One Is Right for You?",
     desc: "Both use heat to close faulty veins in under an hour. A plain-language breakdown for patients.",
     image: "/user/deep vein reflux.png",
     href: "/treatments/evlt",
@@ -58,7 +58,7 @@ const blogPosts = [
     category: "Article",
     tag: "Patient Journeys",
     title: "What to Expect in the Week After Treatment",
-    desc: "Bruising, tightness, and that cord-like feeling along the treated vein — what is normal and what is not.",
+    desc: "Bruising, tightness, and that cord-like feeling along the treated vein - what is normal and what is not.",
     image: "/user/chronic venus insufficiency.png",
     href: "/blog/when-to-see-doctor",
     readTime: "4 min read",
@@ -67,7 +67,7 @@ const blogPosts = [
     category: "Article",
     tag: "Women’s Vein Health",
     title: "Varicose Veins During and After Pregnancy",
-    desc: "Hormones, weight, and posture all play a role. Here is when veins improve on their own — and when they do not.",
+    desc: "Hormones, weight, and posture all play a role. Here is when veins improve on their own - and when they do not.",
     image: "/user/spider vein.png",
     href: "/blog/early-warning-signs",
     readTime: "6 min read",
@@ -165,7 +165,7 @@ export default function BlogOverviewPage() {
 
           {/* Load more */}
           <div className="flex justify-center mt-12">
-            <button className="bg-primary hover:opacity-90 text-white font-semibold py-3 px-10 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer">
+            <button className="bg-primary hover:opacity-90 text-white font-semibold py-2 px-6 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl group cursor-pointer">
               Load more articles
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>

@@ -135,7 +135,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           First Things First: How Do Veins Normally Work?
         </h2>
         <p className="text-[15px] md:text-base leading-7 mb-4" style={{ color: '#48546B' }}>
-          Your veins have a tough job. They carry blood upwards, from your legs back to your heart — <strong className="font-bold">against gravity</strong>.
+          Your veins have a tough job. They carry blood upwards, from your legs back to your heart - <strong className="font-bold">against gravity</strong>.
         </p>
         <p className="text-[15px] md:text-base leading-7 mb-6" style={{ color: '#48546B' }}>
           To make this possible, veins contain tiny one-way valves that:
@@ -145,7 +145,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <li>Close to stop blood from flowing backward</li>
         </ul>
         <p className="text-[15px] md:text-base leading-7 mb-12" style={{ color: '#48546B' }}>
-          When these valves work well, blood flows smoothly. When they don&apos;t — Varicose veins happen.
+          When these valves work well, blood flows smoothly. When they don&apos;t - Varicose veins happen.
         </p>
 
         {/* Root Cause with Image */}
@@ -220,7 +220,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <div>
             <h3 className="font-heading text-xl text-[#023936] mb-2">4. Ageing</h3>
             <p className="text-[15px] md:text-base leading-7" style={{ color: '#48546B' }}>
-              As you age, vein walls lose elasticity and valves weaken naturally. This is why Varicose veins become more common after the age of 40 — but age alone isn&apos;t the cause.
+              As you age, vein walls lose elasticity and valves weaken naturally. This is why Varicose veins become more common after the age of 40 - but age alone isn&apos;t the cause.
             </p>
           </div>
 
@@ -252,7 +252,7 @@ export default function WhyvaricoseVeinsHappenPage() {
             Why Do Varicose Veins Usually Appear in the Legs?
           </h3>
           <p className="text-[15px] md:text-base leading-7" style={{ color: '#48546B' }}>
-            Because your legs face maximum gravitational pressure. Blood has to travel the longest distance upward from your feet to your heart. <strong className="font-bold">That&apos;s why Varicose veins rarely appear in arms — but commonly in calves and thighs.</strong>
+            Because your legs face maximum gravitational pressure. Blood has to travel the longest distance upward from your feet to your heart. <strong className="font-bold">That&apos;s why Varicose veins rarely appear in arms - but commonly in calves and thighs.</strong>
           </p>
         </div>
 
@@ -268,7 +268,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <li><strong className="font-bold">Varicose veins</strong> are larger, deeper, and often linked to valve failure</li>
         </ul>
         <p className="text-[15px] md:text-base leading-7 mb-12" style={{ color: '#48546B' }}>
-          Spider veins can be an early warning sign — but Varicose veins indicate a deeper circulation issue.
+          Spider veins can be an early warning sign - but Varicose veins indicate a deeper circulation issue.
         </p>
 
         {/* What Happens If Ignored */}
@@ -295,7 +295,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           Can Varicose Veins Be Prevented?
         </h2>
         <p className="text-[15px] md:text-base leading-7 mb-4" style={{ color: '#48546B' }}>
-          You can&apos;t change genetics — but you can slow progression by:
+          You can&apos;t change genetics - but you can slow progression by:
         </p>
         <ul className="list-disc list-inside text-[15px] md:text-base leading-7 mb-6 space-y-2 ml-4" style={{ color: '#48546B' }}>
           <li>Staying active</li>
@@ -321,7 +321,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <li>Decide the right treatment</li>
         </ul>
         <p className="text-[15px] md:text-base leading-7 mb-12" style={{ color: '#48546B' }}>
-          Visible veins alone don&apos;t tell the full story — ultrasound does.
+          Visible veins alone don&apos;t tell the full story - ultrasound does.
         </p>
 
         {/* Modern Treatments */}
@@ -338,7 +338,7 @@ export default function WhyvaricoseVeinsHappenPage() {
           <li>Foam sclerotherapy</li>
         </ul>
         <p className="text-[15px] md:text-base leading-7 mb-12" style={{ color: '#48546B' }}>
-          ...seal faulty veins from the inside, correcting reflux — <strong className="font-bold">without surgery</strong>.
+          ...seal faulty veins from the inside, correcting reflux - <strong className="font-bold">without surgery</strong>.
         </p>
 
         {/* When to See Doctor */}
@@ -392,15 +392,15 @@ export default function WhyvaricoseVeinsHappenPage() {
             Take the First Step Toward Healthier Legs
           </h2>
           <p className="text-[15px] md:text-base leading-7 mb-8 text-white/85">
-            Varicose veins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
+            Varicose veins happen for real medical reasons - not vanity. Understanding the cause is the first step to lasting relief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90">
+            <a href="/book-consultation" className="bg-cta text-white font-semibold py-2 px-6 rounded-full transition-colors hover:brightness-105">
               Book a Consultation
-            </button>
-            <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full transition-colors hover:bg-white/10 border-2 border-white">
+            </a>
+            <a href="/clinics" className="bg-transparent text-white font-semibold py-2 px-6 rounded-full transition-colors hover:bg-white/10 border-2 border-white">
               Find a Specialist Near You
-            </button>
+            </a>
           </div>
         </div>
       </section>

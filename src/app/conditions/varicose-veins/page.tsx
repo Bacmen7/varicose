@@ -109,8 +109,8 @@ function SidebarCTA() {
         right treatment.
       </p>
       <a
-        href="#"
-        className="inline-block text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
+        href="/book-consultation"
+        className="inline-block text-white font-medium px-6 py-2 rounded-full transition-colors text-sm"
         style={{ backgroundColor: "#2C847F" }}
       >
         Book a Consultation
@@ -190,7 +190,7 @@ export default function VaricoseVeinsPage() {
             <a
               key={tab.label}
               href={tab.href}
-              className={`shrink-0 rounded-full px-6 py-3 text-sm transition-colors ${
+              className={`shrink-0 rounded-full px-6 py-2 text-sm transition-colors ${
                 tab.active
                   ? "bg-white text-[#07545D]"
                   : "bg-white/12 text-white hover:bg-white/20"
@@ -290,7 +290,7 @@ export default function VaricoseVeinsPage() {
               <BulletItem>Night cramps and restless legs</BulletItem>
               <BulletItem>Itching or irritation near affected veins</BulletItem>
               <BulletItem>
-                Skin changes — darkening or dryness near ankles
+                Skin changes - darkening or dryness near ankles
               </BulletItem>
               <BulletItem>Visible bulging or twisted veins</BulletItem>
             </ul>
@@ -374,7 +374,7 @@ export default function VaricoseVeinsPage() {
             <SectionHeading>Are They Dangerous?</SectionHeading>
 
             <p className="text-base leading-relaxed mb-5" style={{ color: "#48546B" }}>
-              Varicose veins are not immediately life-threatening — but they can
+              Varicose veins are not immediately life-threatening - but they can
               progress if ignored.
             </p>
 
@@ -585,15 +585,15 @@ export default function VaricoseVeinsPage() {
             Take the First Step Toward Healthier Legs
           </h2>
           <p className="text-[15px] md:text-base leading-7 mb-8 text-white/85">
-            Varicose veins happen for real medical reasons — not vanity. Understanding the cause is the first step to lasting relief.
+            Varicose veins happen for real medical reasons - not vanity. Understanding the cause is the first step to lasting relief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-full transition-colors hover:opacity-90">
+            <a href="/book-consultation" className="bg-cta text-white font-semibold py-2 px-6 rounded-full transition-colors hover:brightness-105">
               Book a Consultation
-            </button>
-            <button className="bg-transparent text-white font-semibold py-3 px-8 rounded-full transition-colors hover:bg-white/10 border-2 border-white">
+            </a>
+            <a href="/clinics" className="bg-transparent text-white font-semibold py-2 px-6 rounded-full transition-colors hover:bg-white/10 border-2 border-white">
               Find a Specialist Near You
-            </button>
+            </a>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 const conditions = [
   {
-    href: "/conditions/varicose-veins",
+    href: "/conditions?c=varicose-veins",
     image: "/user/varicose veins.png",
     category: "Get started",
     title: "What are varicose veins",
@@ -21,7 +21,7 @@ const conditions = [
     title: "Causes of varicose veins",
   },
   {
-    href: "/treatments",
+    href: "/treatments-overview",
     image: "/user/deep vein reflux.png",
     category: "Treatment",
     title: "How is varicose vein treated",
@@ -131,7 +131,7 @@ export default function ConditionsOverviewPage() {
               <h2 className="font-heading text-secondary text-3xl font-bold">Explore by category</h2>
             </div>
             {[
-              { label: "Common subtypes & symptoms", href: "/conditions/varicose-veins" },
+              { label: "Common subtypes & symptoms", href: "/conditions?c=varicose-veins" },
               { label: "Treatment options", href: "/treatments" },
               { label: "Vein health stats & science", href: "/blog/why-varicose-veins-happen" },
               { label: "Living with varicose veins", href: "/blog/early-warning-signs" },
@@ -153,18 +153,19 @@ export default function ConditionsOverviewPage() {
         </div>
       </section>
 
-      {/* ── EXPLORE VIDEOS ── */}
-      <section className="py-12 w-full bg-background">
+      {/* EXPLORE VIDEOS - hidden */}
+{false && (
+<section className="py-12 w-full bg-background">
         <div className="container mx-auto px-4 max-w-[1200px]">
           <h2 className="font-heading text-secondary text-2xl md:text-3xl font-bold text-center mb-8">Explore videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { image: "/user/varicose veins.png", title: "What Are Varicose Veins? Causes, Symptoms & When To See A Doctor" },
-              { image: "/user/deep vein reflux.png", title: "Spider Veins vs Varicose Veins — What's the difference?" },
+              { image: "/user/deep vein reflux.png", title: "Spider Veins vs Varicose Veins - What's the difference?" },
               { image: "/user/leg pain and heaviness.png", title: "How to Recognise Venous Disease in Yourself or Others: Key Signs" },
             ].map((video, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden border border-gray-100 cursor-pointer group flex flex-col">
-                {/* Thumbnail — separate block, fixed height */}
+                {/* Thumbnail - separate block, fixed height */}
                 <div className="w-full h-48 relative overflow-hidden rounded-t-2xl flex-shrink-0">
                   <Image
                     src={video.image}
@@ -186,6 +187,7 @@ export default function ConditionsOverviewPage() {
           </div>
         </div>
       </section>
+)}
 
       {/* ── EDITORIAL PROCESS ── */}
       <section className="py-8 w-full bg-background">
@@ -198,7 +200,7 @@ export default function ConditionsOverviewPage() {
                 <Link href="/about" className="text-primary font-medium hover:underline">Sira Vascular&apos;s Clinical Team</Link>.
               </p>
             </div>
-            <Link href="/about" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-xl whitespace-nowrap transition-all shrink-0">
+            <Link href="/about" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-2 px-6 rounded-xl whitespace-nowrap transition-all shrink-0">
               Learn more
             </Link>
           </div>
@@ -219,7 +221,7 @@ export default function ConditionsOverviewPage() {
             ].map((subtype, i) => (
               <Link
                 key={i}
-                href="/conditions/varicose-veins"
+                href="/conditions?c=varicose-veins"
                 className="inline-flex min-h-[54px] items-center gap-3 rounded-full border border-[#DDEBEA] bg-white px-6 text-[20px] font-normal leading-none text-[#244247] shadow-[0_1px_4px_rgba(22,56,58,0.04)] transition-all hover:border-primary hover:text-primary hover:shadow-[0_4px_14px_rgba(44,132,127,0.12)]"
               >
                 <span className="h-2 w-2 rounded-full bg-[#9DE5D4]" aria-hidden="true" />

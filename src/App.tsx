@@ -15,9 +15,13 @@ const WhyVaricoseVeinsHappen = lazy(
 );
 const BlogOverview = lazy(() => import("@/pages/BlogOverview"));
 const BookAppointment = lazy(() => import("@/pages/BookAppointment"));
+const BookConsultation = lazy(() => import("@/pages/BookConsultation"));
 const Clinics = lazy(() => import("@/pages/Clinics"));
 const Conditions = lazy(() => import("@/pages/Conditions"));
 const VaricoseVeins = lazy(() => import("@/pages/conditions/VaricoseVeins"));
+const ConditionOverviewPage = lazy(
+  () => import("@/pages/conditions/ConditionOverviewPage"),
+);
 const DiseaseOverview = lazy(() => import("@/pages/DiseaseOverview"));
 const Pricing = lazy(() => import("@/pages/Pricing"));
 const Evlt = lazy(() => import("@/pages/treatments/Evlt"));
@@ -54,9 +58,21 @@ export default function App() {
           />
           <Route path="/blog-overview" element={<BlogOverview />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
+          <Route path="/book-consultation" element={<BookConsultation />} />
           <Route path="/clinics" element={<Clinics />} />
           <Route path="/conditions" element={<Conditions />} />
           <Route path="/conditions/varicose-veins" element={<VaricoseVeins />} />
+          <Route path="/varicose-veins-overview" element={<VaricoseVeins />} />
+          <Route path="/spider-veins-overview" element={<ConditionOverviewPage />} />
+          <Route
+            path="/chronic-venous-insufficiency-overview"
+            element={<ConditionOverviewPage />}
+          />
+          <Route
+            path="/dvt-and-leg-swelling-overview"
+            element={<ConditionOverviewPage />}
+          />
+          <Route path="/vein-ulcers-overview" element={<ConditionOverviewPage />} />
           <Route path="/disease-overview" element={<DiseaseOverview />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/treatments/evlt" element={<Evlt />} />

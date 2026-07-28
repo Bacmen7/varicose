@@ -6,19 +6,19 @@ import Footer from "@/components/Footer";
 import { ArrowRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 
 const guideCategories = [
-  { title: "Varicose veins", href: "/conditions/varicose-veins" },
-  { title: "Spider veins", href: "/conditions" },
-  { title: "Venous leg ulcers", href: "/conditions" },
-  { title: "Chronic venous insufficiency", href: "/conditions" },
-  { title: "Reticular veins", href: "/conditions" },
-  { title: "Lipodermatosclerosis", href: "/conditions" },
+  { title: "Varicose veins", href: "/conditions?c=varicose-veins" },
+  { title: "Spider veins", href: "/conditions?c=spider-veins" },
+  { title: "Venous leg ulcers", href: "/conditions?c=vein-ulcers" },
+  { title: "Chronic venous insufficiency", href: "/conditions?c=chronic-venous-insufficiency" },
+  { title: "Reticular veins", href: "/conditions?c=spider-veins" },
+  { title: "Lipodermatosclerosis", href: "/conditions?c=vein-ulcers" },
 ];
 
 const articleRows = [
   {
     title: "Varicose vein articles",
     image: "/user/varicose veins.png",
-    href: "/conditions/varicose-veins",
+    href: "/conditions?c=varicose-veins",
     articles: [
       {
         title: "Why varicose veins happen",
@@ -49,13 +49,13 @@ const articleRows = [
   {
     title: "Spider vein articles",
     image: "/user/spider vein.png",
-    href: "/conditions",
+    href: "/conditions?c=spider-veins",
     articles: [
       {
         title: "Spider veins vs varicose veins",
         image: "/user/spider vein.png",
         readTime: "5 min read",
-        href: "/conditions",
+        href: "/conditions?c=spider-veins",
       },
       {
         title: "Why tiny red and blue veins appear",
@@ -111,9 +111,9 @@ const articleRows = [
 ];
 
 const moreTopics = [
-  { title: "Varicose veins", href: "/conditions/varicose-veins" },
-  { title: "Spider veins", href: "/conditions" },
-  { title: "Leg swelling", href: "/conditions" },
+  { title: "Varicose veins", href: "/conditions?c=varicose-veins" },
+  { title: "Spider veins", href: "/conditions?c=spider-veins" },
+  { title: "Leg swelling", href: "/conditions?c=dvt-and-leg-swelling" },
   { title: "EVLT", href: "/treatments/evlt" },
   { title: "RFA", href: "/treatments/rfa" },
 ];

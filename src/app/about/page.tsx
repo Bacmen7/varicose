@@ -11,36 +11,30 @@ export default function AboutPage() {
     <main className="bg-background">
 
       {/* ── HERO ── */}
-      <section
-        className="w-full overflow-hidden relative"
-        style={{ backgroundColor: "#026460" }}
-      >
-        <div className="flex flex-col lg:flex-row min-h-[420px] lg:min-h-[460px]">
+      <section className="w-full overflow-hidden relative bg-accent-lighter">
+        <div className="flex flex-col lg:flex-row min-h-[480px] lg:min-h-[560px]">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 px-4 py-10 md:px-8 lg:px-16 xl:px-24 lg:py-12 flex flex-col justify-center">
+          <div className="w-full lg:w-1/2 px-5 py-14 md:px-8 lg:px-16 xl:px-24 lg:py-20 flex flex-col justify-center">
             <div className="max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-8">
-              <h1 className="font-heading text-white text-3xl md:text-4xl lg:text-5xl font-normal mb-4 leading-tight">
+              <h1 className="font-heading text-primary-dark text-[2.2rem] md:text-[2.8rem] lg:text-[3.3rem] font-normal mb-5 leading-[1.15] tracking-tight">
                 Relief you can trust.{" "}
-                <span className="text-accent-lighter">Care that comes to you.</span>
+                <span className="italic text-primary">Care that comes to you.</span>
               </h1>
-              <p className="text-white/85 text-base lg:text-lg mb-5 leading-relaxed max-w-lg">
+              <p className="text-gray-600 text-base lg:text-lg mb-5 leading-relaxed max-w-lg">
                 Varicose veins affect millions of Indians, yet most people wait years before seeking help. At Sira Vascular, we make specialist vascular care simple, accessible, and reassuring for every patient who walks through our doors.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/blog/when-to-see-doctor" className="bg-white text-primary hover:bg-accent-lighter font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 group cursor-pointer w-fit">
-                  Meet our specialist
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link href="/blog/when-to-see-doctor" className="border-2 border-white/80 text-white font-semibold text-sm md:text-base py-2.5 px-5 md:py-3 md:px-8 rounded-full flex items-center gap-2 transition-all duration-300 hover:bg-white/10 w-fit">
-                  Book consultation
+              <div className="mt-8">
+                <Link href="/book-consultation" className="group inline-flex items-center gap-2 rounded-full bg-cta px-6 py-2 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:brightness-105 w-fit">
+                  Book a Consultation
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-1/2 h-[300px] lg:h-auto relative">
+          <div className="w-full lg:w-1/2 h-[340px] lg:h-auto relative">
             <Image src="/hero2.png" alt="Sira Vascular specialist care" fill className="object-cover object-center" priority />
           </div>
         </div>
@@ -79,28 +73,42 @@ export default function AboutPage() {
       {/* ── WHY PATIENTS TRUST US ── */}
       <section className="py-10 lg:py-12 w-full bg-surface relative">
         <div className="container mx-auto px-3 md:px-4 max-w-[1320px]">
-          <div className="mb-8">
-            <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Approach</p>
-            <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Sira Vascular</h2>
-            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-              We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their concerns, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: MessageCircle, title: "Clear & Simple Communication", desc: "We explain your condition in easy language, answer your questions patiently, and help you feel confident about your treatment plan." },
-              { icon: Search, title: "Early Diagnosis Matters", desc: "Finding vein problems early can help prevent pain, swelling, skin changes, and other complications later." },
-              { icon: Zap, title: "Accurate Vein Assessment", desc: "We use safe ultrasound scans and detailed vein evaluations to understand the cause of your symptoms and guide the right treatment." },
-              { icon: MapPin, title: "Easy Access to Care", desc: "With flexible appointments and online consultations, getting expert vein care becomes simpler and more convenient." },
-            ].map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-primary/30 transition-all duration-300">
-                <span className="bg-accent-lighter mb-5 flex size-12 items-center justify-center rounded-xl text-primary">
-                  <item.icon className="size-5" strokeWidth={1.5} />
-                </span>
-                <h3 className="font-heading text-secondary text-lg font-normal mb-2 leading-snug">{item.title}</h3>
-                <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+            {/* Left: image */}
+            <div className="relative h-[320px] w-full overflow-hidden rounded-2xl border border-black/5 shadow-sm sm:h-[420px] lg:sticky lg:top-28 lg:h-[560px]">
+              <Image
+                src="/talk.png"
+                alt="Vein specialist explaining a treatment plan to a patient"
+                fill
+                className="object-cover object-center"
+              />
+            </div>
+
+            {/* Right: heading + cards */}
+            <div>
+              <p className="text-primary font-semibold mb-3 text-sm tracking-wider uppercase">Our Approach</p>
+              <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">Why patients trust Sira Vascular</h2>
+              <p className="text-gray-600 text-base leading-relaxed mb-8">
+                We believe good care starts with understanding your concerns. That&apos;s why we give every patient enough time to talk, understand their concerns, and get a treatment plan that&apos;s clear and easy to follow. No rushed visits. No complicated medical terms. Just honest advice and caring support from specialists you can trust.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {[
+                  { icon: MessageCircle, title: "Clear & Simple Communication", desc: "We explain your condition in easy language, answer your questions patiently, and help you feel confident about your treatment plan." },
+                  { icon: Search, title: "Early Diagnosis Matters", desc: "Finding vein problems early can help prevent pain, swelling, skin changes, and other complications later." },
+                  { icon: Zap, title: "Accurate Vein Assessment", desc: "We use safe ultrasound scans and detailed vein evaluations to understand the cause of your symptoms and guide the right treatment." },
+                  { icon: MapPin, title: "Easy Access to Care", desc: "With flexible appointments and online consultations, getting expert vein care becomes simpler and more convenient." },
+                ].map((item, i) => (
+                  <div key={i} className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-primary/30 transition-all duration-300">
+                    <span className="bg-accent-lighter mb-4 flex size-11 items-center justify-center rounded-xl text-primary">
+                      <item.icon className="size-5" strokeWidth={1.5} />
+                    </span>
+                    <h3 className="font-heading text-secondary text-lg font-normal mb-2 leading-snug">{item.title}</h3>
+                    <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -153,7 +161,7 @@ export default function AboutPage() {
                 <p className="text-gray-400 text-sm mt-0.5">Sira Vascular, Mumbai</p>
               </div>
               <div className="flex flex-col gap-2">
-                {["MBBS", "MS — General Surgery", "Fellowship in Vascular Surgery"].map((q, i) => (
+                {["MBBS", "MS - General Surgery", "Fellowship in Vascular Surgery"].map((q, i) => (
                   <span key={i} className="text-sm font-medium text-primary bg-accent px-3 py-1 rounded-md w-fit">{q}</span>
                 ))}
               </div>
@@ -185,7 +193,7 @@ export default function AboutPage() {
                 Dr. Sharma believes that no patient should feel rushed or confused during their care. Every consultation at Sira Vascular is unhurried, evidence-based, and focused on finding the right path for each individual.
               </p>
 
-              <Link href="/blog/when-to-see-doctor" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-3 px-7 rounded-full inline-flex items-center gap-2 transition-all duration-300 group w-fit">
+              <Link href="/blog/when-to-see-doctor" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-2 px-6 rounded-full inline-flex items-center gap-2 transition-all duration-300 group w-fit">
                 Book a consultation with Dr. Sharma
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
