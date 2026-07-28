@@ -24,8 +24,8 @@ export default function HeroSection() {
 
             <Link
               href="/book-consultation"
-              className="group mt-8 inline-flex items-center gap-2.5 rounded-full py-2 pl-6 pr-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:brightness-105"
-              style={{ backgroundColor: "#FF7A4D" }}
+              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-cta py-2 pl-6 pr-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:brightness-105"
+              
             >
               Book a Consultation
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-0.5">

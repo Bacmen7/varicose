@@ -109,8 +109,7 @@ function SidebarCTA() {
       </p>
       <a
         href="/book-consultation"
-        className="inline-block text-white font-medium px-6 py-2 rounded-full transition-colors text-sm"
-        style={{ backgroundColor: "#2C847F" }}
+        className="inline-block bg-cta text-white font-medium px-6 py-2 rounded-full transition-all hover:brightness-105 text-sm"
       >
         Book a Consultation
       </a>

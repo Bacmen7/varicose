@@ -258,7 +258,7 @@ export default function PricingPage() {
               <div className="px-5 py-5">
                 <Link
                   href="/book-consultation"
-                  className="mx-auto flex h-12 w-fit items-center justify-center gap-2 rounded-full bg-[#FF7A4D] px-7 text-sm font-semibold text-white transition-colors hover:brightness-105"
+                  className="mx-auto flex h-12 w-fit items-center justify-center gap-2 rounded-full bg-cta px-7 text-sm font-semibold text-white transition-colors hover:brightness-105"
                 >
                   Schedule Appointment
                   <ArrowRight size={16} />

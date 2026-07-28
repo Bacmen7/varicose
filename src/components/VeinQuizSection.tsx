@@ -83,8 +83,7 @@ export default function VeinQuizSection() {
               <div className="mt-7 flex items-center gap-3">
                 <button
                   onClick={() => answer(true)}
-                  className="rounded-full px-6 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:brightness-105 cursor-pointer"
-                  style={{ backgroundColor: "#FF7A4D" }}
+                  className="rounded-full bg-cta px-6 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:brightness-105 cursor-pointer"
                 >
                   Yes
                 </button>
@@ -131,8 +130,7 @@ export default function VeinQuizSection() {
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <Link
                   href="/book-consultation"
-                  className="group inline-flex items-center gap-2.5 rounded-full py-2 pl-6 pr-3 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:brightness-105"
-                  style={{ backgroundColor: "#FF7A4D" }}
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-cta py-2 pl-6 pr-3 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:brightness-105"
                 >
                   Book a Consultation
                   <ArrowRight

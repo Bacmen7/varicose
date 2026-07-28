@@ -811,7 +811,7 @@ export default function CanVaricoseVeinsComeBackPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/book-consultation"
-              className="bg-white text-primary text-base font-semibold py-2 px-6 rounded-full transition-colors hover:opacity-90"
+              className="bg-cta text-white text-sm font-semibold py-2 px-6 rounded-full transition-all hover:brightness-105"
             >
               Book a Consultation
             </Link>

@@ -22,7 +22,7 @@ const articleRows = [
     articles: [
       {
         title: "Why varicose veins happen",
-        image: "/valve_reflux.png",
+        image: "/i2.png",
         readTime: "8 min read",
         href: "/blog/why-varicose-veins-happen",
       },
@@ -40,7 +40,7 @@ const articleRows = [
       },
       {
         title: "Can varicose veins come back?",
-        image: "/valve_reflux.png",
+        image: "/i1.png",
         readTime: "7 min read",
         href: "/blog/can-varicose-veins-come-back",
       },

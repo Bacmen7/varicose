@@ -159,7 +159,6 @@ export default function BookConsultation() {
                 type="button"
                 onClick={handleSubmit}
                 className="mx-auto block rounded-full px-6 py-2 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:brightness-105 cursor-pointer"
-                style={{ backgroundColor: "#FF7A4D" }}
               >
                 Request My Consultation
               </button>

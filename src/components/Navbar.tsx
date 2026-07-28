@@ -180,7 +180,7 @@ export default function Navbar() {
                         onClick={closeMenus}
                         className={
                           link.label.startsWith("Book Consultation")
-                            ? "mt-4 inline-flex min-h-[40px] items-center rounded-full bg-[#FF7A4D] px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:brightness-105"
+                            ? "mt-4 inline-flex min-h-[40px] items-center rounded-full bg-cta px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:brightness-105"
                             : "block py-3 text-sm font-medium leading-snug text-[#4f6267] transition-colors hover:text-primary"
                         }
                       >
@@ -227,7 +227,7 @@ export default function Navbar() {
                         onClick={closeMenus}
                         className={
                           link.label.startsWith("Book Consultation")
-                            ? "mt-2 inline-flex min-h-[40px] items-center rounded-full bg-[#FF7A4D] px-5 py-2.5 text-center text-sm font-semibold text-white"
+                            ? "mt-2 inline-flex min-h-[40px] items-center rounded-full bg-cta px-5 py-2.5 text-center text-sm font-semibold text-white"
                             : "block py-2 text-sm font-medium text-[#596b70]"
                         }
                       >

@@ -117,7 +117,7 @@ function Sidebar({ step }: { step: number }) {
               <li key={label} className="flex items-center gap-[10px] text-sm">
                 <span
                   className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm ${
-                    active ? "bg-[#FF7A4D] text-white" : "bg-white/20 text-white/80"
+                    active ? "bg-cta text-white" : "bg-white/20 text-white/80"
                   }`}
                 >
                   {number}
@@ -387,7 +387,7 @@ export default function BookAppointmentPage() {
                     </button>
                     <button
                       type="submit"
-                      className="h-11 min-w-[148px] rounded-full bg-[#FF7A4D] px-8 text-sm font-semibold text-white transition hover:brightness-105"
+                      className="h-11 min-w-[148px] rounded-full bg-cta px-8 text-sm font-semibold text-white transition hover:brightness-105"
                     >
                       {step === 5 ? "Submit" : "Next"}
                     </button>

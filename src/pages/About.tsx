@@ -135,6 +135,36 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── WHY PATIENTS CHOOSE US ── */}
+      <section className="py-14 md:py-20 w-full bg-surface relative">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
+          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">Why Patients Choose Us</p>
+          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">Relief that goes beyond the procedure</h2>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-10">
+            Choosing the right vascular care centre is about more than just the treatment. It is about feeling heard, supported, and confident in the care you receive at every step.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                { image: "/patient.png", title: "No unnecessary surgery", desc: "We recommend a procedure only when it is genuinely needed, with day-care options for most suitable patients." },
+                { image: "/talk.png", title: "Honest second opinions", desc: "Already advised treatment elsewhere? We provide an independent review so you can decide with clarity." },
+                { image: "/cost.png", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
+                { image: "/teleconsulation.png", title: "Teleconsultation available", desc: "Connect online before visiting the centre, especially if you live outside Mumbai or need initial guidance." },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-xl overflow-hidden border border-black/5 shadow-sm hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                  <div className="relative h-40 w-full overflow-hidden">
+                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-heading text-secondary text-lg font-normal mb-2">{item.title}</h3>
+                    <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── OUR SPECIALIST ── */}
       <section className="py-14 md:py-20 w-full bg-surface relative">
         <div className="mx-auto w-full max-w-[1200px] px-5 md:px-8">
@@ -198,36 +228,6 @@ export default function AboutPage() {
       </section>
 
       <ConditionsTreatSection />
-
-      {/* ── WHY PATIENTS CHOOSE US ── */}
-      <section className="py-14 md:py-20 w-full bg-surface relative">
-        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
-          <p className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">Why Patients Choose Us</p>
-          <h2 className="font-heading font-normal tracking-tight leading-[1.15] text-[1.9rem] sm:text-[2.3rem] text-secondary mb-4">Relief that goes beyond the procedure</h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-10">
-            Choosing the right vascular care centre is about more than just the treatment. It is about feeling heard, supported, and confident in the care you receive at every step.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[
-                { image: "/patient.png", title: "No unnecessary surgery", desc: "We recommend a procedure only when it is genuinely needed, with day-care options for most suitable patients." },
-                { image: "/talk.png", title: "Honest second opinions", desc: "Already advised treatment elsewhere? We provide an independent review so you can decide with clarity." },
-                { image: "/cost.png", title: "Transparent costs", desc: "You receive a clear estimate before treatment, with guidance on insurance and available coverage support." },
-                { image: "/teleconsulation.png", title: "Teleconsultation available", desc: "Connect online before visiting the centre, especially if you live outside Mumbai or need initial guidance." },
-              ].map((item, i) => (
-                <div key={i} className="bg-white rounded-xl overflow-hidden border border-black/5 shadow-sm hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                  <div className="relative h-40 w-full overflow-hidden">
-                    <Image src={item.image} alt={item.title} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-heading text-secondary text-lg font-normal mb-2">{item.title}</h3>
-                    <p className="text-gray-500 text-base leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── PATIENT STORIES ── */}
       <section className="py-14 md:py-20 w-full bg-background relative">

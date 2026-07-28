@@ -1,4 +1,7 @@
-import { ArrowRight } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "@/compat/Image";
 import Link from "@/compat/Link";
 
@@ -77,6 +80,13 @@ const conditions = [
 ];
 
 export default function ConditionsSection() {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () =>
+    setCurrent((i) => (i === 0 ? conditions.length - 1 : i - 1));
+  const next = () =>
+    setCurrent((i) => (i === conditions.length - 1 ? 0 : i + 1));
+
   return (
     <section className="w-full bg-accent-light py-14 md:py-20">
       <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
@@ -100,63 +110,105 @@ export default function ConditionsSection() {
           </p>
         </div>
 
-        {/* Condition cards */}
-        <div className="mx-auto flex max-w-[1000px] flex-col gap-4 md:gap-5">
-          {conditions.map((condition) => (
+        {/* Condition slider */}
+        <div className="relative mx-auto max-w-[1000px]">
+          <div className="overflow-hidden rounded-2xl">
             <div
-              key={condition.title}
-              className="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm md:grid md:grid-cols-[300px_minmax(0,1fr)]"
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${current * 100}%)` }}
             >
-              {/* Image */}
-              <div className="relative h-52 md:h-auto md:min-h-[260px]">
-                <Image
-                  src={condition.image}
-                  alt={condition.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
+              {conditions.map((condition) => (
+                <div
+                  key={condition.title}
+                  className="w-full shrink-0 overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm md:grid md:grid-cols-[300px_minmax(0,1fr)]"
+                >
+                  {/* Image */}
+                  <div className="relative h-52 md:h-auto md:min-h-[300px]">
+                    <Image
+                      src={condition.image}
+                      alt={condition.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 300px"
+                    />
+                  </div>
 
-              {/* Content */}
-              <div className="p-6 md:p-8">
-                <span className="inline-flex items-center gap-2 rounded-full bg-accent-lighter px-3 py-1 text-[12px] font-semibold text-primary">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                  {condition.badge}
-                </span>
-
-                <h3 className="font-heading mt-3 text-2xl font-normal leading-snug text-secondary">
-                  {condition.title}
-                </h3>
-
-                <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-                  {condition.desc}
-                </p>
-
-                {/* Symptom chips */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {condition.chips.map((chip) => (
-                    <span
-                      key={chip}
-                      className="rounded-full bg-accent-light px-3 py-1.5 text-[13px] font-semibold text-primary"
-                    >
-                      {chip}
+                  {/* Content */}
+                  <div className="p-6 md:p-8">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-accent-lighter px-3 py-1 text-[12px] font-semibold text-primary">
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                      {condition.badge}
                     </span>
-                  ))}
-                </div>
 
-                <div className="mt-6 flex justify-end">
-                  <Link
-                    href={condition.href}
-                    className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-                  >
-                    {condition.cta}
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                    <h3 className="font-heading mt-3 text-2xl font-normal leading-snug text-secondary">
+                      {condition.title}
+                    </h3>
+
+                    <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                      {condition.desc}
+                    </p>
+
+                    {/* Symptom chips */}
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {condition.chips.map((chip) => (
+                        <span
+                          key={chip}
+                          className="rounded-full bg-accent-light px-3 py-1.5 text-[13px] font-semibold text-primary"
+                        >
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 flex justify-end">
+                      <Link
+                        href={condition.href}
+                        className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+                      >
+                        {condition.cta}
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Controls: arrows + dots */}
+          <div className="mt-7 flex items-center justify-center gap-5">
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Previous condition"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-primary shadow-md transition hover:bg-primary hover:text-white"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div className="flex items-center gap-2">
+              {conditions.map((condition, i) => (
+                <button
+                  key={condition.title}
+                  type="button"
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Go to ${condition.title}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i === current ? "w-8 bg-primary" : "w-2 bg-primary/30"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Next condition"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-primary shadow-md transition hover:bg-primary hover:text-white"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
 
         {/* View all */}

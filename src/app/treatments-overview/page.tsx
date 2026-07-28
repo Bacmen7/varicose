@@ -71,12 +71,9 @@ export default function TreatmentsOverviewPage() {
                 Minimally invasive, walk-in walk-out procedures. No long hospital stays. Our vascular specialists choose the right treatment for your vein type and severity.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="#treatments" className="bg-primary hover:opacity-90 text-white font-semibold text-sm py-2 px-6 rounded-full flex items-center gap-2 transition-all duration-300 group">
-                  Explore Treatments
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link href="/blog/when-to-see-doctor" className="border-2 border-primary text-primary font-semibold text-sm py-2 px-6 rounded-full hover:bg-primary/5 transition-all duration-300">
+                <Link href="/book-consultation" className="bg-cta hover:brightness-105 text-white font-semibold text-sm py-2 px-6 rounded-full flex items-center gap-2 transition-all duration-300 group">
                   Book a Consultation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -98,26 +95,26 @@ export default function TreatmentsOverviewPage() {
             <h2 className="font-heading text-secondary text-3xl lg:text-4xl font-normal mb-4">How is it diagnosed?</h2>
             <p className="text-gray-600 text-lg max-w-xl mx-auto">There is no single test. Your specialist builds the picture from four key steps.</p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
             {/* Dark card */}
-            <div className="rounded-2xl p-10 relative overflow-hidden" style={{ backgroundColor: '#026460' }}>
+            <div className="flex flex-col justify-center rounded-2xl p-10 relative overflow-hidden" style={{ backgroundColor: '#026460' }}>
               <div className="absolute bottom-0 right-0 w-48 h-48 rounded-full opacity-10 bg-white translate-x-1/3 translate-y-1/3" />
               <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>Getting the right diagnosis</p>
               <h3 className="font-heading text-white text-3xl font-normal mb-4 leading-snug">Getting the right picture</h3>
               <p className="text-base leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 Varicose veins can look simple on the outside but involve deeper valve problems underneath. A proper diagnosis makes sure the right vein is treated - and nothing is missed.
               </p>
-              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold text-sm py-2 px-6 rounded-full transition-all group">
+              <Link href="/book-consultation" className="inline-flex w-fit items-center gap-2 bg-cta hover:brightness-105 text-white font-semibold text-sm py-2 px-6 rounded-full transition-all group">
                 Book your first appointment
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             {/* Steps */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col justify-between gap-3">
               {diagSteps.map((s, i) => {
                 const Icon = s.icon;
                 return (
-                  <div key={i} className="flex items-center gap-4 bg-surface rounded-2xl p-5 border border-transparent hover:border-primary/30 transition-all">
+                  <div key={i} className="flex flex-1 items-center gap-4 bg-surface rounded-2xl p-5 border border-transparent hover:border-primary/30 transition-all">
                     <div className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center bg-primary">
                       <Icon size={18} strokeWidth={1.5} className="text-white" />
                     </div>
