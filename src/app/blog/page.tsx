@@ -22,25 +22,25 @@ const articleRows = [
     articles: [
       {
         title: "Why varicose veins happen",
-        image: "/i2.png",
+        image: "/blog/why-varicose-veins-photo.png",
         readTime: "8 min read",
         href: "/blog/why-varicose-veins-happen",
       },
       {
         title: "Early warning signs you should not ignore",
-        image: "/user/leg pain and heaviness.png",
+        image: "/blog/earlysign-photo.png",
         readTime: "5 min read",
         href: "/blog/early-warning-signs",
       },
       {
         title: "When should you see a doctor?",
-        image: "/user/swelling, skin changes, non-healing ulcers swelling, skin changes, non-healing ulcers.png",
+        image: "/blog/when-doctr-photo.png",
         readTime: "4 min read",
         href: "/blog/when-to-see-doctor",
       },
       {
         title: "Can varicose veins come back?",
-        image: "/i1.png",
+        image: "/blog/why-photo.png",
         readTime: "7 min read",
         href: "/blog/can-varicose-veins-come-back",
       },
@@ -53,25 +53,25 @@ const articleRows = [
     articles: [
       {
         title: "Spider veins vs varicose veins",
-        image: "/user/spider vein.png",
+        image: "/blog/spider/spider-vs-varicose.png",
         readTime: "5 min read",
         href: "/conditions?c=spider-veins",
       },
       {
         title: "Why tiny red and blue veins appear",
-        image: "/user/chronic venus insufficiency.png",
+        image: "/blog/spider/spider-veins-closeup.png",
         readTime: "6 min read",
         href: "/blog/why-varicose-veins-happen",
       },
       {
         title: "When spider veins need medical attention",
-        image: "/user/leg pain and heaviness.png",
+        image: "/blog/spider/spider-veins-doctor-exam.png",
         readTime: "4 min read",
         href: "/blog/when-to-see-doctor",
       },
       {
         title: "Treatment options for visible surface veins",
-        image: "/user/deep vein reflux.png",
+        image: "/blog/spider/spider-veins-treatment.png",
         readTime: "5 min read",
         href: "/treatments-overview",
       },
@@ -96,7 +96,7 @@ const articleRows = [
       },
       {
         title: "How treatment helps blood flow improve",
-        image: "/valve_reflux.png",
+        image: "/blog/blood-flow-improve.png",
         readTime: "5 min read",
         href: "/blog/why-varicose-veins-happen",
       },
@@ -121,19 +121,19 @@ const moreTopics = [
 const latestArticles = [
   {
     title: "Can varicose veins come back?",
-    image: "/i1.png",
+    image: "/blog/why-photo.png",
     readTime: "7 min read",
     href: "/blog/can-varicose-veins-come-back",
   },
   {
     title: "Why varicose veins happen",
-    image: "/i2.png",
+    image: "/blog/why-varicose-veins-photo.png",
     readTime: "8 min read",
     href: "/blog/why-varicose-veins-happen",
   },
   {
     title: "When to see a doctor for varicose veins",
-    image: "/i3.png",
+    image: "/blog/when-doctr-photo.png",
     readTime: "4 min read",
     href: "/blog/when-to-see-doctor",
   },
