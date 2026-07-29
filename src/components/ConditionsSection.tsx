@@ -66,7 +66,7 @@ const conditions = [
   {
     badge: "Advanced stage care",
     title: "Swelling, Skin Changes and Ulcers",
-    image: "/user/swelling.png",
+    image: "/swelling1.png",
     desc: "Long-standing vein disease can lead to darkened, hardened skin and slow-healing wounds near the ankle. These need specialist treatment of the underlying vein problem, not just wound dressing.",
     chips: [
       "Non-healing leg ulcers",
