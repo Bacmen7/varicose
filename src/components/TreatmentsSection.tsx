@@ -235,7 +235,7 @@ export default function TreatmentsSection() {
                 {/* CTA */}
                 <div className="flex justify-center">
                     <button
-                        className="bg-primary text-white rounded-full px-6 py-2 text-sm font-semibold hover:bg-primary-dark transition-colors flex items-center gap-2 group cursor-pointer"
+                        className="bg-cta text-white rounded-full px-6 py-2 text-sm font-semibold hover:brightness-105 transition-colors flex items-center gap-2 group cursor-pointer"
                     >
                         See Treatment Options
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

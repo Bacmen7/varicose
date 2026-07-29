@@ -48,7 +48,7 @@ export default function LocationsSection() {
 
             <Link
               href="/clinics"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-cta px-6 py-2 text-sm font-semibold text-white transition-colors hover:brightness-105"
             >
               Explore All Clinics
               <ArrowRight size={18} />

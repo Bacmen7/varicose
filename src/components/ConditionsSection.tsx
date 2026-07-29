@@ -163,7 +163,7 @@ export default function ConditionsSection() {
                     <div className="mt-6 flex justify-end">
                       <Link
                         href={condition.href}
-                        className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+                        className="group inline-flex items-center gap-2 rounded-full bg-cta px-6 py-2 text-sm font-semibold text-white transition-colors hover:brightness-105"
                       >
                         {condition.cta}
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
