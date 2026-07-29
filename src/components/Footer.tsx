@@ -19,22 +19,22 @@ const pageLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-accent-light py-14">
+    <footer className="w-full bg-accent-light py-12 md:py-14">
       <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.25fr_1fr] md:gap-16">
-          <div>
+        <div className="grid grid-cols-1 gap-10 text-center md:grid-cols-[1.25fr_1fr] md:gap-16 md:text-left">
+          <div className="flex flex-col items-center md:items-start">
             <Image
               src="/logo.png"
               alt="Sira Vascular"
               width={180}
               height={60}
-              className="mb-4 h-auto w-[180px]"
+              className="mb-4 h-auto w-[150px] md:w-[180px]"
             />
-            <p className="max-w-md text-gray-600 leading-relaxed font-medium">
+            <p className="max-w-xs text-gray-600 leading-relaxed font-medium md:max-w-md">
               Restoring comfort and confidence with expert vein care.
             </p>
 
-            <div className="mt-6 space-y-3 text-gray-600 font-medium">
+            <div className="mt-6 flex flex-col items-center gap-3 text-gray-600 font-medium md:items-start">
               <a href="tel:+919833943177" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Phone size={18} className="text-primary" />
                 <span>+91 9833943177</span>
@@ -45,7 +45,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="mt-7 flex gap-4">
+            <div className="mt-7 flex justify-center gap-4 md:justify-start">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -59,11 +59,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="border-t border-secondary/10 pt-8 md:border-t-0 md:pt-0">
             <h2 className="mb-5 text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.18em] text-secondary">
               Pages
             </h2>
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 md:flex-col md:justify-start md:gap-4">
               {pageLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -76,6 +76,11 @@ export default function Footer() {
             </nav>
           </div>
 
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-2 border-t border-secondary/10 pt-6 text-sm text-gray-500 md:mt-12 md:flex-row md:justify-between">
+          <span>&copy; {new Date().getFullYear()} Sira Vascular. All rights reserved.</span>
+          <span>Made with care, for your vein health.</span>
         </div>
       </div>
     </footer>

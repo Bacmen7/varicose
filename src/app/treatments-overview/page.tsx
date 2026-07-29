@@ -223,24 +223,20 @@ export default function TreatmentsOverviewPage() {
           </div>
           <div className="rounded-2xl overflow-hidden border border-gray-200">
             {/* Header */}
-            <div className="grid px-6 py-4 text-xs font-semibold tracking-widest uppercase text-white" style={{ backgroundColor: '#026460', gridTemplateColumns: '28% 28% 36% 8%' }}>
+            <div className="grid px-6 py-4 text-xs font-semibold tracking-widest uppercase text-white" style={{ backgroundColor: '#026460', gridTemplateColumns: '28% 28% 44%' }}>
               <div>Condition</div>
               <div>First treatment</div>
               <div>If that is not enough</div>
-              <div></div>
             </div>
             {conditionRows.map((row, i) => (
-              <Link key={i} href={row.href} className="grid px-6 py-4 items-center bg-white border-t border-gray-100 hover:bg-surface transition-colors" style={{ gridTemplateColumns: '28% 28% 36% 8%' }}>
+              <div key={i} className="grid px-6 py-4 items-center bg-white border-t border-gray-100" style={{ gridTemplateColumns: '28% 28% 44%' }}>
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-heading text-secondary text-base font-normal">{row.condition}</span>
                   <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ backgroundColor: row.badgeColor, color: row.badgeText }}>{row.badge}</span>
                 </div>
                 <div className="text-gray-600 text-sm pr-4">{row.first}</div>
                 <div className="text-gray-600 text-sm pr-4">{row.next}</div>
-                <div className="flex justify-end">
-                  <ArrowRight size={16} className="text-gray-400" />
-                </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -256,7 +252,7 @@ export default function TreatmentsOverviewPage() {
               <p className="text-base" style={{ color: 'rgba(255,255,255,0.65)' }}>Most patients are seen within 1 to 2 weeks. Early treatment means faster recovery.</p>
             </div>
             <div className="relative z-10 flex flex-col items-start md:items-end gap-2 shrink-0">
-              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary font-semibold text-sm py-2 px-6 rounded-full transition-all group shadow-lg">
+              <Link href="/blog/when-to-see-doctor" className="inline-flex items-center gap-2 bg-cta hover:brightness-105 text-white font-semibold text-sm py-2 px-6 rounded-full transition-all group shadow-lg">
                 Book a Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
